@@ -5,7 +5,7 @@ public class PlayerMove : StateMachineBehaviour
     public float speed;
     private SpriteRenderer spriteRenderer;
     private Collider2D collider2D;
-    private RaycastHit2D[] rayHits = new RaycastHit2D[16];
+    private readonly RaycastHit2D[] rayHits = new RaycastHit2D[16];
 
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
