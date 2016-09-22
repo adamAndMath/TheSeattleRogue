@@ -26,7 +26,7 @@ public class PlayerFall : StateMachineBehaviour
             for (int i = 0; i < size; i++)
             {
                 RaycastHit2D rayHit = rayHits[i];
-                if (move > rayHit.distance && (rayHit.point.y - animator.transform.position.y) < 0)
+                if (move > rayHit.distance && Mathf.Abs(rayHit.normal.y) / rayHit.normal.magnitude > 0.99F && (rayHit.point.y - animator.transform.position.y) < 0)
                 {
                     move = rayHit.distance;
                     animator.Play(idleState);

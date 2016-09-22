@@ -26,7 +26,7 @@ public class PlayerMove : StateMachineBehaviour
             for (int i = 0; i < size; i++)
             {
                 RaycastHit2D rayHit = rayHits[i];
-                if (move > rayHit.distance && Vector2.Dot((rayHit.point - (Vector2)animator.transform.position), dir)/dir.magnitude > 0)
+                if (move > rayHit.distance && Mathf.Abs(Vector2.Dot(rayHit.normal, dir))/rayHit.normal.magnitude > 0.99F && Vector2.Dot((rayHit.point - (Vector2)animator.transform.position), dir) > 0)
                     move = rayHit.distance;
             }
         }
