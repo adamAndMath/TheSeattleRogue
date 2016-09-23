@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
             for (int i = 0; i < size; i++)
             {
                 RaycastHit2D rayHit = rayHits[i];
-                if (rayHit.point.y - animator.transform.position.y < 0)
+                if (rayHit.point.y - animator.transform.position.y < 0 && Mathf.Abs(rayHit.normal.y) / rayHit.normal.magnitude > 0.99F)
                     return true;
             }
         }
