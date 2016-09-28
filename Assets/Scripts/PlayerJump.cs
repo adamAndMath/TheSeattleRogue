@@ -6,12 +6,12 @@ public class PlayerJump : StateMachineBehaviour
     public float startSpeed;
     public string fallState;
     private float speed;
-    private Collider2D collider2D;
+    private Player player;
     private readonly RaycastHit2D[] rayHits = new RaycastHit2D[16];
 
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        collider2D = animator.GetComponent<Collider2D>();
+        player = animator.GetComponent<Player>();
         speed = startSpeed;
     }
 
@@ -20,22 +20,8 @@ public class PlayerJump : StateMachineBehaviour
         float move = (speed - gravity * Time.deltaTime / 2) * Time.deltaTime;
         speed -= gravity * Time.deltaTime;
 
-        int size = collider2D.Cast(Vector2.up, rayHits, move);
-
-        if (size > 0)
-        {
-            for (int i = 0; i < size; i++)
-            {
-                RaycastHit2D rayHit = rayHits[i];
-                if (move > rayHit.distance && Mathf.Abs(rayHit.normal.y) / rayHit.normal.magnitude > 0.99F && (rayHit.point.y - animator.transform.position.y) > 0)
-                {
-                    move = rayHit.distance;
-                    speed = 0;
-                }
-            }
-        }
-
-        animator.transform.Translate(move * Vector2.up);
+        if (player.MoveVertical(move))
+            speed = 0;
 
         if (speed <= 0)
             animator.Play(fallState);

@@ -15,8 +15,10 @@ public class Player : MonoBehaviour
     void Update()
     {
         animator.SetBool("Moving", !Mathf.Approximately(0, Input.GetAxisRaw("Horizontal")));
+        animator.SetBool("Vertical", !Mathf.Approximately(0, Input.GetAxisRaw("Vertical")));
         animator.SetBool("Jump", Input.GetButton("Jump"));
         animator.SetBool("Grounded", IsGrounded());
+        animator.SetBool("Charge", Input.GetButton("Charge"));
     }
 
     private bool IsGrounded()
@@ -34,5 +36,55 @@ public class Player : MonoBehaviour
         }
 
         return false;
+    }
+
+    public bool MoveHorizontal(float move)
+    {
+        Vector2 dir = Vector2.right * Mathf.Sign(move);
+        move = Mathf.Abs(move);
+        bool re = false;
+
+        int size = collider2D.Cast(dir, rayHits, move);
+
+        if (size > 0)
+        {
+            for (int i = 0; i < size; i++)
+            {
+                RaycastHit2D rayHit = rayHits[i];
+                if (move > rayHit.distance && Mathf.Abs(Vector2.Dot(rayHit.normal.normalized, dir)) > 0.99F && Vector2.Dot(rayHit.point - (Vector2)transform.position, dir) > 0)
+                {
+                    move = rayHit.distance;
+                    re = true;
+                }
+            }
+        }
+
+        animator.transform.Translate(move * dir);
+        return re;
+    }
+
+    public bool MoveVertical(float move)
+    {
+        Vector2 dir = Vector2.up * Mathf.Sign(move);
+        move = Mathf.Abs(move);
+        bool re = false;
+
+        int size = collider2D.Cast(dir, rayHits, move);
+
+        if (size > 0)
+        {
+            for (int i = 0; i < size; i++)
+            {
+                RaycastHit2D rayHit = rayHits[i];
+                if (move > rayHit.distance && Mathf.Abs(rayHit.normal.y) / rayHit.normal.magnitude > 0.99F && Vector2.Dot(rayHit.point - (Vector2)transform.position, dir) > 0)
+                {
+                    move = rayHit.distance;
+                    re = true;
+                }
+            }
+        }
+
+        animator.transform.Translate(move * dir);
+        return re;
     }
 }
