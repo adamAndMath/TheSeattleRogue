@@ -9,7 +9,10 @@ public class Player : MonoBehaviour
     public int hp;
     private Animator animator;
     private Collider2D collider2D;
+    private SpriteRenderer spriteRenderer;
     private readonly RaycastHit2D[] rayHits = new RaycastHit2D[16];
+
+    public bool Direction { get { return 0 < transform.localScale.x; } set { transform.localScale = value ? Vector3.left : Vector3.right; } }
 
     void Awake()
     {
@@ -21,6 +24,7 @@ public class Player : MonoBehaviour
         hp = maxHP;
         animator = GetComponent<Animator>();
         collider2D = animator.GetComponent<Collider2D>();
+        spriteRenderer = animator.GetComponent<SpriteRenderer>();
     }
 
     void Update()
