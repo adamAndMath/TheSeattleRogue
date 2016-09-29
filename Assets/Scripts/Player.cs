@@ -2,12 +2,23 @@
 
 public class Player : MonoBehaviour
 {
+    public static Player Instance { get; private set; }
+
+    public int maxHP = 3;
+    [HideInInspector]
+    public int hp;
     private Animator animator;
     private Collider2D collider2D;
     private readonly RaycastHit2D[] rayHits = new RaycastHit2D[16];
 
+    void Awake()
+    {
+        Instance = this;
+    }
+
     void Start()
     {
+        hp = maxHP;
         animator = GetComponent<Animator>();
         collider2D = animator.GetComponent<Collider2D>();
     }
