@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         animator.SetBool("Moving", !Mathf.Approximately(0, Input.GetAxisRaw("Horizontal")));
-        animator.SetBool("Vertical", !Mathf.Approximately(0, Input.GetAxisRaw("Vertical")));
+        animator.SetBool("Looking", !Mathf.Approximately(0, Input.GetAxisRaw("Horizontal")) || !Mathf.Approximately(0, Input.GetAxisRaw("Vertical")));
         animator.SetBool("Jump", Input.GetButton("Jump"));
         animator.SetBool("Grounded", IsGrounded());
         animator.SetBool("Charge", Input.GetButton("Charge"));
