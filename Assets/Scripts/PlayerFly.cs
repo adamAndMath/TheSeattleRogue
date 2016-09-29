@@ -1,21 +1,20 @@
 ﻿using UnityEngine;
 
-public class PlayerMove : StateMachineBehaviour
+public class PlayerFly : StateMachineBehaviour
 {
     public float speed;
-    private SpriteRenderer spriteRenderer;
+    private Vector2 dir;
     private Player player;
 
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        spriteRenderer = animator.GetComponent<SpriteRenderer>();
         player = animator.GetComponent<Player>();
+        dir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
     }
 
     public override void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        spriteRenderer.flipX = !Mathf.Approximately(0, Input.GetAxisRaw("Horizontal"));
-        float move = Input.GetAxis("Horizontal")*speed*Time.deltaTime;
-        player.MoveHorizontal(move);
+        player.MoveHorizontal(dir.x*speed*Time.deltaTime);
+        player.MoveVertical(dir.y*speed*Time.deltaTime);
     }
 }
