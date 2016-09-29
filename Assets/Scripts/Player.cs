@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
         animator.SetBool("Jump", Input.GetButton("Jump"));
         animator.SetBool("Grounded", IsGrounded());
         animator.SetBool("Charge", Input.GetButton("Charge"));
+        animator.SetBool("Attacking", Input.GetButton("Attack"));
     }
 
     private bool IsGrounded()
