@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
             }
         }
 
-        animator.transform.Translate(move * dir);
+        animator.transform.Translate(move * dir, Space.World);
         return re;
     }
 
@@ -97,7 +97,7 @@ public class Player : MonoBehaviour
             }
         }
 
-        animator.transform.Translate(move * dir);
+        animator.transform.Translate(move * dir, Space.World);
         return re;
     }
 }

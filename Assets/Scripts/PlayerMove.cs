@@ -3,12 +3,10 @@
 public class PlayerMove : StateMachineBehaviour
 {
     public float speed;
-    private SpriteRenderer spriteRenderer;
     private Player player;
 
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        spriteRenderer = animator.GetComponent<SpriteRenderer>();
         player = animator.GetComponent<Player>();
     }
 
