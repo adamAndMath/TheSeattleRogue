@@ -9,10 +9,9 @@ public class Player : MonoBehaviour
     public int hp;
     private Animator animator;
     private Collider2D collider2D;
-    private SpriteRenderer spriteRenderer;
     private readonly RaycastHit2D[] rayHits = new RaycastHit2D[16];
 
-    public bool Direction { get { return 0 < transform.localScale.x; } set { transform.localScale = value ? Vector3.left : Vector3.right; } }
+    public bool Direction { get { return 0 < transform.localScale.x; } set { transform.localScale = new Vector3(value ? -1 : 1, 1, 1); } }
 
     void Awake()
     {
@@ -24,7 +23,6 @@ public class Player : MonoBehaviour
         hp = maxHP;
         animator = GetComponent<Animator>();
         collider2D = animator.GetComponent<Collider2D>();
-        spriteRenderer = animator.GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -74,7 +72,7 @@ public class Player : MonoBehaviour
             }
         }
 
-        animator.transform.Translate(move * dir);
+        animator.transform.Translate(move * dir, Space.World);
         return re;
     }
 
@@ -99,7 +97,7 @@ public class Player : MonoBehaviour
             }
         }
 
-        animator.transform.Translate(move * dir);
+        animator.transform.Translate(move * dir, Space.World);
         return re;
     }
 }
