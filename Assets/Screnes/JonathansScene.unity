@@ -348,8 +348,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fba7d1ac9db39a44a318b3bfbe2bec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 3
-  hp: 0
 --- !u!61 &998378893
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -452,8 +450,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1093932638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: 2, z: 0}
-  m_LocalScale: {x: 10, y: 40, z: 1}
+  m_LocalPosition: {x: -4, y: 0, z: 0}
+  m_LocalScale: {x: 10, y: 10, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
