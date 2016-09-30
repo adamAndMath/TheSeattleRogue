@@ -4,6 +4,7 @@ public class Player : MonoBehaviour
 {
     public static Player Instance { get; private set; }
 
+    public Collider2D WeaponCollider2D;
     public int maxHP = 3;
     [HideInInspector]
     public int hp;
@@ -38,7 +39,7 @@ public class Player : MonoBehaviour
     private bool IsGrounded()
     {
         int size = collider2D.Cast(Vector2.down, rayHits, 0.01F);
-
+        
         if (size > 0)
         {
             for (int i = 0; i < size; i++)
@@ -48,6 +49,7 @@ public class Player : MonoBehaviour
                     return true;
             }
         }
+
 
         return false;
     }
