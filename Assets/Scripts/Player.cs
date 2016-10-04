@@ -2,12 +2,26 @@
 
 public class Player : MonoBehaviour
 {
+    public static Player Instance { get; private set; }
+
+    public Collider2D WeaponCollider2D;
+    public int maxHP = 3;
+    [HideInInspector]
+    public int hp;
     private Animator animator;
     private Collider2D collider2D;
     private readonly RaycastHit2D[] rayHits = new RaycastHit2D[16];
 
+    public bool Direction { get { return 0 < transform.localScale.x; } set { transform.localScale = new Vector3(value ? -1 : 1, 1, 1); } }
+
+    void Awake()
+    {
+        Instance = this;
+    }
+
     void Start()
     {
+        hp = maxHP;
         animator = GetComponent<Animator>();
         collider2D = animator.GetComponent<Collider2D>();
     }
@@ -19,12 +33,13 @@ public class Player : MonoBehaviour
         animator.SetBool("Jump", Input.GetButton("Jump"));
         animator.SetBool("Grounded", IsGrounded());
         animator.SetBool("Charge", Input.GetButton("Charge"));
+        animator.SetBool("Attacking", Input.GetButton("Attack"));
     }
 
     private bool IsGrounded()
     {
         int size = collider2D.Cast(Vector2.down, rayHits, 0.01F);
-
+        
         if (size > 0)
         {
             for (int i = 0; i < size; i++)
@@ -34,6 +49,7 @@ public class Player : MonoBehaviour
                     return true;
             }
         }
+
 
         return false;
     }
@@ -59,7 +75,7 @@ public class Player : MonoBehaviour
             }
         }
 
-        animator.transform.Translate(move * dir);
+        animator.transform.Translate(move * dir, Space.World);
         return re;
     }
 
@@ -84,7 +100,7 @@ public class Player : MonoBehaviour
             }
         }
 
-        animator.transform.Translate(move * dir);
+        animator.transform.Translate(move * dir, Space.World);
         return re;
     }
 }

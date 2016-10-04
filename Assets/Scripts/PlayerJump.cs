@@ -7,7 +7,6 @@ public class PlayerJump : StateMachineBehaviour
     public string fallState;
     private float speed;
     private Player player;
-    private readonly RaycastHit2D[] rayHits = new RaycastHit2D[16];
 
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
