@@ -50,8 +50,12 @@ public class Player : MonoBehaviour
             }
         }
 
-
         return false;
+    }
+
+    public void Damaged(int damage)
+    {
+        hp -= damage;
     }
 
     public bool MoveHorizontal(float move)
