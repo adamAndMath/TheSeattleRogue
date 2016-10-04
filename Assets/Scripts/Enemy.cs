@@ -19,11 +19,9 @@ public class Enemy : MonoBehaviour
 	
 	}
 
-    public void Damaged(int damageAmount, SpriteRenderer sprite)
+    public void Damaged(int damageAmount)
     {
         health -= damageAmount;
-        sprite.color = new Color(3,1,1,1);
-        
     }
 
     public void Killed()
