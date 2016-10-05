@@ -3,12 +3,12 @@ using System.Collections;
 
 public class StandardTurretBehavior : Enemy
 {
-    public Animator turretAnimator;
+    public Animator TurretAnimator;
 
 	// Use this for initialization
 	void Start ()
 	{
-	    turretAnimator = GetComponent<Animator>();
+	    TurretAnimator = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
