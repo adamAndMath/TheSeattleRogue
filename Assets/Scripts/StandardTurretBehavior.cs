@@ -8,7 +8,7 @@ public class StandardTurretBehavior : Enemy
 	// Use this for initialization
 	void Start ()
 	{
-	    turretAnimator = GetComponent<Animator>();
+	
 	}
 	
 	// Update is called once per frame
