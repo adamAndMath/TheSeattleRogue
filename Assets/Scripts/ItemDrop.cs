@@ -6,7 +6,6 @@ using Random = UnityEngine.Random;
 public class ItemDrop
 {
     public GameObject obj;
-    [Range(0, 1)]
     public float chance;
 
     public void Drop(Vector2 position)

@@ -11,6 +11,7 @@ public class ItemDropEditor : PropertyDrawer
 
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
+        EditorGUI.BeginProperty(position, label, property);
         position = EditorGUI.PrefixLabel(position, label);
         int indent = EditorGUI.indentLevel;
         EditorGUI.indentLevel = 0;
@@ -19,8 +20,9 @@ public class ItemDropEditor : PropertyDrawer
         Rect chanceRect = new Rect(position.x + position.width / 2 + 4, position.y, position.width / 2 - 4, position.height);
 
         EditorGUI.PropertyField(objRect, property.FindPropertyRelative("obj"), GUIContent.none);
-        EditorGUI.PropertyField(chanceRect, property.FindPropertyRelative("chance"), GUIContent.none);
+        property.FindPropertyRelative("chance").floatValue = Mathf.Clamp01(EditorGUI.FloatField(chanceRect, property.FindPropertyRelative("chance").floatValue));
 
         EditorGUI.indentLevel = indent;
+        EditorGUI.EndProperty();
     }
 }
