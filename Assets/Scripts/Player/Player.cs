@@ -4,7 +4,7 @@ public class Player : MonoBehaviour
 {
     public static Player Instance { get; private set; }
 
-    public Collider2D WeaponCollider2D;
+    public Collider2D weaponCollider2D;
     public int maxHP = 3;
     [HideInInspector]
     public int hp;

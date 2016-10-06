@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class PlayerAttack : StateMachineBehaviour
 {
@@ -14,7 +13,7 @@ public class PlayerAttack : StateMachineBehaviour
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        int size = player.WeaponCollider2D.Cast(Vector2.up, rayHits, 0);
+        int size = player.weaponCollider2D.Cast(Vector2.up, rayHits, 0);
 
         if (size > 0)
         {
