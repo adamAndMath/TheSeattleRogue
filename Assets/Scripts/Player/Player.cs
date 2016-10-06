@@ -55,7 +55,11 @@ public class Player : MonoBehaviour
 
     public void Damaged(int damage)
     {
+        if (animator.GetCurrentAnimatorStateInfo(animator.GetLayerIndex("Invincibility")).IsName("Invincibility"))
+            return;
+
         hp -= damage;
+        animator.SetTrigger("Hit");
     }
 
     public bool MoveHorizontal(float move)
