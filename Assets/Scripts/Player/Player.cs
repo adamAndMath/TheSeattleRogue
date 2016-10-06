@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
         animator.SetBool("Looking", !Mathf.Approximately(0, Input.GetAxisRaw("Horizontal")) || !Mathf.Approximately(0, Input.GetAxisRaw("Vertical")));
         animator.SetBool("Jump", Input.GetButton("Jump"));
         animator.SetBool("Grounded", IsGrounded());
-        animator.SetBool("Charge", Input.GetButton("Charge"));
+        animator.SetBool("Charge", Input.GetAxis("Charge") > 0.9F);
         animator.SetBool("Attacking", Input.GetButton("Attack"));
     }
 
