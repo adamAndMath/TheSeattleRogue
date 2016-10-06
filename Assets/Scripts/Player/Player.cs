@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
             for (int i = 0; i < size; i++)
             {
                 RaycastHit2D rayHit = rayHits[i];
-                if (rayHit.point.y - animator.transform.position.y < 0 && Mathf.Abs(rayHit.normal.y) / rayHit.normal.magnitude > 0.99F)
+                if (!rayHit.collider.isTrigger && rayHit.point.y - animator.transform.position.y < 0 && Mathf.Abs(rayHit.normal.y) / rayHit.normal.magnitude > 0.99F)
                     return true;
             }
         }
@@ -75,7 +75,7 @@ public class Player : MonoBehaviour
             for (int i = 0; i < size; i++)
             {
                 RaycastHit2D rayHit = rayHits[i];
-                if (move > rayHit.distance && Mathf.Abs(Vector2.Dot(rayHit.normal.normalized, dir)) > 0.99F && Vector2.Dot(rayHit.point - (Vector2)transform.position, dir) > 0)
+                if (!rayHit.collider.isTrigger && move > rayHit.distance && Mathf.Abs(Vector2.Dot(rayHit.normal.normalized, dir)) > 0.99F && Vector2.Dot(rayHit.point - (Vector2)transform.position, dir) > 0)
                 {
                     move = rayHit.distance;
                     re = true;
@@ -100,7 +100,7 @@ public class Player : MonoBehaviour
             for (int i = 0; i < size; i++)
             {
                 RaycastHit2D rayHit = rayHits[i];
-                if (move > rayHit.distance && Mathf.Abs(rayHit.normal.y) / rayHit.normal.magnitude > 0.99F && Vector2.Dot(rayHit.point - (Vector2)transform.position, dir) > 0)
+                if (!rayHit.collider.isTrigger && move > rayHit.distance && Mathf.Abs(rayHit.normal.y) / rayHit.normal.magnitude > 0.99F && Vector2.Dot(rayHit.point - (Vector2)transform.position, dir) > 0)
                 {
                     move = rayHit.distance;
                     re = true;
