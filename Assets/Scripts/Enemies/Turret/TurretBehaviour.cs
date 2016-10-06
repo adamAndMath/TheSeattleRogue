@@ -4,7 +4,7 @@ using JetBrains.Annotations;
 
 public class TurretBehaviour : Enemy
 {
-    public Animator turretAnimator;
+    private Animator turretAnimator;
     public float turretRange;
     public float cooldown;
     private float ReloadTime;

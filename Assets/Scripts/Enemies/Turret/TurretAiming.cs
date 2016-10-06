@@ -4,7 +4,7 @@ using System.Collections;
 public class TurretAiming : StateMachineBehaviour {
 
     public float roationSpeed;
-    public float playerAngle;
+    private float playerAngle;
     Quaternion lookrotation;
     Vector3 relativePos;
     Enemy enemy;
@@ -20,8 +20,8 @@ public class TurretAiming : StateMachineBehaviour {
     {
         relativePos = Player.Instance.transform.position - enemy.transform.position;
 
-        lookrotation = Quaternion.LookRotation(relativePos, enemy.transform.up);
-        Quaternion.RotateTowards(enemy.transform.rotation, lookrotation, roationSpeed*Time.deltaTime);
+        lookrotation = Quaternion.LookRotation(Vector3.forward, relativePos);
+        enemy.transform.rotation = Quaternion.RotateTowards(enemy.transform.rotation, lookrotation, roationSpeed*Time.deltaTime);
     }
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
