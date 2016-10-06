@@ -4,10 +4,11 @@ public class Player : MonoBehaviour
 {
     public static Player Instance { get; private set; }
 
-    public Collider2D WeaponCollider2D;
+    public Collider2D weaponCollider2D;
     public int maxHP = 3;
     [HideInInspector]
     public int hp;
+    public int money;
     private Animator animator;
     private Collider2D collider2D;
     private readonly RaycastHit2D[] rayHits = new RaycastHit2D[16];
@@ -45,7 +46,7 @@ public class Player : MonoBehaviour
             for (int i = 0; i < size; i++)
             {
                 RaycastHit2D rayHit = rayHits[i];
-                if (rayHit.point.y - animator.transform.position.y < 0 && Mathf.Abs(rayHit.normal.y) / rayHit.normal.magnitude > 0.99F)
+                if (!rayHit.collider.isTrigger && rayHit.point.y - animator.transform.position.y < 0 && Mathf.Abs(rayHit.normal.y) / rayHit.normal.magnitude > 0.99F)
                     return true;
             }
         }
@@ -55,7 +56,11 @@ public class Player : MonoBehaviour
 
     public void Damaged(int damage)
     {
+        if (animator.GetCurrentAnimatorStateInfo(animator.GetLayerIndex("Invincibility")).IsName("Invincibility"))
+            return;
+
         hp -= damage;
+        animator.SetTrigger("Hit");
     }
 
     public bool MoveHorizontal(float move)
@@ -71,7 +76,7 @@ public class Player : MonoBehaviour
             for (int i = 0; i < size; i++)
             {
                 RaycastHit2D rayHit = rayHits[i];
-                if (move > rayHit.distance && Mathf.Abs(Vector2.Dot(rayHit.normal.normalized, dir)) > 0.99F && Vector2.Dot(rayHit.point - (Vector2)transform.position, dir) > 0)
+                if (!rayHit.collider.isTrigger && move > rayHit.distance && Mathf.Abs(Vector2.Dot(rayHit.normal.normalized, dir)) > 0.99F && Vector2.Dot(rayHit.point - (Vector2)transform.position, dir) > 0)
                 {
                     move = rayHit.distance;
                     re = true;
@@ -96,7 +101,7 @@ public class Player : MonoBehaviour
             for (int i = 0; i < size; i++)
             {
                 RaycastHit2D rayHit = rayHits[i];
-                if (move > rayHit.distance && Mathf.Abs(rayHit.normal.y) / rayHit.normal.magnitude > 0.99F && Vector2.Dot(rayHit.point - (Vector2)transform.position, dir) > 0)
+                if (!rayHit.collider.isTrigger && move > rayHit.distance && Mathf.Abs(rayHit.normal.y) / rayHit.normal.magnitude > 0.99F && Vector2.Dot(rayHit.point - (Vector2)transform.position, dir) > 0)
                 {
                     move = rayHit.distance;
                     re = true;
