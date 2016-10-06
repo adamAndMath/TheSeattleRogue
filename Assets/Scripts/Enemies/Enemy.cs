@@ -4,8 +4,8 @@ using System.Collections;
 public class Enemy : MonoBehaviour
 {
     public int health;
-    public GameObject valuta;
     public bool isDamaged;
+    public ItemDrop[] drops;
 
 	// Use this for initialization
 	void Start () 
@@ -31,7 +31,11 @@ public class Enemy : MonoBehaviour
 
     public void Killed()
     {
-        Instantiate(valuta, gameObject.transform.position, Quaternion.identity);
+        foreach (ItemDrop drop in drops)
+        {
+            drop.Drop(transform.position);
+        }
+
         DestroyObject(gameObject);
     }
 }
