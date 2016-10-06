@@ -4,10 +4,11 @@ public class Player : MonoBehaviour
 {
     public static Player Instance { get; private set; }
 
-    public Collider2D WeaponCollider2D;
+    public Collider2D weaponCollider2D;
     public int maxHP = 3;
     [HideInInspector]
     public int hp;
+    public int money;
     private Animator animator;
     private Collider2D collider2D;
     private readonly RaycastHit2D[] rayHits = new RaycastHit2D[16];
@@ -50,8 +51,16 @@ public class Player : MonoBehaviour
             }
         }
 
-
         return false;
+    }
+
+    public void Damaged(int damage)
+    {
+        if (animator.GetCurrentAnimatorStateInfo(animator.GetLayerIndex("Invincibility")).IsName("Invincibility"))
+            return;
+
+        hp -= damage;
+        animator.SetTrigger("Hit");
     }
 
     public bool MoveHorizontal(float move)
