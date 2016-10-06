@@ -22,6 +22,12 @@ public class TurretAiming : StateMachineBehaviour {
 
         lookrotation = Quaternion.LookRotation(Vector3.forward, relativePos);
         enemy.transform.rotation = Quaternion.RotateTowards(enemy.transform.rotation, lookrotation, roationSpeed*Time.deltaTime);
+
+        if (Quaternion.Angle(enemy.transform.rotation, lookrotation) == 0 && enemy.GetComponent<TurretBehaviour>().cooldownOn == false)
+        {
+            animator.SetBool("readyToShoot", true);
+            enemy.GetComponent<TurretBehaviour>().ReloadTime = enemy.GetComponent<TurretBehaviour>().cooldown;
+        }
     }
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
