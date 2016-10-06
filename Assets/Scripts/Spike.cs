@@ -3,13 +3,17 @@ using System.Collections;
 
 public class Spike : MonoBehaviour {
 
-	// Use this for initialization
+    Collider2D spikeCol;
+
 	void Start () {
-	
+        spikeCol = this.GetComponent<Collider2D>();
 	}
 	
-	// Update is called once per frame
+
 	void Update () {
-	
+	    if (spikeCol.IsTouching(Player.Instance.GetComponent<Collider2D>()))
+        {
+            Player.Instance.Damaged(1);
+        }
 	}
 }
