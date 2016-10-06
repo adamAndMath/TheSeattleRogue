@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour
 	
 	}
 
-    public void Damaged(int damageAmount)
+    public virtual void Damaged(int damageAmount)
     {
         health -= damageAmount;
         if (health <= 0)
