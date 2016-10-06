@@ -50,8 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9476d2e18557d184887d5ffa02897f05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roationSpeed: 0
-  playerAngle: 0
+  roationSpeed: 50
 --- !u!114 &114000012485319920
 MonoBehaviour:
   m_ObjectHideFlags: 1

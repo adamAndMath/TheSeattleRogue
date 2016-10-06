@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public int maxHP = 3;
     [HideInInspector]
     public int hp;
+    public int money;
     private Animator animator;
     private Collider2D collider2D;
     private readonly RaycastHit2D[] rayHits = new RaycastHit2D[16];

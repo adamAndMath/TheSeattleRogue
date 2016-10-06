@@ -315,7 +315,49 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
+--- !u!1001 &1469200741
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000012413323090, guid: 75dcc9dbf9ad55f4398bde8d7f714b21, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.6327373
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012413323090, guid: 75dcc9dbf9ad55f4398bde8d7f714b21, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 3.1429727
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012413323090, guid: 75dcc9dbf9ad55f4398bde8d7f714b21, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012413323090, guid: 75dcc9dbf9ad55f4398bde8d7f714b21, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012413323090, guid: 75dcc9dbf9ad55f4398bde8d7f714b21, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012413323090, guid: 75dcc9dbf9ad55f4398bde8d7f714b21, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012413323090, guid: 75dcc9dbf9ad55f4398bde8d7f714b21, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012413323090, guid: 75dcc9dbf9ad55f4398bde8d7f714b21, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 75dcc9dbf9ad55f4398bde8d7f714b21, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1505484955
 Prefab:
   m_ObjectHideFlags: 0
@@ -355,11 +397,66 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114000013436769942, guid: aacd67190f492934c91d0c37716b36b4, type: 2}
+    - {fileID: 61000011083240046, guid: aacd67190f492934c91d0c37716b36b4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: aacd67190f492934c91d0c37716b36b4, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2002391030 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010667431374, guid: aacd67190f492934c91d0c37716b36b4,
+    type: 2}
+  m_PrefabInternal: {fileID: 1505484955}
+--- !u!95 &2002391031
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2002391030}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f04e1ddbf8b2a264cb112cc7bde9ccd2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!58 &2002391032
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2002391030}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.087
 --- !u!4 &2002391034 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000010049204082, guid: aacd67190f492934c91d0c37716b36b4,
     type: 2}
   m_PrefabInternal: {fileID: 1505484955}
+--- !u!114 &2002391035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2002391030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67ca5243fb7aefa4e9dd25def08f9f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  valuta: {fileID: 1000010260307704, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
+  isDamaged: 0
+  turretRange: 1000
+  cooldown: 3
+  cooldownOn: 0
