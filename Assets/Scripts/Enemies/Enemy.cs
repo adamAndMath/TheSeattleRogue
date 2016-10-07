@@ -1,23 +1,8 @@
-﻿using UnityEngine;
-using System.Collections;
-
-public class Enemy : MonoBehaviour
+﻿public class Enemy : PhysicsObject
 {
     public int health;
     public bool isDamaged;
     public ItemDrop[] drops;
-
-	// Use this for initialization
-	void Start () 
-    {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () 
-    {
-	
-	}
 
     public virtual void Damaged(int damageAmount)
     {
