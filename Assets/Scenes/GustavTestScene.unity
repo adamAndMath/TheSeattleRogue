@@ -455,9 +455,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  valuta: {fileID: 1000010260307704, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
   isDamaged: 0
+  drops:
+  - obj: {fileID: 1000012271734224, guid: 70488e5cd1ef718409e53b076d2cfd65, type: 2}
+    chance: 1
   turretRange: 1000
-  cooldown: 100
+  cooldown: 2
   ReloadTime: 0
   cooldownOn: 0
