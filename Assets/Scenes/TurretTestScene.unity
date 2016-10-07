@@ -459,7 +459,7 @@ MonoBehaviour:
   drops:
   - obj: {fileID: 1000012271734224, guid: 70488e5cd1ef718409e53b076d2cfd65, type: 2}
     chance: 1
-  turretRange: 1000
+  turretRange: 3.5
   cooldown: 2
   ReloadTime: 0
   cooldownOn: 0
