@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : PhysicsObject
 {
     public static Player Instance { get; private set; }
 
@@ -10,8 +10,6 @@ public class Player : MonoBehaviour
     public int hp;
     public int money;
     private Animator animator;
-    private Collider2D collider2D;
-    private readonly RaycastHit2D[] rayHits = new RaycastHit2D[16];
 
     public bool Direction { get { return 0 < transform.localScale.x; } set { transform.localScale = new Vector3(value ? -1 : 1, 1, 1); } }
 
@@ -20,11 +18,11 @@ public class Player : MonoBehaviour
         Instance = this;
     }
 
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         hp = maxHP;
         animator = GetComponent<Animator>();
-        collider2D = animator.GetComponent<Collider2D>();
     }
 
     void Update()
@@ -37,23 +35,6 @@ public class Player : MonoBehaviour
         animator.SetBool("Attacking", Input.GetButton("Attack"));
     }
 
-    private bool IsGrounded()
-    {
-        int size = collider2D.Cast(Vector2.down, rayHits, 0.01F);
-        
-        if (size > 0)
-        {
-            for (int i = 0; i < size; i++)
-            {
-                RaycastHit2D rayHit = rayHits[i];
-                if (!rayHit.collider.isTrigger && rayHit.point.y - animator.transform.position.y < 0 && Mathf.Abs(rayHit.normal.y) / rayHit.normal.magnitude > 0.99F)
-                    return true;
-            }
-        }
-
-        return false;
-    }
-
     public void Damaged(int damage)
     {
         if (animator.GetCurrentAnimatorStateInfo(animator.GetLayerIndex("Invincibility")).IsName("Invincibility"))
@@ -61,55 +42,5 @@ public class Player : MonoBehaviour
 
         hp -= damage;
         animator.SetTrigger("Hit");
-    }
-
-    public bool MoveHorizontal(float move)
-    {
-        Vector2 dir = Vector2.right * Mathf.Sign(move);
-        move = Mathf.Abs(move);
-        bool re = false;
-
-        int size = collider2D.Cast(dir, rayHits, move);
-
-        if (size > 0)
-        {
-            for (int i = 0; i < size; i++)
-            {
-                RaycastHit2D rayHit = rayHits[i];
-                if (!rayHit.collider.isTrigger && move > rayHit.distance && Mathf.Abs(Vector2.Dot(rayHit.normal.normalized, dir)) > 0.99F && Vector2.Dot(rayHit.point - (Vector2)transform.position, dir) > 0)
-                {
-                    move = rayHit.distance;
-                    re = true;
-                }
-            }
-        }
-
-        animator.transform.Translate(move * dir, Space.World);
-        return re;
-    }
-
-    public bool MoveVertical(float move)
-    {
-        Vector2 dir = Vector2.up * Mathf.Sign(move);
-        move = Mathf.Abs(move);
-        bool re = false;
-
-        int size = collider2D.Cast(dir, rayHits, move);
-
-        if (size > 0)
-        {
-            for (int i = 0; i < size; i++)
-            {
-                RaycastHit2D rayHit = rayHits[i];
-                if (!rayHit.collider.isTrigger && move > rayHit.distance && Mathf.Abs(rayHit.normal.y) / rayHit.normal.magnitude > 0.99F && Vector2.Dot(rayHit.point - (Vector2)transform.position, dir) > 0)
-                {
-                    move = rayHit.distance;
-                    re = true;
-                }
-            }
-        }
-
-        animator.transform.Translate(move * dir, Space.World);
-        return re;
     }
 }
