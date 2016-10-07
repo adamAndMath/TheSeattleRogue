@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
-using JetBrains.Annotations;
 
 public class TurretBehaviour : Enemy
 {
@@ -8,11 +6,11 @@ public class TurretBehaviour : Enemy
     public float turretRange;
     public float cooldown;
     public float ReloadTime;
-    public bool cooldownOn = false;
+    public bool cooldownOn;
     private bool IsAiming;
 
 	// Use this for initialization
-	void Start ()
+	protected override void Start ()
 	{
 	    turretAnimator = GetComponent<Animator>();
 	}
