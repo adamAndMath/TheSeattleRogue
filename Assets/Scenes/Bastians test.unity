@@ -350,9 +350,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fba7d1ac9db39a44a318b3bfbe2bec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponCollider2D: {fileID: 1024022574}
+  weaponCollider2D: {fileID: 1024022574}
   maxHP: 3
   hp: 0
+  money: 0
 --- !u!61 &998378893
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -671,6 +672,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
+  isDamaged: 0
+  drops: []
 --- !u!1 &1776097412
 GameObject:
   m_ObjectHideFlags: 0
