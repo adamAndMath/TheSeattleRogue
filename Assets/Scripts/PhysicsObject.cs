@@ -3,8 +3,8 @@ using System.Collections;
 
 public class PhysicsObject : MonoBehaviour
 {
+    protected readonly RaycastHit2D[] rayHits = new RaycastHit2D[16];
     protected Collider2D collider2D;
-    private readonly RaycastHit2D[] rayHits = new RaycastHit2D[16];
 
     protected virtual void Start()
     {
@@ -28,6 +28,11 @@ public class PhysicsObject : MonoBehaviour
         return false;
     }
 
+    /// <summary>
+    /// Moves the object along the x axis.
+    /// </summary>
+    /// <param name="move">displacement</param>
+    /// <returns>true if collision occured</returns>
     public bool MoveHorizontal(float move)
     {
         Vector2 dir = Vector2.right * Mathf.Sign(move);
@@ -53,6 +58,11 @@ public class PhysicsObject : MonoBehaviour
         return re;
     }
 
+    /// <summary>
+    /// Moves the object along the y axis.
+    /// </summary>
+    /// <param name="move">displacement</param>
+    /// <returns>true if collision occured</returns>
     public bool MoveVertical(float move)
     {
         Vector2 dir = Vector2.up * Mathf.Sign(move);

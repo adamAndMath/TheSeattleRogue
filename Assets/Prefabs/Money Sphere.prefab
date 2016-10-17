@@ -21,6 +21,7 @@ GameObject:
   - 4: {fileID: 4000011990167220}
   - 212: {fileID: 212000012734503444}
   - 58: {fileID: 58000010340774236}
+  - 114: {fileID: 114000012286668530}
   m_Layer: 0
   m_Name: Money Sphere
   m_TagString: Untagged
@@ -55,6 +56,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &114000012286668530
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012271734224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10fce7a0258a0b54ea66610a4fd6e2d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  val: 1
+  gravity: 0
+  speed: {x: 0, y: 0}
 --- !u!212 &212000012734503444
 SpriteRenderer:
   m_ObjectHideFlags: 1
