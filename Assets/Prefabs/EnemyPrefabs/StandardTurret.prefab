@@ -64,13 +64,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000010667431374}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efe1e75723fe9f345800483aac8a0d74, type: 3}
+  m_Script: {fileID: 11500000, guid: 67ca5243fb7aefa4e9dd25def08f9f5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  valuta: {fileID: 63391904, guid: 58016b6b1465e5d4b8089902c8879233, type: 2}
   isDamaged: 0
-  TurretAnimator: {fileID: 0}
+  drops: []
+  turretRange: 3
+  cooldown: 1
+  cooldownOn: 0
 --- !u!212 &212000012586112112
 SpriteRenderer:
   m_ObjectHideFlags: 1

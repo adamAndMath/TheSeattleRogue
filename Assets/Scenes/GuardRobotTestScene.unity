@@ -254,40 +254,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
---- !u!1 &394159785 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000010985636292, guid: 2dd222dd33d95bf44b809baef75d72d2,
-    type: 2}
-  m_PrefabInternal: {fileID: 804593024}
---- !u!58 &394159786
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 394159785}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.1
---- !u!114 &394159787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 394159785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 845c0c249c697344896c7275f12d08d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  isDamaged: 0
-  drops: []
---- !u!1001 &804593024
+--- !u!1001 &683167094
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -296,11 +263,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000013160257850, guid: 2dd222dd33d95bf44b809baef75d72d2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.394
+      value: 3.167
       objectReference: {fileID: 0}
     - target: {fileID: 4000013160257850, guid: 2dd222dd33d95bf44b809baef75d72d2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.56
+      value: -0.587
       objectReference: {fileID: 0}
     - target: {fileID: 4000013160257850, guid: 2dd222dd33d95bf44b809baef75d72d2, type: 2}
       propertyPath: m_LocalPosition.z
@@ -325,16 +292,6 @@ Prefab:
     - target: {fileID: 4000013160257850, guid: 2dd222dd33d95bf44b809baef75d72d2, type: 2}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012730278908, guid: 2dd222dd33d95bf44b809baef75d72d2,
-        type: 2}
-      propertyPath: threatRangeRight
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012730278908, guid: 2dd222dd33d95bf44b809baef75d72d2,
-        type: 2}
-      propertyPath: threatRangeLeft
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2dd222dd33d95bf44b809baef75d72d2, type: 2}

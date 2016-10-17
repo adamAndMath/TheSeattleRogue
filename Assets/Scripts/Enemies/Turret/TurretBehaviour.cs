@@ -1,11 +1,12 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class TurretBehaviour : Enemy
 {
     private Animator turretAnimator;
     public float turretRange;
     public float cooldown;
-    public float ReloadTime;
+    [NonSerialized]public float ReloadTime;
     public bool cooldownOn;
     private bool IsAiming;
 
