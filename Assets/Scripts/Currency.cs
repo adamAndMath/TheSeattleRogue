@@ -24,7 +24,7 @@ public class Currency : PhysicsObject
             if (player)
             {
                 player.money += val;
-                Destroy(this);
+                Destroy(gameObject);
             }
         }
     }
