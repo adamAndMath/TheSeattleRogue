@@ -9,6 +9,16 @@ public class GuardRobotBehaviour : Enemy {
     private float pointOfOrigin;
     public float relocationSpeed;
     private float snapThreshold = 0.01F;
+    public float threatHeight;
+
+    private Rigidbody2D EnemyRigidbody;
+    private Animator animator;
+
+
+    //Movement
+    public Vector2 speed;
+    public float acceleration;
+
 
 	// Use this for initialization
 	void Start ()
@@ -16,6 +26,9 @@ public class GuardRobotBehaviour : Enemy {
 	    pointOfOrigin = transform.position.x;
         rightRange = new Vector3(threatRangeRight, 0);
         leftRange = new Vector3(threatRangeLeft, 0);
+
+	    EnemyRigidbody = GetComponent<Rigidbody2D>();
+	    animator = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -25,7 +38,8 @@ public class GuardRobotBehaviour : Enemy {
         {
             transform.position = new Vector3(pointOfOrigin,transform.position.y,transform.position.z);
         }
-	    if (transform.position.x > pointOfOrigin)
+	    
+        if (transform.position.x > pointOfOrigin)
 	    {
 	        transform.Translate(-0.01F*relocationSpeed,0,0);
 	    }
@@ -33,6 +47,10 @@ public class GuardRobotBehaviour : Enemy {
 	    {
             transform.Translate(0.01F * relocationSpeed, 0, 0);
 	    }
+
+        animator.SetBool("isAttacking", (Player.Instance.transform.position.x - transform.position.x < threatRangeRight && Player.Instance.transform.position.x - transform.position.x > 0 || Player.Instance.transform.position.x - transform.position.x > -threatRangeLeft) 
+        /*&& Mathf.Pow(Mathf.Sqrt(Player.Instance.transform.position.y - transform.position.y),2) < threatHeight*/);
+
 	}
     private void OnDrawGizmos()
     {
