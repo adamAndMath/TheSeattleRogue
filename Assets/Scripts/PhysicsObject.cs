@@ -3,6 +3,7 @@
 public class PhysicsObject : MonoBehaviour
 {
     private static int platform;
+
     private static int Platform
     {
         get
@@ -13,6 +14,7 @@ public class PhysicsObject : MonoBehaviour
             return platform;
         }
     }
+
     protected readonly RaycastHit2D[] rayHits = new RaycastHit2D[16];
     protected Collider2D collider2D;
 
@@ -30,7 +32,7 @@ public class PhysicsObject : MonoBehaviour
             for (int i = 0; i < size; i++)
             {
                 RaycastHit2D rayHit = rayHits[i];
-                if (!rayHit.collider.isTrigger && rayHit.point.y - transform.position.y < 0 && Mathf.Abs(rayHit.normal.y) / rayHit.normal.magnitude > 0.99F && CanCollide(rayHit, Vector2.down))
+                if (!rayHit.collider.isTrigger && rayHit.point.y - transform.position.y < 0 && Mathf.Abs(rayHit.normal.y) > 0 && CanCollide(rayHit, Vector2.down))
                     return true;
             }
         }
@@ -56,7 +58,7 @@ public class PhysicsObject : MonoBehaviour
             for (int i = 0; i < size; i++)
             {
                 RaycastHit2D rayHit = rayHits[i];
-                if (!rayHit.collider.isTrigger && move > rayHit.distance && Mathf.Abs(Vector2.Dot(rayHit.normal.normalized, dir)) > 0.99F && Vector2.Dot(rayHit.point - (Vector2)transform.position, dir) > 0 && CanCollide(rayHit, dir))
+                if (!rayHit.collider.isTrigger && move > rayHit.distance && Mathf.Abs(Vector2.Dot(rayHit.normal.normalized, dir)) > 0 && Vector2.Dot(rayHit.point - (Vector2)transform.position, dir) > 0 && CanCollide(rayHit, dir))
                 {
                     move = rayHit.distance;
                     re = true;
@@ -65,6 +67,47 @@ public class PhysicsObject : MonoBehaviour
         }
 
         transform.Translate(move * dir, Space.World);
+        return re;
+    }
+
+    /// <summary>
+    /// Moves the object along the x axis.
+    /// </summary>
+    /// <param name="moveMax">displacement</param>
+    /// <param name="vertical">returns the vertical movement when moving across slopes</param>
+    /// <returns>true if collision occured</returns>
+    public bool MoveHorizontalSloped(float moveMax)
+    {
+        Vector2 dir = Vector2.right * Mathf.Sign(moveMax);
+        float move = moveMax = Mathf.Abs(moveMax);
+        bool re = false;
+
+        int size = collider2D.Cast(dir, rayHits, move);
+        float vertical = 0;
+
+        if (size > 0)
+        {
+            for (int i = 0; i < size; i++)
+            {
+                RaycastHit2D rayHit = rayHits[i];
+                if (!rayHit.collider.isTrigger && move > rayHit.distance && Mathf.Abs(Vector2.Dot(rayHit.normal.normalized, dir)) > 0 && Vector2.Dot(rayHit.point - (Vector2)transform.position, dir) > 0 && CanCollide(rayHit, dir))
+                {
+                    if (Mathf.Abs(Vector2.Dot(rayHit.normal.normalized, dir)) < 0.71F)
+                    {
+                        vertical = -dir.x*(moveMax - rayHit.distance)*rayHit.normal.x/rayHit.normal.y;
+                    }
+                    else
+                    {
+                        vertical = 0;
+                        move = rayHit.distance;
+                    }
+
+                    re = true;
+                }
+            }
+        }
+
+        transform.Translate(move * dir + vertical * Vector2.up, Space.World);
         return re;
     }
 
@@ -86,7 +129,7 @@ public class PhysicsObject : MonoBehaviour
             for (int i = 0; i < size; i++)
             {
                 RaycastHit2D rayHit = rayHits[i];
-                if (!rayHit.collider.isTrigger && move > rayHit.distance && Mathf.Abs(rayHit.normal.y) / rayHit.normal.magnitude > 0.99F && Vector2.Dot(rayHit.point - (Vector2)transform.position, dir) > 0 && CanCollide(rayHit, dir))
+                if (!rayHit.collider.isTrigger && move > rayHit.distance && Mathf.Abs(rayHit.normal.y) > 0 && Vector2.Dot(rayHit.point - (Vector2)transform.position, dir) > 0 && CanCollide(rayHit, dir))
                 {
                     move = rayHit.distance;
                     re = true;
