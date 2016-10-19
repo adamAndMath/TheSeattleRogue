@@ -19,7 +19,6 @@ public class GuardRobotBehaviour : Enemy {
     public Vector2 speed;
     public float acceleration;
 
-
 	// Use this for initialization
 	void Start ()
 	{
@@ -36,6 +35,7 @@ public class GuardRobotBehaviour : Enemy {
     {
         if (transform.position.x - pointOfOrigin < snapThreshold && transform.position.x - pointOfOrigin > 0 || transform.position.x - pointOfOrigin > -snapThreshold && transform.position.x - pointOfOrigin < 0)
         {
+            
             transform.position = new Vector3(pointOfOrigin,transform.position.y,transform.position.z);
         }
 	    
