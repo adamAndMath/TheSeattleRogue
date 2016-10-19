@@ -14,7 +14,7 @@ public class PlayerFly : StateMachineBehaviour
 
     public override void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        player.MoveHorizontal(dir.x*speed*Time.deltaTime);
+        player.MoveHorizontalSloped(dir.x*speed*Time.deltaTime);
         player.MoveVertical(dir.y*speed*Time.deltaTime);
     }
 }
