@@ -1,7 +1,6 @@
 ﻿public class Enemy : PhysicsObject
 {
     public int health;
-    public bool isDamaged;
     public ItemDrop[] drops;
 
     public virtual void Damaged(int damageAmount)
@@ -11,7 +10,6 @@
         {
             Killed();
         }
-        isDamaged = true;
     }
 
     public void Killed()

@@ -6,6 +6,11 @@ public class GuardRobotAttacking : StateMachineBehaviour
     private Enemy enemy;
     public float attackingSpeed;
 
+    //Movement
+    public Vector2 speed;
+    public float acceleration;
+    private float initialSpeed;
+    private Vector2 position;
 	 
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
@@ -18,7 +23,9 @@ public class GuardRobotAttacking : StateMachineBehaviour
         //Debug.Log(Mathf.Pow(Mathf.Sqrt(Player.Instance.transform.position.y - enemy.transform.position.y), 2));
 	    if (Player.Instance.transform.position.x > enemy.transform.position.x)
 	    {
-	        enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(1*attackingSpeed, 0), ForceMode2D.Force);
+	        //enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(1*attackingSpeed, 0), ForceMode2D.Force);
+
+            
 	    }
 
         if (Player.Instance.transform.position.x < enemy.transform.position.x)
