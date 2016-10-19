@@ -22,9 +22,11 @@ GameObject:
   - 212: {fileID: 212000014204862214}
   - 114: {fileID: 114000012730278908}
   - 114: {fileID: 114000010063069668}
+  - 95: {fileID: 95000011983188498}
+  - 50: {fileID: 50000011903425060}
   m_Layer: 0
   m_Name: GuardRobot
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,12 +38,46 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010985636292}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.494, y: -0.577, z: 0}
+  m_LocalPosition: {x: 3.167, y: -0.587, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &50000011903425060
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010985636292}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!95 &95000011983188498
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010985636292}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d4cccfb244d4c1e4596e7217fe3c2064, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114000010063069668
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -73,6 +109,9 @@ MonoBehaviour:
   threatRangeRight: 1
   threatRangeLeft: 3
   relocationSpeed: 1
+  threatHeight: 1
+  speed: {x: 0, y: 0}
+  acceleration: 0
 --- !u!212 &212000014204862214
 SpriteRenderer:
   m_ObjectHideFlags: 1
