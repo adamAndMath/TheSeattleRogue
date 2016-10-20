@@ -113,6 +113,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+--- !u!114 &114000010587647092
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31c9fee4c782e1e4bb9a0ea8f7305952, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LandSoundClip: {fileID: 8300000, guid: 004fd0bcef8e9c24ca8e8cf1e680524d, type: 3}
 --- !u!114 &114000010754454642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -608,7 +620,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Attacking
-  m_Speed: 1
+  m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101000012601823558}
@@ -640,6 +652,7 @@ AnimatorState:
   m_StateMachineBehaviours:
   - {fileID: 114000013951156210}
   - {fileID: 114000011041163420}
+  - {fileID: 114000010587647092}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
