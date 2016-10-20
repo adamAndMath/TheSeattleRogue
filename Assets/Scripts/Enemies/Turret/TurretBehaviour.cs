@@ -10,6 +10,7 @@ public class TurretBehaviour : Enemy
     public bool cooldownOn;
     private bool IsAiming;
 
+    public float placeHolderSpeed;
 	// Use this for initialization
 	protected override void Start ()
 	{
