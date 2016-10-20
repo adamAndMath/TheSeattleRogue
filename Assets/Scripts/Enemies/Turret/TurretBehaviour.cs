@@ -1,11 +1,12 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class TurretBehaviour : Enemy
 {
     private Animator turretAnimator;
     public float turretRange;
     public float cooldown;
-    public float ReloadTime;
+    [NonSerialized]public float ReloadTime;
     public bool cooldownOn;
     private bool IsAiming;
 
@@ -30,6 +31,12 @@ public class TurretBehaviour : Enemy
 
 	    turretAnimator.SetBool("isAiming",turretRange >= (Player.Instance.transform.position - transform.position).magnitude);
 	
+    }
+
+    private void OnDrawGizmos()
+    {
+        UnityEditor.Handles.color = Color.green;
+        UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.forward, turretRange);
     }
 
     public override void Damaged(int damageAmount)
