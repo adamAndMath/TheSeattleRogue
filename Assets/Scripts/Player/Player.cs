@@ -43,4 +43,9 @@ public class Player : PhysicsObject
         hp -= damage;
         animator.SetTrigger("Hit");
     }
+
+    protected override bool CanCollide(RaycastHit2D rayHit, Vector2 dir)
+    {
+        return rayHit.collider.gameObject.layer != Platform || (Input.GetAxisRaw("Vertical") >= 0 && base.CanCollide(rayHit, dir));
+    }
 }
