@@ -4,7 +4,7 @@ public class PhysicsObject : MonoBehaviour
 {
     private static int platform;
 
-    private static int Platform
+    protected static int Platform
     {
         get
         {
@@ -141,7 +141,7 @@ public class PhysicsObject : MonoBehaviour
         return re;
     }
 
-    protected bool CanCollide(RaycastHit2D rayHit, Vector2 dir)
+    protected virtual bool CanCollide(RaycastHit2D rayHit, Vector2 dir)
     {
         return rayHit.collider.gameObject.layer != Platform || (rayHit.normal.y > 0 && Vector2.Dot(dir, rayHit.normal) < 0);
     }
