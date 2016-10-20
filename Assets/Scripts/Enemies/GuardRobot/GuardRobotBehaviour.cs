@@ -15,10 +15,6 @@ public class GuardRobotBehaviour : Enemy {
     private Animator animator;
 
 
-    //Movement
-    public Vector2 speed;
-    public float acceleration;
-
 	// Use this for initialization
 	void Start ()
 	{
