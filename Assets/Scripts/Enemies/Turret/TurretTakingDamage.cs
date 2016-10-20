@@ -4,13 +4,12 @@ using System.Collections;
 public class TurretTakingDamage : StateMachineBehaviour
 {
     private SpriteRenderer renderer;
-    private Color color;
+    private Color color = Color.white;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         renderer = animator.GetComponent<SpriteRenderer>();
-        color = renderer.color;
         renderer.color = Color.red;
     }
 
