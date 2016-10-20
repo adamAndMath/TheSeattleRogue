@@ -1,23 +1,7 @@
-﻿using UnityEngine;
-using System.Collections;
-
-public class Enemy : MonoBehaviour
+﻿public class Enemy : PhysicsObject
 {
     public int health;
-    public GameObject valuta;
-    public bool isDamaged;
-
-	// Use this for initialization
-	void Start () 
-    {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () 
-    {
-	
-	}
+    public ItemDrop[] drops;
 
     public virtual void Damaged(int damageAmount)
     {
@@ -26,12 +10,15 @@ public class Enemy : MonoBehaviour
         {
             Killed();
         }
-        isDamaged = true;
     }
 
     public void Killed()
     {
-        Instantiate(valuta, gameObject.transform.position, Quaternion.identity);
+        foreach (ItemDrop drop in drops)
+        {
+            drop.Drop(transform.position);
+        }
+
         DestroyObject(gameObject);
     }
 }

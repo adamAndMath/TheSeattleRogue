@@ -15,6 +15,6 @@ public class PlayerMove : StateMachineBehaviour
         if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.1F)
             player.Direction = 0 > Input.GetAxisRaw("Horizontal");
         float move = Input.GetAxis("Horizontal")*speed*Time.deltaTime;
-        player.MoveHorizontal(move);
+        player.MoveHorizontalSloped(move);
     }
 }

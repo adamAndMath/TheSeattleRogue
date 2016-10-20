@@ -1,17 +1,17 @@
-﻿using UnityEngine;
-using System.Collections;
-using JetBrains.Annotations;
+﻿using System;
+using UnityEngine;
 
 public class TurretBehaviour : Enemy
 {
     private Animator turretAnimator;
     public float turretRange;
     public float cooldown;
-    private float ReloadTime;
-    public bool cooldownOn = false;
+    [NonSerialized]public float ReloadTime;
+    public bool cooldownOn;
+    private bool IsAiming;
 
 	// Use this for initialization
-	void Start ()
+	protected override void Start ()
 	{
 	    turretAnimator = GetComponent<Animator>();
 	}
@@ -22,6 +22,7 @@ public class TurretBehaviour : Enemy
 	    if (ReloadTime > 0)
 	    {
 	        ReloadTime = ReloadTime - Time.deltaTime;
+	        cooldownOn = true;
 	    }
 	    else
 	    {
@@ -29,7 +30,14 @@ public class TurretBehaviour : Enemy
 	    }
 
 	    turretAnimator.SetBool("isAiming",turretRange >= (Player.Instance.transform.position - transform.position).magnitude);
-	}
+	
+    }
+
+    private void OnDrawGizmos()
+    {
+        UnityEditor.Handles.color = Color.green;
+        UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.forward, turretRange);
+    }
 
     public override void Damaged(int damageAmount)
     {
@@ -37,17 +45,4 @@ public class TurretBehaviour : Enemy
         turretAnimator.SetBool("isTakingDamage", true);
     }
 
-    public void RayCast()
-    {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, turretRange);
-        Player player = hit.collider.GetComponent<Player>();
-
-        if (player != null && cooldownOn == false)
-        {
-            turretAnimator.SetBool("readyToShoot", true);
-            cooldownOn = true;
-            ReloadTime = cooldown;
-        }    
-        
-    }
 }

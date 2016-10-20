@@ -1,18 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TurretShoot : StateMachineBehaviour {
+public class TurretShoot : StateMachineBehaviour
+{
 
+    public GameObject bulletGameObject;
 	 //OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-	public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
-    {
-	    
+	public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+	{
+
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-	//override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-	//
-	//}
+    public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+	{
+	    Instantiate(bulletGameObject, animator.transform.position + animator.transform.up*0.45f, animator.transform.rotation);
+        animator.SetBool("readyToShoot", false);
+	}
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
 	//override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
