@@ -23,6 +23,7 @@ GameObject:
   - 58: {fileID: 58000013265778030}
   - 95: {fileID: 95000012121501212}
   - 114: {fileID: 114000011189839446}
+  - 114: {fileID: 114000010143594650}
   m_Layer: 0
   m_Name: StandardTurret
   m_TagString: Enemy
@@ -53,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010667431374}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.341, y: 1.397, z: 0}
+  m_LocalPosition: {x: -2.05, y: 1, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -104,6 +105,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000010143594650
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010667431374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d239e4fca2576844291b7c530106387f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioPlayer: {fileID: 1000013845088750, guid: 67ce6380078e47a4f9f37fd5901bbc75,
+    type: 2}
 --- !u!114 &114000011189839446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -116,7 +130,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  isDamaged: 0
   drops:
   - obj: {fileID: 1000012271734224, guid: 70488e5cd1ef718409e53b076d2cfd65, type: 2}
     chance: 1
