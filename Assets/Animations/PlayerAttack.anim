@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: PlayerDash
+  m_Name: PlayerAttack
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -54,7 +54,7 @@ AnimationClip:
   - time: 0
     functionName: Play
     data: 
-    objectReferenceParameter: {fileID: 8300000, guid: 11ab466e1c6d1f7438ce15b1c0b83428,
+    objectReferenceParameter: {fileID: 8300000, guid: 2228602b23fb03b4cb203f842602fbdc,
       type: 3}
     floatParameter: 0
     intParameter: 0
