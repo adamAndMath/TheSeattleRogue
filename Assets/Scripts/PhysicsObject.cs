@@ -25,7 +25,7 @@ public class PhysicsObject : MonoBehaviour
 
     protected bool IsGrounded()
     {
-        int size = collider2D.Cast(Vector2.down, rayHits, 0.01F);
+        int size = collider2D.Cast(Vector2.down, rayHits, 0F);
 
         if (size > 0)
         {
@@ -33,7 +33,10 @@ public class PhysicsObject : MonoBehaviour
             {
                 RaycastHit2D rayHit = rayHits[i];
                 if (!rayHit.collider.isTrigger && rayHit.point.y - transform.position.y < 0 && Mathf.Abs(rayHit.normal.y) > 0 && CanCollide(rayHit, Vector2.down))
+                {
+                    Debug.Log(rayHit.distance);
                     return true;
+                }
             }
         }
 
@@ -143,6 +146,6 @@ public class PhysicsObject : MonoBehaviour
 
     protected virtual bool CanCollide(RaycastHit2D rayHit, Vector2 dir)
     {
-        return rayHit.collider.gameObject.layer != Platform || (rayHit.normal.y > 0 && Vector2.Dot(dir, rayHit.normal) < 0);
+        return rayHit.collider.gameObject.layer != Platform || (rayHit.normal.y > 0 && Vector2.Dot(dir, rayHit.normal) < 0 && !collider2D.OverlapPoint(rayHit.point));
     }
 }
