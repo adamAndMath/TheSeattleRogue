@@ -9,6 +9,7 @@ public class PlaySound : MonoBehaviour
     {
         GameObject playerObject = Instantiate(AudioPlayer);
         playerObject.transform.position = transform.position;
+        playerObject.hideFlags = HideFlags.HideInHierarchy;
 	    audio = playerObject.GetComponent<AudioSource>();
         audio.clip = sound;
         audio.Play();

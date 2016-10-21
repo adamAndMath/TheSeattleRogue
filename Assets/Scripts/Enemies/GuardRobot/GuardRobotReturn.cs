@@ -2,16 +2,36 @@
 using System.Collections;
 
 public class GuardRobotReturn : StateMachineBehaviour {
+    private GuardRobotBehaviour enemy;
+    private float speed;
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-	//override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-	//
-	//}
+	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+	{
+	    enemy = animator.GetComponent<GuardRobotBehaviour>();
+	    enemy.speed = 0;
+	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-	//override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-	//
-	//}
+	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
+    {
+        if (enemy.transform.position.x - enemy.pointOfOrigin < enemy.snapThreshold && enemy.transform.position.x - enemy.pointOfOrigin > 0 || enemy.transform.position.x - enemy.pointOfOrigin > -enemy.snapThreshold && enemy.transform.position.x - enemy.pointOfOrigin < 0)
+        {
+            enemy.transform.position = new Vector3(enemy.pointOfOrigin, enemy.transform.position.y, enemy.transform.position.z);
+            animator.SetBool("isReturningHome", false);
+            Debug.Log(animator.GetBool("isReturningHome"));
+        }
+
+        if (enemy.transform.position.x > enemy.pointOfOrigin)
+        {
+            enemy.MoveHorizontalSloped(-0.01F * enemy.relocationSpeed);
+        }
+        else
+        {
+            enemy.MoveHorizontalSloped(0.01F * enemy.relocationSpeed);
+        }
+
+	}
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
 	//override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
