@@ -5,6 +5,8 @@ public class Currency : PhysicsObject
     public int val;
     public float gravity;
     public Vector2 speed;
+    public AudioSource audioObject;
+    public AudioClip coinSoundAudioClip;
 
     void Update()
     {
@@ -25,6 +27,12 @@ public class Currency : PhysicsObject
             {
                 player.money += val;
                 Destroy(gameObject);
+
+                AudioSource clone = Instantiate(audioObject);
+                clone.clip = coinSoundAudioClip;
+                clone.Play();
+                clone.gameObject.hideFlags = HideFlags.HideInHierarchy;
+                Destroy(clone.gameObject,3);
             }
         }
     }
