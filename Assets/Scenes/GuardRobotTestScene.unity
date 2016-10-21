@@ -318,6 +318,11 @@ Prefab:
       propertyPath: gravity
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012730278908, guid: 2dd222dd33d95bf44b809baef75d72d2,
+        type: 2}
+      propertyPath: gravity
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2dd222dd33d95bf44b809baef75d72d2, type: 2}
   m_IsPrefabParent: 0
