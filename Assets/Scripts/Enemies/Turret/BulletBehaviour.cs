@@ -29,7 +29,7 @@ public class BulletBehaviour : MonoBehaviour
             {
                 RaycastHit2D rayHit = hits[i];
 
-                if (!rayHit.collider.isTrigger && dist > rayHit.distance)
+                if ((!rayHit.collider.isTrigger || rayHit.collider.GetComponent<Player>()) && dist > rayHit.distance)
                 {
                     dist = rayHit.distance;
                     hit = rayHit.collider;
