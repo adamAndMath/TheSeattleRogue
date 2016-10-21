@@ -19,7 +19,8 @@ public class GuardRobotAttacking : StateMachineBehaviour
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
-        //Debug.Log(Mathf.Pow(Mathf.Sqrt(Player.Instance.transform.position.y - enemy.transform.position.y), 2));
+        
+
 	    if (Player.Instance.transform.position.x > enemy.transform.position.x)
 	    {  
 	        position = acceleration*Mathf.Pow(Time.deltaTime,2)*0.5f + enemy.speed*Time.deltaTime;
