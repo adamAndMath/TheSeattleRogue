@@ -90,7 +90,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  isDamaged: 0
   drops: []
 --- !u!114 &114000012730278908
 MonoBehaviour:
@@ -104,14 +103,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  isDamaged: 0
   drops: []
   threatRangeRight: 1
   threatRangeLeft: 3
   relocationSpeed: 1
   threatHeight: 1
-  speed: {x: 0, y: 0}
-  acceleration: 0
+  pointOfOrigin: 0
+  snapThreshold: 0
+  yPoint: 0
+  speed: 0
 --- !u!212 &212000014204862214
 SpriteRenderer:
   m_ObjectHideFlags: 1
