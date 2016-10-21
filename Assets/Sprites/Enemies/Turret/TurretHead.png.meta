@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 93426589bb3fa25409c16c7736bee788
-timeCreated: 1477002033
+guid: 083689e6745e48b4c9a5b2368d7a6b82
+timeCreated: 1477073079
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -29,11 +29,7 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-<<<<<<< HEAD:Assets/Sprites/Forground/Bricks/BrickCornerPiece_Bottom.png.meta
     filterMode: 0
-=======
-    filterMode: -1
->>>>>>> origin/master:Assets/Sprites/Enemies/Melee enemy.png.meta
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -48,11 +44,16 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 50
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
-  buildTargetSettings: []
+  buildTargetSettings:
+  - buildTarget: Standalone
+    maxTextureSize: 512
+    textureFormat: -2
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
   spriteSheet:
     serializedVersion: 2
     sprites: []
