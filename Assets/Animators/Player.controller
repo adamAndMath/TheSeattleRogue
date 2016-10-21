@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 310d62ac5a02c9547b6e3f4cfbbeb949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: 27
-  startSpeed: 14
+  gravity: 35
+  startSpeed: 16
   fallState: Fall
 --- !u!114 &114000011108214468
 MonoBehaviour:
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2af7915cdad0c214bb31727c8d8af923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 18
 --- !u!114 &114000013363861114
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8503d99cfe0ce3a4da7e070e52dbaada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: 27
+  gravity: 35
 --- !u!114 &114000013975475190
 MonoBehaviour:
   m_ObjectHideFlags: 1
