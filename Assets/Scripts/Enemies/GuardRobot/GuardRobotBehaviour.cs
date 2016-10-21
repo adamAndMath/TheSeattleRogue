@@ -1,23 +1,27 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Runtime.CompilerServices;
 
 public class GuardRobotBehaviour : Enemy {
     public float threatRangeRight;
     public float threatRangeLeft;
-    private Vector3 rightRange;
-    private Vector3 leftRange;
     public float relocationSpeed;
     public float threatHeight;
+    public float speed;
+    private bool gizmosHasBeenDrawn;
     
     public float pointOfOrigin;
-    
     public float snapThreshold;
     public float yPoint;
 
     private Rigidbody2D EnemyRigidbody;
     private Animator animator;
 
-    public float speed;
+    public Vector3 rightRange;
+    public Vector3 leftRange;
+
+    private Vector2 gizmosrightRange;
+    private Vector2 gizmosleftRange;
 
 	// Use this for initialization
 	protected override void Start ()
@@ -26,11 +30,32 @@ public class GuardRobotBehaviour : Enemy {
         pointOfOrigin = transform.position.x;
 	    yPoint = transform.position.y;
 
-        rightRange = new Vector3(threatRangeRight, transform.position.y);
-        leftRange = new Vector3(threatRangeLeft, transform.position.y);
+        rightRange = new Vector3(transform.position.x + threatRangeRight, transform.position.y,0);
+        leftRange = new Vector3(transform.position.x - threatRangeLeft, transform.position.y, 0);
 
 	    EnemyRigidbody = GetComponent<Rigidbody2D>();
 	    animator = GetComponent<Animator>();
+
+	    if (!IsGrounded())
+	    {
+            float move = (gravitySpeed + gravity * Time.deltaTime / 2) * Time.deltaTime;
+            gravitySpeed += gravity * Time.deltaTime;
+
+            MoveVertical(-move);
+	        Debug.Log("This is not on the ground");
+	    }
+	    else
+	    {
+	        speed = 0;
+	        Debug.Log("This is on the ground");
+	    }
+	    if (IsGrounded() && !gizmosHasBeenDrawn)
+	    {
+            gizmosrightRange = new Vector3(transform.position.x + threatRangeRight, transform.position.y);
+            gizmosleftRange = new Vector3(transform.position.x - threatRangeLeft, transform.position.y);
+	        gizmosHasBeenDrawn = true;
+	    }
+
 
 	}
 	
@@ -46,8 +71,8 @@ public class GuardRobotBehaviour : Enemy {
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(transform.position, transform.position-leftRange);
-        Gizmos.DrawLine(transform.position, transform.position+rightRange);
+        Gizmos.DrawLine(transform.position, gizmosleftRange);
+        Gizmos.DrawLine(transform.position, gizmosrightRange);
         Gizmos.DrawWireSphere(new Vector2(pointOfOrigin, yPoint), 0.1f);
     }
 }
