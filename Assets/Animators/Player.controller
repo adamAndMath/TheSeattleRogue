@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 310d62ac5a02c9547b6e3f4cfbbeb949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: 10
-  startSpeed: 5
+  gravity: 28
+  startSpeed: 14
   fallState: Fall
 --- !u!114 &114000010258466164
 MonoBehaviour:
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8503d99cfe0ce3a4da7e070e52dbaada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: 10
+  gravity: 28
 --- !u!114 &114000011383919212
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43a7c437dcccf7b458fcb77fe4ff799f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
 --- !u!114 &114000013951156210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43a7c437dcccf7b458fcb77fe4ff799f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
 --- !u!114 &114000014049373942
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43a7c437dcccf7b458fcb77fe4ff799f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
 --- !u!1101 &1101000010058811230
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
