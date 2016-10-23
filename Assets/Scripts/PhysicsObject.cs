@@ -34,7 +34,6 @@ public class PhysicsObject : MonoBehaviour
                 RaycastHit2D rayHit = rayHits[i];
                 if (!rayHit.collider.isTrigger && rayHit.point.y - transform.position.y < 0 && Mathf.Abs(rayHit.normal.y) > 0 && CanCollide(rayHit, Vector2.down))
                 {
-                    Debug.Log(rayHit.distance);
                     return true;
                 }
             }
