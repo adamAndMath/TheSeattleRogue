@@ -24,6 +24,8 @@ GameObject:
   - 114: {fileID: 114000010063069668}
   - 95: {fileID: 95000011983188498}
   - 50: {fileID: 50000011903425060}
+  - 61: {fileID: 61000013101403686}
+  - 61: {fileID: 61000013090525642}
   m_Layer: 0
   m_Name: GuardRobot
   m_TagString: Enemy
@@ -38,8 +40,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010985636292}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.167, y: -0.587, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: 4.5574703, y: -3.6306946, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -61,6 +63,34 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &61000013090525642
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010985636292}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.2, y: 0.2}
+--- !u!61 &61000013101403686
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010985636292}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: -0.22}
+  serializedVersion: 2
+  m_Size: {x: 1.29, y: 1}
 --- !u!95 &95000011983188498
 Animator:
   serializedVersion: 3
@@ -91,6 +121,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   drops: []
+  gravity: 10
+  gravitySpeed: 0
 --- !u!114 &114000012730278908
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -102,16 +134,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95a2132fec69de7479bf1b3637f768de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 5
   drops: []
-  threatRangeRight: 1
-  threatRangeLeft: 3
+  gravity: 10
+  gravitySpeed: 0
+  threatRangeRight: 2
+  threatRangeLeft: 6
   relocationSpeed: 1
   threatHeight: 1
-  pointOfOrigin: 0
-  snapThreshold: 0
-  yPoint: 0
   speed: 0
+  pointOfOrigin: 0
+  snapThreshold: 0.02
+  yPoint: 0
+  rightRange: {x: 0, y: 0, z: 0}
+  leftRange: {x: 0, y: 0, z: 0}
 --- !u!212 &212000014204862214
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -141,7 +177,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 357aefa11a55ca748be87f30978fd7dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

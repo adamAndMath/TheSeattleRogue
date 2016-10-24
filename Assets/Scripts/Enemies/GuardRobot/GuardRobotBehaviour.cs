@@ -23,6 +23,8 @@ public class GuardRobotBehaviour : Enemy {
     private Vector2 gizmosrightRange;
     private Vector2 gizmosleftRange;
 
+    private Collider2D guardRobotCol;
+
 	// Use this for initialization
 	protected override void Start ()
 	{
@@ -34,6 +36,8 @@ public class GuardRobotBehaviour : Enemy {
 
 	    EnemyRigidbody = GetComponent<Rigidbody2D>();
 	    animator = GetComponent<Animator>();
+
+        guardRobotCol = this.GetComponent<Collider2D>();
 	}
 	
 	// Update is called once per frame
@@ -63,6 +67,10 @@ public class GuardRobotBehaviour : Enemy {
         animator.SetBool("isAttacking", (Player.Instance.transform.position.x - transform.position.x < threatRangeRight && Player.Instance.transform.position.x - transform.position.x > 0 || Player.Instance.transform.position.x - transform.position.x > -threatRangeLeft)
         && Mathf.Abs(Player.Instance.transform.position.y - transform.position.y) <= threatHeight);
 
+        if (guardRobotCol.IsTouching(Player.Instance.GetComponent<Collider2D>()))
+        {
+            Player.Instance.Damaged(1);
+        }
 	}
     private void OnDrawGizmos()
     {
@@ -70,6 +78,11 @@ public class GuardRobotBehaviour : Enemy {
         Gizmos.DrawLine(transform.position, gizmosleftRange);
         Gizmos.DrawLine(transform.position, gizmosrightRange);
         Gizmos.DrawWireSphere(new Vector2(pointOfOrigin, yPoint), 0.1f);
+    }
+    public override void Damaged(int damageAmount)
+    {
+        base.Damaged(damageAmount);
+        animator.SetBool("isTakingDamage", true);
     }
 }
 

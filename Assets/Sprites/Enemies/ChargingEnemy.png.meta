@@ -1,17 +1,13 @@
 fileFormatVersion: 2
-guid: 7b05ca2c410d01c4a9aa63b3047e0dfb
-timeCreated: 1476962150
+guid: d84f651d3931a154dbdfb52f5c7a1594
+timeCreated: 1477343923
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: SpriteSheet_Idle_0
-    21300002: SpriteSheet_Idle_1
-    21300004: SpriteSheet_Idle_2
-    21300006: SpriteSheet_Idle_3
-    21300008: SpriteSheet_Idle_4
-    21300010: SpriteSheet_Idle_5
-    21300012: SpriteSheet_Idle_6
-    21300014: SpriteSheet_Idle_7
+    21300000: ChargingEnemy_0
+    21300002: ChargingEnemy_1
+    21300004: ChargingEnemy_2
+    21300006: ChargingEnemy_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -52,7 +48,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 70
+  spritePixelsToUnits: 100
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
@@ -61,104 +57,52 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpriteSheet_Idle_0
+      name: ChargingEnemy_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 128
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SpriteSheet_Idle_1
+      name: ChargingEnemy_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 100
         y: 0
-        width: 128
-        height: 128
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SpriteSheet_Idle_2
+      name: ChargingEnemy_2
       rect:
         serializedVersion: 2
-        x: 256
+        x: 200
         y: 0
-        width: 128
-        height: 128
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SpriteSheet_Idle_3
+      name: ChargingEnemy_3
       rect:
         serializedVersion: 2
-        x: 384
+        x: 300
         y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: SpriteSheet_Idle_4
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: SpriteSheet_Idle_5
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: SpriteSheet_Idle_6
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: SpriteSheet_Idle_7
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 0
-        width: 128
-        height: 128
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -10,6 +10,7 @@ public class GuardRobotPatrol : StateMachineBehaviour
     private bool isFinishedPatroling;
 
     public float idleTimer;
+    private float patrolTime;
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
@@ -21,12 +22,14 @@ public class GuardRobotPatrol : StateMachineBehaviour
 	public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
         idleTimer = idleTimer - Time.deltaTime;
-	    if (idleTimer <= 0)
+	    patrolTime = patrolTime - Time.deltaTime;
+	    if (idleTimer <= 0 && patrolTime <= 0)
 	    {
 	        if (enemy.transform.position.x >= enemy.rightRange.x)
 	        {
 	            hasPassedRightPoint = true;
 	            isFinishedPatroling = false;
+	            patrolTime = 2;
 	        }
 	        if (hasPassedRightPoint != true)
 	        {
@@ -39,13 +42,12 @@ public class GuardRobotPatrol : StateMachineBehaviour
 	            if (enemy.transform.position.x <= enemy.leftRange.x)
 	            {
 	                hasPassedLeftPoint = true;
+	                patrolTime = 2;
 	            }
 	        }
 
 	        if (hasPassedLeftPoint && hasPassedRightPoint)
 	        {
-                Debug.Log("This is the destination i currently am in "+enemy.transform.position.x);
-	            Debug.Log("This is the place i want to be "+enemy.pointOfOrigin);
                 Debug.Log("Can't get home Left");
 
 	            enemy.MoveHorizontalSloped(0.02f * enemy.relocationSpeed);
