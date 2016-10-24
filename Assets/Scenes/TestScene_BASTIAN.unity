@@ -1472,7 +1472,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010728202398, guid: f45c4e0fa39e4de48bbe2478dffd186c, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114000011300624100, guid: f45c4e0fa39e4de48bbe2478dffd186c,
         type: 2}
@@ -2666,7 +2666,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &774450122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3329,6 +3329,10 @@ Prefab:
     - target: {fileID: 1000012353662160, guid: f45c4e0fa39e4de48bbe2478dffd186c, type: 2}
       propertyPath: m_Name
       value: SpawnNode (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012353662160, guid: f45c4e0fa39e4de48bbe2478dffd186c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f45c4e0fa39e4de48bbe2478dffd186c, type: 2}
@@ -6849,7 +6853,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1 &1895944725
 GameObject:
   m_ObjectHideFlags: 0

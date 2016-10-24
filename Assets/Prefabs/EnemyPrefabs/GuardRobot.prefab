@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010985636292}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.79, y: 0.23, z: 0}
+  m_LocalPosition: {x: 4.5574703, y: -3.6306946, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -88,9 +88,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -0.18}
+  m_Offset: {x: 0, y: -0.22}
   serializedVersion: 2
-  m_Size: {x: 0.88, y: 0.73}
+  m_Size: {x: 1.29, y: 1}
 --- !u!95 &95000011983188498
 Animator:
   serializedVersion: 3
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95a2132fec69de7479bf1b3637f768de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 5
   drops: []
   gravity: 10
   gravitySpeed: 0
