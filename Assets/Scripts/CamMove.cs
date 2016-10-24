@@ -24,7 +24,7 @@ public class CamMove : MonoBehaviour
             Mathf.Clamp(playerPos.y + offset.y, min.y + camSize.y, max.y - camSize.y), z);
     }
 
-    void OnDrawGizmos()
+    void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
         Gizmos.DrawLine(new Vector3(min.x, min.y), new Vector3(min.x, max.y));
