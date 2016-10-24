@@ -1,17 +1,18 @@
 fileFormatVersion: 2
-guid: 7b05ca2c410d01c4a9aa63b3047e0dfb
-timeCreated: 1476962150
+guid: 4e832151ead9c0640ac522570649fcc9
+timeCreated: 1477330056
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: SpriteSheet_Idle_0
-    21300002: SpriteSheet_Idle_1
-    21300004: SpriteSheet_Idle_2
-    21300006: SpriteSheet_Idle_3
-    21300008: SpriteSheet_Idle_4
-    21300010: SpriteSheet_Idle_5
-    21300012: SpriteSheet_Idle_6
-    21300014: SpriteSheet_Idle_7
+    21300000: SpriteSheet_MeleeAttack 1_0
+    21300002: SpriteSheet_MeleeAttack 1_1
+    21300004: SpriteSheet_MeleeAttack 1_2
+    21300006: SpriteSheet_MeleeAttack 1_3
+    21300008: SpriteSheet_MeleeAttack 1_4
+    21300010: SpriteSheet_MeleeAttack 1_5
+    21300012: SpriteSheet_MeleeAttack 1_6
+    21300014: SpriteSheet_MeleeAttack 1_7
+    21300016: SpriteSheet_MeleeAttack 1_8
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -61,7 +62,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpriteSheet_Idle_0
+      name: SpriteSheet_MeleeAttack 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -74,7 +75,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SpriteSheet_Idle_1
+      name: SpriteSheet_MeleeAttack 1_1
       rect:
         serializedVersion: 2
         x: 128
@@ -87,7 +88,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SpriteSheet_Idle_2
+      name: SpriteSheet_MeleeAttack 1_2
       rect:
         serializedVersion: 2
         x: 256
@@ -100,7 +101,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SpriteSheet_Idle_3
+      name: SpriteSheet_MeleeAttack 1_3
       rect:
         serializedVersion: 2
         x: 384
@@ -113,7 +114,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SpriteSheet_Idle_4
+      name: SpriteSheet_MeleeAttack 1_4
       rect:
         serializedVersion: 2
         x: 512
@@ -126,7 +127,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SpriteSheet_Idle_5
+      name: SpriteSheet_MeleeAttack 1_5
       rect:
         serializedVersion: 2
         x: 640
@@ -139,7 +140,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SpriteSheet_Idle_6
+      name: SpriteSheet_MeleeAttack 1_6
       rect:
         serializedVersion: 2
         x: 768
@@ -152,10 +153,23 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SpriteSheet_Idle_7
+      name: SpriteSheet_MeleeAttack 1_7
       rect:
         serializedVersion: 2
         x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_MeleeAttack 1_8
+      rect:
+        serializedVersion: 2
+        x: 1024
         y: 0
         width: 128
         height: 128

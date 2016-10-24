@@ -24,6 +24,7 @@ GameObject:
   - 114: {fileID: 114000010063069668}
   - 95: {fileID: 95000011983188498}
   - 50: {fileID: 50000011903425060}
+  - 61: {fileID: 61000013101403686}
   m_Layer: 0
   m_Name: GuardRobot
   m_TagString: Enemy
@@ -38,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010985636292}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.167, y: -0.587, z: 0}
+  m_LocalPosition: {x: 4.172128, y: -3.31, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -61,6 +62,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &61000013101403686
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010985636292}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: -0.18}
+  serializedVersion: 2
+  m_Size: {x: 0.88, y: 0.73}
 --- !u!95 &95000011983188498
 Animator:
   serializedVersion: 3
@@ -91,6 +106,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   drops: []
+  gravity: 10
+  gravitySpeed: 0
 --- !u!114 &114000012730278908
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -104,14 +121,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   drops: []
+  gravity: 10
+  gravitySpeed: 0
   threatRangeRight: 1
   threatRangeLeft: 3
   relocationSpeed: 1
   threatHeight: 1
-  pointOfOrigin: 0
-  snapThreshold: 0
-  yPoint: 0
   speed: 0
+  pointOfOrigin: 0
+  snapThreshold: 0.02
+  yPoint: 0
+  rightRange: {x: 0, y: 0, z: 0}
+  leftRange: {x: 0, y: 0, z: 0}
 --- !u!212 &212000014204862214
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -141,7 +162,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 357aefa11a55ca748be87f30978fd7dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
