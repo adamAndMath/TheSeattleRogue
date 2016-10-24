@@ -506,7 +506,7 @@ PlayerSettings:
   XboxOne::VR::enabledDevices: []
   iOS::VR::enabledDevices: []
   tvOS::VR::enabledDevices: []
-  cloudProjectId: 50503029-4a96-462d-82f2-38ede28a0f19
-  projectName: Oregon
-  organizationId: mathias-461835
+  cloudProjectId: e352a438-7c6b-427f-9ee0-88a211f064ec
+  projectName: Seattle rogue
+  organizationId: bastian-staunstrup
   cloudEnabled: 0

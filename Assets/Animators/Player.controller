@@ -137,6 +137,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+--- !u!114 &114000012591122504
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31c9fee4c782e1e4bb9a0ea8f7305952, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LandSoundObject: {fileID: 1000010406704150, guid: ec91070f85330f6488fe5f760ca32829,
+    type: 2}
 --- !u!114 &114000012703085084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -571,7 +584,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Fly
-  m_Speed: 4
+  m_Speed: 0.1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101000010058811230}
@@ -628,6 +641,7 @@ AnimatorState:
   m_StateMachineBehaviours:
   - {fileID: 114000013363861114}
   - {fileID: 114000012227625738}
+  - {fileID: 114000012591122504}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1

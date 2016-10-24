@@ -54,8 +54,8 @@ AnimationClip:
   - time: 0
     functionName: Play
     data: 
-    objectReferenceParameter: {fileID: 8300000, guid: bc277ece524ceea47be67e55a0189681,
-      type: 3}
+    objectReferenceParameter: {fileID: 1000010438839498, guid: 74e48ba603b87564c939c3ad3952d400,
+      type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

@@ -3,15 +3,13 @@
 public class PlaySound : MonoBehaviour
 {
     private AudioSource audio;
-    public GameObject AudioPlayer;
 
-    public void Play(AudioClip sound)
+    public void Play(GameObject AudioSource)
     {
-        GameObject playerObject = Instantiate(AudioPlayer);
+        GameObject playerObject = Instantiate(AudioSource);
         playerObject.transform.position = transform.position;
         playerObject.hideFlags = HideFlags.HideInHierarchy;
 	    audio = playerObject.GetComponent<AudioSource>();
-        audio.clip = sound;
         audio.Play();
         Destroy(playerObject,3);
     }
