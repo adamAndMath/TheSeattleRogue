@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TurretTakingDamage : StateMachineBehaviour
+public class EnemyTakingDamage : StateMachineBehaviour
 {
     private SpriteRenderer renderer;
     private Color color = Color.white;
