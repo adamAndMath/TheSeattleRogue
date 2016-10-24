@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 310d62ac5a02c9547b6e3f4cfbbeb949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: 27
-  startSpeed: 14
+  gravity: 35
+  startSpeed: 16
   fallState: Fall
 --- !u!114 &114000011108214468
 MonoBehaviour:
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2af7915cdad0c214bb31727c8d8af923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 18
 --- !u!114 &114000013363861114
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -171,7 +171,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8503d99cfe0ce3a4da7e070e52dbaada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: 27
+  gravity: 35
+--- !u!114 &114000013975475190
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38fa7722c3852a34ea8130d30a8dd38b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1101 &1101000010058811230
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -589,7 +600,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101000012601823558}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 114000013975475190}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
