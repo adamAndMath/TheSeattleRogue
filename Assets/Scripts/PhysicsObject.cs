@@ -143,6 +143,18 @@ public class PhysicsObject : MonoBehaviour
         return re;
     }
 
+    /// <summary>
+    /// Wrapper for canstant acceleration movement
+    /// </summary>
+    /// <param name="acceleration">the acceleration of the object</param>
+    /// <param name="speed">the speed of the object. (Will be updated to the objects new speed)</param>
+    /// <returns>delta position</returns>
+    public static float ConstantAcceleration(float acceleration, ref float speed)
+    {
+        speed += Time.deltaTime*acceleration;
+        return (speed - Time.deltaTime*acceleration/2)*Time.deltaTime;
+    }
+
     protected virtual bool CanCollide(RaycastHit2D rayHit, Vector2 dir)
     {
         return rayHit.collider.gameObject.layer != Platform || (rayHit.normal.y > 0 && Vector2.Dot(dir, rayHit.normal) < 0 && !collider2D.OverlapPoint(rayHit.point));

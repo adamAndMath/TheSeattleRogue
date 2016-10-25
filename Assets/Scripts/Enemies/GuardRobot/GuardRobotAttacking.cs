@@ -22,14 +22,12 @@ public class GuardRobotAttacking : StateMachineBehaviour
         
 
 	    if (Player.Instance.transform.position.x > enemy.transform.position.x)
-	    {  
-	        position = acceleration*Mathf.Pow(Time.deltaTime,2)*0.5f + enemy.speed*Time.deltaTime;
-	        enemy.speed += acceleration*Time.deltaTime;
+	    {
+	        position = PhysicsObject.ConstantAcceleration(acceleration, ref enemy.speed);
 	    }
         else
 	    {
-	        position = -acceleration*Mathf.Pow(Time.deltaTime, 2)*0.5f + enemy.speed*Time.deltaTime;
-            enemy.speed -= acceleration * Time.deltaTime;
+            position = PhysicsObject.ConstantAcceleration(-acceleration, ref enemy.speed);
         }
 
         Debug.Log(position);
