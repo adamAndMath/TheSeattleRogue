@@ -1,17 +1,27 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ProjectileBehaviour : MonoBehaviour {
+public class ProjectileBehaviour : PhysicsObject
+{
+    public float horizontalSpeed;
+    public float verticalSpeed;
+    public float acceleration;
+    private float startingSpeed;
 
-	// Use this for initialization
-	void Start () 
-    {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () 
-    {
-	
+    private GameObject smokeCloud;
+
+	void Update ()
+	{
+
+	    MoveVertical(ConstantAcceleration(-acceleration, ref startingSpeed));
+        
+        MoveHorizontal(-horizontalSpeed*Time.deltaTime);
+	    MoveVertical(verticalSpeed*Time.deltaTime);
+
+	    if (IsGrounded())
+	    {
+	        Instantiate(smokeCloud, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+	    }
 	}
 }

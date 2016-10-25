@@ -3,8 +3,10 @@ using System.Collections;
 
 public class PlantShooterShoot : StateMachineBehaviour
 {
-    public GameObject projectiles;
-    public  GameObject fastProjectile;
+    public GameObject projectilesRight;
+    public GameObject projectilesLeft;
+    public GameObject fastProjectileLeft;
+    public GameObject fastProjectileRight;
 
     public Enemy enemy;
 
@@ -19,29 +21,30 @@ public class PlantShooterShoot : StateMachineBehaviour
 	    enemy = animator.GetComponent<Enemy>();
 
 
-        Instantiate(fastProjectile, enemy.transform.Find("PointOfShooting").transform.position, startingRotation);
-        Instantiate(fastProjectile, enemy.transform.Find("PointOfShooting").transform.position, negativeStartingRotation);
+        Instantiate(fastProjectileRight, enemy.transform.Find("PointOfShooting").transform.position, Quaternion.identity);
+        Instantiate(fastProjectileLeft, enemy.transform.Find("PointOfShooting").transform.position, Quaternion.identity);
 
-        
+        Instantiate(projectilesRight, enemy.transform.Find("PointOfShooting").transform.position, Quaternion.identity);
+        Instantiate(projectilesLeft, enemy.transform.Find("PointOfShooting").transform.position, Quaternion.identity);
 
+        animator.SetBool("isShooting", false);
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-	{
+	//override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+	/*{
 	    timer -= timer - Time.deltaTime;
 	    if (timer <= 0)
 	    {
 	        animator.SetBool("isShooting",false);
 	    }
-	}
+	}*/
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
-    {
-        Instantiate(projectiles, enemy.transform.Find("PointOfShooting").transform.position, startingRotation);
-        Instantiate(projectiles, enemy.transform.Find("PointOfShooting").transform.position, negativeStartingRotation);
-	}
+	//override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
+   //{
+        
+	//}
 
 	// OnStateMove is called right after Animator.OnAnimatorMove(). Code that processes and affects root motion should be implemented here
 	//override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
