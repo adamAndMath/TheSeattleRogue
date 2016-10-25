@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponCollider2D: {fileID: 61000014148133278}
-  maxHP: 3
+  maxHP: 6
   hp: 0
   money: 0
   DashRegenerationRate: 20
