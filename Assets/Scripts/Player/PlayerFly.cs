@@ -10,6 +10,7 @@ public class PlayerFly : StateMachineBehaviour
     {
         player = animator.GetComponent<Player>();
         dir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        player.DashPower -= player.DashCost;
     }
 
     public override void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
