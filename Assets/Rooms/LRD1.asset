@@ -9,11 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6260ed30445b7d9489f571908e66ba34, type: 3}
-  m_Name: U
+  m_Name: LRD1
   m_EditorClassIdentifier: 
   size:
-    x: 10
-    y: 10
+    x: 19
+    y: 11
   entrences: 0
   columns:
   - data:
@@ -21,8 +21,21 @@ MonoBehaviour:
     - wallID: 1
     - wallID: 1
     - wallID: 1
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
     - wallID: 1
     - wallID: 1
+    - wallID: 1
+    - wallID: 1
+  - data:
+    - wallID: 1
+    - wallID: 1
+    - wallID: 1
+    - wallID: 1
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
     - wallID: 1
     - wallID: 1
     - wallID: 1
@@ -32,71 +45,6 @@ MonoBehaviour:
     - wallID: 0
     - wallID: 0
     - wallID: 0
-    - wallID: 0
-    - wallID: 0
-    - wallID: 0
-    - wallID: 0
-    - wallID: 0
-    - wallID: 1
-  - data:
-    - wallID: 1
-    - wallID: 0
-    - wallID: 1
-    - wallID: 0
-    - wallID: 0
-    - wallID: 0
-    - wallID: 0
-    - wallID: 0
-    - wallID: 0
-    - wallID: 1
-  - data:
-    - wallID: 1
-    - wallID: 0
-    - wallID: 1
-    - wallID: 0
-    - wallID: 1
-    - wallID: 0
-    - wallID: 0
-    - wallID: 0
-    - wallID: 0
-    - wallID: 1
-  - data:
-    - wallID: 1
-    - wallID: 0
-    - wallID: 0
-    - wallID: 0
-    - wallID: 1
-    - wallID: 0
-    - wallID: 1
-    - wallID: 0
-    - wallID: 0
-    - wallID: 0
-  - data:
-    - wallID: 1
-    - wallID: 0
-    - wallID: 0
-    - wallID: 0
-    - wallID: 1
-    - wallID: 0
-    - wallID: 1
-    - wallID: 0
-    - wallID: 0
-    - wallID: 0
-  - data:
-    - wallID: 1
-    - wallID: 0
-    - wallID: 1
-    - wallID: 0
-    - wallID: 1
-    - wallID: 0
-    - wallID: 0
-    - wallID: 0
-    - wallID: 0
-    - wallID: 1
-  - data:
-    - wallID: 1
-    - wallID: 0
-    - wallID: 1
     - wallID: 0
     - wallID: 0
     - wallID: 0
@@ -114,14 +62,184 @@ MonoBehaviour:
     - wallID: 0
     - wallID: 0
     - wallID: 0
+    - wallID: 0
+    - wallID: 1
+  - data:
+    - wallID: 1
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 1
+  - data:
+    - wallID: 1
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 1
+  - data:
+    - wallID: 1
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 1
+  - data:
+    - wallID: 1
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 1
+  - data:
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 1
+  - data:
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 1
+  - data:
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 1
+  - data:
+    - wallID: 1
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 1
+  - data:
+    - wallID: 1
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 1
+  - data:
+    - wallID: 1
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 1
+  - data:
+    - wallID: 1
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 1
+  - data:
+    - wallID: 1
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 1
+  - data:
+    - wallID: 1
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
     - wallID: 1
   - data:
     - wallID: 1
     - wallID: 1
     - wallID: 1
     - wallID: 1
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
     - wallID: 1
     - wallID: 1
+    - wallID: 1
+    - wallID: 1
+  - data:
+    - wallID: 1
+    - wallID: 1
+    - wallID: 1
+    - wallID: 1
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
     - wallID: 1
     - wallID: 1
     - wallID: 1
