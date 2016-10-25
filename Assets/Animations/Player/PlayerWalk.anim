@@ -101,16 +101,16 @@ AnimationClip:
   - time: 0.033333335
     functionName: Play
     data: 
-    objectReferenceParameter: {fileID: 8300000, guid: 84c4c2b6ae1c49646b98aed3ca77f0bf,
-      type: 3}
+    objectReferenceParameter: {fileID: 1000012612917028, guid: 0ede6b645b99a594d8a61f26859b2b49,
+      type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.23333333
     functionName: Play
     data: 
-    objectReferenceParameter: {fileID: 8300000, guid: 84c4c2b6ae1c49646b98aed3ca77f0bf,
-      type: 3}
+    objectReferenceParameter: {fileID: 1000012612917028, guid: 0ede6b645b99a594d8a61f26859b2b49,
+      type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
