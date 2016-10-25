@@ -152,6 +152,10 @@ MonoBehaviour:
   maxHP: 3
   hp: 0
   money: 0
+  DashRegenerationRate: 20
+  MaxDash: 100
+  DashCost: 50
+  DashPower: 0
 --- !u!114 &114000014161105452
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -163,8 +167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d239e4fca2576844291b7c530106387f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioPlayer: {fileID: 1000013845088750, guid: 67ce6380078e47a4f9f37fd5901bbc75,
-    type: 2}
 --- !u!212 &212000011535831610
 SpriteRenderer:
   m_ObjectHideFlags: 1
