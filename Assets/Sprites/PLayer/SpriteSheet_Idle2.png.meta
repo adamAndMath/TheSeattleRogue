@@ -1,9 +1,18 @@
 fileFormatVersion: 2
 guid: e255f5c40388ece4e844eabe02952604
-timeCreated: 1477420799
+timeCreated: 1477433585
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: SpriteSheet_Idle2_0
+    21300002: SpriteSheet_Idle2_1
+    21300004: SpriteSheet_Idle2_2
+    21300006: SpriteSheet_Idle2_3
+    21300008: SpriteSheet_Idle2_4
+    21300010: SpriteSheet_Idle2_5
+    21300012: SpriteSheet_Idle2_6
+    21300014: SpriteSheet_Idle2_7
+    21300016: SpriteSheet_Idle2_8
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -44,14 +53,131 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 214
+  spritePixelsToUnits: 115
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SpriteSheet_Idle2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 214
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Idle2_1
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 0
+        width: 214
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Idle2_2
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 0
+        width: 214
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Idle2_3
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 0
+        width: 214
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Idle2_4
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 0
+        width: 214
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Idle2_5
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 0
+        width: 214
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Idle2_6
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 0
+        width: 214
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Idle2_7
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 0
+        width: 214
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Idle2_8
+      rect:
+        serializedVersion: 2
+        x: 1712
+        y: 0
+        width: 214
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
     outline: []
   spritePackingTag: 
   userData: 

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 212b2ad79298dc5478cdde4abd3c75b4
-timeCreated: 1477429496
+timeCreated: 1477432833
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -65,9 +65,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 136
-        height: 136
+        y: 1
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -77,10 +77,10 @@ TextureImporter:
       name: SpriteSheet_WoodenclubeAttack_1
       rect:
         serializedVersion: 2
-        x: 136
-        y: 0
-        width: 136
-        height: 136
+        x: 256
+        y: 1
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -90,10 +90,10 @@ TextureImporter:
       name: SpriteSheet_WoodenclubeAttack_2
       rect:
         serializedVersion: 2
-        x: 272
-        y: 0
-        width: 136
-        height: 136
+        x: 512
+        y: 1
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -103,10 +103,10 @@ TextureImporter:
       name: SpriteSheet_WoodenclubeAttack_3
       rect:
         serializedVersion: 2
-        x: 408
-        y: 0
-        width: 136
-        height: 136
+        x: 768
+        y: 1
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -116,10 +116,10 @@ TextureImporter:
       name: SpriteSheet_WoodenclubeAttack_4
       rect:
         serializedVersion: 2
-        x: 544
-        y: 0
-        width: 136
-        height: 136
+        x: 1024
+        y: 1
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,10 +129,10 @@ TextureImporter:
       name: SpriteSheet_WoodenclubeAttack_5
       rect:
         serializedVersion: 2
-        x: 680
-        y: 0
-        width: 136
-        height: 136
+        x: 1280
+        y: 1
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,10 +142,10 @@ TextureImporter:
       name: SpriteSheet_WoodenclubeAttack_6
       rect:
         serializedVersion: 2
-        x: 816
-        y: 0
-        width: 136
-        height: 136
+        x: 1536
+        y: 1
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,10 +155,10 @@ TextureImporter:
       name: SpriteSheet_WoodenclubeAttack_7
       rect:
         serializedVersion: 2
-        x: 952
-        y: 0
-        width: 136
-        height: 136
+        x: 1792
+        y: 1
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
