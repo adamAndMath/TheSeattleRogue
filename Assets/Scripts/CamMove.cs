@@ -14,7 +14,7 @@ public class CamMove : MonoBehaviour
         cam = GetComponent<Camera>();
     }
 
-    void Update()
+    void LateUpdate()
     {
         Vector3 playerPos = Player.Instance.transform.position;
         Vector2 camSize = new Vector2(1 * cam.aspect, 1) * (cam.orthographicSize);
