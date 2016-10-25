@@ -14,7 +14,6 @@ public class GuardRobotBehaviour : Enemy {
     public float snapThreshold;
     public float yPoint;
 
-    private Rigidbody2D EnemyRigidbody;
     private Animator animator;
 
     public Vector3 rightRange;
@@ -34,7 +33,6 @@ public class GuardRobotBehaviour : Enemy {
         rightRange = new Vector3(transform.position.x + threatRangeRight, transform.position.y,0);
         leftRange = new Vector3(transform.position.x - threatRangeLeft, transform.position.y, 0);
 
-	    EnemyRigidbody = GetComponent<Rigidbody2D>();
 	    animator = GetComponent<Animator>();
 
         guardRobotCol = this.GetComponent<Collider2D>();

@@ -42,11 +42,11 @@ public class BombBehavior : Enemy
 	        {
 	            if ((Player.Instance.transform.position.y - transform.position.y) > 0.1f)
 	            {
-	                moveY = -1*chaseSpeed*Time.deltaTime;
+	                moveY = chaseSpeed*Time.deltaTime;
 	            }
 	            else
 	            {
-	                moveY = chaseSpeed*Time.deltaTime;
+	                moveY = -chaseSpeed*Time.deltaTime;
 	            }
 	            MoveVertical(moveY);
 	        }
@@ -56,6 +56,7 @@ public class BombBehavior : Enemy
 	    if (explosionTime <= 0)
 	    {
 	        //Afspil animaation og afspil explosionslyd
+
 	    }
 	}
 }

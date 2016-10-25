@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011256261650}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.13, y: 1.33, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -89,6 +89,7 @@ MonoBehaviour:
   gravitySpeed: 0
   bombRange: 4
   chaseSpeed: 3
+  explosionTime: 0
 --- !u!212 &212000013462639586
 SpriteRenderer:
   m_ObjectHideFlags: 1
