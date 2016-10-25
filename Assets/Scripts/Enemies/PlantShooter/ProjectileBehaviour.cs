@@ -4,24 +4,25 @@ using System.Collections;
 public class ProjectileBehaviour : PhysicsObject
 {
     public float horizontalSpeed;
-    public float verticalSpeed;
     public float acceleration;
-    private float startingSpeed;
+    public float startingSpeed;
+    private float offSet = 0.3f;
 
-    private GameObject smokeCloud;
+    public GameObject smokeCloud;
 
 	void Update ()
 	{
-
-	    MoveVertical(ConstantAcceleration(-acceleration, ref startingSpeed));
-        
-        MoveHorizontal(-horizontalSpeed*Time.deltaTime);
-	    MoveVertical(verticalSpeed*Time.deltaTime);
-
-	    if (IsGrounded())
+        if (MoveHorizontal(-horizontalSpeed * Time.deltaTime) || MoveVertical(ConstantAcceleration(-acceleration, ref startingSpeed)))
 	    {
-	        Instantiate(smokeCloud, transform.position, Quaternion.identity);
+	        Debug.Log("Why is this not happening?");
+
+            Instantiate(smokeCloud, new Vector3(transform.position.x, transform.position.y + offSet, 0), Quaternion.identity);
             Destroy(gameObject);
 	    }
 	}
+
+    protected override bool CanCollide(RaycastHit2D rayHit, Vector2 dir)
+    {
+        return rayHit.collider.GetComponent<Player>() || base.CanCollide(rayHit, dir);
+    }
 }

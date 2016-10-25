@@ -278,11 +278,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000010897265950, guid: ceceb75b8ae45344a919c745ceb696d3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.49
+      value: 2.28
       objectReference: {fileID: 0}
     - target: {fileID: 4000010897265950, guid: ceceb75b8ae45344a919c745ceb696d3, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.13
+      value: -1.07
       objectReference: {fileID: 0}
     - target: {fileID: 4000010897265950, guid: ceceb75b8ae45344a919c745ceb696d3, type: 2}
       propertyPath: m_LocalPosition.z
@@ -307,31 +307,6 @@ Prefab:
     - target: {fileID: 4000010897265950, guid: ceceb75b8ae45344a919c745ceb696d3, type: 2}
       propertyPath: m_RootOrder
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011684268616, guid: ceceb75b8ae45344a919c745ceb696d3,
-        type: 2}
-      propertyPath: gravity
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011684268616, guid: ceceb75b8ae45344a919c745ceb696d3,
-        type: 2}
-      propertyPath: leftPoint
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011684268616, guid: ceceb75b8ae45344a919c745ceb696d3,
-        type: 2}
-      propertyPath: rightPoint
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011684268616, guid: ceceb75b8ae45344a919c745ceb696d3,
-        type: 2}
-      propertyPath: timeOfWaitingSet
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011684268616, guid: ceceb75b8ae45344a919c745ceb696d3,
-        type: 2}
-      propertyPath: snappingThreshold
-      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ceceb75b8ae45344a919c745ceb696d3, type: 2}

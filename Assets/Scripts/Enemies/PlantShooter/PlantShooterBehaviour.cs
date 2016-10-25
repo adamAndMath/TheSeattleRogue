@@ -24,6 +24,8 @@ public class PlantShooterBehaviour : Enemy
 
     private float gizmosYPoint;
 
+    private Collider2D plantCollider2D;
+
 	// Use this for initialization
     protected override void Start()
     {
@@ -33,23 +35,27 @@ public class PlantShooterBehaviour : Enemy
 
         stoppingPointLeft = transform.position.x - leftPoint;
         stoppingPointRight = transform.position.x + rightPoint;
+
+        plantCollider2D = GetComponent<Collider2D>();
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
+        if (plantCollider2D.IsTouching(Player.Instance.GetComponent<Collider2D>()))
+        {
+            Player.Instance.Damaged(1);
+        }
         if (IsGrounded() == false)
         {
             float move = (gravitySpeed + gravity * Time.deltaTime / 2) * Time.deltaTime;
             gravitySpeed += gravity * Time.deltaTime;
 
             MoveVertical(-move);
-            Debug.Log("This is not on the ground");
         }
         else
         {
             gravitySpeed = 0;
-            Debug.Log("This is on the ground");
         }
         timeOfWaiting -= Time.deltaTime;
 	    if (timeOfWaiting < 0)
@@ -57,12 +63,10 @@ public class PlantShooterBehaviour : Enemy
 	        
             if (hasPassedLeft && hasPassedRight && Mathf.Abs(transform.position.x - pointOfOrigin) > snappingThreshold)
 	        {
-	            Debug.Log("Is Ready to go middle");
                 MoveHorizontalSloped(-relocationSpeed * Time.deltaTime);
 	        }
             else if (Mathf.Abs(transform.position.x - pointOfOrigin) < snappingThreshold && hasPassedLeft && hasPassedRight)
             {
-                Debug.Log("Not this yet please");
 	            hasPassedLeft = false;
 	            hasPassedRight = false;
                 animator.SetBool("isShooting",true);
@@ -73,7 +77,6 @@ public class PlantShooterBehaviour : Enemy
 	            hasBeenGrounded = true;
 	            animator.SetBool("isShooting", true);
 	            timeOfWaiting = timeOfWaitingSet;
-                Debug.Log("It Has been grounded");
 	            gizmosYPoint = transform.position.y;
 	        }
 
@@ -82,28 +85,24 @@ public class PlantShooterBehaviour : Enemy
 	        if (transform.position.x > stoppingPointLeft && !hasPassedLeft && hasBeenGrounded)
 	        {
 	            MoveHorizontalSloped(-relocationSpeed*Time.deltaTime);
-	            Debug.Log("What is going on?");
 	        }
 	        else if (!hasPassedLeft && hasBeenGrounded)
 	        {
 	            hasPassedLeft = true;
 	            animator.SetBool("isShooting", true);
 	            timeOfWaiting = timeOfWaitingSet;
-                Debug.Log("It Has passed the left point");
 	        }
 
 
 	        if (transform.position.x < stoppingPointRight && hasPassedLeft && hasBeenGrounded && !hasPassedRight)
 	        {
 	            MoveHorizontalSloped(relocationSpeed*Time.deltaTime);
-	            Debug.Log("This is really fucked up");
 	        }
             else if (transform.position.x > stoppingPointRight && !hasPassedRight)
             {
                 hasPassedRight = true;
                 animator.SetBool("isShooting", true);
                 timeOfWaiting = timeOfWaitingSet;
-                Debug.Log("Has passed  right");
             }
 
 	    }
@@ -116,5 +115,10 @@ public class PlantShooterBehaviour : Enemy
         Gizmos.DrawWireSphere(new Vector3(stoppingPointLeft, gizmosYPoint,0), 0.1f);
         Gizmos.DrawWireSphere(new Vector3(stoppingPointRight, gizmosYPoint, 0), 0.1f);
         Gizmos.DrawWireSphere(new Vector3(pointOfOrigin, gizmosYPoint, 0), 0.1f);
+    }
+    public override void Damaged(int damageAmount)
+    {
+        base.Damaged(damageAmount);
+        animator.SetBool("isTakingDamage", true);
     }
 }
