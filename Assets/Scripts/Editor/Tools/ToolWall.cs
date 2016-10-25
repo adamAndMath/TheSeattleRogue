@@ -5,7 +5,7 @@ using UnityEngine;
 public class ToolWall : Tool
 {
     private int selectedObject;
-    private List<LevelGenerator.Position> selectedPositions = new List<LevelGenerator.Position>();
+    private readonly List<LevelGenerator.Position> selectedPositions = new List<LevelGenerator.Position>();
     private Mode mode = Mode.None;
 
     public enum Mode

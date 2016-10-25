@@ -6,7 +6,7 @@ public class WallEditor : PropertyDrawer
 {
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
     {
-        return EditorGUIUtility.singleLineHeight*4;
+        return EditorGUIUtility.singleLineHeight*5;
     }
 
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)

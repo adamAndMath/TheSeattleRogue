@@ -23,10 +23,10 @@ MonoBehaviour:
     - wallID: 0
     - wallID: 0
     - wallID: 0
-    - wallID: 0
-    - wallID: 0
-    - wallID: 0
-    - wallID: 0
+    - wallID: 1
+    - wallID: 1
+    - wallID: 1
+    - wallID: 1
   - data:
     - wallID: 0
     - wallID: 0
@@ -37,7 +37,7 @@ MonoBehaviour:
     - wallID: 1
     - wallID: 1
     - wallID: 1
-    - wallID: 0
+    - wallID: 1
   - data:
     - wallID: 0
     - wallID: 0
@@ -45,10 +45,10 @@ MonoBehaviour:
     - wallID: 0
     - wallID: 1
     - wallID: 0
-    - wallID: 1
-    - wallID: 1
-    - wallID: 1
     - wallID: 0
+    - wallID: 0
+    - wallID: 1
+    - wallID: 1
   - data:
     - wallID: 0
     - wallID: 0
@@ -56,32 +56,10 @@ MonoBehaviour:
     - wallID: 0
     - wallID: 1
     - wallID: 0
-    - wallID: 1
-    - wallID: 1
-    - wallID: 1
-    - wallID: 0
-  - data:
-    - wallID: 0
-    - wallID: 0
-    - wallID: 0
-    - wallID: 0
-    - wallID: 0
-    - wallID: 0
-    - wallID: 0
-    - wallID: 0
-    - wallID: 0
-    - wallID: 0
-  - data:
-    - wallID: 0
-    - wallID: 0
     - wallID: 0
     - wallID: 0
     - wallID: 1
-    - wallID: 0
     - wallID: 1
-    - wallID: 1
-    - wallID: 1
-    - wallID: 0
   - data:
     - wallID: 0
     - wallID: 0
@@ -98,12 +76,12 @@ MonoBehaviour:
     - wallID: 0
     - wallID: 0
     - wallID: 0
+    - wallID: 1
     - wallID: 0
-    - wallID: 0
-    - wallID: 0
-    - wallID: 0
-    - wallID: 0
-    - wallID: 0
+    - wallID: 1
+    - wallID: 1
+    - wallID: 1
+    - wallID: 1
   - data:
     - wallID: 0
     - wallID: 0
@@ -114,7 +92,18 @@ MonoBehaviour:
     - wallID: 0
     - wallID: 0
     - wallID: 0
+    - wallID: 1
+  - data:
     - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 1
+    - wallID: 0
+    - wallID: 0
+    - wallID: 1
   - data:
     - wallID: 0
     - wallID: 0
@@ -125,7 +114,18 @@ MonoBehaviour:
     - wallID: 0
     - wallID: 0
     - wallID: 0
+    - wallID: 1
+  - data:
     - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 0
+    - wallID: 1
+    - wallID: 1
+    - wallID: 1
+    - wallID: 1
   walls:
   - upLeft: {fileID: 21300000, guid: 86cbfc8445425364da94a1aeb5ad4b3b, type: 3}
     left: {fileID: 21300008, guid: 86cbfc8445425364da94a1aeb5ad4b3b, type: 3}
@@ -143,3 +143,12 @@ MonoBehaviour:
     leftRight: {fileID: 21300026, guid: 86cbfc8445425364da94a1aeb5ad4b3b, type: 3}
     rightOnly: {fileID: 21300028, guid: 86cbfc8445425364da94a1aeb5ad4b3b, type: 3}
     only: {fileID: 21300030, guid: 86cbfc8445425364da94a1aeb5ad4b3b, type: 3}
+  spawners:
+  - position:
+      x: 7
+      y: 7
+    spawnMask: 0
+  - position:
+      x: 3
+      y: 5
+    spawnMask: 0

@@ -4,6 +4,19 @@ using UnityEngine;
 
 public class RoomWindow : EditorWindow
 {
+    private static Texture2D questionMark;
+
+    public static Texture2D QuestionMark
+    {
+        get
+        {
+            if (questionMark == null)
+                questionMark = (Texture2D) EditorGUIUtility.Load("Question Mark.png");
+
+            return questionMark;
+        }
+    }
+
     private readonly Tool[] Tools;
     public const float SideWidth = 128;
 
@@ -29,7 +42,7 @@ public class RoomWindow : EditorWindow
 
     public RoomWindow()
     {
-        Tools = new Tool[] { new ToolWall(this) };
+        Tools = new Tool[] { new ToolWall(this), new ToolSpawnerPlace(this), new ToolSpawnerEdit(this) };
         minSize = new Vector2(256, 256);
         titleContent.text = "Room Editor";
     }
@@ -201,6 +214,11 @@ public class RoomWindow : EditorWindow
                     {
                         Sprite sprite = room.walls[objData.wallID - 1][GetWallDir(pos, objData.wallID)];
                         GUI.DrawTextureWithTexCoords(rect, sprite.texture, GetTextureRect(sprite));
+                    }
+
+                    if (room.spawners.Any(spawner => spawner.position == pos))
+                    {
+                        GUI.DrawTextureWithTexCoords(rect, QuestionMark, new Rect(0, 0, 1, 1));
                     }
                 }
 
