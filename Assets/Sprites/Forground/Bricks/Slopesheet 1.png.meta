@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 36adedb434c38d144bf77cb23b8aa4ed
-timeCreated: 1477427855
+guid: 787ce08de1749464ba468caf1d2092d6
+timeCreated: 1477428187
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Slopesheet_0
-    21300002: Slopesheet_1
-    21300004: Slopesheet_2
-    21300006: Slopesheet_3
+    21300000: Slopesheet 1_0
+    21300002: Slopesheet 1_1
+    21300004: Slopesheet 1_2
+    21300006: Slopesheet 1_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -57,7 +57,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Slopesheet_0
+      name: Slopesheet 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -70,7 +70,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Slopesheet_1
+      name: Slopesheet 1_1
       rect:
         serializedVersion: 2
         x: 100
@@ -83,7 +83,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Slopesheet_2
+      name: Slopesheet 1_2
       rect:
         serializedVersion: 2
         x: 0
@@ -96,7 +96,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Slopesheet_3
+      name: Slopesheet 1_3
       rect:
         serializedVersion: 2
         x: 100
