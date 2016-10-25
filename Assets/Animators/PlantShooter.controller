@@ -7,7 +7,13 @@ AnimatorController:
   m_PrefabInternal: {fileID: 0}
   m_Name: PlantShooter
   serializedVersion: 5
-  m_AnimatorParameters: []
+  m_AnimatorParameters:
+  - m_Name: isShooting
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -32,13 +38,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93df637b35c831340a24ca5e88002c65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectiles: {fileID: 1000010988014836, guid: ec793fed58f296a4bb8f27b8a80b7478,
+  projectilesRight: {fileID: 1000010988014836, guid: ec793fed58f296a4bb8f27b8a80b7478,
     type: 2}
-  fastProjectile: {fileID: 1000012964502610, guid: b21d552cfe5b2e04b9eef26db4a61d6d,
+  projectilesLeft: {fileID: 1000012964502610, guid: b21d552cfe5b2e04b9eef26db4a61d6d,
+    type: 2}
+  fastProjectileLeft: {fileID: 1000013513266676, guid: 59823b8a3992b834c823a8577b5f2a69,
+    type: 2}
+  fastProjectileRight: {fileID: 1000014284796580, guid: cab197893d361ef49b7d98b0f7fdac0f,
     type: 2}
   enemy: {fileID: 0}
   angleVector: {x: 0, y: 0}
-  timer: 0
+  timer: 0.1
+--- !u!114 &114000014090214216
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0909c9f235cabb47ae44e21ca2b0fc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1101 &1101000011577503302
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -66,7 +87,10 @@ AnimatorStateTransition:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: isShooting
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102000014117546268}
   m_Solo: 0
@@ -76,7 +100,7 @@ AnimatorStateTransition:
   m_TransitionDuration: 0.1
   m_TransitionOffset: 0
   m_ExitTime: 0.9
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -87,7 +111,10 @@ AnimatorStateTransition:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: isShooting
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102000012053913126}
   m_Solo: 0
@@ -97,7 +124,7 @@ AnimatorStateTransition:
   m_TransitionDuration: 0.1
   m_TransitionOffset: 0
   m_ExitTime: 0.9
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -159,7 +186,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101000013637680482}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 114000014090214216}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
