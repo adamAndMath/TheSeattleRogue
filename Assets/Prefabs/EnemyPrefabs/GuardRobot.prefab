@@ -26,6 +26,7 @@ GameObject:
   - 50: {fileID: 50000011903425060}
   - 61: {fileID: 61000013101403686}
   - 61: {fileID: 61000013090525642}
+  - 114: {fileID: 114000010069261620}
   m_Layer: 0
   m_Name: GuardRobot
   m_TagString: Enemy
@@ -40,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010985636292}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.5574703, y: -3.6306946, z: 0}
+  m_LocalPosition: {x: -6.203622, y: 0.3444208, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -123,6 +124,17 @@ MonoBehaviour:
   drops: []
   gravity: 10
   gravitySpeed: 0
+--- !u!114 &114000010069261620
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010985636292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d239e4fca2576844291b7c530106387f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000012730278908
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -135,7 +147,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  drops: []
+  drops:
+  - obj: {fileID: 1000012271734224, guid: 70488e5cd1ef718409e53b076d2cfd65, type: 2}
+    chance: 1
   gravity: 10
   gravitySpeed: 0
   threatRangeRight: 2
