@@ -35,6 +35,11 @@ public class Room : ScriptableObject
         public Sprite rightOnly;
         public Sprite only;
 
+        public Sprite slopeDownLeft;
+        public Sprite slopeDownRight;
+        public Sprite slopeUpLeft;
+        public Sprite slopeUpRight;
+
         public Sprite this[int dir]
         {
             get
@@ -61,6 +66,13 @@ public class Room : ScriptableObject
                 }
             }
         }
+
+        public Sprite GetSlope(int dir)
+        {
+            return (dir & (int) Direction.Up) != 0
+                ? ((dir & (int) Direction.Right) != 0 ? slopeUpRight : slopeUpLeft)
+                : ((dir & (int) Direction.Right) != 0 ? slopeDownRight : slopeDownLeft);
+        }
     }
 
     [Serializable]
@@ -73,6 +85,7 @@ public class Room : ScriptableObject
     public struct RoomPosition
     {
         public int wallID;
+        public bool slope;
     }
 
     [Serializable]

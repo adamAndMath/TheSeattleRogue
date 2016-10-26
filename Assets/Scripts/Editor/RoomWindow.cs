@@ -216,7 +216,9 @@ public class RoomWindow : EditorWindow
                     }
                     else if (objData.wallID != 0)
                     {
-                        Sprite sprite = room.walls[objData.wallID - 1][GetWallDir(pos, objData.wallID)];
+                        Room.Wall wall = room.walls[objData.wallID - 1];
+                        int dir = GetWallDir(pos, objData.wallID);
+                        Sprite sprite = objData.slope ? wall.GetSlope(dir) : wall[dir];
                         GUI.DrawTextureWithTexCoords(rect, sprite.texture, GetTextureRect(sprite));
                     }
 

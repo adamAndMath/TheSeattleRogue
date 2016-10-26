@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class ToolPlatform : Tool
@@ -83,6 +82,7 @@ public class ToolPlatform : Tool
                 foreach (LevelGenerator.Position p in selectedPositions)
                 {
                     GetPropertyAtPos(p).FindPropertyRelative("wallID").intValue = -1;
+                    GetPropertyAtPos(p).FindPropertyRelative("slope").boolValue = false;
                 }
 
                 break;
@@ -90,6 +90,7 @@ public class ToolPlatform : Tool
                 foreach (LevelGenerator.Position p in selectedPositions)
                 {
                     GetPropertyAtPos(p).FindPropertyRelative("wallID").intValue = 0;
+                    GetPropertyAtPos(p).FindPropertyRelative("slope").boolValue = false;
                 }
 
                 break;
