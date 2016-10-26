@@ -62,7 +62,7 @@ public class CamMove : MonoBehaviour
                 deltaMax.x = max.x;
             }
         }
-        if (Player.Instance.transform.position.x < -camSize.x + (deltaMin.x - deltaMin.x))
+        if (Player.Instance.transform.position.x < -camSize.x + (deltaMin.x - startingMin.x))
         {
             Time.timeScale = 0;
             if (!camIsMoving)
@@ -83,12 +83,12 @@ public class CamMove : MonoBehaviour
                 deltaMin.x = min.x;
             }
         }
-        if (Player.Instance.transform.position.y > 2*camSize.y + (deltaMax.y - deltaMax.y))
+        if (Player.Instance.transform.position.y > camSize.y + (deltaMax.y - startingMax.y))
         {
             Time.timeScale = 0;
             if (!camIsMoving)
             {
-                camMovingPoint = new Vector3(transform.position.x, transform.position.y + camSize.y, 0);
+                camMovingPoint = new Vector3(transform.position.x, transform.position.y + 2*camSize.y, 0);
                 camIsMoving = true;
                 min.y = min.y + 2 * camSize.y;
                 max.y = max.y + 2 * camSize.y;
@@ -104,12 +104,12 @@ public class CamMove : MonoBehaviour
                 deltaMax.y = max.y;
             }
         }
-        if (Player.Instance.transform.position.y < -2*camSize.y + (deltaMin.y - deltaMin.y))
+        if (Player.Instance.transform.position.y < -camSize.y + (deltaMin.y - startingMin.y))
         {
             Time.timeScale = 0;
             if (!camIsMoving)
             {
-                camMovingPoint = new Vector3(transform.position.x, transform.position.y - camSize.y, 0);
+                camMovingPoint = new Vector3(transform.position.x, transform.position.y - 2*camSize.y, 0);
                 camIsMoving = true;
                 min.y = min.y - 2*camSize.y;
                 max.y = max.y - 2 * camSize.y;
