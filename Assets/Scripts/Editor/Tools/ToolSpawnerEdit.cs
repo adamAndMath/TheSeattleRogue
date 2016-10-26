@@ -8,18 +8,25 @@ public class ToolSpawnerEdit : Tool
     private SerializedProperty propSpawnMask;
     private int spawnerID;
     private Mode mode = Mode.None;
+    private Room room;
 
     public enum Mode
     {
         None, Sellect
     }
 
-    public ToolSpawnerEdit(RoomWindow window) : base(window, "Place Edit")
+    public ToolSpawnerEdit(RoomWindow window) : base(window, "Spawner Edit")
     {
     }
 
     public override void OnGUI()
     {
+        if (room != Room)
+        {
+            room = Room;
+            propSpawnMask = null;
+        }
+
         if (propSpawnMask != null)
         {
             propSpawnMask.intValue = SelectionGrid(propSpawnMask.intValue, Mathf.FloorToInt((RoomWindow.SideWidth - 4) / 36));
