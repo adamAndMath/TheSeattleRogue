@@ -10,6 +10,11 @@ public class LevelGenerator : MonoBehaviour
     public Range pathDist;
     public Range exstraRooms;
     public SpriteRenderer wallPrefab;
+    [EnumMask]
+    public Room.Direction forceStartDir;
+
+    public Position min;
+    public Position max;
 
     readonly List<Position> positions = new List<Position>();
     readonly Dictionary<Position, Room.Direction> extraPositions = new Dictionary<Position, Room.Direction>();
@@ -100,7 +105,7 @@ public class LevelGenerator : MonoBehaviour
                 positions.Add(position);
                 dir = (dir + Random.Range(3, 6)) % 4;
             }
-        } while (OverlapingPath());
+        } while (ValidatePath());
 
         for (int i = 0; i < positions.Count; i++)
         {
@@ -109,6 +114,10 @@ public class LevelGenerator : MonoBehaviour
             if (i > 0)
             {
                 direction |= positions[i - 1] - positions[i];
+            }
+            else
+            {
+                direction |= forceStartDir;
             }
 
             if (i < positions.Count - 1)
@@ -129,7 +138,7 @@ public class LevelGenerator : MonoBehaviour
 
                 KeyValuePair<Position, Room.Direction> extPos = extraPositions.ElementAt(Random.Range(0, extraPositions.Count));
                 position = extPos.Key;
-            } while (extraPositions.ContainsKey(position + (Room.Direction)(1 << dir)));
+            } while (ValidateExtra(position, dir));
             extraPositions.Add(position + (Room.Direction)(1 << dir), (Room.Direction)(1 << (dir ^ 2)));
             extraPositions[position] |= (Room.Direction)(1 << dir);
         }
@@ -142,7 +151,7 @@ public class LevelGenerator : MonoBehaviour
         }
     }
 
-    private bool OverlapingPath()
+    private bool ValidatePath()
     {
         for (int i = 0; i < positions.Count; i++)
         {
@@ -151,9 +160,21 @@ public class LevelGenerator : MonoBehaviour
                 if (positions[i] == positions[j])
                     return true;
             }
+
+            if (positions[i].x < min.x || positions[i].x > max.x ||
+                positions[i].y < min.y || positions[i].y > max.y)
+                return true;
         }
 
         return false;
+    }
+
+    private bool ValidateExtra(Position pos, int dir)
+    {
+        Position newPos = pos + (Room.Direction) (1 << dir);
+        return extraPositions.ContainsKey(newPos) ||
+               newPos.x < min.x || newPos.x > max.x ||
+               newPos.y < min.y || newPos.y > max.y;
     }
 
     void OnDrawGizmos()
