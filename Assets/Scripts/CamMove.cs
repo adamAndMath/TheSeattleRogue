@@ -48,10 +48,11 @@ public class CamMove : MonoBehaviour
             {
                 camMovingPoint = new Vector3(transform.position.x + 2*camSize.x, transform.position.y, 0);
                 camIsMoving = true;
-                min.x = min.x + 2 * camSize.x;
-                max.x = max.x + 2 * camSize.x;
+                float delta = max.x - min.x;
+                min.x += delta;
+                max.x += delta;
             }
-            if (camIsMoving)
+            else
             {
                 transform.Translate(camMoveSpeed * Time.unscaledDeltaTime, 0, 0);
             }
@@ -70,10 +71,11 @@ public class CamMove : MonoBehaviour
             {
                 camMovingPoint = new Vector3(transform.position.x - 2*camSize.x, transform.position.y, 0);
                 camIsMoving = true;
-                min.x = min.x - 2 * camSize.x;
-                max.x = max.x - 2 * camSize.x;
+                float delta = max.x - min.x;
+                min.x -= delta;
+                max.x -= delta;
             }
-            if (camIsMoving)
+            else
             {
                 transform.Translate(-camMoveSpeed * Time.unscaledDeltaTime, 0, 0);
             }
@@ -92,10 +94,11 @@ public class CamMove : MonoBehaviour
             {
                 camMovingPoint = new Vector3(transform.position.x, transform.position.y + 2*camSize.y, 0);
                 camIsMoving = true;
-                min.y = min.y + 2 * camSize.y;
-                max.y = max.y + 2 * camSize.y;
+                float delta = max.y - min.y;
+                min.y += delta;
+                max.y += delta;
             }
-            if (camIsMoving)
+            else
             {
                 transform.Translate(0, camMoveSpeed * Time.unscaledDeltaTime, 0);
             }
@@ -114,10 +117,11 @@ public class CamMove : MonoBehaviour
             {
                 camMovingPoint = new Vector3(transform.position.x, transform.position.y - 2*camSize.y, 0);
                 camIsMoving = true;
-                min.y = min.y - 2*camSize.y;
-                max.y = max.y - 2 * camSize.y;
+                float delta = max.y - min.y;
+                min.y -= delta;
+                max.y -= delta;
             }
-            if (camIsMoving)
+            else
             {
                 transform.Translate(0, -camMoveSpeed*Time.unscaledDeltaTime,0);
             }
