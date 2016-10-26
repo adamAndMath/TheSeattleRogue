@@ -28,16 +28,20 @@ public class ToolSpawnerEdit : Tool
 
     private int SelectionGrid(int sellectionMask, int xCount)
     {
-        Rect control = EditorGUILayout.GetControlRect(false, 0);
-        control = EditorGUILayout.GetControlRect(false, Room.spawnables.Length / xCount);
+        if (Room.spawnables == null) return sellectionMask;
+
+        Rect control = EditorGUILayout.GetControlRect(false, Room.spawnables.Length / xCount);
 
         for (int i = 0; i < Room.spawnables.Length; i++)
         {
             int x = i % xCount;
             int y = Mathf.FloorToInt(i / xCount);
 
-            if (GUI.Toggle(new Rect(control.x + x * 36, control.y + y * 36, 32, 32), (sellectionMask & (1 << i)) != 0, "", GUI.skin.button))
-                sellectionMask |= 1 << i;
+            bool val = GUI.Toggle(new Rect(control.x + x * 36, control.y + y * 36, 32, 32), (sellectionMask & (1 << i)) != 0, "", GUI.skin.button);
+            sellectionMask |= 1 << i;
+
+            if (val)
+                sellectionMask ^= 1 << i;
 
             if (Room.spawnables[i] != null)
                 GUI.DrawTextureWithTexCoords(new Rect(control.x + x * 36 + 2, control.y + y * 36 + 2, 28, 28), Room.spawnables[i].idleSprite.texture, RoomWindow.GetTextureRect(Room.spawnables[i].idleSprite));

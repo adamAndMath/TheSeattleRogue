@@ -5,6 +5,7 @@ public class RoomEditor : Editor
 {
     private SerializedProperty propSize;
     private SerializedProperty propEntrences;
+    private SerializedProperty propPlatform;
     private SerializedProperty propWalls;
     private SerializedProperty propSpawnables;
 
@@ -12,6 +13,7 @@ public class RoomEditor : Editor
     {
         propSize = serializedObject.FindProperty("size");
         propEntrences = serializedObject.FindProperty("entrences");
+        propPlatform = serializedObject.FindProperty("platformSprite");
         propWalls = serializedObject.FindProperty("walls");
         propSpawnables = serializedObject.FindProperty("spawnables");
     }
@@ -34,6 +36,7 @@ public class RoomEditor : Editor
 
         EditorGUI.EndDisabledGroup();
         EditorGUILayout.PropertyField(propEntrences);
+        EditorGUILayout.PropertyField(propPlatform);
         EditorGUILayout.PropertyField(propWalls, true);
         EditorGUILayout.PropertyField(propSpawnables, true);
 
