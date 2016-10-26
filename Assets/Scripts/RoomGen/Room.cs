@@ -100,4 +100,24 @@ public class Room : ScriptableObject
     {
         get { return columns[pos.x].data[pos.y]; }
     }
+
+    public int GetWallDir(LevelGenerator.Position pos)
+    {
+        int dir = 0;
+        if (pos.y == size.y - 1 || this[pos + Direction.Up].wallID > 0) dir |= (int)Direction.Up;
+        if (pos.y == 0 || this[pos + Direction.Down].wallID > 0) dir |= (int)Direction.Down;
+        if (pos.x == 0 || this[pos + Direction.Left].wallID > 0) dir |= (int)Direction.Left;
+        if (pos.x == size.x - 1 || this[pos + Direction.Right].wallID > 0) dir |= (int)Direction.Right;
+        return dir;
+    }
+
+    public int GetWallDir(LevelGenerator.Position pos, int id)
+    {
+        int dir = 0;
+        if (pos.y == size.y - 1 || this[pos + Direction.Up].wallID == id) dir |= (int)Direction.Up;
+        if (pos.y == 0 || this[pos + Direction.Down].wallID == id) dir |= (int)Direction.Down;
+        if (pos.x == 0 || this[pos + Direction.Left].wallID == id) dir |= (int)Direction.Left;
+        if (pos.x == size.x - 1 || this[pos + Direction.Right].wallID == id) dir |= (int)Direction.Right;
+        return dir;
+    }
 }

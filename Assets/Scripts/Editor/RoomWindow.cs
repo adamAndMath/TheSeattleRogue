@@ -221,7 +221,7 @@ public class RoomWindow : EditorWindow
                     else if (objData.wallID != 0)
                     {
                         Room.Wall wall = room.walls[objData.wallID - 1];
-                        int dir = GetWallDir(pos, objData.wallID);
+                        int dir = room.GetWallDir(pos, objData.wallID);
                         Sprite sprite = objData.slope ? wall.GetSlope(dir) : wall[dir];
                         GUI.DrawTextureWithTexCoords(rect, sprite.texture, GetTextureRect(sprite));
                     }
@@ -242,15 +242,5 @@ public class RoomWindow : EditorWindow
     public static Rect GetTextureRect(Sprite sprite)
     {
         return new Rect(sprite.rect.x / sprite.texture.width, sprite.rect.y / sprite.texture.height, sprite.rect.width / sprite.texture.width, sprite.rect.height / sprite.texture.height);
-    }
-
-    public int GetWallDir(LevelGenerator.Position pos, int id)
-    {
-        int dir = 0;
-        if (pos.y == room.size.y - 1 || room[pos + Room.Direction.Up].wallID == id) dir |= (int)Room.Direction.Up;
-        if (pos.y == 0 || room[pos + Room.Direction.Down].wallID == id) dir |= (int)Room.Direction.Down;
-        if (pos.x == 0 || room[pos + Room.Direction.Left].wallID == id) dir |= (int)Room.Direction.Left;
-        if (pos.x == room.size.x - 1 || room[pos + Room.Direction.Right].wallID == id) dir |= (int)Room.Direction.Right;
-        return dir;
     }
 }

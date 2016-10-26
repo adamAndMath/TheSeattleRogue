@@ -9,6 +9,7 @@ public class LevelGenerator : MonoBehaviour
     public Room[] rooms;
     public Range pathDist;
     public Range exstraRooms;
+    public SpriteRenderer wallPrefab;
 
     readonly List<Position> positions = new List<Position>();
     readonly Dictionary<Position, Room.Direction> extraPositions = new Dictionary<Position, Room.Direction>();
@@ -130,6 +131,72 @@ public class LevelGenerator : MonoBehaviour
             Vector3 from = new Vector3(position.Key.x, position.Key.y);
             Vector3 to = new Vector3(posTo.x, posTo.y);
             Gizmos.DrawLine(from, to);
+        }
+    }
+
+    private void GenerateRoom(Room room, Position pos, Vector3 size)
+    {
+        GameObject roomObject = new GameObject(room.name);
+        Position position = new Position();
+
+        foreach (var column in room.columns)
+        {
+            foreach (var posData in column.data)
+            {
+                if (posData.wallID == -1)
+                {
+                    SpriteRenderer platform = Instantiate(room.platform);
+                    platform.transform.SetParent(roomObject.transform);
+                    platform.transform.localPosition = new Vector3(position.x - size.x / 2, position.y - size.y / 2);
+                }
+                else if (posData.wallID == -2)
+                {
+                    SpriteRenderer spike = Instantiate(room.spike);
+                    spike.transform.SetParent(roomObject.transform);
+                    spike.transform.localPosition = new Vector3(position.x - size.x / 2, position.y - size.y / 2);
+                    int dir = room.GetWallDir(position);
+
+                    if ((dir & (int) Room.Direction.Down) == 0)
+                    {
+                        if ((dir & (int) Room.Direction.Left) != 0)
+                            spike.transform.localRotation = Quaternion.Euler(0, 0, 90);
+                        else if ((dir & (int) Room.Direction.Right) != 0)
+                            spike.transform.localRotation = Quaternion.Euler(0, 0, 270);
+                        else if ((dir & (int) Room.Direction.Up) != 0)
+                            spike.transform.localRotation = Quaternion.Euler(0, 0, 180);
+                    }
+                }
+                else if (posData.wallID != 0)
+                {
+                    if (posData.slope)
+                    {
+                        int dir = room.GetWallDir(position, posData.wallID);
+                        GameObject slope = new GameObject("Slope", typeof(SpriteRenderer), typeof(EdgeCollider2D));
+                        slope.transform.SetParent(roomObject.transform);
+                        slope.transform.localPosition = new Vector3(position.x - size.x / 2, position.y - size.y / 2);
+                        slope.GetComponent<SpriteRenderer>().sprite = room.walls[posData.wallID - 1].GetSlope(dir);
+                        EdgeCollider2D col = slope.GetComponent<EdgeCollider2D>();
+
+                        Vector2 point = new Vector2(
+                            (dir & (int) Room.Direction.Up) != 0 ? 0.5F : -0.5F,
+                            (dir & (int) Room.Direction.Right) != 0 ? -0.5F : 0.5F);
+
+                        col.points = new[] { point, -point };
+                    }
+                    else
+                    {
+                        SpriteRenderer wall = Instantiate(wallPrefab);
+                        wall.transform.SetParent(roomObject.transform);
+                        wall.transform.localPosition = new Vector3(position.x - size.x/2, position.y - size.y/2);
+                        wall.sprite = room.walls[posData.wallID - 1][room.GetWallDir(position, posData.wallID)];
+                    }
+                }
+                
+                position.y++;
+            }
+            
+            position.y = 0;
+            position.x++;
         }
     }
 }
