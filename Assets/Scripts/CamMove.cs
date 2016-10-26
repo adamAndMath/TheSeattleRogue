@@ -7,10 +7,12 @@ public class CamMove : MonoBehaviour
     public Vector2 offset;
     private float z;
     private Camera cam;
-    public float camMoveSpeed;
+    public float camMoveTime;
 
     private bool camIsMoving;
-    private Vector3 camMovingPoint;
+    private Vector3 camMoveFrom;
+    private Vector3 camMoveTo;
+    private float timer;
 
     void Start()
     {
@@ -29,25 +31,29 @@ public class CamMove : MonoBehaviour
                 Mathf.Clamp(playerPos.x + offset.x, min.x + camSize.x, max.x - camSize.x),
                 Mathf.Clamp(playerPos.y + offset.y, min.y + camSize.y, max.y - camSize.y), z);
         }
+        else
+        {
+            timer += Time.deltaTime;
+            transform.position = Vector3.Lerp(camMoveFrom, camMoveTo, timer / camMoveTime) + Vector3.forward * z;
+            if (timer >= camMoveTime)
+            {
+                Time.timeScale = 1;
+                camIsMoving = false;
+                timer = 0;
+            }
+        }
+
         if (Player.Instance.transform.position.x > max.x)
         {
             Time.timeScale = 0;
             if (!camIsMoving)
             {
-                camMovingPoint = new Vector3(transform.position.x + 2*camSize.x, transform.position.y, 0);
                 camIsMoving = true;
                 float delta = max.x - min.x;
+                camMoveFrom = new Vector3(transform.position.x, transform.position.y, 0);
+                camMoveTo = new Vector3(transform.position.x + delta, transform.position.y, 0);
                 min.x += delta;
                 max.x += delta;
-            }
-            else
-            {
-                transform.Translate(camMoveSpeed * Time.unscaledDeltaTime, 0, 0);
-            }
-            if (transform.position.x >= camMovingPoint.x)
-            {
-                camIsMoving = false;
-                Time.timeScale = 1;
             }
         }
         if (Player.Instance.transform.position.x < min.x)
@@ -55,20 +61,12 @@ public class CamMove : MonoBehaviour
             Time.timeScale = 0;
             if (!camIsMoving)
             {
-                camMovingPoint = new Vector3(transform.position.x - 2*camSize.x, transform.position.y, 0);
                 camIsMoving = true;
                 float delta = max.x - min.x;
+                camMoveFrom = new Vector3(transform.position.x, transform.position.y, 0);
+                camMoveTo = new Vector3(transform.position.x - delta, transform.position.y, 0);
                 min.x -= delta;
                 max.x -= delta;
-            }
-            else
-            {
-                transform.Translate(-camMoveSpeed * Time.unscaledDeltaTime, 0, 0);
-            }
-            if (transform.position.x <= camMovingPoint.x)
-            {
-                camIsMoving = false;
-                Time.timeScale = 1;
             }
         }
         if (Player.Instance.transform.position.y > max.y)
@@ -76,20 +74,12 @@ public class CamMove : MonoBehaviour
             Time.timeScale = 0;
             if (!camIsMoving)
             {
-                camMovingPoint = new Vector3(transform.position.x, transform.position.y + 2*camSize.y, 0);
                 camIsMoving = true;
                 float delta = max.y - min.y;
+                camMoveFrom = new Vector3(transform.position.x, transform.position.y, 0);
+                camMoveTo = new Vector3(transform.position.x, transform.position.y + delta, 0);
                 min.y += delta;
                 max.y += delta;
-            }
-            else
-            {
-                transform.Translate(0, camMoveSpeed * Time.unscaledDeltaTime, 0);
-            }
-            if (transform.position.y >= camMovingPoint.y)
-            {
-                camIsMoving = false;
-                Time.timeScale = 1;
             }
         }
         if (Player.Instance.transform.position.y < min.y)
@@ -97,20 +87,12 @@ public class CamMove : MonoBehaviour
             Time.timeScale = 0;
             if (!camIsMoving)
             {
-                camMovingPoint = new Vector3(transform.position.x, transform.position.y - 2*camSize.y, 0);
                 camIsMoving = true;
                 float delta = max.y - min.y;
+                camMoveFrom = new Vector3(transform.position.x, transform.position.y, 0);
+                camMoveTo = new Vector3(transform.position.x, transform.position.y - delta, 0);
                 min.y -= delta;
                 max.y -= delta;
-            }
-            else
-            {
-                transform.Translate(0, -camMoveSpeed*Time.unscaledDeltaTime,0);
-            }
-            if (transform.position.y <= camMovingPoint.y)
-            {
-                camIsMoving = false;
-                Time.timeScale = 1;
             }
         }
     }
