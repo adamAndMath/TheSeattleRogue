@@ -156,6 +156,13 @@ MonoBehaviour:
     max: 10
   wallPrefab: {fileID: 212000012543991934, guid: 0aae726afba3e0e45baf5109c22aba98,
     type: 2}
+  forceStartDir: 1
+  min:
+    x: -40
+    y: -40
+  max:
+    x: 40
+    y: 0
 --- !u!4 &528951655
 Transform:
   m_ObjectHideFlags: 0
@@ -294,6 +301,21 @@ Prefab:
     - target: {fileID: 4000012413323090, guid: 75dcc9dbf9ad55f4398bde8d7f714b21, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 61000012059258472, guid: 75dcc9dbf9ad55f4398bde8d7f714b21,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 61000012059258472, guid: 75dcc9dbf9ad55f4398bde8d7f714b21,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61000012059258472, guid: 75dcc9dbf9ad55f4398bde8d7f714b21,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 75dcc9dbf9ad55f4398bde8d7f714b21, type: 2}
