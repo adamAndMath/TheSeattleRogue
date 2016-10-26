@@ -470,10 +470,15 @@ MonoBehaviour:
     leftRight: {fileID: 21300026, guid: 86cbfc8445425364da94a1aeb5ad4b3b, type: 3}
     rightOnly: {fileID: 21300028, guid: 86cbfc8445425364da94a1aeb5ad4b3b, type: 3}
     only: {fileID: 21300030, guid: 86cbfc8445425364da94a1aeb5ad4b3b, type: 3}
-    slopeDownLeft: {fileID: 0}
-    slopeDownRight: {fileID: 0}
-    slopeUpLeft: {fileID: 0}
-    slopeUpRight: {fileID: 0}
+    slopeDownLeft: {fileID: 21300002, guid: 787ce08de1749464ba468caf1d2092d6, type: 3}
+    slopeDownRight: {fileID: 21300000, guid: 787ce08de1749464ba468caf1d2092d6, type: 3}
+    slopeUpLeft: {fileID: 21300006, guid: 787ce08de1749464ba468caf1d2092d6, type: 3}
+    slopeUpRight: {fileID: 21300004, guid: 787ce08de1749464ba468caf1d2092d6, type: 3}
   spawnables: []
-  spawners: []
-  platformSprite: {fileID: 21300000, guid: ede5b8c65e05b5345882bb73b9a15d77, type: 3}
+  spawners:
+  - position:
+      x: 11
+      y: 1
+    spawnMask: 0
+  platform: {fileID: 212000013609954282, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+  spike: {fileID: 212000011588063242, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
