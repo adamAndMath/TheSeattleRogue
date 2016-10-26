@@ -60,6 +60,7 @@ public class CamMove : MonoBehaviour
                 camIsMoving = false;
                 Time.timeScale = 1;
                 deltaMax.x = max.x;
+                deltaMin.x = min.x;
             }
         }
         if (Player.Instance.transform.position.x < -camSize.x + (deltaMin.x - startingMin.x))
@@ -81,6 +82,7 @@ public class CamMove : MonoBehaviour
                 camIsMoving = false;
                 Time.timeScale = 1;
                 deltaMin.x = min.x;
+                deltaMax.x = max.x;
             }
         }
         if (Player.Instance.transform.position.y > camSize.y + (deltaMax.y - startingMax.y))
@@ -102,6 +104,7 @@ public class CamMove : MonoBehaviour
                 camIsMoving = false;
                 Time.timeScale = 1;
                 deltaMax.y = max.y;
+                deltaMin.y = min.y;
             }
         }
         if (Player.Instance.transform.position.y < -camSize.y + (deltaMin.y - startingMin.y))
@@ -123,6 +126,7 @@ public class CamMove : MonoBehaviour
                 camIsMoving = false;
                 Time.timeScale = 1;
                 deltaMin.y = min.y;
+                deltaMax.y = max.y;
             }
         }
     }
