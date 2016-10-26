@@ -134,7 +134,12 @@ public class LevelGenerator : MonoBehaviour
             extraPositions[position] |= (Room.Direction)(1 << dir);
         }
 
-        GenerateRoom(rooms[0], new Position(0, 0), new Vector3(rooms[0].size.x, rooms[0].size.y));
+        foreach (var extraPosition in extraPositions)
+        {
+            Room[] avalableRooms = rooms.Where(r => r.entrences == extraPosition.Value).ToArray();
+            Room room = avalableRooms[Random.Range(0, avalableRooms.Length - 1)];
+            GenerateRoom(room, extraPosition.Key, new Vector3(room.size.x, room.size.y));
+        }
     }
 
     private bool OverlapingPath()
@@ -173,6 +178,7 @@ public class LevelGenerator : MonoBehaviour
     private void GenerateRoom(Room room, Position pos, Vector3 size)
     {
         GameObject roomObject = new GameObject(room.name);
+        roomObject.transform.position = new Vector3(pos.x * size.x, pos.y * size.y);
         Position position = new Position();
 
         foreach (var column in room.columns)
