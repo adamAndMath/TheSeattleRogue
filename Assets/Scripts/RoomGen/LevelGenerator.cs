@@ -71,22 +71,55 @@ public class LevelGenerator : MonoBehaviour
                 default: throw new Exception();
             }
         }
+
+        public static implicit operator Room.Direction(Position pos)
+        {
+            if (pos.y > 0) return Room.Direction.Up;
+            if (pos.y < 0) return Room.Direction.Down;
+            if (pos.x > 0) return Room.Direction.Right;
+            if (pos.x < 0) return Room.Direction.Left;
+            throw new Exception();
+        }
     }
 
     void Start()
     {
-        Position position = new Position();
         int dir = Random.Range(0, 4);
-        positions.Add(position);
-        int pathLength = pathDist.Random;
-        int extra = exstraRooms.Random;
+        Position position;
 
-        for (int i = 0; i < pathLength; i++)
+        do
         {
-            position += (Room.Direction) (1 << dir);
+            position = new Position();
+            positions.Clear();
             positions.Add(position);
-            dir = (dir + Random.Range(3, 6))%4;
+            int pathLength = pathDist.Random;
+
+            for (int i = 0; i < pathLength; i++)
+            {
+                position += (Room.Direction)(1 << dir);
+                positions.Add(position);
+                dir = (dir + Random.Range(3, 6)) % 4;
+            }
+        } while (OverlapingPath());
+
+        for (int i = 0; i < positions.Count; i++)
+        {
+            Room.Direction direction = 0;
+
+            if (i > 0)
+            {
+                direction |= positions[i - 1] - positions[i];
+            }
+
+            if (i < positions.Count - 1)
+            {
+                direction |= positions[i + 1] - positions[i];
+            }
+
+            extraPositions.Add(positions[i], direction);
         }
+
+        int extra = exstraRooms.Random;
 
         for (int i = 0; i < extra; i++)
         {
@@ -94,45 +127,46 @@ public class LevelGenerator : MonoBehaviour
             {
                 dir = Random.Range(0, 3);
 
-                if (Random.Range(0, 2) == 1 && extraPositions.Count > 0)
-                {
-                    KeyValuePair<Position, Room.Direction> extPos = extraPositions.ElementAt(Random.Range(0, extraPositions.Count));
-                    position = extPos.Key;
-                }
-                else
-                {
-                    position = positions[Random.Range(0, positions.Count)];
-                }
-            } while (positions.Contains(position + (Room.Direction)(1 << dir)) || extraPositions.ContainsKey(position + (Room.Direction)(1 << dir)));
+                KeyValuePair<Position, Room.Direction> extPos = extraPositions.ElementAt(Random.Range(0, extraPositions.Count));
+                position = extPos.Key;
+            } while (extraPositions.ContainsKey(position + (Room.Direction)(1 << dir)));
             extraPositions.Add(position + (Room.Direction)(1 << dir), (Room.Direction)(1 << (dir ^ 2)));
+            extraPositions[position] |= (Room.Direction)(1 << dir);
         }
 
         GenerateRoom(rooms[0], new Position(0, 0), new Vector3(rooms[0].size.x, rooms[0].size.y));
     }
 
-    void OnDrawGizmos()
+    private bool OverlapingPath()
     {
-        Gizmos.color = Color.cyan;
-        Quaternion rot = Quaternion.Euler(0, 0, 45);
-        Quaternion rotInv = Quaternion.Euler(0, 0, -45);
-
-        for (int i = 1; i < positions.Count; i++)
+        for (int i = 0; i < positions.Count; i++)
         {
-            Vector3 from = new Vector3(positions[i - 1].x, positions[i - 1].y);
-            Vector3 to = new Vector3(positions[i].x, positions[i].y);
-            Gizmos.DrawLine(from, to);
-            Gizmos.DrawLine((from + to) / 2, (from + to) / 2 + rot * (from - to) / 3);
-            Gizmos.DrawLine((from + to) / 2, (from + to) / 2 + rotInv * (from - to) / 3);
+            for (int j = i + 1; j < positions.Count; j++)
+            {
+                if (positions[i] == positions[j])
+                    return true;
+            }
         }
 
+        return false;
+    }
+
+    void OnDrawGizmos()
+    {
         Gizmos.color = Color.magenta;
 
         foreach (var position in extraPositions)
         {
-            Position posTo = position.Key + position.Value;
-            Vector3 from = new Vector3(position.Key.x, position.Key.y);
-            Vector3 to = new Vector3(posTo.x, posTo.y);
-            Gizmos.DrawLine(from, to);
+            for (int i = 0; i < 4; i++)
+            {
+                if (((int)position.Value & (1 << i)) == 0)
+                    continue;
+
+                Position posTo = position.Key + (Room.Direction)(1 << i);
+                Vector3 from = new Vector3(position.Key.x, position.Key.y);
+                Vector3 to = new Vector3(posTo.x, posTo.y);
+                Gizmos.DrawLine(from, to);
+            }
         }
     }
 
