@@ -33,7 +33,7 @@ public class CamMove : MonoBehaviour
         }
         else
         {
-            timer += Time.deltaTime;
+            timer += Time.unscaledDeltaTime;
             transform.position = Vector3.Lerp(camMoveFrom, camMoveTo, timer / camMoveTime) + Vector3.forward * z;
             if (timer >= camMoveTime)
             {
@@ -43,7 +43,7 @@ public class CamMove : MonoBehaviour
             }
         }
 
-        if (Player.Instance.transform.position.x > max.x)
+        if (playerPos.x > max.x)
         {
             Time.timeScale = 0;
             if (!camIsMoving)
@@ -56,7 +56,7 @@ public class CamMove : MonoBehaviour
                 max.x += delta;
             }
         }
-        if (Player.Instance.transform.position.x < min.x)
+        if (playerPos.x < min.x)
         {
             Time.timeScale = 0;
             if (!camIsMoving)
@@ -69,7 +69,7 @@ public class CamMove : MonoBehaviour
                 max.x -= delta;
             }
         }
-        if (Player.Instance.transform.position.y > max.y)
+        if (playerPos.y > max.y)
         {
             Time.timeScale = 0;
             if (!camIsMoving)
@@ -82,7 +82,7 @@ public class CamMove : MonoBehaviour
                 max.y += delta;
             }
         }
-        if (Player.Instance.transform.position.y < min.y)
+        if (playerPos.y < min.y)
         {
             Time.timeScale = 0;
             if (!camIsMoving)
