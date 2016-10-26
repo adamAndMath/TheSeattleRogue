@@ -6,6 +6,9 @@ public class EnumMaskAttributeDrawer : PropertyDrawer
 {
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
-        property.intValue = EditorGUI.MaskField(position, label, property.intValue, property.enumDisplayNames);
+        int val = EditorGUI.MaskField(position, label, property.intValue, property.enumDisplayNames);
+
+        if (property.intValue != val)
+            property.intValue = val;
     }
 }

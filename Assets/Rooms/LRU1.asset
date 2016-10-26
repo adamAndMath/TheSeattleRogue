@@ -14,7 +14,7 @@ MonoBehaviour:
   size:
     x: 19
     y: 11
-  entrences: 0
+  entrences: 11
   columns:
   - data:
     - wallID: 1
