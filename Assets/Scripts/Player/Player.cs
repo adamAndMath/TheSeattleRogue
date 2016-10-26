@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player : PhysicsObject
 {
@@ -20,6 +22,7 @@ public class Player : PhysicsObject
 
     public int DeathScene = 0;
 
+    public List<Sprite> enemyDeathSprites;
     public bool Direction { get { return 0 < transform.localScale.x; } set { transform.localScale = new Vector3(value ? -1 : 1, 1, 1); } }
 
     void Awake()

@@ -17,8 +17,6 @@ public class TurretBehaviour : Enemy
 	{
 	    turretAnimator = GetComponent<Animator>();
 
-	    turretPlatform.layer = -2;
-
 	    Instantiate(turretPlatform, transform.position, Quaternion.identity);
 	}
 	
