@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
-  idleSprite: {fileID: 0}
+  idleSprite: {fileID: 21300000, guid: 62890ef2c54f0504980344fb523b17e0, type: 3}
   drops:
   - obj: {fileID: 1000012271734224, guid: 70488e5cd1ef718409e53b076d2cfd65, type: 2}
     chance: 1
