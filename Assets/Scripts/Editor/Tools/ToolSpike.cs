@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class ToolPlatform : Tool
+public class ToolSpike : Tool
 {
     private readonly List<LevelGenerator.Position> selectedPositions = new List<LevelGenerator.Position>();
     private Mode mode = Mode.None;
@@ -11,7 +11,7 @@ public class ToolPlatform : Tool
         None, Place, Delete
     }
 
-    public ToolPlatform(RoomWindow window) : base(window, "Platform")
+    public ToolSpike(RoomWindow window) : base(window, "Spike")
     {
     }
 
@@ -22,7 +22,7 @@ public class ToolPlatform : Tool
 
         if (mode == Mode.Place)
         {
-            GUI.DrawTextureWithTexCoords(rect, Room.platform.sprite.texture, RoomWindow.GetTextureRect(Room.platform.sprite));
+            GUI.DrawTextureWithTexCoords(rect, Room.spike.sprite.texture, RoomWindow.GetTextureRect(Room.spike.sprite));
         }
 
         return false;
@@ -81,7 +81,7 @@ public class ToolPlatform : Tool
             case Mode.Place:
                 foreach (LevelGenerator.Position p in selectedPositions)
                 {
-                    GetPropertyAtPos(p).FindPropertyRelative("wallID").intValue = -1;
+                    GetPropertyAtPos(p).FindPropertyRelative("wallID").intValue = -2;
                     GetPropertyAtPos(p).FindPropertyRelative("slope").boolValue = false;
                 }
 
