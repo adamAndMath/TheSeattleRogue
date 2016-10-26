@@ -37,9 +37,9 @@ public class CamMove : MonoBehaviour
 
         if (!camIsMoving)
         {
-            /*transform.position = new Vector3(
+            transform.position = new Vector3(
                 Mathf.Clamp(playerPos.x + offset.x, min.x + camSize.x, max.x - camSize.x),
-                Mathf.Clamp(playerPos.y + offset.y, min.y + camSize.y, max.y - camSize.y), z);*/
+                Mathf.Clamp(playerPos.y + offset.y, min.y + camSize.y, max.y - camSize.y), z);
         }
         if (Player.Instance.transform.position.x > camSize.x + (deltaMax.x - startingMax.x))
         {
