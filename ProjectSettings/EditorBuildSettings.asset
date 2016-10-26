@@ -8,4 +8,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
   - enabled: 1
-    path: Assets/Scenes/TestScene_BASTIAN.unity
+    path: Assets/Scenes/HubArea.unity
