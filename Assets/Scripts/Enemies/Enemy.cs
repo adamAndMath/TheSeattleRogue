@@ -1,6 +1,9 @@
-﻿public class Enemy : PhysicsObject
+﻿using UnityEngine;
+
+public class Enemy : PhysicsObject
 {
     public int health;
+    public Sprite idleSprite;
     public ItemDrop[] drops;
     public float gravity;
     public float gravitySpeed;

@@ -20,9 +20,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013503356288}
   - 212: {fileID: 212000013462639586}
-  - 61: {fileID: 61000013788983816}
   - 114: {fileID: 114000013701088000}
   - 114: {fileID: 114000013057939958}
+  - 50: {fileID: 50000012793930530}
+  - 58: {fileID: 58000010785131358}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Untagged
@@ -37,14 +38,31 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011256261650}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.13, y: 1.33, z: 0}
+  m_LocalPosition: {x: 0.63, y: -0.15, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!61 &61000013788983816
-BoxCollider2D:
+--- !u!50 &50000012793930530
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011256261650}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &58000010785131358
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -56,7 +74,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Radius: 0.6
 --- !u!114 &114000013057939958
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -69,6 +87,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
+  idleSprite: {fileID: 0}
   drops: []
   gravity: 0
   gravitySpeed: 0
@@ -84,11 +103,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
+  idleSprite: {fileID: 0}
   drops: []
   gravity: 0
   gravitySpeed: 0
   bombRange: 4
-  chaseSpeed: 3
+  chaseSpeed: 1
+  explosionTime: 3
 --- !u!212 &212000013462639586
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -118,7 +139,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: a6f356e442728164fb31241d6a900810, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

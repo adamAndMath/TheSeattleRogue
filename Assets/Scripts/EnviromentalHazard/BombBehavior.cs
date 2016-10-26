@@ -11,9 +11,16 @@ public class BombBehavior : Enemy
 
     private bool activated;
 
+    private Collider2D bombCollider;
+
 	// Use this for initialization
-	
-	// Update is called once per frame
+    protected override void Start()
+    {
+        base.Start();
+        bombCollider = GetComponent<Collider2D>();
+    }
+
+    // Update is called once per frame
 	protected void Update () 
     {
 
@@ -24,6 +31,8 @@ public class BombBehavior : Enemy
 
 	    if (activated)
 	    {
+            Quaternion rotation = Quaternion.LookRotation(Player.Instance.transform.position - transform.position, transform.TransformDirection(Vector3.up));
+            transform.rotation = new Quaternion(0,0,rotation.z,rotation.w);
             //Tikkende lyd skal indsættes
 	        if (Mathf.Abs(Player.Instance.transform.position.x - transform.position.x) > 0.1f)
 	        {
@@ -42,11 +51,11 @@ public class BombBehavior : Enemy
 	        {
 	            if ((Player.Instance.transform.position.y - transform.position.y) > 0.1f)
 	            {
-	                moveY = -1*chaseSpeed*Time.deltaTime;
+	                moveY = chaseSpeed*Time.deltaTime;
 	            }
 	            else
 	            {
-	                moveY = chaseSpeed*Time.deltaTime;
+	                moveY = -chaseSpeed*Time.deltaTime;
 	            }
 	            MoveVertical(moveY);
 	        }
@@ -56,6 +65,11 @@ public class BombBehavior : Enemy
 	    if (explosionTime <= 0)
 	    {
 	        //Afspil animaation og afspil explosionslyd
+            if (bombCollider.IsTouching(Player.Instance.GetComponent<Collider2D>()))
+            {
+                Player.Instance.Damaged(1);
+            }
+            Destroy(gameObject);
 	    }
 	}
 }

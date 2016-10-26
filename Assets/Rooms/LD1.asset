@@ -1,0 +1,483 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6260ed30445b7d9489f571908e66ba34, type: 3}
+  m_Name: LD1
+  m_EditorClassIdentifier: 
+  size:
+    x: 19
+    y: 11
+  entrences: 0
+  columns:
+  - data:
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+  - data:
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 1
+      slope: 0
+  - data:
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 1
+      slope: 0
+  - data:
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 1
+      slope: 0
+  - data:
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: -2
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: -2
+      slope: 0
+    - wallID: 1
+      slope: 0
+  - data:
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 1
+      slope: 0
+  - data:
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 1
+      slope: 0
+  - data:
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 1
+      slope: 0
+  - data:
+    - wallID: -1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: -2
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: -2
+      slope: 0
+    - wallID: 1
+      slope: 0
+  - data:
+    - wallID: -1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 1
+      slope: 0
+  - data:
+    - wallID: -1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 1
+      slope: 0
+  - data:
+    - wallID: 1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 1
+      slope: 0
+  - data:
+    - wallID: 1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: -2
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: -2
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+  - data:
+    - wallID: 1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 1
+      slope: 0
+  - data:
+    - wallID: 1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 1
+      slope: 0
+  - data:
+    - wallID: 1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 1
+      slope: 0
+  - data:
+    - wallID: 1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 1
+      slope: 0
+  - data:
+    - wallID: 1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 1
+      slope: 0
+  - data:
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+  walls:
+  - upLeft: {fileID: 21300000, guid: 86cbfc8445425364da94a1aeb5ad4b3b, type: 3}
+    left: {fileID: 21300008, guid: 86cbfc8445425364da94a1aeb5ad4b3b, type: 3}
+    downLeft: {fileID: 21300016, guid: 86cbfc8445425364da94a1aeb5ad4b3b, type: 3}
+    up: {fileID: 21300002, guid: 86cbfc8445425364da94a1aeb5ad4b3b, type: 3}
+    center: {fileID: 21300010, guid: 86cbfc8445425364da94a1aeb5ad4b3b, type: 3}
+    down: {fileID: 21300018, guid: 86cbfc8445425364da94a1aeb5ad4b3b, type: 3}
+    upRight: {fileID: 21300004, guid: 86cbfc8445425364da94a1aeb5ad4b3b, type: 3}
+    right: {fileID: 21300012, guid: 86cbfc8445425364da94a1aeb5ad4b3b, type: 3}
+    downRight: {fileID: 21300020, guid: 86cbfc8445425364da94a1aeb5ad4b3b, type: 3}
+    upOnly: {fileID: 21300006, guid: 86cbfc8445425364da94a1aeb5ad4b3b, type: 3}
+    upDown: {fileID: 21300014, guid: 86cbfc8445425364da94a1aeb5ad4b3b, type: 3}
+    downOnly: {fileID: 21300022, guid: 86cbfc8445425364da94a1aeb5ad4b3b, type: 3}
+    leftOnly: {fileID: 21300024, guid: 86cbfc8445425364da94a1aeb5ad4b3b, type: 3}
+    leftRight: {fileID: 21300026, guid: 86cbfc8445425364da94a1aeb5ad4b3b, type: 3}
+    rightOnly: {fileID: 21300028, guid: 86cbfc8445425364da94a1aeb5ad4b3b, type: 3}
+    only: {fileID: 21300030, guid: 86cbfc8445425364da94a1aeb5ad4b3b, type: 3}
+    slopeDownLeft: {fileID: 21300002, guid: 787ce08de1749464ba468caf1d2092d6, type: 3}
+    slopeDownRight: {fileID: 21300000, guid: 787ce08de1749464ba468caf1d2092d6, type: 3}
+    slopeUpLeft: {fileID: 21300006, guid: 787ce08de1749464ba468caf1d2092d6, type: 3}
+    slopeUpRight: {fileID: 21300004, guid: 787ce08de1749464ba468caf1d2092d6, type: 3}
+  spawnables:
+  - {fileID: 114000011684268616, guid: ceceb75b8ae45344a919c745ceb696d3, type: 2}
+  - {fileID: 114000012730278908, guid: 2dd222dd33d95bf44b809baef75d72d2, type: 2}
+  - {fileID: 114000013082522072, guid: 206017b8abfd3ef46b32b9527a9d9252, type: 2}
+  spawners: []
+  platform: {fileID: 212000013609954282, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+  spike: {fileID: 212000011588063242, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}

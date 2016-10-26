@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject PauseMenuGameObject;
-    private bool paused;
+    public bool paused;
+    public int SceneToLoad;
 	
 	void Update ()
 	{
@@ -32,9 +33,9 @@ public class PauseMenu : MonoBehaviour
         paused = false;
     }
 
-    public void MainMenu()
+    public void ChangeScene()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(SceneToLoad);
     }
 
     public void Quit()

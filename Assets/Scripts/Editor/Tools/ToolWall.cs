@@ -1,12 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 using UnityEngine;
 
 public class ToolWall : Tool
 {
     private int selectedObject;
-    private List<LevelGenerator.Position> selectedPositions = new List<LevelGenerator.Position>();
+    private readonly List<LevelGenerator.Position> selectedPositions = new List<LevelGenerator.Position>();
     private Mode mode = Mode.None;
+    private bool slope;
 
     public enum Mode
     {
@@ -20,6 +22,8 @@ public class ToolWall : Tool
     public override void OnGUI()
     {
         if (Room.walls.Length == 0) return;
+
+        slope = GUILayout.Toggle(slope, "Slope");
 
         Sprite[] thumbnails = Room.walls.Select(wall => wall.only).ToArray();
         selectedObject = SelectionGrid(selectedObject, thumbnails, Mathf.FloorToInt((RoomWindow.SideWidth - 4) / 36));
@@ -93,6 +97,7 @@ public class ToolWall : Tool
                 foreach (LevelGenerator.Position p in selectedPositions)
                 {
                     GetPropertyAtPos(p).FindPropertyRelative("wallID").intValue = selectedObject + 1;
+                    GetPropertyAtPos(p).FindPropertyRelative("slope").boolValue = slope;
                 }
 
                 break;
@@ -100,6 +105,7 @@ public class ToolWall : Tool
                 foreach (LevelGenerator.Position p in selectedPositions)
                 {
                     GetPropertyAtPos(p).FindPropertyRelative("wallID").intValue = 0;
+                    GetPropertyAtPos(p).FindPropertyRelative("slope").boolValue = false;
                 }
 
                 break;
