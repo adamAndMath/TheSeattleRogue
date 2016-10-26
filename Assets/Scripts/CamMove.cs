@@ -8,10 +8,6 @@ public class CamMove : MonoBehaviour
     private float z;
     private Camera cam;
     public float camMoveSpeed;
-    private Vector2 startingMax;
-    private Vector2 startingMin;
-    private Vector2 deltaMax;
-    private Vector2 deltaMin;
 
     private bool camIsMoving;
     private Vector3 camMovingPoint;
@@ -20,14 +16,6 @@ public class CamMove : MonoBehaviour
     {
         z = transform.position.z;
         cam = GetComponent<Camera>();
-        startingMax.x = max.x;
-        startingMax.y = max.y;
-        startingMin.x = min.x;
-        startingMin.y = min.y;
-        deltaMax.x = max.x;
-        deltaMax.y = max.y;
-        deltaMin.x = min.x;
-        deltaMin.y = min.y;
     }
 
     void LateUpdate()
@@ -41,7 +29,7 @@ public class CamMove : MonoBehaviour
                 Mathf.Clamp(playerPos.x + offset.x, min.x + camSize.x, max.x - camSize.x),
                 Mathf.Clamp(playerPos.y + offset.y, min.y + camSize.y, max.y - camSize.y), z);
         }
-        if (Player.Instance.transform.position.x > camSize.x + (deltaMax.x - startingMax.x))
+        if (Player.Instance.transform.position.x > max.x)
         {
             Time.timeScale = 0;
             if (!camIsMoving)
@@ -60,11 +48,9 @@ public class CamMove : MonoBehaviour
             {
                 camIsMoving = false;
                 Time.timeScale = 1;
-                deltaMax.x = max.x;
-                deltaMin.x = min.x;
             }
         }
-        if (Player.Instance.transform.position.x < -camSize.x + (deltaMin.x - startingMin.x))
+        if (Player.Instance.transform.position.x < min.x)
         {
             Time.timeScale = 0;
             if (!camIsMoving)
@@ -83,11 +69,9 @@ public class CamMove : MonoBehaviour
             {
                 camIsMoving = false;
                 Time.timeScale = 1;
-                deltaMin.x = min.x;
-                deltaMax.x = max.x;
             }
         }
-        if (Player.Instance.transform.position.y > camSize.y + (deltaMax.y - startingMax.y))
+        if (Player.Instance.transform.position.y > max.y)
         {
             Time.timeScale = 0;
             if (!camIsMoving)
@@ -106,11 +90,9 @@ public class CamMove : MonoBehaviour
             {
                 camIsMoving = false;
                 Time.timeScale = 1;
-                deltaMax.y = max.y;
-                deltaMin.y = min.y;
             }
         }
-        if (Player.Instance.transform.position.y < -camSize.y + (deltaMin.y - startingMin.y))
+        if (Player.Instance.transform.position.y < min.y)
         {
             Time.timeScale = 0;
             if (!camIsMoving)
@@ -129,8 +111,6 @@ public class CamMove : MonoBehaviour
             {
                 camIsMoving = false;
                 Time.timeScale = 1;
-                deltaMin.y = min.y;
-                deltaMax.y = max.y;
             }
         }
     }
