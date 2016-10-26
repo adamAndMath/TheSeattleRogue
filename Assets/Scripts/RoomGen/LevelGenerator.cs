@@ -106,6 +106,8 @@ public class LevelGenerator : MonoBehaviour
             } while (positions.Contains(position + (Room.Direction)(1 << dir)) || extraPositions.ContainsKey(position + (Room.Direction)(1 << dir)));
             extraPositions.Add(position + (Room.Direction)(1 << dir), (Room.Direction)(1 << (dir ^ 2)));
         }
+
+        GenerateRoom(rooms[0], new Position(0, 0), new Vector3(rooms[0].size.x, rooms[0].size.y));
     }
 
     void OnDrawGizmos()
