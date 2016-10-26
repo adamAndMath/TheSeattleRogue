@@ -23,6 +23,7 @@ public class Enemy : PhysicsObject
         {
             drop.Drop(transform.position);
         }
+        Player.Instance.enemyDeathSprites.Add(idleSprite);
 
         DestroyObject(gameObject);
     }
