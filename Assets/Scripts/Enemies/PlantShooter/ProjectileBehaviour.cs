@@ -6,7 +6,7 @@ public class ProjectileBehaviour : PhysicsObject
     public float horizontalSpeed;
     public float acceleration;
     public float startingSpeed;
-    private float offSet = 0.3f;
+    private float offSet = 0.9f;
 
     public GameObject smokeCloud;
 

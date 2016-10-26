@@ -4,6 +4,19 @@ using UnityEngine;
 
 public class RoomWindow : EditorWindow
 {
+    private static Texture2D questionMark;
+
+    public static Texture2D QuestionMark
+    {
+        get
+        {
+            if (questionMark == null)
+                questionMark = (Texture2D) EditorGUIUtility.Load("Question Mark.png");
+
+            return questionMark;
+        }
+    }
+
     private readonly Tool[] Tools;
     public const float SideWidth = 128;
 
@@ -29,7 +42,7 @@ public class RoomWindow : EditorWindow
 
     public RoomWindow()
     {
-        Tools = new Tool[] { new ToolWall(this) };
+        Tools = new Tool[] { new ToolWall(this), new ToolPlatform(this), new ToolSpike(this), new ToolSpawnerPlace(this), new ToolSpawnerEdit(this) };
         minSize = new Vector2(256, 256);
         titleContent.text = "Room Editor";
     }
@@ -197,10 +210,25 @@ public class RoomWindow : EditorWindow
                 {
                     Room.RoomPosition objData = room[pos];
 
-                    if (objData.wallID != 0)
+                    if (objData.wallID == -1)
                     {
-                        Sprite sprite = room.walls[objData.wallID - 1][GetWallDir(pos, objData.wallID)];
+                        GUI.DrawTextureWithTexCoords(rect, room.platform.sprite.texture, GetTextureRect(room.platform.sprite));
+                    }
+                    else if (objData.wallID == -2)
+                    {
+                        GUI.DrawTextureWithTexCoords(rect, room.spike.sprite.texture, GetTextureRect(room.platform.sprite));
+                    }
+                    else if (objData.wallID != 0)
+                    {
+                        Room.Wall wall = room.walls[objData.wallID - 1];
+                        int dir = room.GetWallDir(pos, objData.wallID);
+                        Sprite sprite = objData.slope ? wall.GetSlope(dir) : wall[dir];
                         GUI.DrawTextureWithTexCoords(rect, sprite.texture, GetTextureRect(sprite));
+                    }
+
+                    if (room.spawners != null && room.spawners.Any(spawner => spawner.position == pos))
+                    {
+                        GUI.DrawTextureWithTexCoords(rect, QuestionMark, new Rect(0, 0, 1, 1));
                     }
                 }
 
@@ -214,15 +242,5 @@ public class RoomWindow : EditorWindow
     public static Rect GetTextureRect(Sprite sprite)
     {
         return new Rect(sprite.rect.x / sprite.texture.width, sprite.rect.y / sprite.texture.height, sprite.rect.width / sprite.texture.width, sprite.rect.height / sprite.texture.height);
-    }
-
-    public int GetWallDir(LevelGenerator.Position pos, int id)
-    {
-        int dir = 0;
-        if (pos.y == room.size.y - 1 || room[pos + Room.Direction.Up].wallID == id) dir |= (int)Room.Direction.Up;
-        if (pos.y == 0 || room[pos + Room.Direction.Down].wallID == id) dir |= (int)Room.Direction.Down;
-        if (pos.x == 0 || room[pos + Room.Direction.Left].wallID == id) dir |= (int)Room.Direction.Left;
-        if (pos.x == room.size.x - 1 || room[pos + Room.Direction.Right].wallID == id) dir |= (int)Room.Direction.Right;
-        return dir;
     }
 }

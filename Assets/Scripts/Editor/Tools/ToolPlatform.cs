@@ -1,32 +1,18 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
-using UnityEditor;
 using UnityEngine;
 
-public class ToolWall : Tool
+public class ToolPlatform : Tool
 {
-    private int selectedObject;
     private readonly List<LevelGenerator.Position> selectedPositions = new List<LevelGenerator.Position>();
     private Mode mode = Mode.None;
-    private bool slope;
 
     public enum Mode
     {
         None, Place, Delete
     }
 
-    public ToolWall(RoomWindow window) : base(window, "Wall")
+    public ToolPlatform(RoomWindow window) : base(window, "Platform")
     {
-    }
-
-    public override void OnGUI()
-    {
-        if (Room.walls.Length == 0) return;
-
-        slope = GUILayout.Toggle(slope, "Slope");
-
-        Sprite[] thumbnails = Room.walls.Select(wall => wall.only).ToArray();
-        selectedObject = SelectionGrid(selectedObject, thumbnails, Mathf.FloorToInt((RoomWindow.SideWidth - 4) / 36));
     }
 
     public override bool PreRenderGrid(LevelGenerator.Position pos, Rect rect)
@@ -36,8 +22,7 @@ public class ToolWall : Tool
 
         if (mode == Mode.Place)
         {
-            Sprite sprite = Room.walls[selectedObject].only;
-            GUI.DrawTextureWithTexCoords(rect, sprite.texture, RoomWindow.GetTextureRect(sprite));
+            GUI.DrawTextureWithTexCoords(rect, Room.platform.sprite.texture, RoomWindow.GetTextureRect(Room.platform.sprite));
         }
 
         return false;
@@ -96,8 +81,8 @@ public class ToolWall : Tool
             case Mode.Place:
                 foreach (LevelGenerator.Position p in selectedPositions)
                 {
-                    GetPropertyAtPos(p).FindPropertyRelative("wallID").intValue = selectedObject + 1;
-                    GetPropertyAtPos(p).FindPropertyRelative("slope").boolValue = slope;
+                    GetPropertyAtPos(p).FindPropertyRelative("wallID").intValue = -1;
+                    GetPropertyAtPos(p).FindPropertyRelative("slope").boolValue = false;
                 }
 
                 break;

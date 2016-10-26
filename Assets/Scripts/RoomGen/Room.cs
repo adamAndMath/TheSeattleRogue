@@ -8,9 +8,13 @@ public class Room : ScriptableObject
     public Direction entrences;
     public Column[] columns;
     public Wall[] walls;
+    public Enemy[] spawnables;
+    public Spawner[] spawners;
+    public SpriteRenderer platform;
+    public SpriteRenderer spike;
 
     [Flags]
-    public enum Direction { Up = 1, Down = 2, Left = 4, Right = 8 }
+    public enum Direction { Up = 1, Left = 2, Down = 4, Right = 8 }
 
     [Serializable]
     public struct Wall
@@ -32,6 +36,11 @@ public class Room : ScriptableObject
         public Sprite rightOnly;
         public Sprite only;
 
+        public Sprite slopeDownLeft;
+        public Sprite slopeDownRight;
+        public Sprite slopeUpLeft;
+        public Sprite slopeUpRight;
+
         public Sprite this[int dir]
         {
             get
@@ -40,23 +49,30 @@ public class Room : ScriptableObject
                 {
                     case 0: return only;
                     case 1: return downOnly;
-                    case 2: return upOnly;
-                    case 3: return upDown;
-                    case 4: return rightOnly;
-                    case 5: return downRight;
+                    case 2: return rightOnly;
+                    case 3: return downRight;
+                    case 4: return upOnly;
+                    case 5: return upDown;
                     case 6: return upRight;
                     case 7: return right;
                     case 8: return leftOnly;
                     case 9: return downLeft;
-                    case 10: return upLeft;
-                    case 11: return left;
-                    case 12: return leftRight;
-                    case 13: return down;
+                    case 10: return leftRight;
+                    case 11: return down;
+                    case 12: return upLeft;
+                    case 13: return left;
                     case 14: return up;
                     case 15: return center;
                     default: throw new Exception();
                 }
             }
+        }
+
+        public Sprite GetSlope(int dir)
+        {
+            return (dir & (int) Direction.Up) != 0
+                ? ((dir & (int) Direction.Right) != 0 ? slopeUpRight : slopeUpLeft)
+                : ((dir & (int) Direction.Right) != 0 ? slopeDownRight : slopeDownLeft);
         }
     }
 
@@ -70,10 +86,38 @@ public class Room : ScriptableObject
     public struct RoomPosition
     {
         public int wallID;
+        public bool slope;
+    }
+
+    [Serializable]
+    public struct Spawner
+    {
+        public LevelGenerator.Position position;
+        public int spawnMask;
     }
 
     public RoomPosition this[LevelGenerator.Position pos]
     {
         get { return columns[pos.x].data[pos.y]; }
+    }
+
+    public int GetWallDir(LevelGenerator.Position pos)
+    {
+        int dir = 0;
+        if (pos.y == size.y - 1 || this[pos + Direction.Up].wallID > 0) dir |= (int)Direction.Up;
+        if (pos.y == 0 || this[pos + Direction.Down].wallID > 0) dir |= (int)Direction.Down;
+        if (pos.x == 0 || this[pos + Direction.Left].wallID > 0) dir |= (int)Direction.Left;
+        if (pos.x == size.x - 1 || this[pos + Direction.Right].wallID > 0) dir |= (int)Direction.Right;
+        return dir;
+    }
+
+    public int GetWallDir(LevelGenerator.Position pos, int id)
+    {
+        int dir = 0;
+        if (pos.y == size.y - 1 || this[pos + Direction.Up].wallID == id) dir |= (int)Direction.Up;
+        if (pos.y == 0 || this[pos + Direction.Down].wallID == id) dir |= (int)Direction.Down;
+        if (pos.x == 0 || this[pos + Direction.Left].wallID == id) dir |= (int)Direction.Left;
+        if (pos.x == size.x - 1 || this[pos + Direction.Right].wallID == id) dir |= (int)Direction.Right;
+        return dir;
     }
 }

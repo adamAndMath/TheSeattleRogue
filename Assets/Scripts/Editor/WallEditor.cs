@@ -6,7 +6,7 @@ public class WallEditor : PropertyDrawer
 {
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
     {
-        return EditorGUIUtility.singleLineHeight*4;
+        return EditorGUIUtility.singleLineHeight*8;
     }
 
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
@@ -34,6 +34,12 @@ public class WallEditor : PropertyDrawer
         SpriteField(new Rect(position.x + position.width / 4, position.y + position.height * 3, position.width / 4, position.height), property.FindPropertyRelative("leftRight"));
         SpriteField(new Rect(position.x + position.width / 2, position.y + position.height * 3, position.width / 4, position.height), property.FindPropertyRelative("rightOnly"));
         SpriteField(new Rect(position.x + position.width * 3 / 4, position.y + position.height * 3, position.width / 4, position.height), property.FindPropertyRelative("only"));
+
+
+        SpriteField(new Rect(position.x, position.y + position.height * 5, position.width / 2, position.height), property.FindPropertyRelative("slopeDownRight"));
+        SpriteField(new Rect(position.x + position.width / 2, position.y + position.height * 5, position.width / 2, position.height), property.FindPropertyRelative("slopeDownLeft"));
+        SpriteField(new Rect(position.x, position.y + position.height * 6, position.width / 2, position.height), property.FindPropertyRelative("slopeUpRight"));
+        SpriteField(new Rect(position.x + position.width / 2, position.y + position.height * 6, position.width / 2, position.height), property.FindPropertyRelative("slopeUpLeft"));
     }
 
     private void SpriteField(Rect position, SerializedProperty prop)
