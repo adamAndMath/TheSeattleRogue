@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : PhysicsObject
 {
@@ -16,6 +17,8 @@ public class Player : PhysicsObject
     public int MaxDash = 100;
     public int DashCost = 50;
     public float DashPower;
+
+    public int DeathScene = 0;
 
     public bool Direction { get { return 0 < transform.localScale.x; } set { transform.localScale = new Vector3(value ? -1 : 1, 1, 1); } }
 
@@ -44,6 +47,12 @@ public class Player : PhysicsObject
         animator.SetBool("Grounded", IsGrounded());
         animator.SetBool("Attacking", Input.GetButton("Attack"));
         animator.SetBool("Charge", Input.GetAxis("Charge") > 0.9F && DashPower >= DashCost);
+
+        if (hp <= 0)
+        {
+            SceneManager.LoadScene(DeathScene);
+        }
+
     }
 
     public void Damaged(int damage)
