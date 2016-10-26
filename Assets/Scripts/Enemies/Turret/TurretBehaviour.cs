@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Xml;
 using UnityEngine;
 
 public class TurretBehaviour : Enemy
@@ -10,11 +11,15 @@ public class TurretBehaviour : Enemy
     public bool cooldownOn;
     private bool IsAiming;
 
-    public float placeHolderSpeed;
+    public GameObject turretPlatform;
 	// Use this for initialization
 	protected override void Start ()
 	{
 	    turretAnimator = GetComponent<Animator>();
+
+	    turretPlatform.layer = -2;
+
+	    Instantiate(turretPlatform, transform.position, Quaternion.identity);
 	}
 	
 	// Update is called once per frame
