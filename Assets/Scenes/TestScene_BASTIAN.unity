@@ -2058,11 +2058,11 @@ Prefab:
         type: 3}
     - target: {fileID: 4000011039918464, guid: 75dcc9dbf9ad55f4398bde8d7f714b21, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.58
+      value: 0.54
       objectReference: {fileID: 0}
     - target: {fileID: 4000011039918464, guid: 75dcc9dbf9ad55f4398bde8d7f714b21, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.17
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 212000011535831610, guid: 75dcc9dbf9ad55f4398bde8d7f714b21,
         type: 2}
