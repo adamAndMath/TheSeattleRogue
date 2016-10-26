@@ -42,7 +42,7 @@ public class RoomWindow : EditorWindow
 
     public RoomWindow()
     {
-        Tools = new Tool[] { new ToolWall(this), new ToolPlatform(this), new ToolSpawnerPlace(this), new ToolSpawnerEdit(this) };
+        Tools = new Tool[] { new ToolWall(this), new ToolPlatform(this), new ToolSpike(this), new ToolSpawnerPlace(this), new ToolSpawnerEdit(this) };
         minSize = new Vector2(256, 256);
         titleContent.text = "Room Editor";
     }
@@ -212,7 +212,11 @@ public class RoomWindow : EditorWindow
 
                     if (objData.wallID == -1)
                     {
-                        GUI.DrawTextureWithTexCoords(rect, room.platformSprite.texture, GetTextureRect(room.platformSprite));
+                        GUI.DrawTextureWithTexCoords(rect, room.platform.sprite.texture, GetTextureRect(room.platform.sprite));
+                    }
+                    else if (objData.wallID == -2)
+                    {
+                        GUI.DrawTextureWithTexCoords(rect, room.spike.sprite.texture, GetTextureRect(room.platform.sprite));
                     }
                     else if (objData.wallID != 0)
                     {

@@ -10,7 +10,8 @@ public class Room : ScriptableObject
     public Wall[] walls;
     public Enemy[] spawnables;
     public Spawner[] spawners;
-    public Sprite platformSprite;
+    public SpriteRenderer platform;
+    public SpriteRenderer spike;
 
     [Flags]
     public enum Direction { Up = 1, Left = 2, Down = 4, Right = 8 }
