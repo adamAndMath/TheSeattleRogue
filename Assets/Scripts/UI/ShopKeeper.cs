@@ -26,7 +26,8 @@ public class ShopKeeper : MonoBehaviour
 	    else
 	    {
             ShopGameObject.SetActive(false);
-	    }
+            Time.timeScale = 1;
+        }
 
 	    if (Vector2.Distance(Player.Instance.transform.position, transform.position) > ShopRange)
 	    {
