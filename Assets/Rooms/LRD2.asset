@@ -15,9 +15,9 @@ MonoBehaviour:
     x: 1
     y: 1
   entrencesUp: 0
-  entrencesDown: 0
-  entrencesLeft: 0
-  entrencesRight: 0
+  entrencesDown: 1
+  entrencesLeft: 1
+  entrencesRight: 1
   columns:
   - data:
     - wallID: 1

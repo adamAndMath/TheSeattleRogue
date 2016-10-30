@@ -14,9 +14,9 @@ MonoBehaviour:
   size:
     x: 1
     y: 1
-  entrencesUp: 0
+  entrencesUp: 1
   entrencesDown: 0
-  entrencesLeft: 0
+  entrencesLeft: 1
   entrencesRight: 0
   columns:
   - data:

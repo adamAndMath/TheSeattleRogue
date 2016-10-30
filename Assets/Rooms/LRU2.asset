@@ -14,10 +14,10 @@ MonoBehaviour:
   size:
     x: 1
     y: 1
-  entrencesUp: 0
+  entrencesUp: 1
   entrencesDown: 0
-  entrencesLeft: 0
-  entrencesRight: 0
+  entrencesLeft: 1
+  entrencesRight: 1
   columns:
   - data:
     - wallID: 1
