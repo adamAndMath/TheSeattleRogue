@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Name: D1
   m_EditorClassIdentifier: 
   size:
-    x: 15
-    y: 9
-  entrences: 4
+    x: 1
+    y: 1
+  entrencesUp: 0
+  entrencesDown: 0
+  entrencesLeft: 0
+  entrencesRight: 0
   columns:
   - data:
     - wallID: 1
