@@ -147,7 +147,7 @@ public class LevelGenerator : MonoBehaviour
         {
             Room[] avalableRooms = rooms.Where(r => RoomFit(r, extraPosition.Key, extraPosition.Value)).ToArray();
             Room room = avalableRooms[Random.Range(0, avalableRooms.Length - 1)];
-            GenerateRoom(room, extraPosition.Key, new Vector3(room.size.x, room.size.y));
+            GenerateRoom(room, extraPosition.Key, new Vector3(room.RealSize.x, room.RealSize.y));
         }
     }
 
