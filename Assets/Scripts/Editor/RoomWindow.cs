@@ -138,20 +138,20 @@ public class RoomWindow : EditorWindow
     {
         Rect gridRect = new Rect(SideWidth, 0, position.width - SideWidth, position.height);
 
-        if (gridRect.width < room.size.x * gridSize)
+        if (gridRect.width < room.RealSize.x * gridSize)
         {
             gridRect.height -= 20;
 
-            if (gridRect.height < room.size.y * gridSize)
+            if (gridRect.height < room.RealSize.y * gridSize)
             {
                 gridRect.width -= 20;
             }
         }
-        else if (gridRect.height < room.size.y * gridSize)
+        else if (gridRect.height < room.RealSize.y * gridSize)
         {
             gridRect.width -= 20;
 
-            if (gridRect.width < room.size.x * gridSize)
+            if (gridRect.width < room.RealSize.x * gridSize)
             {
                 gridRect.height -= 20;
             }
@@ -163,7 +163,7 @@ public class RoomWindow : EditorWindow
 
         pos += scrollPosition - gridRect.position;
         pos /= gridSize;
-        return new LevelGenerator.Position(Mathf.FloorToInt(pos.x), room.size.y - 1 - Mathf.FloorToInt(pos.y));
+        return new LevelGenerator.Position(Mathf.FloorToInt(pos.x), room.RealSize.y - 1 - Mathf.FloorToInt(pos.y));
     }
 
     /// <summary>
@@ -197,13 +197,13 @@ public class RoomWindow : EditorWindow
     /// <param name="position"></param>
     private void GUIGrid(Rect position)
     {
-        scrollPosition = GUI.BeginScrollView(position, scrollPosition, new Rect(0, 0, room.size.x * gridSize, room.size.y * gridSize));
+        scrollPosition = GUI.BeginScrollView(position, scrollPosition, new Rect(0, 0, room.RealSize.x * gridSize, room.RealSize.y * gridSize));
 
-        for (LevelGenerator.Position pos = new LevelGenerator.Position(); pos.x < room.size.x; pos.x++)
+        for (LevelGenerator.Position pos = new LevelGenerator.Position(); pos.x < room.RealSize.x; pos.x++)
         {
-            for (pos.y = 0; pos.y < room.size.y; pos.y++)
+            for (pos.y = 0; pos.y < room.RealSize.y; pos.y++)
             {
-                Rect rect = new Rect(pos.x * gridSize, (room.size.y - 1 - pos.y) * gridSize, gridSize, gridSize);
+                Rect rect = new Rect(pos.x * gridSize, (room.RealSize.y - 1 - pos.y) * gridSize, gridSize, gridSize);
                 //GUI.DrawTextureWithTexCoords(rect, room.background.texture, GetTextureRect(room.background));
 
                 if (CurrentTool.PreRenderGrid(pos, rect))

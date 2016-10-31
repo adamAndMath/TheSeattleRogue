@@ -145,10 +145,19 @@ public class LevelGenerator : MonoBehaviour
 
         foreach (var extraPosition in extraPositions)
         {
-            Room[] avalableRooms = rooms.Where(r => r.entrences == extraPosition.Value).ToArray();
+            Room[] avalableRooms = rooms.Where(r => RoomFit(r, extraPosition.Key, extraPosition.Value)).ToArray();
             Room room = avalableRooms[Random.Range(0, avalableRooms.Length - 1)];
-            GenerateRoom(room, extraPosition.Key, new Vector3(room.size.x, room.size.y));
+            GenerateRoom(room, extraPosition.Key, new Vector3(room.RealSize.x, room.RealSize.y));
         }
+    }
+
+    private bool RoomFit(Room room, Position position, Room.Direction direction)
+    {
+        return room.size.x == 1 && room.size.y == 1 &&
+               (room.entrencesUp == 1) == ((direction & Room.Direction.Up) != 0) &&
+               (room.entrencesDown == 1) == ((direction & Room.Direction.Down) != 0) &&
+               (room.entrencesLeft == 1) == ((direction & Room.Direction.Left) != 0) &&
+               (room.entrencesRight == 1) == ((direction & Room.Direction.Right) != 0);
     }
 
     private bool ValidatePath()
@@ -222,9 +231,9 @@ public class LevelGenerator : MonoBehaviour
                     if ((dir & (int) Room.Direction.Down) == 0)
                     {
                         if ((dir & (int) Room.Direction.Left) != 0)
-                            spike.transform.localRotation = Quaternion.Euler(0, 0, 90);
-                        else if ((dir & (int) Room.Direction.Right) != 0)
                             spike.transform.localRotation = Quaternion.Euler(0, 0, 270);
+                        else if ((dir & (int) Room.Direction.Right) != 0)
+                            spike.transform.localRotation = Quaternion.Euler(0, 0, 90);
                         else if ((dir & (int) Room.Direction.Up) != 0)
                             spike.transform.localRotation = Quaternion.Euler(0, 0, 180);
                     }
