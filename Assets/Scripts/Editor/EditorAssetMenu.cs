@@ -11,6 +11,12 @@ public class EditorAssetMenu
         CreateNewAsset<Room>();
     }
 
+    [MenuItem("Assets/Create/Item")]
+    public static void CreateItem()
+    {
+        CreateNewAsset<Item>();
+    }
+
     private static T CreateNewAsset<T>() where T : ScriptableObject
     {
         return CreateNewAsset<T>(string.Format(NewAsset, typeof(T).Name));

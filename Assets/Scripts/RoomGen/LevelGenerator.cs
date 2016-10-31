@@ -287,7 +287,7 @@ public class LevelGenerator : MonoBehaviour
             do
             {
                 i = Random.Range(0, 30);
-            } while ((1 << i & spawner.spawnMask) == 0);
+            } while (((1 << i) & spawner.spawnMask) == 0);
 
             Enemy enemy = Instantiate(room.spawnables[i]);
             enemy.transform.SetParent(roomObject.transform, false);

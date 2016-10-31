@@ -9,123 +9,226 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6260ed30445b7d9489f571908e66ba34, type: 3}
-  m_Name: LU
+  m_Name: LRU
   m_EditorClassIdentifier: 
   size:
     x: 10
     y: 10
-  entrences: 0
+  entrencesUp: 0
+  entrencesDown: 0
+  entrencesLeft: 0
+  entrencesRight: 0
   columns:
   - data:
     - wallID: 1
+      slope: 0
     - wallID: 1
+      slope: 0
     - wallID: 1
+      slope: 0
     - wallID: 1
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 1
+      slope: 0
     - wallID: 1
+      slope: 0
     - wallID: 1
+      slope: 0
     - wallID: 1
+      slope: 0
   - data:
     - wallID: 1
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 1
+      slope: 0
   - data:
     - wallID: 1
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 1
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 1
+      slope: 0
   - data:
     - wallID: 1
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 1
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 1
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 1
+      slope: 0
   - data:
     - wallID: 1
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 1
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 1
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
   - data:
     - wallID: 1
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 1
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 1
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
   - data:
     - wallID: 1
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 1
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 1
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 1
+      slope: 0
   - data:
     - wallID: 1
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 1
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 1
+      slope: 0
   - data:
     - wallID: 1
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 0
+      slope: 0
     - wallID: 1
+      slope: 0
   - data:
     - wallID: 1
+      slope: 0
     - wallID: 1
+      slope: 0
     - wallID: 1
+      slope: 0
     - wallID: 1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
     - wallID: 1
+      slope: 0
     - wallID: 1
+      slope: 0
     - wallID: 1
+      slope: 0
     - wallID: 1
-    - wallID: 1
-    - wallID: 1
+      slope: 0
   walls:
   - upLeft: {fileID: 21300000, guid: 86cbfc8445425364da94a1aeb5ad4b3b, type: 3}
     left: {fileID: 21300008, guid: 86cbfc8445425364da94a1aeb5ad4b3b, type: 3}
@@ -143,3 +246,11 @@ MonoBehaviour:
     leftRight: {fileID: 21300026, guid: 86cbfc8445425364da94a1aeb5ad4b3b, type: 3}
     rightOnly: {fileID: 21300028, guid: 86cbfc8445425364da94a1aeb5ad4b3b, type: 3}
     only: {fileID: 21300030, guid: 86cbfc8445425364da94a1aeb5ad4b3b, type: 3}
+    slopeDownLeft: {fileID: 0}
+    slopeDownRight: {fileID: 0}
+    slopeUpLeft: {fileID: 0}
+    slopeUpRight: {fileID: 0}
+  spawnables: []
+  spawners: []
+  platform: {fileID: 0}
+  spike: {fileID: 0}

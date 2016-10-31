@@ -30,7 +30,7 @@ MonoBehaviour:
       slope: 0
     - wallID: 0
       slope: 0
-    - wallID: 0
+    - wallID: 1
       slope: 0
     - wallID: 1
       slope: 0
@@ -307,7 +307,7 @@ MonoBehaviour:
   - position:
       x: 12
       y: 6
-    spawnMask: 5
+    spawnMask: 2
   - position:
       x: 2
       y: 6
