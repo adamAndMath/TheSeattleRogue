@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Name: LD2
   m_EditorClassIdentifier: 
   size:
-    x: 19
-    y: 11
-  entrences: 6
+    x: 1
+    y: 1
+  entrencesUp: 0
+  entrencesDown: 1
+  entrencesLeft: 1
+  entrencesRight: 0
   columns:
   - data:
     - wallID: 1
@@ -23,17 +26,11 @@ MonoBehaviour:
       slope: 0
     - wallID: 1
       slope: 0
-    - wallID: 1
-      slope: 0
     - wallID: 0
       slope: 0
     - wallID: 0
       slope: 0
     - wallID: 0
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
       slope: 0
     - wallID: 1
       slope: 0
@@ -56,12 +53,6 @@ MonoBehaviour:
       slope: 0
     - wallID: 0
       slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 1
-      slope: 0
   - data:
     - wallID: 1
       slope: 0
@@ -78,12 +69,6 @@ MonoBehaviour:
     - wallID: 0
       slope: 0
     - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 1
       slope: 0
   - data:
     - wallID: 1
@@ -97,7 +82,37 @@ MonoBehaviour:
     - wallID: 1
       slope: 0
     - wallID: 1
+      slope: 1
+    - wallID: 0
       slope: 0
+    - wallID: 0
+      slope: 0
+  - data:
+    - wallID: 1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+  - data:
+    - wallID: 1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 1
+      slope: 1
     - wallID: 1
       slope: 0
     - wallID: 1
@@ -105,100 +120,6 @@ MonoBehaviour:
     - wallID: 0
       slope: 0
     - wallID: 0
-      slope: 0
-    - wallID: 1
-      slope: 0
-  - data:
-    - wallID: 1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 1
-      slope: 0
-  - data:
-    - wallID: 1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 1
-      slope: 0
-  - data:
-    - wallID: 1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 1
-      slope: 0
-  - data:
-    - wallID: 1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 1
       slope: 0
   - data:
     - wallID: -1
@@ -207,21 +128,15 @@ MonoBehaviour:
       slope: 0
     - wallID: 0
       slope: 0
-    - wallID: 1
+    - wallID: 0
       slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
+    - wallID: 0
       slope: 0
     - wallID: 0
       slope: 0
     - wallID: 0
       slope: 0
-    - wallID: 1
+    - wallID: 0
       slope: 0
   - data:
     - wallID: -1
@@ -230,21 +145,15 @@ MonoBehaviour:
       slope: 0
     - wallID: 0
       slope: 0
-    - wallID: 1
+    - wallID: 0
       slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
+    - wallID: 0
       slope: 0
     - wallID: 0
       slope: 0
     - wallID: 0
       slope: 0
-    - wallID: 1
+    - wallID: 0
       slope: 0
   - data:
     - wallID: -1
@@ -253,29 +162,19 @@ MonoBehaviour:
       slope: 0
     - wallID: 0
       slope: 0
-    - wallID: 1
+    - wallID: 0
       slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
+    - wallID: 0
       slope: 0
     - wallID: 0
       slope: 0
     - wallID: 0
       slope: 0
-    - wallID: 1
+    - wallID: 0
       slope: 0
   - data:
     - wallID: 1
       slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
     - wallID: 1
       slope: 0
     - wallID: 1
@@ -286,147 +185,7 @@ MonoBehaviour:
       slope: 0
     - wallID: 1
       slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
     - wallID: 1
-      slope: 0
-  - data:
-    - wallID: 1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 1
-      slope: 0
-  - data:
-    - wallID: 1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 1
-      slope: 0
-  - data:
-    - wallID: 1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 1
-      slope: 0
-  - data:
-    - wallID: 1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 1
-      slope: 1
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 1
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 1
-      slope: 0
-  - data:
-    - wallID: 1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 1
-      slope: 0
-  - data:
-    - wallID: 1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
       slope: 0
     - wallID: 1
       slope: 0
@@ -437,6 +196,68 @@ MonoBehaviour:
       slope: 0
     - wallID: 1
       slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+  - data:
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+  - data:
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+  - data:
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+  - data:
     - wallID: 1
       slope: 0
     - wallID: 1
