@@ -14,8 +14,6 @@ public class ProjectileBehaviour : PhysicsObject
 	{
         if (MoveHorizontal(-horizontalSpeed * Time.deltaTime) || MoveVertical(ConstantAcceleration(-acceleration, ref startingSpeed)))
 	    {
-	        Debug.Log("Why is this not happening?");
-
             Instantiate(smokeCloud, new Vector3(transform.position.x, transform.position.y + offSet, 0), Quaternion.identity);
             Destroy(gameObject);
 	    }
