@@ -1,15 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Runtime.InteropServices;
 
-public class BossBehaviour : MonoBehaviour {
+public class BossBehaviour : PhysicsObject
+{
+    public int Health;
+
+    public Animator animator;
 
 	// Use this for initialization
-	void Start () {
-	
+	protected  override void Start ()
+	{
+        base.Start();
+	    animator = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
-	}
+	void Update ()
+    {
+
+    }
 }
