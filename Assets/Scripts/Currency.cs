@@ -7,8 +7,7 @@ public class Currency : PhysicsObject
     public Vector2 speedMin;
     public Vector2 speedMax;
     private Vector2 speed;
-    public AudioSource audioObject;
-    public AudioClip coinSoundAudioClip;
+    public GameObject audioObject;
 
     protected override void Start()
     {
@@ -37,10 +36,7 @@ public class Currency : PhysicsObject
                 player.money += val;
                 Destroy(gameObject);
 
-                AudioSource clone = Instantiate(audioObject);
-                clone.clip = coinSoundAudioClip;
-                clone.Play();
-                clone.gameObject.hideFlags = HideFlags.HideInHierarchy;
+                GameObject clone = Instantiate(audioObject) as GameObject;
                 Destroy(clone.gameObject,3);
             }
         }

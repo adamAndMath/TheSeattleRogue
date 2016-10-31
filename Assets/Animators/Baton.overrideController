@@ -1,0 +1,14 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Baton
+  m_Controller: {fileID: 9100000, guid: e7517d7c9de17ba42bf6f19136b9a86f, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 40a71ce4d85576846b208f98b1fd4752, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c1cc840a58e44294388fa02f41e5add9, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5adda76272cad81488ca0f000f807fb2, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: daaff90c22413b74780e53bb6895d5db, type: 2}

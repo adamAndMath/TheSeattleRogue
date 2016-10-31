@@ -89,9 +89,8 @@ MonoBehaviour:
   gravity: 5
   speedMin: {x: -1, y: 0.9}
   speedMax: {x: 1, y: 1.1}
-  audioObject: {fileID: 82000012647805016, guid: 67ce6380078e47a4f9f37fd5901bbc75,
+  audioObject: {fileID: 1000013612913616, guid: c94283cd028288149b973e87e0d3e36f,
     type: 2}
-  coinSoundAudioClip: {fileID: 8300000, guid: 333240c550c68ce43a1f8a03a91eb12b, type: 3}
 --- !u!212 &212000012734503444
 SpriteRenderer:
   m_ObjectHideFlags: 1

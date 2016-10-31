@@ -20,6 +20,8 @@ public class Player : PhysicsObject
     public int DashCost = 50;
     public float DashPower;
 
+    public Animator weapon;
+
     public int DeathScene = 0;
 
     public List<Sprite> enemyDeathSprites;
@@ -48,7 +50,8 @@ public class Player : PhysicsObject
         animator.SetBool("Looking", !Mathf.Approximately(0, Input.GetAxisRaw("Horizontal")) || !Mathf.Approximately(0, Input.GetAxisRaw("Vertical")));
         animator.SetBool("Jump", Input.GetButton("Jump"));
         animator.SetBool("Grounded", IsGrounded());
-        animator.SetBool("Attacking", Input.GetButton("Attack"));
+        animator.SetBool("Attacking", Input.GetButtonDown("Attack"));
+        weapon.SetBool("Attacking", Input.GetButtonDown("Attack"));
         animator.SetBool("Charge", Input.GetAxis("Charge") > 0.9F && DashPower >= DashCost);
 
         if (hp <= 0)

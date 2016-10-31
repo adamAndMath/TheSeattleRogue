@@ -1583,6 +1583,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 487778936}
   - 212: {fileID: 487778937}
+  - 95: {fileID: 487778938}
   m_Layer: 0
   m_Name: UndergroundBackdrop
   m_TagString: Untagged
@@ -1636,6 +1637,23 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!95 &487778938
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 487778935}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c1d5ff93e2ab16e498cd8f7f242ddabb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &494890230
 Prefab:
   m_ObjectHideFlags: 0
@@ -3655,6 +3673,29 @@ Prefab:
     - target: {fileID: 4000012496464288, guid: ec87c0c3747b40540a15e88610c6042c, type: 2}
       propertyPath: m_RootOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 102000011037266234, guid: ec87c0c3747b40540a15e88610c6042c,
+        type: 2}
+      propertyPath: m_Text
+      value: 00 / 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 102000011037266234, guid: ec87c0c3747b40540a15e88610c6042c,
+        type: 2}
+      propertyPath: m_FontSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 102000011037266234, guid: ec87c0c3747b40540a15e88610c6042c,
+        type: 2}
+      propertyPath: m_Anchor
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010642051936, guid: ec87c0c3747b40540a15e88610c6042c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010642051936, guid: ec87c0c3747b40540a15e88610c6042c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec87c0c3747b40540a15e88610c6042c, type: 2}
@@ -5865,6 +5906,17 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012413323090, guid: 75dcc9dbf9ad55f4398bde8d7f714b21, type: 2}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 95000012926095692, guid: 75dcc9dbf9ad55f4398bde8d7f714b21,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 062503537071f4c429beb0058f14ab0f,
+        type: 2}
+    - target: {fileID: 95000012926095692, guid: 75dcc9dbf9ad55f4398bde8d7f714b21,
+        type: 2}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
