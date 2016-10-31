@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012271734224}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.8350976, y: -3.7391825, z: 0}
+  m_LocalPosition: {x: -5.9037585, y: -3.4124894, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -87,7 +87,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   val: 1
   gravity: 5
-  speed: {x: 0, y: 0}
+  speed: {x: 1, y: 1}
   audioObject: {fileID: 82000012647805016, guid: 67ce6380078e47a4f9f37fd5901bbc75,
     type: 2}
   coinSoundAudioClip: {fileID: 8300000, guid: 333240c550c68ce43a1f8a03a91eb12b, type: 3}

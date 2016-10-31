@@ -147,7 +147,7 @@ public class LevelGenerator : MonoBehaviour
         {
             Room[] avalableRooms = rooms.Where(r => RoomFit(r, extraPosition.Key, extraPosition.Value)).ToArray();
             Room room = avalableRooms[Random.Range(0, avalableRooms.Length - 1)];
-            GenerateRoom(room, extraPosition.Key, new Vector3(room.RealSize.x, room.RealSize.y));
+            GenerateRoom(room, extraPosition.Key, new Vector3(Room.RoomSize.x, Room.RoomSize.y));
         }
     }
 
@@ -207,9 +207,20 @@ public class LevelGenerator : MonoBehaviour
 
     private void GenerateRoom(Room room, Position pos, Vector3 size)
     {
-        GameObject roomObject = new GameObject(room.name);
+        GameObject roomObject = new GameObject(room.name, typeof(RoomInstance));
         roomObject.transform.position = new Vector3(pos.x * size.x, pos.y * size.y);
+        roomObject.GetComponent<RoomInstance>().room = room;
         Position position = new Position();
+
+        GenerateWall(room, roomObject, new Position(-1, -1), 15, 1);
+        GenerateWall(room, roomObject, new Position(room.RealSize.x, -1), 15, 1);
+        GenerateWall(room, roomObject, new Position(-1, room.RealSize.y), 15, 1);
+        GenerateWall(room, roomObject, new Position(room.RealSize.x, room.RealSize.y), 15, 1);
+
+        GenerateSide(room.entrencesLeft == 1, room, roomObject, -1, 1);
+        GenerateSide(room.entrencesRight == 1, room, roomObject, room.RealSize.x, -1);
+        GenerateTop(room.entrencesDown == 1, room, roomObject, -1, 1);
+        GenerateTop(room.entrencesUp == 1, room, roomObject, room.RealSize.y, -1);
 
         foreach (var column in room.columns)
         {
@@ -217,15 +228,13 @@ public class LevelGenerator : MonoBehaviour
             {
                 if (posData.wallID == -1)
                 {
-                    SpriteRenderer platform = Instantiate(room.platform);
-                    platform.transform.SetParent(roomObject.transform);
-                    platform.transform.localPosition = new Vector3(position.x - size.x / 2, position.y - size.y / 2);
+                    GeneratePlatform(room, roomObject, position);
                 }
                 else if (posData.wallID == -2)
                 {
                     SpriteRenderer spike = Instantiate(room.spike);
                     spike.transform.SetParent(roomObject.transform);
-                    spike.transform.localPosition = new Vector3(position.x - size.x / 2, position.y - size.y / 2);
+                    spike.transform.localPosition = new Vector3(position.x, position.y);
                     int dir = room.GetWallDir(position);
 
                     if ((dir & (int) Room.Direction.Down) == 0)
@@ -245,7 +254,7 @@ public class LevelGenerator : MonoBehaviour
                         int dir = room.GetWallDir(position, posData.wallID);
                         GameObject slope = new GameObject("Slope", typeof(SpriteRenderer), typeof(EdgeCollider2D));
                         slope.transform.SetParent(roomObject.transform);
-                        slope.transform.localPosition = new Vector3(position.x - size.x / 2, position.y - size.y / 2);
+                        slope.transform.localPosition = new Vector3(position.x, position.y);
                         slope.GetComponent<SpriteRenderer>().sprite = room.walls[posData.wallID - 1].GetSlope(dir);
                         EdgeCollider2D col = slope.GetComponent<EdgeCollider2D>();
 
@@ -257,10 +266,7 @@ public class LevelGenerator : MonoBehaviour
                     }
                     else
                     {
-                        SpriteRenderer wall = Instantiate(wallPrefab);
-                        wall.transform.SetParent(roomObject.transform);
-                        wall.transform.localPosition = new Vector3(position.x - size.x/2, position.y - size.y/2);
-                        wall.sprite = room.walls[posData.wallID - 1][room.GetWallDir(position, posData.wallID)];
+                        GenerateWall(room, roomObject, position, room.GetWallDir(position, posData.wallID), posData.wallID);
                     }
                 }
                 
@@ -270,5 +276,71 @@ public class LevelGenerator : MonoBehaviour
             position.y = 0;
             position.x++;
         }
+    }
+
+    private static void GeneratePlatform(Room room, GameObject roomObject, Position position)
+    {
+        SpriteRenderer platform = Instantiate(room.platform);
+        platform.transform.SetParent(roomObject.transform);
+        platform.transform.localPosition = new Vector3(position.x, position.y);
+    }
+
+    private void GenerateSide(bool entrence, Room room, GameObject roomObject, int x, int check)
+    {
+        int dir = 1 << (2 - check);
+        int antiDir = 1 << (2 + check);
+
+        if (entrence)
+        {
+            GenerateWall(room, roomObject, new Position(x, 0), 5 | antiDir | (room[new Position(x + check, 0)].wallID == 1 ? dir : 0), 1);
+            GenerateWall(room, roomObject, new Position(x, 1), 5 | antiDir | (room[new Position(x + check, 1)].wallID == 1 ? dir : 0), 1);
+            GenerateWall(room, roomObject, new Position(x, 2), 4 | antiDir | (room[new Position(x + check, 2)].wallID == 1 ? dir : 0), 1);
+            GenerateWall(room, roomObject, new Position(x, 5), 1 | antiDir | (room[new Position(x + check, 5)].wallID == 1 ? dir : 0), 1);
+            GenerateWall(room, roomObject, new Position(x, 6), 5 | antiDir | (room[new Position(x + check, 6)].wallID == 1 ? dir : 0), 1);
+            GenerateWall(room, roomObject, new Position(x, 7), 5 | antiDir | (room[new Position(x + check, 7)].wallID == 1 ? dir : 0), 1);
+        }
+        else
+        {
+            for (int y = 0; y < 8; y++)
+            {
+                GenerateWall(room, roomObject, new Position(x, y), 7 | (room[new Position(x + check, y)].wallID == 1 ? 8 : 0), 1);
+            }
+        }
+    }
+
+    private void GenerateTop(bool entrence, Room room, GameObject roomObject, int y, int check)
+    {
+        int dir = 1 << (1 - check);
+        int antiDir = 1 << (1 + check);
+
+        if (entrence)
+        {
+            for (int x = 0; x < 5; x++)
+            {
+                GenerateWall(room, roomObject, new Position(x, y), 10 | antiDir | (room[new Position(x, y + check)].wallID == 1 ? dir : 0), 1);
+                GenerateWall(room, roomObject, new Position(14 - x, y), 10 | antiDir | (room[new Position(14 - x, y + check)].wallID == 1 ? dir : 0), 1);
+            }
+            
+            GenerateWall(room, roomObject, new Position(5, y), 2 | antiDir | (room[new Position(5, y + check)].wallID == 1 ? dir : 0), 1);
+            GenerateWall(room, roomObject, new Position(9, y), 8 | antiDir | (room[new Position(9, y + check)].wallID == 1 ? dir : 0), 1);
+            GeneratePlatform(room, roomObject, new Position(6, y));
+            GeneratePlatform(room, roomObject, new Position(7, y));
+            GeneratePlatform(room, roomObject, new Position(8, y));
+        }
+        else
+        {
+            for (int x = 0; x < 15; x++)
+            {
+                GenerateWall(room, roomObject, new Position(x, y), 10 | antiDir | (room[new Position(x, y + check)].wallID == 1 ? dir : 0), 1);
+            }
+        }
+    }
+
+    private void GenerateWall(Room room, GameObject roomObject, Position position, int direction, int wallID)
+    {
+        SpriteRenderer wall = Instantiate(wallPrefab);
+        wall.transform.SetParent(roomObject.transform);
+        wall.transform.localPosition = new Vector3(position.x, position.y);
+        wall.sprite = room.walls[wallID - 1][direction];
     }
 }

@@ -17,6 +17,7 @@ public class Currency : PhysicsObject
             speed = Vector2.zero;
         else
             speed.y -= gravity*Time.deltaTime;
+        
 
         int size = collider2D.Cast(Vector2.down, rayHits, 0);
 

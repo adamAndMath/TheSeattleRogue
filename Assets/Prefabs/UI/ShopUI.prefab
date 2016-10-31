@@ -23,7 +23,7 @@ GameObject:
   - 114: {fileID: 114000010235283916}
   - 114: {fileID: 114000014273981128}
   m_Layer: 5
-  m_Name: Weapon1Box
+  m_Name: KnifeBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57,7 +57,7 @@ GameObject:
   - 222: {fileID: 222000013349914686}
   - 114: {fileID: 114000010341947708}
   m_Layer: 5
-  m_Name: ShopItemInfo (1)
+  m_Name: DifferentWeapons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -160,7 +160,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 224000010465374902}
   m_Layer: 5
-  m_Name: Weapon3Info
+  m_Name: ManceteInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -470,7 +470,7 @@ GameObject:
   - 114: {fileID: 114000014217017792}
   - 114: {fileID: 114000013695472888}
   m_Layer: 5
-  m_Name: Weapon2Box
+  m_Name: SwordBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -534,7 +534,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 224000010311891502}
   m_Layer: 5
-  m_Name: Weapon2Info
+  m_Name: SwordInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -617,7 +617,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 224000013774357980}
   m_Layer: 5
-  m_Name: Weapon1Info
+  m_Name: KnifeInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -669,7 +669,7 @@ GameObject:
   - 114: {fileID: 114000014061747776}
   - 114: {fileID: 114000013595124808}
   m_Layer: 5
-  m_Name: Weapon3Box
+  m_Name: MancetteBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -941,6 +941,7 @@ MonoBehaviour:
 
 
 
+    Range: 2
 
     Hardhittyness: 2'
 --- !u!114 &114000010548498104
@@ -1135,7 +1136,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'This is a nice weapon3, it''s better than a club at least!
+  m_Text: 'This is a nice sword, it has the range of a club, and the damage of a knife.
 
 
 
@@ -1143,9 +1144,9 @@ MonoBehaviour:
 
 
 
+    Range: 2
 
-
-    Hardhittyness: 2'
+    Hardhittyness: 3'
 --- !u!114 &114000011451568076
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1281,7 +1282,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 6af7b5bc78bb5a44cbaa5d9ab86cd683, type: 3}
+  m_Sprite: {fileID: 21300004, guid: 739ebdf3cbce92a49bbeaab60312976c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1308,7 +1309,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 6af7b5bc78bb5a44cbaa5d9ab86cd683, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 739ebdf3cbce92a49bbeaab60312976c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1495,7 +1496,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'This is a nice Weapon2, it''s better than a club at least!
+  m_Text: 'This is a nice Knife, It has a small range, but hits harder than a pipe.
 
 
 
@@ -1503,9 +1504,9 @@ MonoBehaviour:
 
 
 
+    Range: 1
 
-
-    Hardhittyness: 2'
+    Hardhittyness: 3'
 --- !u!114 &114000012886727628
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1689,7 +1690,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 6af7b5bc78bb5a44cbaa5d9ab86cd683, type: 3}
+  m_Sprite: {fileID: 21300006, guid: 739ebdf3cbce92a49bbeaab60312976c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1729,17 +1730,17 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'This is a nice weapon4, it''s better than a club at least!
+  m_Text: 'This is a nice machette, it is the sharpest of the weapons, and has a good
+    range.
 
 
 
 
 
 
+    Range: 2
 
-
-
-    Hardhittyness: 2'
+    Hardhittyness: 4'
 --- !u!114 &114000013486689916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2740,16 +2741,16 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012924017642}
-  m_LocalRotation: {x: -0, y: -0, z: 0.9977973, w: 0.0663373}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 172.59901}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 224000012723735814}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2, y: 0}
+  m_AnchoredPosition: {x: 0.0000007599592, y: 0.0000007748604}
   m_SizeDelta: {x: -18, y: -18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224000012321397034
@@ -2776,16 +2777,16 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012037906280}
-  m_LocalRotation: {x: -0, y: -0, z: 0.7017348, w: -0.7124383}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.158005}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 224000012721468100}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2, y: 0}
+  m_AnchoredPosition: {x: 0.0000015496944, y: -0.0000014305115}
   m_SizeDelta: {x: -18, y: -18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224000012721468100
@@ -2925,16 +2926,16 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013747675584}
-  m_LocalRotation: {x: -0, y: -0, z: 0.47169632, w: 0.8817611}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 56.123}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 224000014078984044}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -18, y: -18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224000013382467550
