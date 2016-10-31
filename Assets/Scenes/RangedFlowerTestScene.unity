@@ -189,7 +189,7 @@ Camera:
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: -0
     y: 0
     width: 1
     height: 1
@@ -235,10 +235,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b13d3210c5f70f54f9ddaa6598ccd203, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  min: {x: -9, y: -5}
-  max: {x: 9, y: 5}
+  min: {x: -8.9, y: -5}
+  max: {x: 8.9, y: 5}
   offset: {x: 0, y: 0}
-  camMoveSpeed: 5
+  camMoveTime: 1
 --- !u!1001 &413881195
 Prefab:
   m_ObjectHideFlags: 0
@@ -751,11 +751,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000013503356288, guid: c6e2dad952315f4489cee5d6b4ac6498, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.65
+      value: 5.92
       objectReference: {fileID: 0}
     - target: {fileID: 4000013503356288, guid: c6e2dad952315f4489cee5d6b4ac6498, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.73
+      value: 1.38
       objectReference: {fileID: 0}
     - target: {fileID: 4000013503356288, guid: c6e2dad952315f4489cee5d6b4ac6498, type: 2}
       propertyPath: m_LocalPosition.z
@@ -790,6 +790,11 @@ Prefab:
         type: 2}
       propertyPath: explosionTime
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 58000010785131358, guid: c6e2dad952315f4489cee5d6b4ac6498,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c6e2dad952315f4489cee5d6b4ac6498, type: 2}
