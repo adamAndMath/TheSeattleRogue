@@ -36,7 +36,7 @@ public class ATM : MonoBehaviour
                 CurrentMoney += FreeSpace;
             }
         }
-        if (Input.GetKeyDown(KeyCode.D) && Active)
+        if (Input.GetKeyDown(KeyCode.S) && Active)
         {
             Player.Instance.money += CurrentMoney;
             CurrentMoney = 0;
