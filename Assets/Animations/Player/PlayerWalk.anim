@@ -19,6 +19,13 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
+      value: {fileID: 21300000, guid: 212b2ad79298dc5478cdde4abd3c75b4, type: 3}
+    attribute: m_Sprite
+    path: WeaponGraphics
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+    - time: 0
       value: {fileID: 21300000, guid: 103dbcecab0575543a35a51fbb1d6f8d, type: 3}
     - time: 0.033333335
       value: {fileID: 21300002, guid: 103dbcecab0575543a35a51fbb1d6f8d, type: 3}
@@ -46,13 +53,6 @@ AnimationClip:
     path: 
     classID: 212
     script: {fileID: 0}
-  - curve:
-    - time: 0
-      value: {fileID: 21300000, guid: 212b2ad79298dc5478cdde4abd3c75b4, type: 3}
-    attribute: m_Sprite
-    path: WeaponGraphics
-    classID: 212
-    script: {fileID: 0}
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
@@ -60,19 +60,20 @@ AnimationClip:
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
     genericBindings:
-    - path: 0
-      attribute: 0
-      script: {fileID: 0}
-      classID: 212
-      customType: 23
-      isPPtrCurve: 1
     - path: 631506927
       attribute: 0
       script: {fileID: 0}
       classID: 212
       customType: 23
       isPPtrCurve: 1
+    - path: 0
+      attribute: 0
+      script: {fileID: 0}
+      classID: 212
+      customType: 23
+      isPPtrCurve: 1
     pptrCurveMapping:
+    - {fileID: 21300000, guid: 212b2ad79298dc5478cdde4abd3c75b4, type: 3}
     - {fileID: 21300000, guid: 103dbcecab0575543a35a51fbb1d6f8d, type: 3}
     - {fileID: 21300002, guid: 103dbcecab0575543a35a51fbb1d6f8d, type: 3}
     - {fileID: 21300004, guid: 103dbcecab0575543a35a51fbb1d6f8d, type: 3}
@@ -85,7 +86,6 @@ AnimationClip:
     - {fileID: 21300018, guid: 103dbcecab0575543a35a51fbb1d6f8d, type: 3}
     - {fileID: 21300020, guid: 103dbcecab0575543a35a51fbb1d6f8d, type: 3}
     - {fileID: 21300022, guid: 103dbcecab0575543a35a51fbb1d6f8d, type: 3}
-    - {fileID: 21300000, guid: 212b2ad79298dc5478cdde4abd3c75b4, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -112,7 +112,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
-  - time: 0.033333335
+  - time: 0.06666667
     functionName: Play
     data: 
     objectReferenceParameter: {fileID: 1000012612917028, guid: 0ede6b645b99a594d8a61f26859b2b49,
@@ -120,7 +120,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.23333333
+  - time: 0.26666668
     functionName: Play
     data: 
     objectReferenceParameter: {fileID: 1000012612917028, guid: 0ede6b645b99a594d8a61f26859b2b49,

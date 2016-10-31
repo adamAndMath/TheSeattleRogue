@@ -29,8 +29,6 @@ public class GuardRobotAttacking : StateMachineBehaviour
 	    {
             position = PhysicsObject.ConstantAcceleration(-acceleration, ref enemy.speed);
         }
-
-        Debug.Log(position);
         enemy.speed = Mathf.Clamp(enemy.speed, -maxSpeed, maxSpeed);
 	    enemy.MoveHorizontalSloped(position);
     }

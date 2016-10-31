@@ -4,9 +4,17 @@ public class Currency : PhysicsObject
 {
     public int val;
     public float gravity;
-    public Vector2 speed;
+    public Vector2 speedMin;
+    public Vector2 speedMax;
+    private Vector2 speed;
     public AudioSource audioObject;
     public AudioClip coinSoundAudioClip;
+
+    protected override void Start()
+    {
+        base.Start();
+        speed = new Vector2(Random.Range(speedMin.x,speedMax.x), Random.Range(speedMin.y, speedMax.y));
+    }
 
     void Update()
     {
