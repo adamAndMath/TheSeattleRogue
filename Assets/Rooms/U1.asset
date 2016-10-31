@@ -303,22 +303,22 @@ MonoBehaviour:
   - position:
       x: 5
       y: 5
-    spawnMask: 6
+    spawnMask: 1
   - position:
       x: 6
       y: 3
-    spawnMask: 6
+    spawnMask: 1
   - position:
       x: 7
       y: 1
-    spawnMask: 6
+    spawnMask: 1
   - position:
       x: 8
       y: 3
-    spawnMask: 6
+    spawnMask: 1
   - position:
       x: 9
       y: 5
-    spawnMask: 1
+    spawnMask: 6
   platform: {fileID: 212000013609954282, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
   spike: {fileID: 212000011588063242, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}

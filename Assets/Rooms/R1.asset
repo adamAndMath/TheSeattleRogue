@@ -234,7 +234,7 @@ MonoBehaviour:
       slope: 0
     - wallID: 0
       slope: 0
-    - wallID: 0
+    - wallID: 1
       slope: 0
     - wallID: 1
       slope: 0
@@ -251,7 +251,7 @@ MonoBehaviour:
       slope: 0
     - wallID: 0
       slope: 0
-    - wallID: 0
+    - wallID: 1
       slope: 0
     - wallID: 1
       slope: 0
@@ -268,7 +268,7 @@ MonoBehaviour:
       slope: 0
     - wallID: 0
       slope: 0
-    - wallID: 0
+    - wallID: 1
       slope: 0
     - wallID: 1
       slope: 0
@@ -303,30 +303,30 @@ MonoBehaviour:
   - position:
       x: 3
       y: 7
-    spawnMask: 6
+    spawnMask: 1
   - position:
       x: 4
       y: 7
-    spawnMask: 6
+    spawnMask: 1
   - position:
       x: 5
       y: 7
-    spawnMask: 6
+    spawnMask: 1
   - position:
       x: 6
       y: 7
-    spawnMask: 6
+    spawnMask: 1
   - position:
       x: 7
       y: 7
-    spawnMask: 6
+    spawnMask: 1
   - position:
       x: 9
       y: 7
-    spawnMask: 6
+    spawnMask: 1
   - position:
       x: 8
       y: 7
-    spawnMask: 6
+    spawnMask: 1
   platform: {fileID: 212000013609954282, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
   spike: {fileID: 212000011588063242, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
