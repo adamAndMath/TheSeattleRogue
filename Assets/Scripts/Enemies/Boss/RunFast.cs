@@ -6,9 +6,12 @@ public class RunFast : StateMachineBehaviour
     public bool hasHitRightWall;
     public float bossSpeed;
     public float bossTimer;
+    
     private float realBossTimer;
+    private float shakeTime;
+    private bool shakeIsReady;
 
-    private bool readyToRun;
+    private bool readyToRun = true;
 
     public BossBehaviour boss;
 
@@ -24,7 +27,6 @@ public class RunFast : StateMachineBehaviour
 	{
 	    if (readyToRun)
 	    {
-	        //------------------------------------Not working--------------------------------------------------//
 	        if (hasHitRightWall)
 	        {
 	            if (boss.MoveHorizontal(-bossSpeed*Time.deltaTime))
@@ -32,8 +34,8 @@ public class RunFast : StateMachineBehaviour
 	                hasHitRightWall = false;
 	                realBossTimer = bossTimer;
 	                readyToRun = false;
-	                Debug.Log("So The Boss Has Hit");
 	            }
+
 	        }
 	        else
 	        {
@@ -45,13 +47,17 @@ public class RunFast : StateMachineBehaviour
 	            }
 	        }
 	    }
-	    //---------------------------------------Works fine--------------------------------------------------//
 
-	    if (realBossTimer <= 0)
+	    if (readyToRun == false)
 	    {
-	        readyToRun = true;
+	        if (boss.CameraShake())
+	        {
+	            readyToRun = true;
+	        }
 	    }
-	    realBossTimer -= Time.deltaTime;
+
+
+	    
 	}
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state

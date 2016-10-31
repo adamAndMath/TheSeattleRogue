@@ -4,9 +4,15 @@ using System.Runtime.InteropServices;
 
 public class BossBehaviour : PhysicsObject
 {
-    float shake = 0;
-    float shakeAmount = 0.7f;
-    float decreaseFactor = 1.0f;
+    public float shakeTime;
+    public bool shakeIsReady;
+    public float shakeAmount;
+
+    private float remainingShakeTime;
+    private float shakeX;
+    private float shakeY;
+    private float startingShakeAmount;
+    private Vector3 startingPos;
 
     public int Health;
 
@@ -20,27 +26,39 @@ public class BossBehaviour : PhysicsObject
         base.Start();
 	    animator = GetComponent<Animator>();
 	    cam = FindObjectOfType<Camera>();
+	    remainingShakeTime = shakeTime;
+	    startingShakeAmount = shakeAmount;
+	    startingPos = cam.transform.position;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        CameraShake();
-    }
-
-    public void CameraShake()
-    {
+        if (shakeTime <= 0)
         {
-            if (shake >= 0)
-            {
-                cam.transform.localPosition = Random.insideUnitSphere * shakeAmount;
-                shake -= Time.deltaTime * decreaseFactor;
+            shakeIsReady = true;
+        }   
+    }
+    public bool CameraShake()
+    {
+        bool result = false;
 
-            }
-            else
-            {
-                shake = 0.0f;
-            }
+        if (remainingShakeTime >= 0)
+        {
+            shakeX = Random.Range(-shakeAmount, shakeAmount);
+            shakeY = Random.Range(-shakeAmount, shakeAmount);
+            cam.transform.position = new Vector3(shakeX, shakeY, cam.transform.position.z);
+            remainingShakeTime -= Time.deltaTime;
+            shakeAmount -= (startingShakeAmount/shakeTime)*Time.deltaTime;
         }
+        else
+        {
+            result = true;
+            remainingShakeTime = shakeTime;
+            cam.transform.position = startingPos;
+            shakeAmount = startingShakeAmount;
+        }
+
+        return result;
     }
 }

@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasHitRightWall: 0
-  bossSpeed: 10
+  bossSpeed: 30
   bossTimer: 2
   boss: {fileID: 0}
 --- !u!1101 &1101000010448141550
