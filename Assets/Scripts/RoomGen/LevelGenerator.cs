@@ -276,6 +276,23 @@ public class LevelGenerator : MonoBehaviour
             position.y = 0;
             position.x++;
         }
+
+        foreach (var spawner in room.spawners)
+        {
+            if (spawner.spawnMask == 0)
+                continue;
+
+            int i;
+
+            do
+            {
+                i = Random.Range(0, 30);
+            } while ((1 << i & spawner.spawnMask) == 0);
+
+            Enemy enemy = Instantiate(room.spawnables[i]);
+            enemy.transform.SetParent(roomObject.transform, false);
+            enemy.transform.localPosition += new Vector3(spawner.position.x, spawner.position.y);
+        }
     }
 
     private static void GeneratePlatform(Room room, GameObject roomObject, Position position)
