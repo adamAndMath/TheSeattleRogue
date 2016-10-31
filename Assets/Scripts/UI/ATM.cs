@@ -4,13 +4,22 @@ using System.Collections;
 public class ATM : MonoBehaviour
 {
     public GameObject InstructionObject;
+    public GameObject MoneyDisplay;
     public float Range;
     private bool Active;
     private int CurrentMoney;
     public int MaxMoney;
+    private TextMesh displayTextMesh;
+
+    void Start()
+    {
+        displayTextMesh = MoneyDisplay.GetComponent<TextMesh>();
+    }
 
     void Update()
     {
+        displayTextMesh.text = CurrentMoney + " / " + MaxMoney;
+
         if (Vector2.Distance(Player.Instance.transform.position, transform.position) <= Range)
         {
             Active = true;

@@ -81,35 +81,44 @@ public class PhysicsObject : MonoBehaviour
     public bool MoveHorizontalSloped(float moveMax)
     {
         Vector2 dir = Vector2.right * Mathf.Sign(moveMax);
-        float move = moveMax = Mathf.Abs(moveMax);
+        moveMax = Mathf.Abs(moveMax);
         bool re = false;
 
-        int size = collider2D.Cast(dir, rayHits, move);
-        float vertical = 0;
+        int size = collider2D.Cast(dir, rayHits, moveMax);
 
         if (size > 0)
         {
+            float dist = moveMax;
+            Vector2 normal = Vector2.zero;
+
             for (int i = 0; i < size; i++)
             {
                 RaycastHit2D rayHit = rayHits[i];
-                if (!rayHit.collider.isTrigger && move > rayHit.distance && Mathf.Abs(Vector2.Dot(rayHit.normal.normalized, dir)) > 0 && Vector2.Dot(rayHit.point - (Vector2)transform.position, dir) > 0 && CanCollide(rayHit, dir))
+                if (!rayHit.collider.isTrigger && dist > rayHit.distance &&
+                    Mathf.Abs(Vector2.Dot(rayHit.normal.normalized, dir)) > 0 &&
+                    Vector2.Dot(rayHit.point - (Vector2) transform.position, dir) > 0 && CanCollide(rayHit, dir))
                 {
-                    if (Mathf.Abs(Vector2.Dot(rayHit.normal.normalized, dir)) < 0.71F)
-                    {
-                        vertical = -dir.x*(moveMax - rayHit.distance)*rayHit.normal.x/rayHit.normal.y;
-                    }
-                    else
-                    {
-                        vertical = 0;
-                        move = rayHit.distance;
-                    }
-
+                    dist = rayHit.distance;
+                    normal = rayHit.normal;
                     re = true;
                 }
             }
+
+            if (re)
+            {
+                transform.Translate((moveMax - dist)*normal.y/Mathf.Abs(normal.x)*Vector3.up, Space.World);
+                MoveHorizontal(moveMax*dir.x);
+            }
+            else
+            {
+                transform.Translate(dist * dir, Space.World);
+            }
+        }
+        else
+        {
+            transform.Translate(moveMax*dir, Space.World);
         }
 
-        transform.Translate(move * dir + vertical * Vector2.up, Space.World);
         return re;
     }
 
