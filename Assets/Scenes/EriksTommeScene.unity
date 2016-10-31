@@ -188,6 +188,7 @@ GameObject:
   - 92: {fileID: 605381914}
   - 124: {fileID: 605381913}
   - 81: {fileID: 605381912}
+  - 114: {fileID: 605381917}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -236,7 +237,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -263,6 +264,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &605381917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 605381911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b13d3210c5f70f54f9ddaa6598ccd203, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  min: {x: -1, y: -1}
+  max: {x: 15, y: 8}
+  offset: {x: 0, y: 0}
+  camMoveTime: 0
 --- !u!1001 &1104281273
 Prefab:
   m_ObjectHideFlags: 0
@@ -272,11 +288,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000012413323090, guid: 75dcc9dbf9ad55f4398bde8d7f714b21, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4000012413323090, guid: 75dcc9dbf9ad55f4398bde8d7f714b21, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4000012413323090, guid: 75dcc9dbf9ad55f4398bde8d7f714b21, type: 2}
       propertyPath: m_LocalPosition.z
