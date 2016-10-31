@@ -47,7 +47,7 @@ public class ToolSpawnerEdit : Tool
             bool val = GUI.Toggle(new Rect(control.x + x * 36, control.y + y * 36, 32, 32), (sellectionMask & (1 << i)) != 0, "", GUI.skin.button);
             sellectionMask |= 1 << i;
 
-            if (val)
+            if (!val)
                 sellectionMask ^= 1 << i;
 
             if (Room.spawnables[i] != null)
