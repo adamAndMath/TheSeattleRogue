@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class DashBar : MonoBehaviour
 {
@@ -10,11 +9,11 @@ public class DashBar : MonoBehaviour
 	{
 	    BackDrop = GetComponent<RectTransform>();
 
-        BackDrop.sizeDelta = new Vector2(Player.Instance.MaxDash, BackDrop.sizeDelta.y);
+        BackDrop.sizeDelta = new Vector2(Player.Instance.maxDash, BackDrop.sizeDelta.y);
     }
 	
 	void Update ()
     {
-	    BarOfDashing.sizeDelta = new Vector2(Player.Instance.DashPower,BarOfDashing.sizeDelta.y);
+	    BarOfDashing.sizeDelta = new Vector2(Player.Instance.dashPower,BarOfDashing.sizeDelta.y);
 	}
 }

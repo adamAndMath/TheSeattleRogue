@@ -200,12 +200,12 @@ MonoBehaviour:
   maxHP: 6
   hp: 0
   money: 0
-  DashRegenerationRate: 20
-  MaxDash: 100
-  DashCost: 50
-  DashPower: 0
+  dashRegenerationRate: 20
+  maxDash: 100
+  dashCost: 50
+  dashPower: 0
   weapon: {fileID: 95000012926095692}
-  DeathScene: 0
+  deathScene: 0
   enemyDeathSprites: []
 --- !u!114 &114000014161105452
 MonoBehaviour:
