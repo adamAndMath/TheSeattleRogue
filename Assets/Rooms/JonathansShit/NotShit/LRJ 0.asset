@@ -139,13 +139,13 @@ MonoBehaviour:
     - wallID: 0
       slope: 0
   - data:
-    - wallID: -2
+    - wallID: 1
       slope: 0
-    - wallID: -2
+    - wallID: 1
       slope: 0
-    - wallID: -2
+    - wallID: 1
       slope: 0
-    - wallID: -2
+    - wallID: 1
       slope: 0
     - wallID: 1
       slope: 0

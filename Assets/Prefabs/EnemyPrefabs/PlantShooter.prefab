@@ -134,7 +134,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 2
   idleSprite: {fileID: 21300000, guid: c8110b904b0d7e746aab50b891d882f2, type: 3}
-  drops: []
+  drops:
+  - obj: {fileID: 1000012271734224, guid: 70488e5cd1ef718409e53b076d2cfd65, type: 2}
+    chance: 0.5
+  - obj: {fileID: 1000013426594374, guid: e334fe0422ceaaa47a985f8aecae4921, type: 2}
+    chance: 0.05
   gravity: 10
   gravitySpeed: 0
   relocationSpeed: 1

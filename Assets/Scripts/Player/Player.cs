@@ -41,34 +41,48 @@ public class Player : PhysicsObject
 
     void Update()
     {
-        if (dashPower < maxDash)
-        {
-            dashPower += Time.deltaTime*dashRegenerationRate;
-        }
-        animator.SetBool("Moving", !Mathf.Approximately(0, Input.GetAxisRaw("Horizontal")));
-        animator.SetBool("Looking", !Mathf.Approximately(0, Input.GetAxisRaw("Horizontal")) || !Mathf.Approximately(0, Input.GetAxisRaw("Vertical")));
-        animator.SetBool("Jump", Input.GetButton("Jump"));
-        animator.SetBool("Grounded", IsGrounded());
-        animator.SetBool("Attacking", Input.GetButtonDown("Attack"));
-        weapon.SetBool("Attacking", Input.GetButtonDown("Attack"));
-        animator.SetBool("Charge", Input.GetAxis("Charge") > 0.9F && dashPower >= dashCost);
-
         if (hp <= 0)
         {
             deathTransitionAnimator.SetBool("Transitioning", true);
-            DeathScene.enemies = enemyDeathSprites;
-            SceneManager.LoadScene(deathScene);
-        }
 
+            animator.SetBool("Moving", false);
+            animator.SetBool("Attacking", false);
+            animator.SetBool("Charge", false);
+
+            if (deathTransitionAnimator.GetCurrentAnimatorStateInfo(0).IsName("Done"))
+            {
+                DeathScene.enemies = enemyDeathSprites;
+                SceneManager.LoadScene(deathScene);
+            }
+        }
+        else
+        {
+            if (dashPower < maxDash)
+            {
+                dashPower += Time.deltaTime*dashRegenerationRate;
+            }
+
+            animator.SetBool("Moving", !Mathf.Approximately(0, Input.GetAxisRaw("Horizontal")));
+            animator.SetBool("Looking", !Mathf.Approximately(0, Input.GetAxisRaw("Horizontal")) || !Mathf.Approximately(0, Input.GetAxisRaw("Vertical")));
+            animator.SetBool("Jump", Input.GetButton("Jump"));
+            animator.SetBool("Grounded", IsGrounded());
+            animator.SetBool("Attacking", Input.GetButtonDown("Attack"));
+            weapon.SetBool("Attacking", Input.GetButtonDown("Attack"));
+            animator.SetBool("Charge", Input.GetAxis("Charge") > 0.9F && dashPower >= dashCost);
+
+        }
     }
 
     public void Damaged(int damage)
     {
-        if (animator.GetCurrentAnimatorStateInfo(animator.GetLayerIndex("Invincibility")).IsName("Invincibility"))
-            return;
+        if (hp > 0)
+        {
+            if (animator.GetCurrentAnimatorStateInfo(animator.GetLayerIndex("Invincibility")).IsName("Invincibility"))
+                return;
 
-        hp -= damage;
-        animator.SetTrigger("Hit");
+            hp -= damage;
+            animator.SetTrigger("Hit");
+        }
     }
 
     protected override bool CanCollide(RaycastHit2D rayHit, Vector2 dir)
