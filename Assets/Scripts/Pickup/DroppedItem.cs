@@ -6,6 +6,6 @@ public class DroppedItem : Pickup
 
     protected override void PickedUp(Player player)
     {
-        throw new System.NotImplementedException();
+        player.SetItem(item);
     }
 }

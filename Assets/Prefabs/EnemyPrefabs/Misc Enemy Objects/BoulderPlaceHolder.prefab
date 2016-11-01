@@ -38,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 1000010733703914}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8, y: 8, z: 4}
+  m_LocalScale: {x: 10, y: 10, z: 4}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallSpeed: -15
-  flySpeed: 100
+  flySpeed: 30
 --- !u!212 &212000010148089446
 SpriteRenderer:
   m_ObjectHideFlags: 1

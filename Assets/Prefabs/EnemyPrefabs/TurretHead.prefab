@@ -106,6 +106,7 @@ MonoBehaviour:
     chance: 0.05
   gravity: 0
   gravitySpeed: 0
+  scoreGiven: 10
   turretRange: 5
   cooldown: 2
   cooldownOn: 0

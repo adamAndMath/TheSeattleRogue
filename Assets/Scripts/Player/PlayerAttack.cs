@@ -3,7 +3,6 @@
 public class PlayerAttack : StateMachineBehaviour
 {
     private Player player;
-    public int damage;
 
     private readonly RaycastHit2D[] rayHits = new RaycastHit2D[16];
 
@@ -22,7 +21,7 @@ public class PlayerAttack : StateMachineBehaviour
 
                 if (enemy != null)
                 {
-                    enemy.Damaged(damage);
+                    enemy.Damaged(player.item.damage);
                 }
             }
         }

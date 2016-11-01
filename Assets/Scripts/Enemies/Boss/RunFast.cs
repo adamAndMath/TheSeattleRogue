@@ -38,6 +38,7 @@ public class RunFast : StateMachineBehaviour
 	                hasHitRightWall = false;
 	                realBossTimer = bossTimer;
 	                readyToRun = false;
+	                BossBehaviour.Instance.GetComponent<SpriteRenderer>().flipX = false;
 	            }
 
 	        }
@@ -48,6 +49,7 @@ public class RunFast : StateMachineBehaviour
                     hasHitRightWall = true;
                     realBossTimer = bossTimer;
                     readyToRun = false;
+                    BossBehaviour.Instance.GetComponent<SpriteRenderer>().flipX = true;
 	            }
 	        }
 	    }
