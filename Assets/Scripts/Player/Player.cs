@@ -22,6 +22,7 @@ public class Player : PhysicsObject
 
     public Animator weapon;
 
+    public Animator DeathTransitionAnimator;
     public int DeathScene = 0;
 
     public List<Sprite> enemyDeathSprites;
@@ -56,7 +57,7 @@ public class Player : PhysicsObject
 
         if (hp <= 0)
         {
-
+            DeathTransitionAnimator.SetBool("Transitioning", true);
 
             SceneManager.LoadScene(DeathScene);
         }
