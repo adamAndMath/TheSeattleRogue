@@ -5,6 +5,7 @@ public class CamMove : MonoBehaviour
     public Vector2 min;
     public Vector2 max;
     public Vector2 offset;
+    public float extra;
     private float z;
     private Camera cam;
     public float camMoveTime;
@@ -13,11 +14,23 @@ public class CamMove : MonoBehaviour
     private Vector3 camMoveFrom;
     private Vector3 camMoveTo;
     private float timer;
+    private RoomInstance currentRoom;
+    private RoomInstance nextRoom;
 
     void Start()
     {
         z = transform.position.z;
         cam = GetComponent<Camera>();
+
+        if (RoomHandler.Instance)
+        {
+            currentRoom = RoomHandler.Instance[new LevelGenerator.Position(
+                Mathf.FloorToInt(transform.position.x/Room.RoomSize.x),
+                Mathf.FloorToInt(transform.position.y/Room.RoomSize.y))];
+
+            if (currentRoom)
+                currentRoom.gameObject.SetActive(true);
+        }
     }
 
     void LateUpdate()
@@ -40,60 +53,64 @@ public class CamMove : MonoBehaviour
                 Time.timeScale = 1;
                 camIsMoving = false;
                 timer = 0;
+
+                if (currentRoom)
+                    currentRoom.gameObject.SetActive(false);
+
+                currentRoom = nextRoom;
             }
         }
 
-        if (playerPos.x > max.x)
+        if (playerPos.x > max.x + extra)
         {
             Time.timeScale = 0;
             if (!camIsMoving)
             {
-                camIsMoving = true;
-                float delta = max.x - min.x;
-                camMoveFrom = new Vector3(transform.position.x, transform.position.y, 0);
-                camMoveTo = new Vector3(transform.position.x + delta, transform.position.y, 0);
-                min.x += delta;
-                max.x += delta;
+                TransitionRoom(new Vector3(max.x - min.x, 0));
             }
         }
-        if (playerPos.x < min.x)
+        if (playerPos.x < min.x - extra)
         {
             Time.timeScale = 0;
             if (!camIsMoving)
             {
-                camIsMoving = true;
-                float delta = max.x - min.x;
-                camMoveFrom = new Vector3(transform.position.x, transform.position.y, 0);
-                camMoveTo = new Vector3(transform.position.x - delta, transform.position.y, 0);
-                min.x -= delta;
-                max.x -= delta;
+                TransitionRoom(new Vector2(min.x - max.x, 0));
             }
         }
-        if (playerPos.y > max.y)
+        if (playerPos.y > max.y + extra)
         {
             Time.timeScale = 0;
             if (!camIsMoving)
             {
-                camIsMoving = true;
-                float delta = max.y - min.y;
-                camMoveFrom = new Vector3(transform.position.x, transform.position.y, 0);
-                camMoveTo = new Vector3(transform.position.x, transform.position.y + delta, 0);
-                min.y += delta;
-                max.y += delta;
+                TransitionRoom(new Vector2(0, max.y - min.y));
             }
         }
-        if (playerPos.y < min.y)
+        if (playerPos.y < min.y - extra)
         {
             Time.timeScale = 0;
             if (!camIsMoving)
             {
-                camIsMoving = true;
-                float delta = max.y - min.y;
-                camMoveFrom = new Vector3(transform.position.x, transform.position.y, 0);
-                camMoveTo = new Vector3(transform.position.x, transform.position.y - delta, 0);
-                min.y -= delta;
-                max.y -= delta;
+                TransitionRoom(new Vector2(0, min.y - max.y));
             }
+        }
+    }
+
+    private void TransitionRoom(Vector2 delta)
+    {
+        camIsMoving = true;
+        camMoveFrom = new Vector3(transform.position.x, transform.position.y);
+        camMoveTo = new Vector3(transform.position.x + delta.x, transform.position.y + delta.y);
+        min += delta;
+        max += delta;
+
+        if (RoomHandler.Instance)
+        {
+            nextRoom = RoomHandler.Instance[new LevelGenerator.Position(
+                Mathf.FloorToInt(camMoveTo.x/Room.RoomSize.x),
+                Mathf.FloorToInt(camMoveTo.y/Room.RoomSize.y))];
+
+            if (nextRoom)
+                nextRoom.gameObject.SetActive(true);
         }
     }
 
