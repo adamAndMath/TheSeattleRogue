@@ -54,12 +54,9 @@ public class RunFast : StateMachineBehaviour
 
 	    if (readyToRun == false)
 	    {
-	        boss.CameraShake(shakeTime);
-	        remaningShakeTime -= Time.deltaTime;
-	        if (remaningShakeTime <= 0)
+            if (boss.CameraShake(shakeTime))
 	        {
 	            readyToRun = true;
-	            remaningShakeTime = shakeTime;
 	        }
 	    }
 	    stateTimeRemaining -= Time.deltaTime;

@@ -84,7 +84,7 @@ public class BossBehaviour : PhysicsObject
         bool hasSet = false;
         if (!hasSet)
         {
-            remainingShakeTime = shakeTime;
+            remainingShakeTime = shakeTime*0.95f;
             hasSet = true;
         }
         remainingShakeTime -= Time.deltaTime;
@@ -99,7 +99,6 @@ public class BossBehaviour : PhysicsObject
         else
         {
             result = true;
-            remainingShakeTime = shakeTime;
             cam.transform.position = startingPos;
             shakeAmount = startingShakeAmount;
         }
