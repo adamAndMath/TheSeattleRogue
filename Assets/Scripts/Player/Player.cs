@@ -41,19 +41,20 @@ public class Player : PhysicsObject
 
     void Update()
     {
+        if (deathTransitionAnimator.GetCurrentAnimatorStateInfo(0).IsName("Done"))
+        {
+            DeathScene.enemies = enemyDeathSprites;
+            SceneManager.LoadScene(deathScene);
+        }
+
         if (hp <= 0)
         {
+            deathTransitionAnimator.gameObject.SetActive(true);
             deathTransitionAnimator.SetBool("Transitioning", true);
 
             animator.SetBool("Moving", false);
             animator.SetBool("Attacking", false);
             animator.SetBool("Charge", false);
-
-            if (deathTransitionAnimator.GetCurrentAnimatorStateInfo(0).IsName("Done"))
-            {
-                DeathScene.enemies = enemyDeathSprites;
-                SceneManager.LoadScene(deathScene);
-            }
         }
         else
         {
