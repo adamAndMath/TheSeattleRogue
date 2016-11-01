@@ -30,10 +30,10 @@ MonoBehaviour:
       slope: 0
     - wallID: 0
       slope: 0
-    - wallID: 1
+    - wallID: 0
       slope: 0
     - wallID: 1
-      slope: 0
+      slope: 1
     - wallID: 1
       slope: 0
   - data:
@@ -268,10 +268,10 @@ MonoBehaviour:
       slope: 0
     - wallID: 0
       slope: 0
-    - wallID: 1
+    - wallID: 0
       slope: 0
     - wallID: 1
-      slope: 0
+      slope: 1
     - wallID: 1
       slope: 0
   walls:

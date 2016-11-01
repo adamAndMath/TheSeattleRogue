@@ -6,7 +6,8 @@ public class Player : PhysicsObject
 {
     public static Player Instance { get; private set; }
 
-    public Collider2D weaponCollider2D;
+    public Item item;
+    public BoxCollider2D weaponCollider2D;
     public int maxHP = 3;
     [HideInInspector]
     public int hp;
@@ -26,6 +27,14 @@ public class Player : PhysicsObject
     public List<Sprite> enemyDeathSprites;
     public bool Direction { get { return 0 < transform.localScale.x; } set { transform.localScale = new Vector3(value ? -1 : 1, 1, 1); } }
 
+    public void SetItem(Item item)
+    {
+        this.item = item;
+        weapon.runtimeAnimatorController = item.animator;
+        weaponCollider2D.offset = item.collisionOffset;
+        weaponCollider2D.size = item.collisionOffset;
+    }
+
     void Awake()
     {
         Instance = this;
@@ -33,27 +42,29 @@ public class Player : PhysicsObject
 
     protected override void Start()
     {
-        dashPower = maxDash;
         base.Start();
+        dashPower = maxDash;
         hp = maxHP;
         animator = GetComponent<Animator>();
+        SetItem(item);
     }
 
     void Update()
     {
+        if (deathTransitionAnimator.GetCurrentAnimatorStateInfo(0).IsName("Done"))
+        {
+            DeathScene.enemies = enemyDeathSprites;
+            SceneManager.LoadScene(deathScene);
+        }
+
         if (hp <= 0)
         {
+            deathTransitionAnimator.gameObject.SetActive(true);
             deathTransitionAnimator.SetBool("Transitioning", true);
 
             animator.SetBool("Moving", false);
             animator.SetBool("Attacking", false);
             animator.SetBool("Charge", false);
-
-            if (deathTransitionAnimator.GetCurrentAnimatorStateInfo(0).IsName("Done"))
-            {
-                DeathScene.enemies = enemyDeathSprites;
-                SceneManager.LoadScene(deathScene);
-            }
         }
         else
         {

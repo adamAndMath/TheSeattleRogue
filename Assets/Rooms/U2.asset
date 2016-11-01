@@ -46,7 +46,7 @@ MonoBehaviour:
     - wallID: 0
       slope: 0
     - wallID: 1
-      slope: 0
+      slope: 1
     - wallID: 1
       slope: 0
     - wallID: 1
@@ -82,7 +82,7 @@ MonoBehaviour:
     - wallID: 0
       slope: 0
     - wallID: 1
-      slope: 0
+      slope: 1
     - wallID: 1
       slope: 0
     - wallID: 1
@@ -218,7 +218,7 @@ MonoBehaviour:
     - wallID: 0
       slope: 0
     - wallID: 1
-      slope: 0
+      slope: 1
     - wallID: 1
       slope: 0
     - wallID: 1
@@ -250,7 +250,7 @@ MonoBehaviour:
     - wallID: 0
       slope: 0
     - wallID: 1
-      slope: 0
+      slope: 1
     - wallID: 1
       slope: 0
     - wallID: 1
