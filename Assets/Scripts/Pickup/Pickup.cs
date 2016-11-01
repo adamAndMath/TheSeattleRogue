@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
+using System.Collections;
 
-public class DroppedItem : PhysicsObject
+public abstract class Pickup : PhysicsObject
 {
-    Item item;
     public float gravity;
     public Vector2 speedMin;
     public Vector2 speedMax;
@@ -11,7 +11,6 @@ public class DroppedItem : PhysicsObject
     protected override void Start()
     {
         base.Start();
-        GetComponent<SpriteRenderer>().sprite = item.sprite;
         speed = new Vector2(Random.Range(speedMin.x, speedMax.x), Random.Range(speedMin.y, speedMax.y));
     }
 
@@ -33,8 +32,11 @@ public class DroppedItem : PhysicsObject
             Player player = rayHits[i].collider.GetComponent<Player>();
             if (player)
             {
+                PickedUp(player);
                 Destroy(gameObject);
             }
         }
     }
+
+    protected abstract void PickedUp(Player player);
 }
