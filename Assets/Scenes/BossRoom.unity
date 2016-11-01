@@ -90,86 +90,54 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &21198774
+--- !u!1 &5211384
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 21198775}
-  - 212: {fileID: 21198777}
-  - 95: {fileID: 21198776}
+  - 4: {fileID: 5211385}
   m_Layer: 0
-  m_Name: NewBricks_0 (84)
+  m_Name: Platforms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &21198775
+--- !u!4 &5211385
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 21198774}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16, y: -8, z: 0}
+  m_GameObject: {fileID: 5211384}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 1359379632}
-  m_RootOrder: 124
---- !u!95 &21198776
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 21198774}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!212 &21198777
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 21198774}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedWireframeHidden: 1
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 640955193
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300008, guid: c8a431f5d95b61d4eb7791c0be1682de, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
+  m_Children:
+  - {fileID: 1403518288}
+  - {fileID: 18769630}
+  - {fileID: 2053716286}
+  - {fileID: 818940889}
+  - {fileID: 997018414}
+  - {fileID: 556483812}
+  - {fileID: 1011795891}
+  - {fileID: 1685977444}
+  - {fileID: 383883195}
+  - {fileID: 1939721399}
+  - {fileID: 1206120730}
+  - {fileID: 62798346}
+  - {fileID: 599315510}
+  - {fileID: 1044754206}
+  - {fileID: 1415673770}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+--- !u!4 &18769630 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9,
+    type: 2}
+  m_PrefabInternal: {fileID: 667712181}
 --- !u!1 &23737710
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,6 +148,7 @@ GameObject:
   - 4: {fileID: 23737711}
   - 212: {fileID: 23737713}
   - 95: {fileID: 23737712}
+  - 61: {fileID: 23737715}
   m_Layer: 0
   m_Name: NewBricks_0 (6)
   m_TagString: Untagged
@@ -199,7 +168,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!95 &23737712
 Animator:
   serializedVersion: 3
@@ -250,6 +219,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &23737715
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 23737710}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &26787985
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,6 +243,7 @@ GameObject:
   - 4: {fileID: 26787986}
   - 212: {fileID: 26787988}
   - 95: {fileID: 26787987}
+  - 61: {fileID: 26787990}
   m_Layer: 0
   m_Name: NewBricks_0 (28)
   m_TagString: Untagged
@@ -279,7 +263,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 25
+  m_RootOrder: 24
 --- !u!95 &26787987
 Animator:
   serializedVersion: 3
@@ -330,6 +314,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &26787990
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 26787985}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &27986498
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,6 +338,7 @@ GameObject:
   - 4: {fileID: 27986499}
   - 212: {fileID: 27986501}
   - 95: {fileID: 27986500}
+  - 61: {fileID: 27986503}
   m_Layer: 0
   m_Name: NewBricks_0 (90)
   m_TagString: Untagged
@@ -359,7 +358,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 82
+  m_RootOrder: 79
 --- !u!95 &27986500
 Animator:
   serializedVersion: 3
@@ -410,6 +409,25 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &27986503
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 27986498}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!4 &62798346 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9,
+    type: 2}
+  m_PrefabInternal: {fileID: 598703614}
 --- !u!1 &70086603
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,6 +438,7 @@ GameObject:
   - 4: {fileID: 70086604}
   - 212: {fileID: 70086606}
   - 95: {fileID: 70086605}
+  - 61: {fileID: 70086608}
   m_Layer: 0
   m_Name: NewBricks_0 (17)
   m_TagString: Untagged
@@ -439,7 +458,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 14
+  m_RootOrder: 13
 --- !u!95 &70086605
 Animator:
   serializedVersion: 3
@@ -490,6 +509,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &70086608
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 70086603}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &74595134
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,6 +533,7 @@ GameObject:
   - 4: {fileID: 74595135}
   - 212: {fileID: 74595137}
   - 95: {fileID: 74595136}
+  - 61: {fileID: 74595139}
   m_Layer: 0
   m_Name: NewBricks_0 (20)
   m_TagString: Untagged
@@ -519,7 +553,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 17
+  m_RootOrder: 16
 --- !u!95 &74595136
 Animator:
   serializedVersion: 3
@@ -570,6 +604,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &74595139
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 74595134}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &121022393
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,6 +628,7 @@ GameObject:
   - 4: {fileID: 121022394}
   - 212: {fileID: 121022396}
   - 95: {fileID: 121022395}
+  - 61: {fileID: 121022398}
   m_Layer: 0
   m_Name: NewBricks_0 (53)
   m_TagString: Untagged
@@ -599,7 +648,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 49
+  m_RootOrder: 48
 --- !u!95 &121022395
 Animator:
   serializedVersion: 3
@@ -650,6 +699,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &121022398
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 121022393}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &126713926
 GameObject:
   m_ObjectHideFlags: 0
@@ -660,6 +723,7 @@ GameObject:
   - 4: {fileID: 126713927}
   - 212: {fileID: 126713929}
   - 95: {fileID: 126713928}
+  - 61: {fileID: 126713931}
   m_Layer: 0
   m_Name: NewBricks_0 (44)
   m_TagString: Untagged
@@ -679,7 +743,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 40
+  m_RootOrder: 39
 --- !u!95 &126713928
 Animator:
   serializedVersion: 3
@@ -730,6 +794,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &126713931
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 126713926}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &163760344
 GameObject:
   m_ObjectHideFlags: 0
@@ -791,7 +869,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!1 &168645185
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,6 +880,7 @@ GameObject:
   - 4: {fileID: 168645186}
   - 212: {fileID: 168645188}
   - 95: {fileID: 168645187}
+  - 61: {fileID: 168645190}
   m_Layer: 0
   m_Name: NewBricks_0 (94)
   m_TagString: Untagged
@@ -821,7 +900,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 86
+  m_RootOrder: 83
 --- !u!95 &168645187
 Animator:
   serializedVersion: 3
@@ -872,48 +951,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!1001 &171358875
-Prefab:
+--- !u!61 &168645190
+BoxCollider2D:
   m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 168645185}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-  m_IsPrefabParent: 0
+  m_Size: {x: 1, y: 1}
 --- !u!1 &175889264
 GameObject:
   m_ObjectHideFlags: 0
@@ -924,6 +975,7 @@ GameObject:
   - 4: {fileID: 175889265}
   - 212: {fileID: 175889267}
   - 95: {fileID: 175889266}
+  - 61: {fileID: 175889269}
   m_Layer: 0
   m_Name: NewBricks_0 (64)
   m_TagString: Untagged
@@ -943,7 +995,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 59
+  m_RootOrder: 58
 --- !u!95 &175889266
 Animator:
   serializedVersion: 3
@@ -994,6 +1046,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &175889269
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 175889264}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &196886174
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,6 +1070,7 @@ GameObject:
   - 4: {fileID: 196886175}
   - 212: {fileID: 196886177}
   - 95: {fileID: 196886176}
+  - 61: {fileID: 196886179}
   m_Layer: 0
   m_Name: NewBricks_0 (113)
   m_TagString: Untagged
@@ -1023,7 +1090,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 105
+  m_RootOrder: 102
 --- !u!95 &196886176
 Animator:
   serializedVersion: 3
@@ -1074,6 +1141,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &196886179
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 196886174}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &202949684
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,6 +1165,7 @@ GameObject:
   - 4: {fileID: 202949685}
   - 212: {fileID: 202949687}
   - 95: {fileID: 202949686}
+  - 61: {fileID: 202949689}
   m_Layer: 0
   m_Name: NewBricks_0 (52)
   m_TagString: Untagged
@@ -1103,7 +1185,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 48
+  m_RootOrder: 47
 --- !u!95 &202949686
 Animator:
   serializedVersion: 3
@@ -1154,6 +1236,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &202949689
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 202949684}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &218380733
 GameObject:
   m_ObjectHideFlags: 0
@@ -1164,6 +1260,7 @@ GameObject:
   - 4: {fileID: 218380734}
   - 212: {fileID: 218380736}
   - 95: {fileID: 218380735}
+  - 61: {fileID: 218380738}
   m_Layer: 0
   m_Name: NewBricks_0 (81)
   m_TagString: Untagged
@@ -1183,7 +1280,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 76
+  m_RootOrder: 73
 --- !u!95 &218380735
 Animator:
   serializedVersion: 3
@@ -1234,6 +1331,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &218380738
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 218380733}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &231691994
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,6 +1355,7 @@ GameObject:
   - 4: {fileID: 231691995}
   - 212: {fileID: 231691997}
   - 95: {fileID: 231691996}
+  - 61: {fileID: 231691999}
   m_Layer: 0
   m_Name: NewBricks_0 (125)
   m_TagString: Untagged
@@ -1263,7 +1375,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 117
+  m_RootOrder: 114
 --- !u!95 &231691996
 Animator:
   serializedVersion: 3
@@ -1314,6 +1426,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &231691999
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 231691994}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &256589035
 GameObject:
   m_ObjectHideFlags: 0
@@ -1324,6 +1450,7 @@ GameObject:
   - 4: {fileID: 256589036}
   - 212: {fileID: 256589038}
   - 95: {fileID: 256589037}
+  - 61: {fileID: 256589040}
   m_Layer: 0
   m_Name: NewBricks_0 (88)
   m_TagString: Untagged
@@ -1343,7 +1470,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 80
+  m_RootOrder: 77
 --- !u!95 &256589037
 Animator:
   serializedVersion: 3
@@ -1394,57 +1521,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!1001 &281854412
-Prefab:
+--- !u!61 &256589040
+BoxCollider2D:
   m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 256589035}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1295002225}
-    m_Modifications:
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000010260307704, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_Name
-      value: Spike (5)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &281854413 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43,
-    type: 2}
-  m_PrefabInternal: {fileID: 281854412}
+  m_Size: {x: 1, y: 1}
 --- !u!1 &294854587
 GameObject:
   m_ObjectHideFlags: 0
@@ -1455,6 +1545,7 @@ GameObject:
   - 4: {fileID: 294854588}
   - 212: {fileID: 294854590}
   - 95: {fileID: 294854589}
+  - 61: {fileID: 294854592}
   m_Layer: 0
   m_Name: NewBricks_0 (16)
   m_TagString: Untagged
@@ -1474,7 +1565,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 13
+  m_RootOrder: 12
 --- !u!95 &294854589
 Animator:
   serializedVersion: 3
@@ -1525,6 +1616,66 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &294854592
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 294854587}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!1001 &298002074
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5211385}
+    m_Modifications:
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014260306054, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_Name
+      value: Platform (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &300110714
 GameObject:
   m_ObjectHideFlags: 0
@@ -1535,6 +1686,7 @@ GameObject:
   - 4: {fileID: 300110715}
   - 212: {fileID: 300110717}
   - 95: {fileID: 300110716}
+  - 61: {fileID: 300110719}
   m_Layer: 0
   m_Name: NewBricks_0 (86)
   m_TagString: Untagged
@@ -1554,7 +1706,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 78
+  m_RootOrder: 75
 --- !u!95 &300110716
 Animator:
   serializedVersion: 3
@@ -1605,6 +1757,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &300110719
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 300110714}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &341214751
 GameObject:
   m_ObjectHideFlags: 0
@@ -1615,6 +1781,7 @@ GameObject:
   - 4: {fileID: 341214752}
   - 212: {fileID: 341214754}
   - 95: {fileID: 341214753}
+  - 61: {fileID: 341214756}
   m_Layer: 0
   m_Name: NewBricks_0 (26)
   m_TagString: Untagged
@@ -1634,7 +1801,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 23
+  m_RootOrder: 22
 --- !u!95 &341214753
 Animator:
   serializedVersion: 3
@@ -1685,6 +1852,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &341214756
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 341214751}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &349759245
 GameObject:
   m_ObjectHideFlags: 0
@@ -1695,6 +1876,7 @@ GameObject:
   - 4: {fileID: 349759246}
   - 212: {fileID: 349759248}
   - 95: {fileID: 349759247}
+  - 61: {fileID: 349759250}
   m_Layer: 0
   m_Name: NewBricks_0 (98)
   m_TagString: Untagged
@@ -1714,7 +1896,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 90
+  m_RootOrder: 87
 --- !u!95 &349759247
 Animator:
   serializedVersion: 3
@@ -1765,6 +1947,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &349759250
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 349759245}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &349845294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1775,6 +1971,7 @@ GameObject:
   - 4: {fileID: 349845295}
   - 212: {fileID: 349845297}
   - 95: {fileID: 349845296}
+  - 61: {fileID: 349845299}
   m_Layer: 0
   m_Name: NewBricks_0 (18)
   m_TagString: Untagged
@@ -1794,7 +1991,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 15
+  m_RootOrder: 14
 --- !u!95 &349845296
 Animator:
   serializedVersion: 3
@@ -1845,6 +2042,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &349845299
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 349845294}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &360719806
 GameObject:
   m_ObjectHideFlags: 0
@@ -1855,6 +2066,7 @@ GameObject:
   - 4: {fileID: 360719807}
   - 212: {fileID: 360719809}
   - 95: {fileID: 360719808}
+  - 61: {fileID: 360719811}
   m_Layer: 0
   m_Name: NewBricks_0 (7)
   m_TagString: Untagged
@@ -1874,7 +2086,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!95 &360719808
 Animator:
   serializedVersion: 3
@@ -1925,6 +2137,71 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &360719811
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 360719806}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!1001 &361145375
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5211385}
+    m_Modifications:
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014260306054, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_Name
+      value: Platform (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &383883195 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9,
+    type: 2}
+  m_PrefabInternal: {fileID: 2034374193}
 --- !u!1 &385942899
 GameObject:
   m_ObjectHideFlags: 0
@@ -1935,6 +2212,7 @@ GameObject:
   - 4: {fileID: 385942900}
   - 212: {fileID: 385942902}
   - 95: {fileID: 385942901}
+  - 61: {fileID: 385942904}
   m_Layer: 0
   m_Name: NewBricks_0 (15)
   m_TagString: Untagged
@@ -1954,7 +2232,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 12
+  m_RootOrder: 11
 --- !u!95 &385942901
 Animator:
   serializedVersion: 3
@@ -2005,6 +2283,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &385942904
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 385942899}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &393753061
 GameObject:
   m_ObjectHideFlags: 0
@@ -2015,6 +2307,7 @@ GameObject:
   - 4: {fileID: 393753062}
   - 212: {fileID: 393753064}
   - 95: {fileID: 393753063}
+  - 61: {fileID: 393753066}
   m_Layer: 0
   m_Name: NewBricks_0 (47)
   m_TagString: Untagged
@@ -2034,7 +2327,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 43
+  m_RootOrder: 42
 --- !u!95 &393753063
 Animator:
   serializedVersion: 3
@@ -2085,6 +2378,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &393753066
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 393753061}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &426112366
 GameObject:
   m_ObjectHideFlags: 0
@@ -2095,6 +2402,7 @@ GameObject:
   - 4: {fileID: 426112367}
   - 212: {fileID: 426112369}
   - 95: {fileID: 426112368}
+  - 61: {fileID: 426112371}
   m_Layer: 0
   m_Name: NewBricks_0 (37)
   m_TagString: Untagged
@@ -2114,7 +2422,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 34
+  m_RootOrder: 33
 --- !u!95 &426112368
 Animator:
   serializedVersion: 3
@@ -2165,6 +2473,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &426112371
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 426112366}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &429240965
 GameObject:
   m_ObjectHideFlags: 0
@@ -2175,6 +2497,7 @@ GameObject:
   - 4: {fileID: 429240966}
   - 212: {fileID: 429240968}
   - 95: {fileID: 429240967}
+  - 61: {fileID: 429240970}
   m_Layer: 0
   m_Name: NewBricks_0 (116)
   m_TagString: Untagged
@@ -2194,7 +2517,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 108
+  m_RootOrder: 105
 --- !u!95 &429240967
 Animator:
   serializedVersion: 3
@@ -2245,6 +2568,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &429240970
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 429240965}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &429679862
 GameObject:
   m_ObjectHideFlags: 0
@@ -2255,6 +2592,7 @@ GameObject:
   - 4: {fileID: 429679863}
   - 212: {fileID: 429679865}
   - 95: {fileID: 429679864}
+  - 61: {fileID: 429679867}
   m_Layer: 0
   m_Name: NewBricks_0 (126)
   m_TagString: Untagged
@@ -2274,7 +2612,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 118
+  m_RootOrder: 115
 --- !u!95 &429679864
 Animator:
   serializedVersion: 3
@@ -2325,6 +2663,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &429679867
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 429679862}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &471570724
 GameObject:
   m_ObjectHideFlags: 0
@@ -2335,6 +2687,7 @@ GameObject:
   - 4: {fileID: 471570725}
   - 212: {fileID: 471570727}
   - 95: {fileID: 471570726}
+  - 61: {fileID: 471570729}
   m_Layer: 0
   m_Name: NewBricks_0 (50)
   m_TagString: Untagged
@@ -2354,7 +2707,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 46
+  m_RootOrder: 45
 --- !u!95 &471570726
 Animator:
   serializedVersion: 3
@@ -2405,6 +2758,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &471570729
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 471570724}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &492141396
 GameObject:
   m_ObjectHideFlags: 0
@@ -2415,6 +2782,7 @@ GameObject:
   - 4: {fileID: 492141397}
   - 212: {fileID: 492141399}
   - 95: {fileID: 492141398}
+  - 61: {fileID: 492141401}
   m_Layer: 0
   m_Name: NewBricks_0 (109)
   m_TagString: Untagged
@@ -2434,7 +2802,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 101
+  m_RootOrder: 98
 --- !u!95 &492141398
 Animator:
   serializedVersion: 3
@@ -2485,6 +2853,115 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &492141401
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 492141396}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!1 &501585216
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 501585217}
+  - 212: {fileID: 501585220}
+  - 95: {fileID: 501585219}
+  - 61: {fileID: 501585218}
+  m_Layer: 0
+  m_Name: NewBricks_0 (85)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &501585217
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 501585216}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -15, y: -9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1359379632}
+  m_RootOrder: 128
+--- !u!61 &501585218
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 501585216}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!95 &501585219
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 501585216}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!212 &501585220
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 501585216}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 640955193
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300010, guid: c8a431f5d95b61d4eb7791c0be1682de, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1 &502454812
 GameObject:
   m_ObjectHideFlags: 0
@@ -2495,6 +2972,7 @@ GameObject:
   - 4: {fileID: 502454813}
   - 212: {fileID: 502454815}
   - 95: {fileID: 502454814}
+  - 61: {fileID: 502454817}
   m_Layer: 0
   m_Name: NewBricks_0 (22)
   m_TagString: Untagged
@@ -2514,7 +2992,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 19
+  m_RootOrder: 18
 --- !u!95 &502454814
 Animator:
   serializedVersion: 3
@@ -2565,6 +3043,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &502454817
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 502454812}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &527641830
 GameObject:
   m_ObjectHideFlags: 0
@@ -2575,6 +3067,7 @@ GameObject:
   - 4: {fileID: 527641831}
   - 212: {fileID: 527641833}
   - 95: {fileID: 527641832}
+  - 61: {fileID: 527641835}
   m_Layer: 0
   m_Name: NewBricks_0 (19)
   m_TagString: Untagged
@@ -2594,7 +3087,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 16
+  m_RootOrder: 15
 --- !u!95 &527641832
 Animator:
   serializedVersion: 3
@@ -2645,6 +3138,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &527641835
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 527641830}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &530225565
 GameObject:
   m_ObjectHideFlags: 0
@@ -2655,6 +3162,7 @@ GameObject:
   - 4: {fileID: 530225566}
   - 212: {fileID: 530225568}
   - 95: {fileID: 530225567}
+  - 61: {fileID: 530225570}
   m_Layer: 0
   m_Name: NewBricks_0 (83)
   m_TagString: Untagged
@@ -2674,7 +3182,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 123
+  m_RootOrder: 120
 --- !u!95 &530225567
 Animator:
   serializedVersion: 3
@@ -2725,6 +3233,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &530225570
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 530225565}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &535299939
 GameObject:
   m_ObjectHideFlags: 0
@@ -2735,6 +3257,7 @@ GameObject:
   - 4: {fileID: 535299940}
   - 212: {fileID: 535299942}
   - 95: {fileID: 535299941}
+  - 61: {fileID: 535299944}
   m_Layer: 0
   m_Name: NewBricks_0 (56)
   m_TagString: Untagged
@@ -2754,7 +3277,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 51
+  m_RootOrder: 50
 --- !u!95 &535299941
 Animator:
   serializedVersion: 3
@@ -2805,6 +3328,71 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &535299944
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 535299939}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!4 &556483812 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9,
+    type: 2}
+  m_PrefabInternal: {fileID: 2027504686}
+--- !u!1001 &567985258
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5211385}
+    m_Modifications:
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014260306054, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_Name
+      value: Platform (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &573294486
 GameObject:
   m_ObjectHideFlags: 0
@@ -2815,6 +3403,7 @@ GameObject:
   - 4: {fileID: 573294487}
   - 212: {fileID: 573294489}
   - 95: {fileID: 573294488}
+  - 61: {fileID: 573294491}
   m_Layer: 0
   m_Name: NewBricks_0 (121)
   m_TagString: Untagged
@@ -2829,12 +3418,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 573294486}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15, y: -9, z: 0}
+  m_LocalPosition: {x: -15, y: -8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 113
+  m_RootOrder: 110
 --- !u!95 &573294488
 Animator:
   serializedVersion: 3
@@ -2885,6 +3474,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &573294491
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 573294486}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &574222268
 GameObject:
   m_ObjectHideFlags: 0
@@ -2895,6 +3498,7 @@ GameObject:
   - 4: {fileID: 574222269}
   - 212: {fileID: 574222271}
   - 95: {fileID: 574222270}
+  - 61: {fileID: 574222273}
   m_Layer: 0
   m_Name: NewBricks_0 (124)
   m_TagString: Untagged
@@ -2914,7 +3518,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 116
+  m_RootOrder: 113
 --- !u!95 &574222270
 Animator:
   serializedVersion: 3
@@ -2965,6 +3569,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &574222273
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 574222268}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &591387431
 GameObject:
   m_ObjectHideFlags: 0
@@ -2975,6 +3593,7 @@ GameObject:
   - 4: {fileID: 591387432}
   - 212: {fileID: 591387434}
   - 95: {fileID: 591387433}
+  - 61: {fileID: 591387436}
   m_Layer: 0
   m_Name: NewBricks_0 (24)
   m_TagString: Untagged
@@ -2994,7 +3613,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 21
+  m_RootOrder: 20
 --- !u!95 &591387433
 Animator:
   serializedVersion: 3
@@ -3045,57 +3664,71 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!1001 &632621080
+--- !u!61 &591387436
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 591387431}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!1001 &598703614
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1295002225}
+    m_TransformParent: {fileID: 5211385}
     m_Modifications:
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 14
+      value: -9
       objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -8
+      value: -4
       objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 1000010260307704, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
+    - target: {fileID: 1000014260306054, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
       propertyPath: m_Name
-      value: Spike (1)
+      value: Platform (11)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &632621081 stripped
+--- !u!4 &599315510 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43,
+  m_PrefabParentObject: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9,
     type: 2}
-  m_PrefabInternal: {fileID: 632621080}
+  m_PrefabInternal: {fileID: 818182143}
 --- !u!1 &655112320
 GameObject:
   m_ObjectHideFlags: 0
@@ -3106,6 +3739,7 @@ GameObject:
   - 4: {fileID: 655112321}
   - 212: {fileID: 655112323}
   - 95: {fileID: 655112322}
+  - 61: {fileID: 655112325}
   m_Layer: 0
   m_Name: NewBricks_0 (9)
   m_TagString: Untagged
@@ -3125,7 +3759,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!95 &655112322
 Animator:
   serializedVersion: 3
@@ -3176,6 +3810,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &655112325
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 655112320}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &659286172
 GameObject:
   m_ObjectHideFlags: 0
@@ -3186,6 +3834,7 @@ GameObject:
   - 4: {fileID: 659286173}
   - 212: {fileID: 659286175}
   - 95: {fileID: 659286174}
+  - 61: {fileID: 659286177}
   m_Layer: 0
   m_Name: NewBricks_0 (70)
   m_TagString: Untagged
@@ -3205,7 +3854,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 65
+  m_RootOrder: 63
 --- !u!95 &659286174
 Animator:
   serializedVersion: 3
@@ -3256,6 +3905,66 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &659286177
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 659286172}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!1001 &667712181
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5211385}
+    m_Modifications:
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014260306054, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_Name
+      value: Platform (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &668637688
 GameObject:
   m_ObjectHideFlags: 0
@@ -3266,6 +3975,7 @@ GameObject:
   - 4: {fileID: 668637689}
   - 212: {fileID: 668637691}
   - 95: {fileID: 668637690}
+  - 61: {fileID: 668637693}
   m_Layer: 0
   m_Name: NewBricks_0 (102)
   m_TagString: Untagged
@@ -3280,12 +3990,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 668637688}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14, y: -9, z: 0}
+  m_LocalPosition: {x: 14, y: -8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 94
+  m_RootOrder: 91
 --- !u!95 &668637690
 Animator:
   serializedVersion: 3
@@ -3336,6 +4046,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &668637693
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 668637688}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &693343353
 GameObject:
   m_ObjectHideFlags: 0
@@ -3346,6 +4070,7 @@ GameObject:
   - 4: {fileID: 693343354}
   - 212: {fileID: 693343356}
   - 95: {fileID: 693343355}
+  - 61: {fileID: 693343358}
   m_Layer: 0
   m_Name: NewBricks_0 (41)
   m_TagString: Untagged
@@ -3365,7 +4090,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 37
+  m_RootOrder: 36
 --- !u!95 &693343355
 Animator:
   serializedVersion: 3
@@ -3416,6 +4141,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &693343358
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 693343353}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &710159917
 GameObject:
   m_ObjectHideFlags: 0
@@ -3426,6 +4165,7 @@ GameObject:
   - 4: {fileID: 710159918}
   - 212: {fileID: 710159920}
   - 95: {fileID: 710159919}
+  - 61: {fileID: 710159922}
   m_Layer: 0
   m_Name: NewBricks_0 (57)
   m_TagString: Untagged
@@ -3445,7 +4185,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 52
+  m_RootOrder: 51
 --- !u!95 &710159919
 Animator:
   serializedVersion: 3
@@ -3496,6 +4236,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &710159922
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 710159917}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &726696238
 GameObject:
   m_ObjectHideFlags: 0
@@ -3506,6 +4260,7 @@ GameObject:
   - 4: {fileID: 726696239}
   - 212: {fileID: 726696241}
   - 95: {fileID: 726696240}
+  - 61: {fileID: 726696243}
   m_Layer: 0
   m_Name: NewBricks_0 (128)
   m_TagString: Untagged
@@ -3525,7 +4280,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 120
+  m_RootOrder: 117
 --- !u!95 &726696240
 Animator:
   serializedVersion: 3
@@ -3576,6 +4331,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &726696243
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 726696238}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &734614268
 GameObject:
   m_ObjectHideFlags: 0
@@ -3586,6 +4355,7 @@ GameObject:
   - 4: {fileID: 734614269}
   - 212: {fileID: 734614271}
   - 95: {fileID: 734614270}
+  - 61: {fileID: 734614273}
   m_Layer: 0
   m_Name: NewBricks_0 (11)
   m_TagString: Untagged
@@ -3605,7 +4375,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!95 &734614270
 Animator:
   serializedVersion: 3
@@ -3656,6 +4426,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &734614273
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 734614268}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &748702311
 GameObject:
   m_ObjectHideFlags: 0
@@ -3666,6 +4450,7 @@ GameObject:
   - 4: {fileID: 748702312}
   - 212: {fileID: 748702314}
   - 95: {fileID: 748702313}
+  - 61: {fileID: 748702316}
   m_Layer: 0
   m_Name: NewBricks_0 (36)
   m_TagString: Untagged
@@ -3685,7 +4470,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 33
+  m_RootOrder: 32
 --- !u!95 &748702313
 Animator:
   serializedVersion: 3
@@ -3736,6 +4521,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &748702316
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 748702311}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &751427687
 GameObject:
   m_ObjectHideFlags: 0
@@ -3746,6 +4545,7 @@ GameObject:
   - 4: {fileID: 751427688}
   - 212: {fileID: 751427690}
   - 95: {fileID: 751427689}
+  - 61: {fileID: 751427692}
   m_Layer: 0
   m_Name: NewBricks_0 (115)
   m_TagString: Untagged
@@ -3765,7 +4565,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 107
+  m_RootOrder: 104
 --- !u!95 &751427689
 Animator:
   serializedVersion: 3
@@ -3816,6 +4616,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &751427692
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 751427687}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &778814754
 GameObject:
   m_ObjectHideFlags: 0
@@ -3826,6 +4640,7 @@ GameObject:
   - 4: {fileID: 778814755}
   - 212: {fileID: 778814757}
   - 95: {fileID: 778814756}
+  - 61: {fileID: 778814759}
   m_Layer: 0
   m_Name: NewBricks_0 (29)
   m_TagString: Untagged
@@ -3845,7 +4660,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 26
+  m_RootOrder: 25
 --- !u!95 &778814756
 Animator:
   serializedVersion: 3
@@ -3896,6 +4711,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &778814759
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 778814754}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &782433905
 GameObject:
   m_ObjectHideFlags: 0
@@ -3906,6 +4735,7 @@ GameObject:
   - 4: {fileID: 782433906}
   - 212: {fileID: 782433908}
   - 95: {fileID: 782433907}
+  - 61: {fileID: 782433910}
   m_Layer: 0
   m_Name: NewBricks_0 (49)
   m_TagString: Untagged
@@ -3925,7 +4755,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 45
+  m_RootOrder: 44
 --- !u!95 &782433907
 Animator:
   serializedVersion: 3
@@ -3976,6 +4806,115 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &782433910
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 782433905}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!1 &787841747
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 787841748}
+  - 212: {fileID: 787841751}
+  - 95: {fileID: 787841750}
+  - 61: {fileID: 787841749}
+  m_Layer: 0
+  m_Name: NewBricks_0 (84)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &787841748
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 787841747}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -16, y: -8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1359379632}
+  m_RootOrder: 127
+--- !u!61 &787841749
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 787841747}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!95 &787841750
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 787841747}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!212 &787841751
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 787841747}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 640955193
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300010, guid: c8a431f5d95b61d4eb7791c0be1682de, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1 &795105456
 GameObject:
   m_ObjectHideFlags: 0
@@ -3986,6 +4925,7 @@ GameObject:
   - 4: {fileID: 795105457}
   - 212: {fileID: 795105459}
   - 95: {fileID: 795105458}
+  - 61: {fileID: 795105461}
   m_Layer: 0
   m_Name: NewBricks_0 (123)
   m_TagString: Untagged
@@ -4005,7 +4945,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 115
+  m_RootOrder: 112
 --- !u!95 &795105458
 Animator:
   serializedVersion: 3
@@ -4056,6 +4996,62 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &795105461
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 795105456}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!1001 &800292640
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5211385}
+    m_Modifications:
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &809456049
 GameObject:
   m_ObjectHideFlags: 0
@@ -4066,6 +5062,7 @@ GameObject:
   - 4: {fileID: 809456050}
   - 212: {fileID: 809456052}
   - 95: {fileID: 809456051}
+  - 61: {fileID: 809456054}
   m_Layer: 0
   m_Name: NewBricks_0 (97)
   m_TagString: Untagged
@@ -4085,7 +5082,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 89
+  m_RootOrder: 86
 --- !u!95 &809456051
 Animator:
   serializedVersion: 3
@@ -4136,6 +5133,71 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &809456054
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 809456049}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!1001 &818182143
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5211385}
+    m_Modifications:
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014260306054, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_Name
+      value: Platform (12)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &818940889 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1724733788}
 --- !u!1 &820034865
 GameObject:
   m_ObjectHideFlags: 0
@@ -4146,6 +5208,7 @@ GameObject:
   - 4: {fileID: 820034866}
   - 212: {fileID: 820034868}
   - 95: {fileID: 820034867}
+  - 61: {fileID: 820034870}
   m_Layer: 0
   m_Name: NewBricks_0 (60)
   m_TagString: Untagged
@@ -4165,7 +5228,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 55
+  m_RootOrder: 54
 --- !u!95 &820034867
 Animator:
   serializedVersion: 3
@@ -4216,6 +5279,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &820034870
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 820034865}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &825536121
 GameObject:
   m_ObjectHideFlags: 0
@@ -4226,6 +5303,7 @@ GameObject:
   - 4: {fileID: 825536122}
   - 212: {fileID: 825536124}
   - 95: {fileID: 825536123}
+  - 61: {fileID: 825536126}
   m_Layer: 0
   m_Name: NewBricks_0 (129)
   m_TagString: Untagged
@@ -4245,7 +5323,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 121
+  m_RootOrder: 118
 --- !u!95 &825536123
 Animator:
   serializedVersion: 3
@@ -4296,6 +5374,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &825536126
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 825536121}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &840117731
 GameObject:
   m_ObjectHideFlags: 0
@@ -4306,6 +5398,7 @@ GameObject:
   - 4: {fileID: 840117732}
   - 212: {fileID: 840117734}
   - 95: {fileID: 840117733}
+  - 61: {fileID: 840117736}
   m_Layer: 0
   m_Name: NewBricks_0 (114)
   m_TagString: Untagged
@@ -4325,7 +5418,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 106
+  m_RootOrder: 103
 --- !u!95 &840117733
 Animator:
   serializedVersion: 3
@@ -4376,6 +5469,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &840117736
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 840117731}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &840216405
 GameObject:
   m_ObjectHideFlags: 0
@@ -4386,6 +5493,7 @@ GameObject:
   - 4: {fileID: 840216406}
   - 212: {fileID: 840216408}
   - 95: {fileID: 840216407}
+  - 61: {fileID: 840216410}
   m_Layer: 0
   m_Name: NewBricks_0 (66)
   m_TagString: Untagged
@@ -4405,7 +5513,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 61
+  m_RootOrder: 60
 --- !u!95 &840216407
 Animator:
   serializedVersion: 3
@@ -4456,6 +5564,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &840216410
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 840216405}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &870514152
 GameObject:
   m_ObjectHideFlags: 0
@@ -4466,6 +5588,7 @@ GameObject:
   - 4: {fileID: 870514153}
   - 212: {fileID: 870514155}
   - 95: {fileID: 870514154}
+  - 61: {fileID: 870514157}
   m_Layer: 0
   m_Name: NewBricks_0 (103)
   m_TagString: Untagged
@@ -4485,7 +5608,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 95
+  m_RootOrder: 92
 --- !u!95 &870514154
 Animator:
   serializedVersion: 3
@@ -4536,6 +5659,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &870514157
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 870514152}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &888992653
 GameObject:
   m_ObjectHideFlags: 0
@@ -4546,6 +5683,7 @@ GameObject:
   - 4: {fileID: 888992654}
   - 212: {fileID: 888992656}
   - 95: {fileID: 888992655}
+  - 61: {fileID: 888992658}
   m_Layer: 0
   m_Name: NewBricks_0 (12)
   m_TagString: Untagged
@@ -4565,7 +5703,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!95 &888992655
 Animator:
   serializedVersion: 3
@@ -4616,6 +5754,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &888992658
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 888992653}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &914199332
 GameObject:
   m_ObjectHideFlags: 0
@@ -4626,6 +5778,7 @@ GameObject:
   - 4: {fileID: 914199333}
   - 212: {fileID: 914199335}
   - 95: {fileID: 914199334}
+  - 61: {fileID: 914199337}
   m_Layer: 0
   m_Name: NewBricks_0 (107)
   m_TagString: Untagged
@@ -4645,7 +5798,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 99
+  m_RootOrder: 96
 --- !u!95 &914199334
 Animator:
   serializedVersion: 3
@@ -4696,6 +5849,125 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &914199337
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 914199332}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!4 &997018414 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9,
+    type: 2}
+  m_PrefabInternal: {fileID: 298002074}
+--- !u!1 &1006894239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1006894240}
+  - 212: {fileID: 1006894243}
+  - 95: {fileID: 1006894242}
+  - 61: {fileID: 1006894241}
+  m_Layer: 0
+  m_Name: NewBricks_0 (132)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1006894240
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1006894239}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12, y: -8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1359379632}
+  m_RootOrder: 122
+--- !u!61 &1006894241
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1006894239}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!95 &1006894242
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1006894239}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!212 &1006894243
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1006894239}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 640955193
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300002, guid: c8a431f5d95b61d4eb7791c0be1682de, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+--- !u!4 &1011795891 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1161220563}
 --- !u!1 &1033588034
 GameObject:
   m_ObjectHideFlags: 0
@@ -4706,6 +5978,7 @@ GameObject:
   - 4: {fileID: 1033588035}
   - 212: {fileID: 1033588037}
   - 95: {fileID: 1033588036}
+  - 61: {fileID: 1033588039}
   m_Layer: 0
   m_Name: NewBricks_0 (13)
   m_TagString: Untagged
@@ -4725,7 +5998,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!95 &1033588036
 Animator:
   serializedVersion: 3
@@ -4776,6 +6049,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1033588039
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1033588034}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1035257291
 GameObject:
   m_ObjectHideFlags: 0
@@ -4786,6 +6073,7 @@ GameObject:
   - 4: {fileID: 1035257292}
   - 212: {fileID: 1035257294}
   - 95: {fileID: 1035257293}
+  - 61: {fileID: 1035257296}
   m_Layer: 0
   m_Name: NewBricks_0 (23)
   m_TagString: Untagged
@@ -4805,7 +6093,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 20
+  m_RootOrder: 19
 --- !u!95 &1035257293
 Animator:
   serializedVersion: 3
@@ -4856,6 +6144,71 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1035257296
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1035257291}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!1001 &1044754205
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5211385}
+    m_Modifications:
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014260306054, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_Name
+      value: Platform (13)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1044754206 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1044754205}
 --- !u!1 &1046746113
 GameObject:
   m_ObjectHideFlags: 0
@@ -4866,6 +6219,7 @@ GameObject:
   - 4: {fileID: 1046746114}
   - 212: {fileID: 1046746116}
   - 95: {fileID: 1046746115}
+  - 61: {fileID: 1046746118}
   m_Layer: 0
   m_Name: NewBricks_0 (118)
   m_TagString: Untagged
@@ -4885,7 +6239,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 110
+  m_RootOrder: 107
 --- !u!95 &1046746115
 Animator:
   serializedVersion: 3
@@ -4936,6 +6290,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1046746118
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1046746113}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1065985270
 GameObject:
   m_ObjectHideFlags: 0
@@ -4946,6 +6314,7 @@ GameObject:
   - 4: {fileID: 1065985271}
   - 212: {fileID: 1065985273}
   - 95: {fileID: 1065985272}
+  - 61: {fileID: 1065985275}
   m_Layer: 0
   m_Name: NewBricks_0 (112)
   m_TagString: Untagged
@@ -4965,7 +6334,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 104
+  m_RootOrder: 101
 --- !u!95 &1065985272
 Animator:
   serializedVersion: 3
@@ -5016,6 +6385,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1065985275
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1065985270}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1083870348
 GameObject:
   m_ObjectHideFlags: 0
@@ -5026,6 +6409,7 @@ GameObject:
   - 4: {fileID: 1083870349}
   - 212: {fileID: 1083870351}
   - 95: {fileID: 1083870350}
+  - 61: {fileID: 1083870353}
   m_Layer: 0
   m_Name: NewBricks_0 (10)
   m_TagString: Untagged
@@ -5045,7 +6429,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!95 &1083870350
 Animator:
   serializedVersion: 3
@@ -5096,6 +6480,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1083870353
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1083870348}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1089812584
 GameObject:
   m_ObjectHideFlags: 0
@@ -5106,6 +6504,7 @@ GameObject:
   - 4: {fileID: 1089812585}
   - 212: {fileID: 1089812587}
   - 95: {fileID: 1089812586}
+  - 61: {fileID: 1089812589}
   m_Layer: 0
   m_Name: NewBricks_0 (93)
   m_TagString: Untagged
@@ -5125,7 +6524,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 85
+  m_RootOrder: 82
 --- !u!95 &1089812586
 Animator:
   serializedVersion: 3
@@ -5176,6 +6575,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1089812589
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1089812584}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1110370552
 GameObject:
   m_ObjectHideFlags: 0
@@ -5186,6 +6599,7 @@ GameObject:
   - 4: {fileID: 1110370553}
   - 212: {fileID: 1110370555}
   - 95: {fileID: 1110370554}
+  - 61: {fileID: 1110370557}
   m_Layer: 0
   m_Name: NewBricks_0 (119)
   m_TagString: Untagged
@@ -5205,7 +6619,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 111
+  m_RootOrder: 108
 --- !u!95 &1110370554
 Animator:
   serializedVersion: 3
@@ -5256,6 +6670,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1110370557
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1110370552}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1116697388
 GameObject:
   m_ObjectHideFlags: 0
@@ -5266,6 +6694,7 @@ GameObject:
   - 4: {fileID: 1116697389}
   - 212: {fileID: 1116697391}
   - 95: {fileID: 1116697390}
+  - 61: {fileID: 1116697393}
   m_Layer: 0
   m_Name: NewBricks_0 (117)
   m_TagString: Untagged
@@ -5285,7 +6714,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 109
+  m_RootOrder: 106
 --- !u!95 &1116697390
 Animator:
   serializedVersion: 3
@@ -5336,6 +6765,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1116697393
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1116697388}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1119338149
 GameObject:
   m_ObjectHideFlags: 0
@@ -5346,6 +6789,7 @@ GameObject:
   - 4: {fileID: 1119338150}
   - 212: {fileID: 1119338152}
   - 95: {fileID: 1119338151}
+  - 61: {fileID: 1119338154}
   m_Layer: 0
   m_Name: NewBricks_0 (40)
   m_TagString: Untagged
@@ -5365,7 +6809,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 36
+  m_RootOrder: 35
 --- !u!95 &1119338151
 Animator:
   serializedVersion: 3
@@ -5416,6 +6860,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1119338154
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1119338149}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1125588860
 GameObject:
   m_ObjectHideFlags: 0
@@ -5426,6 +6884,7 @@ GameObject:
   - 4: {fileID: 1125588861}
   - 212: {fileID: 1125588863}
   - 95: {fileID: 1125588862}
+  - 61: {fileID: 1125588865}
   m_Layer: 0
   m_Name: NewBricks_0 (100)
   m_TagString: Untagged
@@ -5440,12 +6899,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1125588860}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15, y: -9, z: 0}
+  m_LocalPosition: {x: 15, y: -8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 92
+  m_RootOrder: 89
 --- !u!95 &1125588862
 Animator:
   serializedVersion: 3
@@ -5496,6 +6955,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1125588865
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1125588860}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1136956189
 GameObject:
   m_ObjectHideFlags: 0
@@ -5506,6 +6979,7 @@ GameObject:
   - 4: {fileID: 1136956190}
   - 212: {fileID: 1136956192}
   - 95: {fileID: 1136956191}
+  - 61: {fileID: 1136956194}
   m_Layer: 0
   m_Name: NewBricks_0 (30)
   m_TagString: Untagged
@@ -5525,7 +6999,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 27
+  m_RootOrder: 26
 --- !u!95 &1136956191
 Animator:
   serializedVersion: 3
@@ -5576,6 +7050,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1136956194
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1136956189}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1139809654
 GameObject:
   m_ObjectHideFlags: 0
@@ -5586,6 +7074,7 @@ GameObject:
   - 4: {fileID: 1139809655}
   - 212: {fileID: 1139809657}
   - 95: {fileID: 1139809656}
+  - 61: {fileID: 1139809659}
   m_Layer: 0
   m_Name: NewBricks_0 (73)
   m_TagString: Untagged
@@ -5605,7 +7094,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 68
+  m_RootOrder: 65
 --- !u!95 &1139809656
 Animator:
   serializedVersion: 3
@@ -5656,57 +7145,256 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!1001 &1153262127
+--- !u!61 &1139809659
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1139809654}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!1001 &1161220563
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1295002225}
+    m_TransformParent: {fileID: 5211385}
     m_Modifications:
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -14
+      value: -6
       objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -8
+      value: -4
       objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 1000010260307704, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
+    - target: {fileID: 1000014260306054, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
       propertyPath: m_Name
-      value: Spike (4)
+      value: Platform (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1153262128 stripped
+--- !u!1 &1169968367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1169968368}
+  - 212: {fileID: 1169968371}
+  - 95: {fileID: 1169968370}
+  - 61: {fileID: 1169968369}
+  m_Layer: 0
+  m_Name: NewBricks_0 (55)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1169968368
 Transform:
-  m_PrefabParentObject: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43,
-    type: 2}
-  m_PrefabInternal: {fileID: 1153262127}
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1169968367}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 15, y: -9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1359379632}
+  m_RootOrder: 124
+--- !u!61 &1169968369
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1169968367}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!95 &1169968370
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1169968367}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!212 &1169968371
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1169968367}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 640955193
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300010, guid: c8a431f5d95b61d4eb7791c0be1682de, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+--- !u!1 &1182565176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1182565177}
+  - 212: {fileID: 1182565180}
+  - 95: {fileID: 1182565179}
+  - 61: {fileID: 1182565178}
+  m_Layer: 0
+  m_Name: NewBricks_0 (133)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1182565177
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1182565176}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -14, y: -9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1359379632}
+  m_RootOrder: 129
+--- !u!61 &1182565178
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1182565176}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!95 &1182565179
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1182565176}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!212 &1182565180
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1182565176}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 640955193
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300010, guid: c8a431f5d95b61d4eb7791c0be1682de, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1 &1197786619
 GameObject:
   m_ObjectHideFlags: 0
@@ -5717,6 +7405,7 @@ GameObject:
   - 4: {fileID: 1197786620}
   - 212: {fileID: 1197786622}
   - 95: {fileID: 1197786621}
+  - 61: {fileID: 1197786624}
   m_Layer: 0
   m_Name: NewBricks_0 (5)
   m_TagString: Untagged
@@ -5736,7 +7425,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!95 &1197786621
 Animator:
   serializedVersion: 3
@@ -5787,6 +7476,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1197786624
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1197786619}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1202527309
 GameObject:
   m_ObjectHideFlags: 0
@@ -5797,6 +7500,7 @@ GameObject:
   - 4: {fileID: 1202527310}
   - 212: {fileID: 1202527312}
   - 95: {fileID: 1202527311}
+  - 61: {fileID: 1202527314}
   m_Layer: 0
   m_Name: NewBricks_0 (75)
   m_TagString: Untagged
@@ -5816,7 +7520,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 70
+  m_RootOrder: 67
 --- !u!95 &1202527311
 Animator:
   serializedVersion: 3
@@ -5867,6 +7571,120 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1202527314
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1202527309}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!1 &1205710225
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1205710226}
+  - 212: {fileID: 1205710229}
+  - 95: {fileID: 1205710228}
+  - 61: {fileID: 1205710227}
+  m_Layer: 0
+  m_Name: NewBricks_0 (38)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1205710226
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1205710225}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 16, y: -8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1359379632}
+  m_RootOrder: 123
+--- !u!61 &1205710227
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1205710225}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!95 &1205710228
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1205710225}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!212 &1205710229
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1205710225}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 640955193
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300010, guid: c8a431f5d95b61d4eb7791c0be1682de, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+--- !u!4 &1206120730 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1719681307}
 --- !u!1 &1212061945
 GameObject:
   m_ObjectHideFlags: 0
@@ -5877,6 +7695,7 @@ GameObject:
   - 4: {fileID: 1212061946}
   - 212: {fileID: 1212061948}
   - 95: {fileID: 1212061947}
+  - 61: {fileID: 1212061950}
   m_Layer: 0
   m_Name: NewBricks_0 (71)
   m_TagString: Untagged
@@ -5896,7 +7715,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 66
+  m_RootOrder: 64
 --- !u!95 &1212061947
 Animator:
   serializedVersion: 3
@@ -5947,6 +7766,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1212061950
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1212061945}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1220786490
 GameObject:
   m_ObjectHideFlags: 0
@@ -5957,6 +7790,7 @@ GameObject:
   - 4: {fileID: 1220786491}
   - 212: {fileID: 1220786493}
   - 95: {fileID: 1220786492}
+  - 61: {fileID: 1220786495}
   m_Layer: 0
   m_Name: NewBricks_0 (87)
   m_TagString: Untagged
@@ -5976,7 +7810,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 79
+  m_RootOrder: 76
 --- !u!95 &1220786492
 Animator:
   serializedVersion: 3
@@ -6027,6 +7861,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1220786495
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1220786490}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1222907254
 GameObject:
   m_ObjectHideFlags: 0
@@ -6037,6 +7885,7 @@ GameObject:
   - 4: {fileID: 1222907255}
   - 212: {fileID: 1222907257}
   - 95: {fileID: 1222907256}
+  - 61: {fileID: 1222907259}
   m_Layer: 0
   m_Name: NewBricks_0 (105)
   m_TagString: Untagged
@@ -6056,7 +7905,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 97
+  m_RootOrder: 94
 --- !u!95 &1222907256
 Animator:
   serializedVersion: 3
@@ -6107,6 +7956,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1222907259
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1222907254}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1232455103
 GameObject:
   m_ObjectHideFlags: 0
@@ -6117,6 +7980,7 @@ GameObject:
   - 4: {fileID: 1232455104}
   - 212: {fileID: 1232455106}
   - 95: {fileID: 1232455105}
+  - 61: {fileID: 1232455108}
   m_Layer: 0
   m_Name: NewBricks_0 (92)
   m_TagString: Untagged
@@ -6136,7 +8000,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 84
+  m_RootOrder: 81
 --- !u!95 &1232455105
 Animator:
   serializedVersion: 3
@@ -6187,6 +8051,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1232455108
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1232455103}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1253711361
 GameObject:
   m_ObjectHideFlags: 0
@@ -6197,6 +8075,7 @@ GameObject:
   - 4: {fileID: 1253711362}
   - 212: {fileID: 1253711364}
   - 95: {fileID: 1253711363}
+  - 61: {fileID: 1253711366}
   m_Layer: 0
   m_Name: NewBricks_0 (62)
   m_TagString: Untagged
@@ -6216,7 +8095,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 57
+  m_RootOrder: 56
 --- !u!95 &1253711363
 Animator:
   serializedVersion: 3
@@ -6267,6 +8146,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1253711366
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1253711361}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1256432029
 GameObject:
   m_ObjectHideFlags: 0
@@ -6277,6 +8170,7 @@ GameObject:
   - 4: {fileID: 1256432030}
   - 212: {fileID: 1256432032}
   - 95: {fileID: 1256432031}
+  - 61: {fileID: 1256432034}
   m_Layer: 0
   m_Name: NewBricks_0 (67)
   m_TagString: Untagged
@@ -6296,7 +8190,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 62
+  m_RootOrder: 61
 --- !u!95 &1256432031
 Animator:
   serializedVersion: 3
@@ -6347,6 +8241,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1256432034
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1256432029}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1264899275
 GameObject:
   m_ObjectHideFlags: 0
@@ -6357,6 +8265,7 @@ GameObject:
   - 4: {fileID: 1264899276}
   - 212: {fileID: 1264899278}
   - 95: {fileID: 1264899277}
+  - 61: {fileID: 1264899280}
   m_Layer: 0
   m_Name: NewBricks_0 (33)
   m_TagString: Untagged
@@ -6376,7 +8285,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 30
+  m_RootOrder: 29
 --- !u!95 &1264899277
 Animator:
   serializedVersion: 3
@@ -6427,6 +8336,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1264899280
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1264899275}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1269322805
 GameObject:
   m_ObjectHideFlags: 0
@@ -6437,6 +8360,7 @@ GameObject:
   - 4: {fileID: 1269322806}
   - 212: {fileID: 1269322808}
   - 95: {fileID: 1269322807}
+  - 61: {fileID: 1269322810}
   m_Layer: 0
   m_Name: NewBricks_0 (96)
   m_TagString: Untagged
@@ -6456,7 +8380,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 88
+  m_RootOrder: 85
 --- !u!95 &1269322807
 Animator:
   serializedVersion: 3
@@ -6507,6 +8431,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1269322810
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1269322805}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1277969795
 GameObject:
   m_ObjectHideFlags: 0
@@ -6517,6 +8455,7 @@ GameObject:
   - 4: {fileID: 1277969796}
   - 212: {fileID: 1277969798}
   - 95: {fileID: 1277969797}
+  - 61: {fileID: 1277969800}
   m_Layer: 0
   m_Name: NewBricks_0 (65)
   m_TagString: Untagged
@@ -6536,7 +8475,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 60
+  m_RootOrder: 59
 --- !u!95 &1277969797
 Animator:
   serializedVersion: 3
@@ -6587,6 +8526,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1277969800
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1277969795}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1295002224
 GameObject:
   m_ObjectHideFlags: 0
@@ -6612,94 +8565,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 632621081}
-  - {fileID: 1392599318}
-  - {fileID: 1620106658}
-  - {fileID: 1153262128}
-  - {fileID: 281854413}
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
---- !u!1 &1307194895
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1307194896}
-  - 212: {fileID: 1307194898}
-  - 95: {fileID: 1307194897}
-  m_Layer: 0
-  m_Name: NewBricks_0 (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1307194896
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1307194895}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12, y: -8, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 1359379632}
-  m_RootOrder: 1
---- !u!95 &1307194897
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1307194895}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!212 &1307194898
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1307194895}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedWireframeHidden: 1
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 640955193
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c8a431f5d95b61d4eb7791c0be1682de, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
 --- !u!1 &1333958752
 GameObject:
   m_ObjectHideFlags: 0
@@ -6710,6 +8578,7 @@ GameObject:
   - 4: {fileID: 1333958753}
   - 212: {fileID: 1333958755}
   - 95: {fileID: 1333958754}
+  - 61: {fileID: 1333958757}
   m_Layer: 0
   m_Name: NewBricks_0 (120)
   m_TagString: Untagged
@@ -6724,12 +8593,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1333958752}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13, y: -9, z: 0}
+  m_LocalPosition: {x: -13, y: -8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 112
+  m_RootOrder: 109
 --- !u!95 &1333958754
 Animator:
   serializedVersion: 3
@@ -6780,6 +8649,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1333958757
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1333958752}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1342011344
 GameObject:
   m_ObjectHideFlags: 0
@@ -6790,6 +8673,7 @@ GameObject:
   - 4: {fileID: 1342011345}
   - 212: {fileID: 1342011347}
   - 95: {fileID: 1342011346}
+  - 61: {fileID: 1342011349}
   m_Layer: 0
   m_Name: NewBricks_0 (101)
   m_TagString: Untagged
@@ -6804,12 +8688,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1342011344}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13, y: -9, z: 0}
+  m_LocalPosition: {x: 13, y: -8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 93
+  m_RootOrder: 90
 --- !u!95 &1342011346
 Animator:
   serializedVersion: 3
@@ -6860,6 +8744,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1342011349
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1342011344}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1359379631
 GameObject:
   m_ObjectHideFlags: 0
@@ -6887,7 +8785,6 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1498634202}
-  - {fileID: 1307194896}
   - {fileID: 1197786620}
   - {fileID: 23737711}
   - {fileID: 360719807}
@@ -6949,11 +8846,9 @@ Transform:
   - {fileID: 1277969796}
   - {fileID: 840216406}
   - {fileID: 1256432030}
-  - {fileID: 1982203633}
   - {fileID: 1687374511}
   - {fileID: 659286173}
   - {fileID: 1212061946}
-  - {fileID: 1734262572}
   - {fileID: 1139809655}
   - {fileID: 2026044178}
   - {fileID: 1202527310}
@@ -7010,9 +8905,18 @@ Transform:
   - {fileID: 825536122}
   - {fileID: 1395999669}
   - {fileID: 530225566}
-  - {fileID: 21198775}
+  - {fileID: 1558475942}
+  - {fileID: 1006894240}
+  - {fileID: 1205710226}
+  - {fileID: 1169968368}
+  - {fileID: 1950521523}
+  - {fileID: 1443214346}
+  - {fileID: 787841748}
+  - {fileID: 501585217}
+  - {fileID: 1182565177}
+  - {fileID: 1385513920}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1 &1361866315
 GameObject:
   m_ObjectHideFlags: 0
@@ -7023,6 +8927,7 @@ GameObject:
   - 4: {fileID: 1361866316}
   - 212: {fileID: 1361866318}
   - 95: {fileID: 1361866317}
+  - 61: {fileID: 1361866320}
   m_Layer: 0
   m_Name: NewBricks_0 (43)
   m_TagString: Untagged
@@ -7042,7 +8947,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 39
+  m_RootOrder: 38
 --- !u!95 &1361866317
 Animator:
   serializedVersion: 3
@@ -7093,6 +8998,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1361866320
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1361866315}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1372502147
 GameObject:
   m_ObjectHideFlags: 0
@@ -7103,6 +9022,7 @@ GameObject:
   - 4: {fileID: 1372502148}
   - 212: {fileID: 1372502150}
   - 95: {fileID: 1372502149}
+  - 61: {fileID: 1372502152}
   m_Layer: 0
   m_Name: NewBricks_0 (76)
   m_TagString: Untagged
@@ -7122,7 +9042,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 71
+  m_RootOrder: 68
 --- !u!95 &1372502149
 Animator:
   serializedVersion: 3
@@ -7173,6 +9093,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1372502152
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1372502147}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1378296826
 GameObject:
   m_ObjectHideFlags: 0
@@ -7183,6 +9117,7 @@ GameObject:
   - 4: {fileID: 1378296827}
   - 212: {fileID: 1378296829}
   - 95: {fileID: 1378296828}
+  - 61: {fileID: 1378296831}
   m_Layer: 0
   m_Name: NewBricks_0 (14)
   m_TagString: Untagged
@@ -7202,7 +9137,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!95 &1378296828
 Animator:
   serializedVersion: 3
@@ -7253,57 +9188,115 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!1001 &1392599317
-Prefab:
+--- !u!61 &1378296831
+BoxCollider2D:
   m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1378296826}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1295002225}
-    m_Modifications:
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000010260307704, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_Name
-      value: Spike (2)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &1392599318 stripped
+  m_Size: {x: 1, y: 1}
+--- !u!1 &1385513919
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1385513920}
+  - 212: {fileID: 1385513923}
+  - 95: {fileID: 1385513922}
+  - 61: {fileID: 1385513921}
+  m_Layer: 0
+  m_Name: NewBricks_0 (134)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1385513920
 Transform:
-  m_PrefabParentObject: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43,
-    type: 2}
-  m_PrefabInternal: {fileID: 1392599317}
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1385513919}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -13, y: -9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1359379632}
+  m_RootOrder: 130
+--- !u!61 &1385513921
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1385513919}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!95 &1385513922
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1385513919}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!212 &1385513923
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1385513919}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 640955193
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300010, guid: c8a431f5d95b61d4eb7791c0be1682de, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1 &1395999668
 GameObject:
   m_ObjectHideFlags: 0
@@ -7314,6 +9307,7 @@ GameObject:
   - 4: {fileID: 1395999669}
   - 212: {fileID: 1395999671}
   - 95: {fileID: 1395999670}
+  - 61: {fileID: 1395999673}
   m_Layer: 0
   m_Name: NewBricks_0 (130)
   m_TagString: Untagged
@@ -7333,7 +9327,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 122
+  m_RootOrder: 119
 --- !u!95 &1395999670
 Animator:
   serializedVersion: 3
@@ -7384,6 +9378,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1395999673
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1395999668}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1402210763
 GameObject:
   m_ObjectHideFlags: 0
@@ -7394,6 +9402,7 @@ GameObject:
   - 4: {fileID: 1402210764}
   - 212: {fileID: 1402210766}
   - 95: {fileID: 1402210765}
+  - 61: {fileID: 1402210768}
   m_Layer: 0
   m_Name: NewBricks_0 (51)
   m_TagString: Untagged
@@ -7413,7 +9422,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 47
+  m_RootOrder: 46
 --- !u!95 &1402210765
 Animator:
   serializedVersion: 3
@@ -7464,6 +9473,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1402210768
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1402210763}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1402833856
 GameObject:
   m_ObjectHideFlags: 0
@@ -7474,6 +9497,7 @@ GameObject:
   - 4: {fileID: 1402833857}
   - 212: {fileID: 1402833859}
   - 95: {fileID: 1402833858}
+  - 61: {fileID: 1402833861}
   m_Layer: 0
   m_Name: NewBricks_0 (35)
   m_TagString: Untagged
@@ -7493,7 +9517,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 32
+  m_RootOrder: 31
 --- !u!95 &1402833858
 Animator:
   serializedVersion: 3
@@ -7544,6 +9568,25 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1402833861
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1402833856}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!4 &1403518288 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9,
+    type: 2}
+  m_PrefabInternal: {fileID: 800292640}
 --- !u!1 &1403562940
 GameObject:
   m_ObjectHideFlags: 0
@@ -7554,6 +9597,7 @@ GameObject:
   - 4: {fileID: 1403562941}
   - 212: {fileID: 1403562943}
   - 95: {fileID: 1403562942}
+  - 61: {fileID: 1403562945}
   m_Layer: 0
   m_Name: NewBricks_0 (79)
   m_TagString: Untagged
@@ -7573,7 +9617,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 74
+  m_RootOrder: 71
 --- !u!95 &1403562942
 Animator:
   serializedVersion: 3
@@ -7624,6 +9668,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1403562945
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1403562940}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1405950111
 GameObject:
   m_ObjectHideFlags: 0
@@ -7634,6 +9692,7 @@ GameObject:
   - 4: {fileID: 1405950112}
   - 212: {fileID: 1405950114}
   - 95: {fileID: 1405950113}
+  - 61: {fileID: 1405950116}
   m_Layer: 0
   m_Name: NewBricks_0 (77)
   m_TagString: Untagged
@@ -7653,7 +9712,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 72
+  m_RootOrder: 69
 --- !u!95 &1405950113
 Animator:
   serializedVersion: 3
@@ -7704,6 +9763,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1405950116
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1405950111}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1409792521
 GameObject:
   m_ObjectHideFlags: 0
@@ -7714,6 +9787,7 @@ GameObject:
   - 4: {fileID: 1409792522}
   - 212: {fileID: 1409792524}
   - 95: {fileID: 1409792523}
+  - 61: {fileID: 1409792526}
   m_Layer: 0
   m_Name: NewBricks_0 (42)
   m_TagString: Untagged
@@ -7733,7 +9807,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 38
+  m_RootOrder: 37
 --- !u!95 &1409792523
 Animator:
   serializedVersion: 3
@@ -7784,6 +9858,71 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1409792526
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1409792521}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!1001 &1415673769
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5211385}
+    m_Modifications:
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014260306054, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_Name
+      value: Platform (14)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1415673770 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1415673769}
 --- !u!1 &1436889726
 GameObject:
   m_ObjectHideFlags: 0
@@ -7794,6 +9933,7 @@ GameObject:
   - 4: {fileID: 1436889727}
   - 212: {fileID: 1436889729}
   - 95: {fileID: 1436889728}
+  - 61: {fileID: 1436889731}
   m_Layer: 0
   m_Name: NewBricks_0 (122)
   m_TagString: Untagged
@@ -7808,12 +9948,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1436889726}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14, y: -9, z: 0}
+  m_LocalPosition: {x: -14, y: -8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 114
+  m_RootOrder: 111
 --- !u!95 &1436889728
 Animator:
   serializedVersion: 3
@@ -7864,6 +10004,115 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1436889731
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1436889726}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!1 &1443214345
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1443214346}
+  - 212: {fileID: 1443214349}
+  - 95: {fileID: 1443214348}
+  - 61: {fileID: 1443214347}
+  m_Layer: 0
+  m_Name: NewBricks_0 (72)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1443214346
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1443214345}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 13, y: -9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1359379632}
+  m_RootOrder: 126
+--- !u!61 &1443214347
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1443214345}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!95 &1443214348
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1443214345}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!212 &1443214349
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1443214345}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 640955193
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300010, guid: c8a431f5d95b61d4eb7791c0be1682de, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1 &1466583191
 GameObject:
   m_ObjectHideFlags: 0
@@ -7874,6 +10123,7 @@ GameObject:
   - 4: {fileID: 1466583192}
   - 212: {fileID: 1466583194}
   - 95: {fileID: 1466583193}
+  - 61: {fileID: 1466583196}
   m_Layer: 0
   m_Name: NewBricks_0 (46)
   m_TagString: Untagged
@@ -7893,7 +10143,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 42
+  m_RootOrder: 41
 --- !u!95 &1466583193
 Animator:
   serializedVersion: 3
@@ -7944,6 +10194,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1466583196
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1466583191}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1482382158
 GameObject:
   m_ObjectHideFlags: 0
@@ -7954,6 +10218,7 @@ GameObject:
   - 4: {fileID: 1482382159}
   - 212: {fileID: 1482382161}
   - 95: {fileID: 1482382160}
+  - 61: {fileID: 1482382163}
   m_Layer: 0
   m_Name: NewBricks_0 (80)
   m_TagString: Untagged
@@ -7973,7 +10238,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 75
+  m_RootOrder: 72
 --- !u!95 &1482382160
 Animator:
   serializedVersion: 3
@@ -8024,6 +10289,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1482382163
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1482382158}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1497245412
 GameObject:
   m_ObjectHideFlags: 0
@@ -8034,6 +10313,7 @@ GameObject:
   - 4: {fileID: 1497245413}
   - 212: {fileID: 1497245415}
   - 95: {fileID: 1497245414}
+  - 61: {fileID: 1497245417}
   m_Layer: 0
   m_Name: NewBricks_0 (95)
   m_TagString: Untagged
@@ -8053,7 +10333,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 87
+  m_RootOrder: 84
 --- !u!95 &1497245414
 Animator:
   serializedVersion: 3
@@ -8104,6 +10384,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1497245417
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1497245412}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1497970131
 GameObject:
   m_ObjectHideFlags: 0
@@ -8114,6 +10408,7 @@ GameObject:
   - 4: {fileID: 1497970132}
   - 212: {fileID: 1497970134}
   - 95: {fileID: 1497970133}
+  - 61: {fileID: 1497970136}
   m_Layer: 0
   m_Name: NewBricks_0 (21)
   m_TagString: Untagged
@@ -8133,7 +10428,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 18
+  m_RootOrder: 17
 --- !u!95 &1497970133
 Animator:
   serializedVersion: 3
@@ -8184,6 +10479,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1497970136
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1497970131}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1498634201
 GameObject:
   m_ObjectHideFlags: 0
@@ -8194,6 +10503,7 @@ GameObject:
   - 4: {fileID: 1498634202}
   - 212: {fileID: 1498634204}
   - 95: {fileID: 1498634203}
+  - 61: {fileID: 1498634206}
   m_Layer: 0
   m_Name: NewBricks_0
   m_TagString: Untagged
@@ -8264,6 +10574,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1498634206
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1498634201}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1522862174
 GameObject:
   m_ObjectHideFlags: 0
@@ -8274,6 +10598,7 @@ GameObject:
   - 4: {fileID: 1522862175}
   - 212: {fileID: 1522862177}
   - 95: {fileID: 1522862176}
+  - 61: {fileID: 1522862179}
   m_Layer: 0
   m_Name: NewBricks_0 (31)
   m_TagString: Untagged
@@ -8293,7 +10618,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 28
+  m_RootOrder: 27
 --- !u!95 &1522862176
 Animator:
   serializedVersion: 3
@@ -8344,6 +10669,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1522862179
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1522862174}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1543436877
 GameObject:
   m_ObjectHideFlags: 0
@@ -8354,6 +10693,7 @@ GameObject:
   - 4: {fileID: 1543436878}
   - 212: {fileID: 1543436880}
   - 95: {fileID: 1543436879}
+  - 61: {fileID: 1543436882}
   m_Layer: 0
   m_Name: NewBricks_0 (82)
   m_TagString: Untagged
@@ -8373,7 +10713,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 77
+  m_RootOrder: 74
 --- !u!95 &1543436879
 Animator:
   serializedVersion: 3
@@ -8424,6 +10764,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1543436882
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1543436877}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1554035128
 GameObject:
   m_ObjectHideFlags: 0
@@ -8434,6 +10788,7 @@ GameObject:
   - 4: {fileID: 1554035129}
   - 212: {fileID: 1554035131}
   - 95: {fileID: 1554035130}
+  - 61: {fileID: 1554035133}
   m_Layer: 0
   m_Name: NewBricks_0 (111)
   m_TagString: Untagged
@@ -8453,7 +10808,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 103
+  m_RootOrder: 100
 --- !u!95 &1554035130
 Animator:
   serializedVersion: 3
@@ -8504,6 +10859,115 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1554035133
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1554035128}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!1 &1558475941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1558475942}
+  - 212: {fileID: 1558475945}
+  - 95: {fileID: 1558475944}
+  - 61: {fileID: 1558475943}
+  m_Layer: 0
+  m_Name: NewBricks_0 (131)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1558475942
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1558475941}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12, y: -8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1359379632}
+  m_RootOrder: 121
+--- !u!61 &1558475943
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1558475941}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!95 &1558475944
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1558475941}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!212 &1558475945
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1558475941}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 640955193
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300002, guid: c8a431f5d95b61d4eb7791c0be1682de, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1 &1573092587
 GameObject:
   m_ObjectHideFlags: 0
@@ -8514,6 +10978,7 @@ GameObject:
   - 4: {fileID: 1573092588}
   - 212: {fileID: 1573092590}
   - 95: {fileID: 1573092589}
+  - 61: {fileID: 1573092592}
   m_Layer: 0
   m_Name: NewBricks_0 (63)
   m_TagString: Untagged
@@ -8533,7 +10998,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 58
+  m_RootOrder: 57
 --- !u!95 &1573092589
 Animator:
   serializedVersion: 3
@@ -8584,6 +11049,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1573092592
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1573092587}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1615700904
 GameObject:
   m_ObjectHideFlags: 0
@@ -8594,6 +11073,7 @@ GameObject:
   - 4: {fileID: 1615700905}
   - 212: {fileID: 1615700907}
   - 95: {fileID: 1615700906}
+  - 61: {fileID: 1615700909}
   m_Layer: 0
   m_Name: NewBricks_0 (127)
   m_TagString: Untagged
@@ -8613,7 +11093,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 119
+  m_RootOrder: 116
 --- !u!95 &1615700906
 Animator:
   serializedVersion: 3
@@ -8664,57 +11144,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!1001 &1620106657
-Prefab:
+--- !u!61 &1615700909
+BoxCollider2D:
   m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1615700904}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1295002225}
-    m_Modifications:
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -13
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000010260307704, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-      propertyPath: m_Name
-      value: Spike (3)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &1620106658 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4000013961584586, guid: ca19ce3d1dfa53240b9b6379675b6f43,
-    type: 2}
-  m_PrefabInternal: {fileID: 1620106657}
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1632949107
 GameObject:
   m_ObjectHideFlags: 0
@@ -8725,6 +11168,7 @@ GameObject:
   - 4: {fileID: 1632949108}
   - 212: {fileID: 1632949110}
   - 95: {fileID: 1632949109}
+  - 61: {fileID: 1632949112}
   m_Layer: 0
   m_Name: NewBricks_0 (91)
   m_TagString: Untagged
@@ -8744,7 +11188,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 83
+  m_RootOrder: 80
 --- !u!95 &1632949109
 Animator:
   serializedVersion: 3
@@ -8795,6 +11239,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1632949112
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1632949107}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1683076853
 GameObject:
   m_ObjectHideFlags: 0
@@ -8805,6 +11263,7 @@ GameObject:
   - 4: {fileID: 1683076854}
   - 212: {fileID: 1683076856}
   - 95: {fileID: 1683076855}
+  - 61: {fileID: 1683076858}
   m_Layer: 0
   m_Name: NewBricks_0 (48)
   m_TagString: Untagged
@@ -8824,7 +11283,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 44
+  m_RootOrder: 43
 --- !u!95 &1683076855
 Animator:
   serializedVersion: 3
@@ -8875,6 +11334,25 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1683076858
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1683076853}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!4 &1685977444 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9,
+    type: 2}
+  m_PrefabInternal: {fileID: 567985258}
 --- !u!1 &1687374510
 GameObject:
   m_ObjectHideFlags: 0
@@ -8885,6 +11363,7 @@ GameObject:
   - 4: {fileID: 1687374511}
   - 212: {fileID: 1687374513}
   - 95: {fileID: 1687374512}
+  - 61: {fileID: 1687374515}
   m_Layer: 0
   m_Name: NewBricks_0 (69)
   m_TagString: Untagged
@@ -8904,7 +11383,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 64
+  m_RootOrder: 62
 --- !u!95 &1687374512
 Animator:
   serializedVersion: 3
@@ -8955,6 +11434,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1687374515
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1687374510}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1687440008
 GameObject:
   m_ObjectHideFlags: 0
@@ -8965,6 +11458,7 @@ GameObject:
   - 4: {fileID: 1687440009}
   - 212: {fileID: 1687440011}
   - 95: {fileID: 1687440010}
+  - 61: {fileID: 1687440013}
   m_Layer: 0
   m_Name: NewBricks_0 (61)
   m_TagString: Untagged
@@ -8984,7 +11478,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 56
+  m_RootOrder: 55
 --- !u!95 &1687440010
 Animator:
   serializedVersion: 3
@@ -9035,6 +11529,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1687440013
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1687440008}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1692664674
 GameObject:
   m_ObjectHideFlags: 0
@@ -9045,6 +11553,7 @@ GameObject:
   - 4: {fileID: 1692664675}
   - 212: {fileID: 1692664677}
   - 95: {fileID: 1692664676}
+  - 61: {fileID: 1692664679}
   m_Layer: 0
   m_Name: NewBricks_0 (25)
   m_TagString: Untagged
@@ -9064,7 +11573,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 22
+  m_RootOrder: 21
 --- !u!95 &1692664676
 Animator:
   serializedVersion: 3
@@ -9115,6 +11624,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1692664679
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1692664674}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1698258098
 GameObject:
   m_ObjectHideFlags: 0
@@ -9125,6 +11648,7 @@ GameObject:
   - 4: {fileID: 1698258099}
   - 212: {fileID: 1698258101}
   - 95: {fileID: 1698258100}
+  - 61: {fileID: 1698258103}
   m_Layer: 0
   m_Name: NewBricks_0 (32)
   m_TagString: Untagged
@@ -9144,7 +11668,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 29
+  m_RootOrder: 28
 --- !u!95 &1698258100
 Animator:
   serializedVersion: 3
@@ -9195,6 +11719,112 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1698258103
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1698258098}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!1001 &1719681307
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5211385}
+    m_Modifications:
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014260306054, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_Name
+      value: Platform (10)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1724733788
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5211385}
+    m_Modifications:
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014260306054, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_Name
+      value: Platform (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1732163403
 GameObject:
   m_ObjectHideFlags: 0
@@ -9205,6 +11835,7 @@ GameObject:
   - 4: {fileID: 1732163404}
   - 212: {fileID: 1732163406}
   - 95: {fileID: 1732163405}
+  - 61: {fileID: 1732163408}
   m_Layer: 0
   m_Name: NewBricks_0 (99)
   m_TagString: Untagged
@@ -9224,7 +11855,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 91
+  m_RootOrder: 88
 --- !u!95 &1732163405
 Animator:
   serializedVersion: 3
@@ -9275,86 +11906,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!1 &1734262571
-GameObject:
+--- !u!61 &1732163408
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1734262572}
-  - 212: {fileID: 1734262574}
-  - 95: {fileID: 1734262573}
-  m_Layer: 0
-  m_Name: NewBricks_0 (72)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1734262572
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1734262571}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12, y: -8, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 1359379632}
-  m_RootOrder: 67
---- !u!95 &1734262573
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1734262571}
+  m_GameObject: {fileID: 1732163403}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!212 &1734262574
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1734262571}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedWireframeHidden: 1
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 640955193
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300004, guid: c8a431f5d95b61d4eb7791c0be1682de, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1752454247
 GameObject:
   m_ObjectHideFlags: 0
@@ -9365,6 +11930,7 @@ GameObject:
   - 4: {fileID: 1752454248}
   - 212: {fileID: 1752454250}
   - 95: {fileID: 1752454249}
+  - 61: {fileID: 1752454252}
   m_Layer: 0
   m_Name: NewBricks_0 (89)
   m_TagString: Untagged
@@ -9384,7 +11950,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 81
+  m_RootOrder: 78
 --- !u!95 &1752454249
 Animator:
   serializedVersion: 3
@@ -9435,6 +12001,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1752454252
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1752454247}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1767679828
 GameObject:
   m_ObjectHideFlags: 0
@@ -9445,6 +12025,7 @@ GameObject:
   - 4: {fileID: 1767679829}
   - 212: {fileID: 1767679831}
   - 95: {fileID: 1767679830}
+  - 61: {fileID: 1767679833}
   m_Layer: 0
   m_Name: NewBricks_0 (104)
   m_TagString: Untagged
@@ -9464,7 +12045,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 96
+  m_RootOrder: 93
 --- !u!95 &1767679830
 Animator:
   serializedVersion: 3
@@ -9515,6 +12096,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1767679833
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1767679828}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1001 &1770973498
 Prefab:
   m_ObjectHideFlags: 0
@@ -9552,10 +12147,56 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012413323090, guid: 75dcc9dbf9ad55f4398bde8d7f714b21, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 75dcc9dbf9ad55f4398bde8d7f714b21, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1789587220
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5211385}
+    m_Modifications:
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014260306054, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_Name
+      value: Platform (9)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1817372965
 GameObject:
@@ -9567,6 +12208,7 @@ GameObject:
   - 4: {fileID: 1817372966}
   - 212: {fileID: 1817372968}
   - 95: {fileID: 1817372967}
+  - 61: {fileID: 1817372970}
   m_Layer: 0
   m_Name: NewBricks_0 (58)
   m_TagString: Untagged
@@ -9586,7 +12228,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 53
+  m_RootOrder: 52
 --- !u!95 &1817372967
 Animator:
   serializedVersion: 3
@@ -9637,6 +12279,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1817372970
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1817372965}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1854039421
 GameObject:
   m_ObjectHideFlags: 0
@@ -9647,6 +12303,7 @@ GameObject:
   - 4: {fileID: 1854039422}
   - 212: {fileID: 1854039424}
   - 95: {fileID: 1854039423}
+  - 61: {fileID: 1854039426}
   m_Layer: 0
   m_Name: NewBricks_0 (45)
   m_TagString: Untagged
@@ -9666,7 +12323,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 41
+  m_RootOrder: 40
 --- !u!95 &1854039423
 Animator:
   serializedVersion: 3
@@ -9717,6 +12374,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1854039426
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1854039421}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1871299100
 GameObject:
   m_ObjectHideFlags: 0
@@ -9727,6 +12398,7 @@ GameObject:
   - 4: {fileID: 1871299101}
   - 212: {fileID: 1871299103}
   - 95: {fileID: 1871299102}
+  - 61: {fileID: 1871299105}
   m_Layer: 0
   m_Name: NewBricks_0 (108)
   m_TagString: Untagged
@@ -9746,7 +12418,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 100
+  m_RootOrder: 97
 --- !u!95 &1871299102
 Animator:
   serializedVersion: 3
@@ -9797,6 +12469,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1871299105
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1871299100}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1893453454
 GameObject:
   m_ObjectHideFlags: 0
@@ -9807,6 +12493,7 @@ GameObject:
   - 4: {fileID: 1893453455}
   - 212: {fileID: 1893453457}
   - 95: {fileID: 1893453456}
+  - 61: {fileID: 1893453459}
   m_Layer: 0
   m_Name: NewBricks_0 (39)
   m_TagString: Untagged
@@ -9826,7 +12513,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 35
+  m_RootOrder: 34
 --- !u!95 &1893453456
 Animator:
   serializedVersion: 3
@@ -9877,6 +12564,25 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1893453459
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1893453454}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!4 &1939721399 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1789587220}
 --- !u!1 &1944956676
 GameObject:
   m_ObjectHideFlags: 0
@@ -9887,6 +12593,7 @@ GameObject:
   - 4: {fileID: 1944956677}
   - 212: {fileID: 1944956679}
   - 95: {fileID: 1944956678}
+  - 61: {fileID: 1944956681}
   m_Layer: 0
   m_Name: NewBricks_0 (27)
   m_TagString: Untagged
@@ -9906,7 +12613,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 24
+  m_RootOrder: 23
 --- !u!95 &1944956678
 Animator:
   serializedVersion: 3
@@ -9957,6 +12664,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1944956681
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1944956676}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1950340983
 GameObject:
   m_ObjectHideFlags: 0
@@ -9967,6 +12688,7 @@ GameObject:
   - 4: {fileID: 1950340984}
   - 212: {fileID: 1950340986}
   - 95: {fileID: 1950340985}
+  - 61: {fileID: 1950340988}
   m_Layer: 0
   m_Name: NewBricks_0 (8)
   m_TagString: Untagged
@@ -9986,7 +12708,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!95 &1950340985
 Animator:
   serializedVersion: 3
@@ -10037,16 +12759,31 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!1 &1982203632
+--- !u!61 &1950340988
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1950340983}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!1 &1950521522
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 1982203633}
-  - 212: {fileID: 1982203635}
-  - 95: {fileID: 1982203634}
+  - 4: {fileID: 1950521523}
+  - 212: {fileID: 1950521526}
+  - 95: {fileID: 1950521525}
+  - 61: {fileID: 1950521524}
   m_Layer: 0
   m_Name: NewBricks_0 (68)
   m_TagString: Untagged
@@ -10054,26 +12791,40 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1982203633
+--- !u!4 &1950521523
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1982203632}
+  m_GameObject: {fileID: 1950521522}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16, y: -8, z: 0}
+  m_LocalPosition: {x: 14, y: -9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 63
---- !u!95 &1982203634
+  m_RootOrder: 125
+--- !u!61 &1950521524
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1950521522}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!95 &1950521525
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1982203632}
+  m_GameObject: {fileID: 1950521522}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 0}
@@ -10084,12 +12835,12 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!212 &1982203635
+--- !u!212 &1950521526
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1982203632}
+  m_GameObject: {fileID: 1950521522}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -10113,7 +12864,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 640955193
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300012, guid: c8a431f5d95b61d4eb7791c0be1682de, type: 3}
+  m_Sprite: {fileID: 21300010, guid: c8a431f5d95b61d4eb7791c0be1682de, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10127,6 +12878,7 @@ GameObject:
   - 4: {fileID: 1988275171}
   - 212: {fileID: 1988275173}
   - 95: {fileID: 1988275172}
+  - 61: {fileID: 1988275175}
   m_Layer: 0
   m_Name: NewBricks_0 (59)
   m_TagString: Untagged
@@ -10146,7 +12898,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 54
+  m_RootOrder: 53
 --- !u!95 &1988275172
 Animator:
   serializedVersion: 3
@@ -10197,6 +12949,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1988275175
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1988275170}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &2012734458
 GameObject:
   m_ObjectHideFlags: 0
@@ -10207,6 +12973,7 @@ GameObject:
   - 4: {fileID: 2012734459}
   - 212: {fileID: 2012734461}
   - 95: {fileID: 2012734460}
+  - 61: {fileID: 2012734463}
   m_Layer: 0
   m_Name: NewBricks_0 (110)
   m_TagString: Untagged
@@ -10226,7 +12993,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 102
+  m_RootOrder: 99
 --- !u!95 &2012734460
 Animator:
   serializedVersion: 3
@@ -10277,6 +13044,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &2012734463
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2012734458}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &2026044177
 GameObject:
   m_ObjectHideFlags: 0
@@ -10287,6 +13068,7 @@ GameObject:
   - 4: {fileID: 2026044178}
   - 212: {fileID: 2026044180}
   - 95: {fileID: 2026044179}
+  - 61: {fileID: 2026044182}
   m_Layer: 0
   m_Name: NewBricks_0 (74)
   m_TagString: Untagged
@@ -10306,7 +13088,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 69
+  m_RootOrder: 66
 --- !u!95 &2026044179
 Animator:
   serializedVersion: 3
@@ -10357,6 +13139,117 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &2026044182
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2026044177}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!1001 &2027504686
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5211385}
+    m_Modifications:
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014260306054, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_Name
+      value: Platform (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &2034374193
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5211385}
+    m_Modifications:
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014260306054, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+      propertyPath: m_Name
+      value: Platform (8)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &2053716286 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000011755098866, guid: 7dc60b15e76c86e4aadfffec218b12d9,
+    type: 2}
+  m_PrefabInternal: {fileID: 361145375}
 --- !u!1 &2088990283
 GameObject:
   m_ObjectHideFlags: 0
@@ -10454,6 +13347,7 @@ GameObject:
   - 4: {fileID: 2094424776}
   - 212: {fileID: 2094424778}
   - 95: {fileID: 2094424777}
+  - 61: {fileID: 2094424780}
   m_Layer: 0
   m_Name: NewBricks_0 (54)
   m_TagString: Untagged
@@ -10473,7 +13367,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 50
+  m_RootOrder: 49
 --- !u!95 &2094424777
 Animator:
   serializedVersion: 3
@@ -10524,6 +13418,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &2094424780
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2094424775}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &2099019907
 GameObject:
   m_ObjectHideFlags: 0
@@ -10534,6 +13442,7 @@ GameObject:
   - 4: {fileID: 2099019908}
   - 212: {fileID: 2099019910}
   - 95: {fileID: 2099019909}
+  - 61: {fileID: 2099019912}
   m_Layer: 0
   m_Name: NewBricks_0 (34)
   m_TagString: Untagged
@@ -10553,7 +13462,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 31
+  m_RootOrder: 30
 --- !u!95 &2099019909
 Animator:
   serializedVersion: 3
@@ -10604,6 +13513,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &2099019912
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2099019907}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &2128436770
 GameObject:
   m_ObjectHideFlags: 0
@@ -10614,6 +13537,7 @@ GameObject:
   - 4: {fileID: 2128436771}
   - 212: {fileID: 2128436773}
   - 95: {fileID: 2128436772}
+  - 61: {fileID: 2128436775}
   m_Layer: 0
   m_Name: NewBricks_0 (106)
   m_TagString: Untagged
@@ -10633,7 +13557,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 98
+  m_RootOrder: 95
 --- !u!95 &2128436772
 Animator:
   serializedVersion: 3
@@ -10684,6 +13608,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &2128436775
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2128436770}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &2133331734
 GameObject:
   m_ObjectHideFlags: 0
@@ -10694,6 +13632,7 @@ GameObject:
   - 4: {fileID: 2133331735}
   - 212: {fileID: 2133331737}
   - 95: {fileID: 2133331736}
+  - 61: {fileID: 2133331739}
   m_Layer: 0
   m_Name: NewBricks_0 (78)
   m_TagString: Untagged
@@ -10713,7 +13652,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1359379632}
-  m_RootOrder: 73
+  m_RootOrder: 70
 --- !u!95 &2133331736
 Animator:
   serializedVersion: 3
@@ -10764,3 +13703,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &2133331739
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2133331734}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
