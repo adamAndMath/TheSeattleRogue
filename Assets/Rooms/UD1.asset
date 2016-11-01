@@ -145,7 +145,7 @@ MonoBehaviour:
       slope: 0
     - wallID: 0
       slope: 0
-    - wallID: 0
+    - wallID: -1
       slope: 0
     - wallID: 0
       slope: 0
