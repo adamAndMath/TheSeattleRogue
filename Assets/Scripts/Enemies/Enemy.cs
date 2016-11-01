@@ -7,6 +7,7 @@ public abstract class Enemy : PhysicsObject
     public ItemDrop[] drops;
     public float gravity;
     public float gravitySpeed;
+    public int scoreGiven;
 
     public virtual void Damaged(int damageAmount)
     {
