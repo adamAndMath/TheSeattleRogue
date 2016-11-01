@@ -21,6 +21,7 @@ public class Player : PhysicsObject
     public Animator weapon;
 
     public int deathScene = 0;
+    public Animator deathTransitionAnimator;
 
     public List<Sprite> enemyDeathSprites;
     public bool Direction { get { return 0 < transform.localScale.x; } set { transform.localScale = new Vector3(value ? -1 : 1, 1, 1); } }
@@ -54,8 +55,9 @@ public class Player : PhysicsObject
 
         if (hp <= 0)
         {
-            SceneManager.LoadScene(deathScene);
+            deathTransitionAnimator.SetBool("Transitioning", true);
             DeathScene.enemies = enemyDeathSprites;
+            SceneManager.LoadScene(deathScene);
         }
 
     }
