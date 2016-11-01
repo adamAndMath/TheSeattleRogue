@@ -56,6 +56,8 @@ public class Player : PhysicsObject
 
         if (hp <= 0)
         {
+
+
             SceneManager.LoadScene(DeathScene);
         }
 
