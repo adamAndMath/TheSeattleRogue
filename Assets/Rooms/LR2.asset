@@ -20,108 +20,6 @@ MonoBehaviour:
   entrencesRight: 1
   columns:
   - data:
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-  - data:
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-  - data:
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-  - data:
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-  - data:
-    - wallID: -2
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: -2
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-  - data:
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-  - data:
     - wallID: 0
       slope: 0
     - wallID: 0
@@ -200,12 +98,114 @@ MonoBehaviour:
       slope: 0
     - wallID: 0
       slope: 0
+    - wallID: -2
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+  - data:
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+  - data:
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+  - data:
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+  - data:
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+  - data:
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+  - data:
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: -2
+      slope: 0
     - wallID: 0
       slope: 0
     - wallID: 0
       slope: 0
     - wallID: -2
       slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
   - data:
     - wallID: 0
       slope: 0
@@ -258,21 +258,21 @@ MonoBehaviour:
     - wallID: 0
       slope: 0
   - data:
-    - wallID: 1
+    - wallID: 0
       slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
+    - wallID: 0
       slope: 0
     - wallID: 0
       slope: 0
     - wallID: 0
       slope: 0
-    - wallID: 1
+    - wallID: 0
       slope: 0
-    - wallID: 1
+    - wallID: 0
       slope: 0
-    - wallID: 1
+    - wallID: 0
+      slope: 0
+    - wallID: 0
       slope: 0
   walls:
   - upLeft: {fileID: 21300000, guid: 86cbfc8445425364da94a1aeb5ad4b3b, type: 3}
