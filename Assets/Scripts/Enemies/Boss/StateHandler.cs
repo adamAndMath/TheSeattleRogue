@@ -1,30 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class StateHandler : StateMachineBehaviour {
-
+public class StateHandler : StateMachineBehaviour
+{
+    public bool betweenStates;
 
 	 //OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
-    {
-	    
+	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+	{
+	    betweenStates = true;
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
         
-	    animator.SetInteger("StateSet", Random.Range(1, 1));
 
-        animator.SetBool("RunFastMode", animator.GetInteger("StateSet") == 1);
-        animator.SetBool("GreatKickMode", animator.GetInteger("StateSet") == 2);
-        animator.SetBool("GrandSlamMode", animator.GetInteger("StateSet") == 3);
 	}
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-	//override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-	//
-	//}
+	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+	{
+	    betweenStates = false;
+	}
 
 	// OnStateMove is called right after Animator.OnAnimatorMove(). Code that processes and affects root motion should be implemented here
 	//override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
