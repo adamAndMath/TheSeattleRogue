@@ -123,14 +123,13 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 224: {fileID: 224000010568113558}
-  - 114: {fileID: 114000011501048572}
   m_Layer: 5
   m_Name: Pause
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000014033569578
 GameObject:
   m_ObjectHideFlags: 1
@@ -176,19 +175,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114000011501048572
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013505420058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b5f9c89a6b646e49ba5024a9034e180, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PauseMenuGameObject: {fileID: 1000010661747690}
-  SceneToLoad: 0
 --- !u!114 &114000011613700278
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -228,7 +214,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114000011501048572}
+      - m_Target: {fileID: 0}
         m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
@@ -400,7 +386,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114000011501048572}
+      - m_Target: {fileID: 0}
         m_MethodName: ChangeScene
         m_Mode: 1
         m_Arguments:
@@ -452,7 +438,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114000011501048572}
+      - m_Target: {fileID: 0}
         m_MethodName: Quit
         m_Mode: 1
         m_Arguments:

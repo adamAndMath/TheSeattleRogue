@@ -36,6 +36,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012155994896}
   - 212: {fileID: 212000011474064434}
+  - 111: {fileID: 111000010189370192}
+  - 95: {fileID: 95000012875512288}
   m_Layer: 0
   m_Name: W speech bubble (1)
   m_TagString: Untagged
@@ -85,7 +87,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012722373928}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.381, y: -0.035, z: 0}
+  m_LocalPosition: {x: -0.01, y: -0.23, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -98,8 +100,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012355700690}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.209, y: 0.969, z: 0}
-  m_LocalScale: {x: 1.2710719, y: 1.2710719, z: 1.2710719}
+  m_LocalPosition: {x: 1.34, y: 1.16, z: 0}
+  m_LocalScale: {x: 0.35410765, y: 0.35410765, z: 0.35410765}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000012496464288}
@@ -162,6 +164,23 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!95 &95000012875512288
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012355700690}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a8252063d3810414ca0e6aadddc273ca, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!102 &102000011037266234
 TextMesh:
   serializedVersion: 3
@@ -169,20 +188,35 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012722373928}
-  m_Text: 0 / 50
+  m_Text: 00 / 50
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
-  m_Anchor: 0
+  m_Anchor: 4
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 30
+  m_FontSize: 25
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_Color:
     serializedVersion: 2
     rgba: 4278190080
+--- !u!111 &111000010189370192
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012355700690}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 70aba5d8ac87a57448ca5036ab01cfc7, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 70aba5d8ac87a57448ca5036ab01cfc7, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &114000010326065350
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -209,8 +243,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69632f53234bd414bb74b44d8eaf7816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Layer: Background1
-  OrderInLayer: 941
+  layer: 
+  orderInLayer: 0
   renderer: {fileID: 23000011348814578}
 --- !u!212 &212000011474064434
 SpriteRenderer:
@@ -241,7 +275,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1775035355
   m_SortingOrder: 298
-  m_Sprite: {fileID: 21300000, guid: 8c775a9417eb76c4d82100f018a0be07, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0ca315793f5850e4982182e764d8af2d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

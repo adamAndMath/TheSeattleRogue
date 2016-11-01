@@ -14,6 +14,7 @@ public class BoulderBehaviour : PhysicsObject
     private float directionY;
     private bool hasBeenTouched;
     private bool hasHitRightState;
+    private Vector2 direction;
 	// Use this for initialization
     protected override void Start()
     {
@@ -22,6 +23,7 @@ public class BoulderBehaviour : PhysicsObject
         coll = GetComponent<Collider2D>();
         directionX = Random.Range(0.2f, 1.0f);
         directionY = Random.Range(0.2f, 1.0f);
+        direction = new Vector2(directionX, directionY).normalized;
     }
 	// Update is called once per frame
 	void Update () 
@@ -46,8 +48,8 @@ public class BoulderBehaviour : PhysicsObject
 	        {
                 if (hasHitRightState)
                 {
-                    if (MoveHorizontal(flySpeed * directionX * Time.deltaTime) ||
-                    MoveVertical(flySpeed * directionY * Time.deltaTime))
+                    if (MoveHorizontal(-flySpeed * direction.x * Time.deltaTime) ||
+                    MoveVertical(flySpeed * direction.y * Time.deltaTime))
                     {
                         Destroy(gameObject);
                     }
@@ -58,8 +60,8 @@ public class BoulderBehaviour : PhysicsObject
                 }
                 else
                 {
-                    if (MoveHorizontal(-flySpeed*directionX*Time.deltaTime) ||
-                        MoveVertical(flySpeed*directionY*Time.deltaTime))
+                    if (MoveHorizontal(flySpeed* direction.x*Time.deltaTime) ||
+                        MoveVertical(flySpeed*direction.y*Time.deltaTime))
                     {
                         Destroy(gameObject);
                     }
