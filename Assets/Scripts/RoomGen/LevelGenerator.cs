@@ -156,10 +156,10 @@ public class LevelGenerator : MonoBehaviour
     private bool RoomFit(Room room, Position position, Room.Direction direction)
     {
         return room.size.x == 1 && room.size.y == 1 &&
-               (room.entrencesUp == 1) == ((direction & Room.Direction.Up) != 0) &&
-               (room.entrencesDown == 1) == ((direction & Room.Direction.Down) != 0) &&
-               (room.entrencesLeft == 1) == ((direction & Room.Direction.Left) != 0) &&
-               (room.entrencesRight == 1) == ((direction & Room.Direction.Right) != 0);
+               ((room.entrencesUp & 1) == 1) == ((direction & Room.Direction.Up) != 0) &&
+               ((room.entrencesDown & 1) == 1) == ((direction & Room.Direction.Down) != 0) &&
+               ((room.entrencesLeft & 1) == 1) == ((direction & Room.Direction.Left) != 0) &&
+               ((room.entrencesRight & 1) == 1) == ((direction & Room.Direction.Right) != 0);
     }
 
     private bool ValidatePath()
