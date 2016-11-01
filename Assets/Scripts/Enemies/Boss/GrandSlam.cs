@@ -7,18 +7,18 @@ public class GrandSlam : StateMachineBehaviour
     public float jumpSpeed;
     public float jumpDeaccelerationSpeed;
     public float snapThreshold;
-    public float shakeTime;
 
     private BossBehaviour boss;
     private float speed;
     private float remainingShakeTime;
     private float move;
+    private SlamDown slam;
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
 	    boss = animator.GetComponent<BossBehaviour>();
-	    remainingShakeTime = shakeTime;
+	    slam = animator.GetBehaviour<SlamDown>();
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -37,23 +37,22 @@ public class GrandSlam : StateMachineBehaviour
 	    }
 	    else
 	    {
-            speed += Time.deltaTime * jumpDeaccelerationSpeed;
             move = (speed + Time.deltaTime * jumpDeaccelerationSpeed / 2) * Time.deltaTime;
+            speed += Time.deltaTime * jumpDeaccelerationSpeed;
 
             boss.MoveVertical((jumpSpeed-move) * Time.deltaTime);
 
             if (jumpSpeed - move < 0)
             {
-                jumpDeaccelerationSpeed = jumpDeaccelerationSpeed*2;
+                slam.slamDeaccelerationSpeed = jumpDeaccelerationSpeed;
+                slam.slamSpeed = speed*10;
+                slam.jumpSpeedReference = jumpSpeed;
+                animator.SetBool("SlamDown", true);
             }
 
 
-	        if (boss.isGrounded && remainingShakeTime > 0)
-	        {
-	            boss.CameraShake(shakeTime);
-                remainingShakeTime -= Time.deltaTime;
-	        }
-	        else if (boss.isGrounded)
+	        
+	        if (boss.isGrounded)
 	        {
 	            Debug.Log("What?");
 	            animator.SetInteger("StateSet", 0);
