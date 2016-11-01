@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   relocationSpeed: 5
-  jumpSpeed: 10
+  jumpSpeed: 5
   jumpDeaccelerationSpeed: 100
   snapThreshold: 0.1
   shakeTime: 3

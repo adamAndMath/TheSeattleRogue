@@ -18,6 +18,7 @@ public class GrandSlam : StateMachineBehaviour
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
 	    boss = animator.GetComponent<BossBehaviour>();
+	    remainingShakeTime = shakeTime;
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -45,21 +46,20 @@ public class GrandSlam : StateMachineBehaviour
             {
                 jumpDeaccelerationSpeed = jumpDeaccelerationSpeed*2;
             }
-	        Debug.Log("Speed is " + speed);
-            Debug.Log("Move is "+move);
+
 
 	        if (boss.isGrounded && remainingShakeTime > 0)
 	        {
-	            boss.CameraShake();
+	            boss.CameraShake(shakeTime);
+                remainingShakeTime -= Time.deltaTime;
 	        }
-	        else if(boss.isGrounded)
+	        else if (boss.isGrounded)
 	        {
+	            Debug.Log("What?");
 	            animator.SetInteger("StateSet", 0);
 	            speed = 0;
 	        }
-                
 	    }
-	    remainingShakeTime -= Time.deltaTime;
     }
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state

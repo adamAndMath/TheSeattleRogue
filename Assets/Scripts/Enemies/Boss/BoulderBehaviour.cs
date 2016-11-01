@@ -12,6 +12,7 @@ public class BoulderBehaviour : PhysicsObject
 
     private float directionX;
     private float directionY;
+    private bool hasBeenTouched;
 	// Use this for initialization
     protected override void Start()
     {
@@ -36,16 +37,20 @@ public class BoulderBehaviour : PhysicsObject
 	    {
 	        if (coll.IsTouching(BossBehaviour.Instance.GetComponent<Collider2D>()))
 	        {
-	            if (BossBehaviour.Instance.animator.GetBehaviour<RunFast>().hasHitRightWall)
-	            {
-	                MoveHorizontal(flySpeed*directionX*Time.deltaTime);
-	                MoveVertical(flySpeed*directionY*Time.deltaTime);
-	            }
-	            else
-	            {
-	                MoveHorizontal(-flySpeed*directionX*Time.deltaTime);
-	                MoveVertical(-flySpeed*directionY*Time.deltaTime);
-	            }
+	            hasBeenTouched = true;
+	        }
+	        if (hasBeenTouched)
+	        {
+                if (BossBehaviour.Instance.animator.GetBehaviour<RunFast>().hasHitRightWall)
+                {
+                    MoveHorizontal(flySpeed * directionX * Time.deltaTime);
+                    MoveVertical(flySpeed * directionY * Time.deltaTime);
+                }
+                else
+                {
+                    MoveHorizontal(-flySpeed * directionX * Time.deltaTime);
+                    MoveVertical(-flySpeed * directionY * Time.deltaTime);
+                }
 	        }
 	    }
     }

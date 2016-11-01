@@ -9,7 +9,6 @@ public class BossBehaviour : PhysicsObject
 {
     public static BossBehaviour Instance { get; private set; }
 
-    public float shakeTime;
     public bool shakeIsReady;
     public float shakeAmount;
     public float timeBetweenBoulders;
@@ -34,7 +33,7 @@ public class BossBehaviour : PhysicsObject
     public Animator animator;
     private Collider2D coll;
 
-    void OnAwake()
+    void Awake()
     {
         Instance = this;
     }
@@ -45,7 +44,6 @@ public class BossBehaviour : PhysicsObject
         base.Start();
 	    animator = GetComponent<Animator>();
 	    cam = FindObjectOfType<Camera>();
-	    remainingShakeTime = shakeTime;
 	    startingShakeAmount = shakeAmount;
 	    startingPos = cam.transform.position;
 	    timeLeftBetweenBoulders = timeBetweenBoulders;
@@ -79,9 +77,16 @@ public class BossBehaviour : PhysicsObject
 	        animator.SetBool("GrandSlamMode", animator.GetInteger("StateSet") == 3);
 	    }
     }
-    public bool CameraShake()
+    public bool CameraShake(float shakeTime)
     {
         bool result = false;
+        bool hasSet = false;
+        if (!hasSet)
+        {
+            remainingShakeTime = shakeTime;
+            hasSet = true;
+        }
+
 
         if (remainingShakeTime >= 0)
         {
@@ -99,7 +104,6 @@ public class BossBehaviour : PhysicsObject
             cam.transform.position = startingPos;
             shakeAmount = startingShakeAmount;
         }
-
         return result;
     }
 

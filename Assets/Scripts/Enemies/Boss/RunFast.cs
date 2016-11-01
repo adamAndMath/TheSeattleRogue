@@ -53,7 +53,7 @@ public class RunFast : StateMachineBehaviour
 
 	    if (readyToRun == false)
 	    {
-	        if (boss.CameraShake())
+	        if (boss.CameraShake(1))
 	        {
 	            readyToRun = true;
 	        }
