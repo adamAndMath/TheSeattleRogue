@@ -5592,6 +5592,8 @@ MonoBehaviour:
   min: {x: -8.9, y: -5}
   max: {x: 8.9, y: 5}
   offset: {x: 0, y: 0}
+  extra: 0
+  camMoveTime: 0
 --- !u!4 &2075728730 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000013305805082, guid: 8a4aa9cb39db43147a5300c9113ba457,
