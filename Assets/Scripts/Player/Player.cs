@@ -27,7 +27,7 @@ public class Player : PhysicsObject
     public List<Sprite> enemyDeathSprites;
     public bool Direction { get { return 0 < transform.localScale.x; } set { transform.localScale = new Vector3(value ? -1 : 1, 1, 1); } }
 
-    private void SetItem(Item item)
+    public void SetItem(Item item)
     {
         this.item = item;
         weapon.runtimeAnimatorController = item.animator;
