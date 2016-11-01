@@ -6,10 +6,12 @@ public class RunFast : StateMachineBehaviour
     public bool hasHitRightWall;
     public float bossSpeed;
     public float bossTimer;
+    public float stateTime;
     
     private float realBossTimer;
     private float shakeTime;
     private bool shakeIsReady;
+    private float stateTimeRemaining;
 
     private bool readyToRun = true;
 
@@ -20,6 +22,7 @@ public class RunFast : StateMachineBehaviour
 	{
 	    boss = animator.GetComponent<BossBehaviour>();
 	    realBossTimer = bossTimer;
+	    stateTimeRemaining = stateTime;
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -50,16 +53,15 @@ public class RunFast : StateMachineBehaviour
 
 	    if (readyToRun == false)
 	    {
-            boss.fallingBoulders();
-	        if (boss.CameraShake())
+	        if (boss.CameraShake(1))
 	        {
 	            readyToRun = true;
 	        }
 
 	    }
+	    stateTimeRemaining -= Time.deltaTime;
 
 
-	    
 	}
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
