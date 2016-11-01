@@ -1,7 +1,9 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using Random = UnityEngine.Random;
 
 public class BossBehaviour : PhysicsObject
 {
@@ -12,6 +14,9 @@ public class BossBehaviour : PhysicsObject
     public float shakeAmount;
     public float timeBetweenBoulders;
     public float boulderSpawnRange;
+    
+    [NonSerialized] public Vector2 originPos;
+    [NonSerialized] public bool isGrounded;
 
     private float remainingShakeTime;
     private float shakeX;
@@ -20,6 +25,7 @@ public class BossBehaviour : PhysicsObject
     private Vector3 startingPos;
     private float timeLeftBetweenBoulders;
     private float fallSpeed = -10;
+    private float speed;
 
     public int Health;
 
@@ -27,6 +33,11 @@ public class BossBehaviour : PhysicsObject
     public List<GameObject> boulders;
     public Animator animator;
     private Collider2D coll;
+
+    void OnAwake()
+    {
+        Instance = this;
+    }
 
 	// Use this for initialization
 	protected override void Start ()
@@ -39,6 +50,7 @@ public class BossBehaviour : PhysicsObject
 	    startingPos = cam.transform.position;
 	    timeLeftBetweenBoulders = timeBetweenBoulders;
 	    coll = GetComponent<Collider2D>();
+	    originPos = transform.position;
 	}
 	
 	// Update is called once per frame
@@ -51,8 +63,21 @@ public class BossBehaviour : PhysicsObject
 
         if (!IsGrounded())
         {
-            MoveVertical(fallSpeed * Time.deltaTime);
+            //MoveVertical(fallSpeed*Time.deltaTime);
+            isGrounded = false;
         }
+        else
+        {
+            isGrounded = true;
+        }
+	    if (animator.GetBehaviour<StateHandler>())
+	    {
+	        animator.SetInteger("StateSet", Random.Range(3, 4));
+
+	        animator.SetBool("RunFastMode", animator.GetInteger("StateSet") == 1);
+	        animator.SetBool("GreatKickMode", animator.GetInteger("StateSet") == 2);
+	        animator.SetBool("GrandSlamMode", animator.GetInteger("StateSet") == 3);
+	    }
     }
     public bool CameraShake()
     {
@@ -65,6 +90,7 @@ public class BossBehaviour : PhysicsObject
             cam.transform.position = new Vector3(shakeX, shakeY, cam.transform.position.z);
             remainingShakeTime -= Time.deltaTime;
             shakeAmount -= (startingShakeAmount/shakeTime)*Time.deltaTime;
+            fallingBoulders();
         }
         else
         {

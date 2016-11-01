@@ -26,25 +26,27 @@ public class BoulderBehaviour : PhysicsObject
 	    if (!IsGrounded())
 	    {
 	        MoveVertical(fallSpeed*Time.deltaTime);
-	    }
-        
-        if (coll.IsTouching(Player.Instance.GetComponent<Collider2D>()))
-        {
-            Player.Instance.Damaged(1);
-        }
 
-	    if (coll.IsTouching(BossBehaviour.Instance.GetComponent<Collider2D>()))
-	    {
-	        if (BossBehaviour.Instance.animator.GetBehaviour<RunFast>().hasHitRightWall)
+	        if (coll.IsTouching(Player.Instance.GetComponent<Collider2D>()))
 	        {
-	            MoveHorizontal(flySpeed*directionX*Time.deltaTime);
-	            MoveVertical(flySpeed*directionY*Time.deltaTime);
-	        }
-	        else
-	        {
-                MoveHorizontal(-flySpeed * directionX * Time.deltaTime);
-                MoveVertical(-flySpeed * directionY * Time.deltaTime);
+	            Player.Instance.Damaged(1);
 	        }
 	    }
-	}
+	    else
+	    {
+	        if (coll.IsTouching(BossBehaviour.Instance.GetComponent<Collider2D>()))
+	        {
+	            if (BossBehaviour.Instance.animator.GetBehaviour<RunFast>().hasHitRightWall)
+	            {
+	                MoveHorizontal(flySpeed*directionX*Time.deltaTime);
+	                MoveVertical(flySpeed*directionY*Time.deltaTime);
+	            }
+	            else
+	            {
+	                MoveHorizontal(-flySpeed*directionX*Time.deltaTime);
+	                MoveVertical(-flySpeed*directionY*Time.deltaTime);
+	            }
+	        }
+	    }
+    }
 }
