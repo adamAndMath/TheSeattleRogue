@@ -17,6 +17,7 @@ public class BossBehaviour : PhysicsObject
     [NonSerialized] public Vector2 originPos;
     [NonSerialized] public bool isGrounded;
 
+    private bool hasSet;
     private float remainingShakeTime;
     private float shakeX;
     private float shakeY;
@@ -81,10 +82,9 @@ public class BossBehaviour : PhysicsObject
     public bool CameraShake(float shakeTime)
     {
         bool result = false;
-        bool hasSet = false;
         if (!hasSet)
         {
-            remainingShakeTime = shakeTime*0.95f;
+            remainingShakeTime = shakeTime;
             hasSet = true;
         }
         remainingShakeTime -= Time.deltaTime;
@@ -99,6 +99,7 @@ public class BossBehaviour : PhysicsObject
         else
         {
             result = true;
+            hasSet = false;
             cam.transform.position = startingPos;
             shakeAmount = startingShakeAmount;
         }
