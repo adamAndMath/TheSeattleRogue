@@ -14,8 +14,8 @@ MonoBehaviour:
   size:
     x: 1
     y: 1
-  entrencesUp: 0
-  entrencesDown: 1
+  entrencesUp: 1
+  entrencesDown: 0
   entrencesLeft: 0
   entrencesRight: 0
   columns:
@@ -291,10 +291,10 @@ MonoBehaviour:
     leftRight: {fileID: 21300026, guid: c8a431f5d95b61d4eb7791c0be1682de, type: 3}
     rightOnly: {fileID: 21300028, guid: c8a431f5d95b61d4eb7791c0be1682de, type: 3}
     only: {fileID: 21300030, guid: c8a431f5d95b61d4eb7791c0be1682de, type: 3}
-    slopeDownLeft: {fileID: 21300002, guid: 787ce08de1749464ba468caf1d2092d6, type: 3}
-    slopeDownRight: {fileID: 21300006, guid: 787ce08de1749464ba468caf1d2092d6, type: 3}
-    slopeUpLeft: {fileID: 21300006, guid: 787ce08de1749464ba468caf1d2092d6, type: 3}
-    slopeUpRight: {fileID: 21300004, guid: 787ce08de1749464ba468caf1d2092d6, type: 3}
+    slopeDownLeft: {fileID: 21300002, guid: c748556a242e0584e8de471861333b53, type: 3}
+    slopeDownRight: {fileID: 21300000, guid: c748556a242e0584e8de471861333b53, type: 3}
+    slopeUpLeft: {fileID: 21300006, guid: c748556a242e0584e8de471861333b53, type: 3}
+    slopeUpRight: {fileID: 21300004, guid: c748556a242e0584e8de471861333b53, type: 3}
   spawnables:
   - {fileID: 114000011684268616, guid: ceceb75b8ae45344a919c745ceb696d3, type: 2}
   - {fileID: 114000012730278908, guid: 2dd222dd33d95bf44b809baef75d72d2, type: 2}
