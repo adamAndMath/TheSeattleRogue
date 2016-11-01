@@ -356,6 +356,11 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224000010123640222, guid: cc6381f4814d1874a94a6dd6db15c86a,
     type: 2}
   m_PrefabInternal: {fileID: 1103721476}
+--- !u!95 &102421288 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95000013311431870, guid: cc6381f4814d1874a94a6dd6db15c86a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1103721476}
 --- !u!1001 &111359536
 Prefab:
   m_ObjectHideFlags: 0
@@ -6014,17 +6019,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 95000012926095692, guid: 75dcc9dbf9ad55f4398bde8d7f714b21,
+    - target: {fileID: 114000010651038966, guid: 75dcc9dbf9ad55f4398bde8d7f714b21,
         type: 2}
-      propertyPath: m_Controller
+      propertyPath: deathTransitionAnimator
       value: 
-      objectReference: {fileID: 22100000, guid: 9a3ea20a7a26387489d43aca07df8618,
-        type: 2}
-    - target: {fileID: 95000012926095692, guid: 75dcc9dbf9ad55f4398bde8d7f714b21,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 102421288}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 75dcc9dbf9ad55f4398bde8d7f714b21, type: 2}
   m_IsPrefabParent: 0
