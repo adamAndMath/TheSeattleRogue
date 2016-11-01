@@ -42,10 +42,6 @@ public class PlantShooterBehaviour : Enemy
 	// Update is called once per frame
 	void Update ()
     {
-        if (plantCollider2D.IsTouching(Player.Instance.GetComponent<Collider2D>()))
-        {
-            Player.Instance.Damaged(1);
-        }
         if (IsGrounded() == false)
         {
             float move = (gravitySpeed + gravity * Time.deltaTime / 2) * Time.deltaTime;
