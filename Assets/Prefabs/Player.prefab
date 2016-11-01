@@ -42,7 +42,7 @@ GameObject:
   - 4: {fileID: 4000011321701894}
   - 61: {fileID: 61000014148133278}
   m_Layer: 0
-  m_Name: Weapon
+  m_Name: WeaponCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57,6 +57,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011039918464}
   - 212: {fileID: 212000011660210938}
+  - 95: {fileID: 95000012926095692}
   m_Layer: 0
   m_Name: WeaponGraphics
   m_TagString: Untagged
@@ -97,7 +98,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012686488162}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.83, y: 2.53, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -133,9 +134,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.1, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1.2, y: 1.6}
+  m_Size: {x: 0.7, y: 1.6}
 --- !u!61 &61000014148133278
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -149,7 +150,24 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.25, y: 1.25}
+--- !u!95 &95000012926095692
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013793331368}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e7517d7c9de17ba42bf6f19136b9a86f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!95 &95000013497673542
 Animator:
   serializedVersion: 3
@@ -186,6 +204,7 @@ MonoBehaviour:
   MaxDash: 100
   DashCost: 50
   DashPower: 0
+  weapon: {fileID: 95000012926095692}
   DeathScene: 0
   enemyDeathSprites: []
 --- !u!114 &114000014161105452

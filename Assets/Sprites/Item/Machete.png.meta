@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: d6533e957c9ce20489e8005aceb05d1a
-timeCreated: 1478020477
+guid: ee416e40ee68e0d4eaa1cdbb7cdaf954
+timeCreated: 1477952464
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: LeadpipeSpriteSheet_0
-    21300002: LeadpipeSpriteSheet_1
-    21300004: LeadpipeSpriteSheet_2
-    21300006: LeadpipeSpriteSheet_3
-    21300008: LeadpipeSpriteSheet_4
-    21300010: LeadpipeSpriteSheet_5
-    21300012: LeadpipeSpriteSheet_6
+    21300000: Machete_0
+    21300002: Machete_1
+    21300004: Machete_2
+    21300006: Machete_3
+    21300008: Machete_4
+    21300010: Machete_5
+    21300012: Machete_6
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -36,7 +36,7 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 0
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -60,91 +60,91 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LeadpipeSpriteSheet_0
+      name: Machete_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 136
-        height: 130
+        width: 257
+        height: 236
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: LeadpipeSpriteSheet_1
+      name: Machete_1
       rect:
         serializedVersion: 2
-        x: 136
+        x: 257
         y: 0
-        width: 136
-        height: 130
+        width: 257
+        height: 236
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: LeadpipeSpriteSheet_2
+      name: Machete_2
       rect:
         serializedVersion: 2
-        x: 272
+        x: 514
         y: 0
-        width: 136
-        height: 130
+        width: 257
+        height: 236
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: LeadpipeSpriteSheet_3
+      name: Machete_3
       rect:
         serializedVersion: 2
-        x: 408
+        x: 771
         y: 0
-        width: 136
-        height: 130
+        width: 257
+        height: 236
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: LeadpipeSpriteSheet_4
+      name: Machete_4
       rect:
         serializedVersion: 2
-        x: 544
+        x: 1028
         y: 0
-        width: 136
-        height: 130
+        width: 257
+        height: 236
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: LeadpipeSpriteSheet_5
+      name: Machete_5
       rect:
         serializedVersion: 2
-        x: 680
+        x: 1285
         y: 0
-        width: 136
-        height: 130
+        width: 257
+        height: 236
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: LeadpipeSpriteSheet_6
+      name: Machete_6
       rect:
         serializedVersion: 2
-        x: 816
+        x: 1542
         y: 0
-        width: 136
-        height: 130
+        width: 257
+        height: 236
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

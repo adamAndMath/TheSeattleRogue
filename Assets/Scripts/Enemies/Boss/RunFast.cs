@@ -50,10 +50,12 @@ public class RunFast : StateMachineBehaviour
 
 	    if (readyToRun == false)
 	    {
+            boss.fallingBoulders();
 	        if (boss.CameraShake())
 	        {
 	            readyToRun = true;
 	        }
+
 	    }
 
 

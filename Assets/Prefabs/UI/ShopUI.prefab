@@ -470,7 +470,7 @@ GameObject:
   - 114: {fileID: 114000014217017792}
   - 114: {fileID: 114000013695472888}
   m_Layer: 5
-  m_Name: SwordBox
+  m_Name: BatonBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -534,7 +534,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 224000010311891502}
   m_Layer: 5
-  m_Name: SwordInfo
+  m_Name: BatonInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1136,7 +1136,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'This is a nice sword, it has the range of a club, and the damage of a knife.
+  m_Text: 'This is a nice baton, it has the range of a club, and the damage of a knife.
 
 
 
@@ -1262,7 +1262,7 @@ MonoBehaviour:
   - {fileID: 1000013666291898}
   - {fileID: 1000013229659170}
   - {fileID: 1000011294432074}
-  Prices: 01000000020000000300000004000000
+  Prices: 050000000a0000001900000032000000
 --- !u!114 &114000012170376582
 MonoBehaviour:
   m_ObjectHideFlags: 1

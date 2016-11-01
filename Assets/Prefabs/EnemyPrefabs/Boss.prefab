@@ -103,7 +103,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d47006f318cf0044786fd5fac2aa0db0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shakeTime: 0
+  shakeIsReady: 0
+  shakeAmount: 0
+  timeBetweenBoulders: 0
+  boulderSpawnRange: 0
   Health: 1
+  cam: {fileID: 0}
+  boulders:
+  - {fileID: 1000010733703914, guid: 388e40c48b095284cbf543dc94010a51, type: 2}
   animator: {fileID: 0}
 --- !u!212 &212000013074705434
 SpriteRenderer:

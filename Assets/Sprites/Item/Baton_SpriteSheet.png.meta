@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: d6533e957c9ce20489e8005aceb05d1a
-timeCreated: 1478020477
+guid: 9dd33474318601b49afe80b4caa46743
+timeCreated: 1477953241
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: LeadpipeSpriteSheet_0
-    21300002: LeadpipeSpriteSheet_1
-    21300004: LeadpipeSpriteSheet_2
-    21300006: LeadpipeSpriteSheet_3
-    21300008: LeadpipeSpriteSheet_4
-    21300010: LeadpipeSpriteSheet_5
-    21300012: LeadpipeSpriteSheet_6
+    21300000: Baton_SpriteSheet_0
+    21300002: Baton_SpriteSheet_1
+    21300004: Baton_SpriteSheet_2
+    21300006: Baton_SpriteSheet_3
+    21300008: Baton_SpriteSheet_4
+    21300010: Baton_SpriteSheet_5
+    21300012: Baton_SpriteSheet_6
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -36,7 +36,7 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 0
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -51,7 +51,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 90
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
@@ -60,91 +60,91 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LeadpipeSpriteSheet_0
+      name: Baton_SpriteSheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 136
-        height: 130
+        width: 158
+        height: 149
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: LeadpipeSpriteSheet_1
+      name: Baton_SpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 136
+        x: 158
         y: 0
-        width: 136
-        height: 130
+        width: 158
+        height: 149
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: LeadpipeSpriteSheet_2
+      name: Baton_SpriteSheet_2
       rect:
         serializedVersion: 2
-        x: 272
+        x: 316
         y: 0
-        width: 136
-        height: 130
+        width: 158
+        height: 149
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: LeadpipeSpriteSheet_3
+      name: Baton_SpriteSheet_3
       rect:
         serializedVersion: 2
-        x: 408
+        x: 474
         y: 0
-        width: 136
-        height: 130
+        width: 158
+        height: 149
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: LeadpipeSpriteSheet_4
+      name: Baton_SpriteSheet_4
       rect:
         serializedVersion: 2
-        x: 544
+        x: 632
         y: 0
-        width: 136
-        height: 130
+        width: 158
+        height: 149
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: LeadpipeSpriteSheet_5
+      name: Baton_SpriteSheet_5
       rect:
         serializedVersion: 2
-        x: 680
+        x: 790
         y: 0
-        width: 136
-        height: 130
+        width: 158
+        height: 149
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: LeadpipeSpriteSheet_6
+      name: Baton_SpriteSheet_6
       rect:
         serializedVersion: 2
-        x: 816
+        x: 948
         y: 0
-        width: 136
-        height: 130
+        width: 158
+        height: 149
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
