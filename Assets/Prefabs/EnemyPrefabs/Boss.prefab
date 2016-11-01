@@ -24,6 +24,7 @@ GameObject:
   - 95: {fileID: 95000012744207380}
   - 114: {fileID: 114000010472602348}
   - 50: {fileID: 50000014024165338}
+  - 61: {fileID: 61000011776328692}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -38,8 +39,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011816118734}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalPosition: {x: 0.6, y: -7.59, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -61,6 +62,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &61000011776328692
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011816118734}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 2.75, y: 1.65}
 --- !u!61 &61000013412484180
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -74,7 +89,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.2}
+  m_Size: {x: 1.2, y: 3.9}
 --- !u!95 &95000012744207380
 Animator:
   serializedVersion: 3
@@ -103,15 +118,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d47006f318cf0044786fd5fac2aa0db0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shakeTime: 0
   shakeIsReady: 0
-  shakeAmount: 0
-  timeBetweenBoulders: 0
-  boulderSpawnRange: 0
+  shakeAmount: 0.8
+  timeBetweenBoulders: 0.5
+  boulderSpawnRange: 15
   Health: 1
   cam: {fileID: 0}
   boulders:
   - {fileID: 1000010733703914, guid: 388e40c48b095284cbf543dc94010a51, type: 2}
+  bouldersInScene: []
   animator: {fileID: 0}
 --- !u!212 &212000013074705434
 SpriteRenderer:
@@ -142,7 +157,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -508167467
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 7dbf56607ad12b04f94b5e099d53560b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
