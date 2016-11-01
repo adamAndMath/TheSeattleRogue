@@ -13,10 +13,12 @@ public class BoulderBehaviour : PhysicsObject
     private float directionX;
     private float directionY;
     private bool hasBeenTouched;
+    private bool hasHitRightState;
 	// Use this for initialization
     protected override void Start()
     {
         base.Start();
+        BossBehaviour.Instance.bouldersInScene.Add(gameObject);
         coll = GetComponent<Collider2D>();
         directionX = Random.Range(0.2f, 1.0f);
         directionY = Random.Range(0.2f, 1.0f);
@@ -24,7 +26,7 @@ public class BoulderBehaviour : PhysicsObject
 	// Update is called once per frame
 	void Update () 
     {
-	    if (!IsGrounded())
+	    if (!IsGrounded() && !hasBeenTouched)
 	    {
 	        MoveVertical(fallSpeed*Time.deltaTime);
 
@@ -38,19 +40,36 @@ public class BoulderBehaviour : PhysicsObject
 	        if (coll.IsTouching(BossBehaviour.Instance.GetComponent<Collider2D>()))
 	        {
 	            hasBeenTouched = true;
+	            hasHitRightState = BossBehaviour.Instance.animator.GetBehaviour<RunFast>().hasHitRightWall;
 	        }
 	        if (hasBeenTouched)
 	        {
-                if (BossBehaviour.Instance.animator.GetBehaviour<RunFast>().hasHitRightWall)
+                if (hasHitRightState)
                 {
-                    MoveHorizontal(flySpeed * directionX * Time.deltaTime);
-                    MoveVertical(flySpeed * directionY * Time.deltaTime);
+                    if (MoveHorizontal(flySpeed * directionX * Time.deltaTime) ||
+                    MoveVertical(flySpeed * directionY * Time.deltaTime))
+                    {
+                        Destroy(gameObject);
+                    }
+                    if (coll.IsTouching(Player.Instance.GetComponent<Collider2D>()))
+                    {
+                        Player.Instance.Damaged(1);
+                    }
                 }
                 else
                 {
-                    MoveHorizontal(-flySpeed * directionX * Time.deltaTime);
-                    MoveVertical(-flySpeed * directionY * Time.deltaTime);
+                    if (MoveHorizontal(-flySpeed*directionX*Time.deltaTime) ||
+                        MoveVertical(flySpeed*directionY*Time.deltaTime))
+                    {
+                        Destroy(gameObject);
+                    }
+                    if (coll.IsTouching(Player.Instance.GetComponent<Collider2D>()))
+                    {
+                        Player.Instance.Damaged(1);
+                    }
+                    
                 }
+                
 	        }
 	    }
     }

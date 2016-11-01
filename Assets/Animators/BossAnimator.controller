@@ -105,6 +105,7 @@ MonoBehaviour:
   bossSpeed: 30
   bossTimer: 2
   stateTime: 2
+  shakeTime: 2
   boss: {fileID: 0}
 --- !u!1101 &1101000010448141550
 AnimatorStateTransition:

@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallSpeed: -15
-  flySpeed: 10
+  flySpeed: 100
 --- !u!212 &212000010148089446
 SpriteRenderer:
   m_ObjectHideFlags: 1

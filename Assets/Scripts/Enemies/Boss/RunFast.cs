@@ -7,9 +7,10 @@ public class RunFast : StateMachineBehaviour
     public float bossSpeed;
     public float bossTimer;
     public float stateTime;
-    
+    public float shakeTime;
+
     private float realBossTimer;
-    private float shakeTime;
+    private float remaningShakeTime;
     private bool shakeIsReady;
     private float stateTimeRemaining;
 
@@ -53,11 +54,13 @@ public class RunFast : StateMachineBehaviour
 
 	    if (readyToRun == false)
 	    {
-	        if (boss.CameraShake(1))
+	        boss.CameraShake(shakeTime);
+	        remaningShakeTime -= Time.deltaTime;
+	        if (remaningShakeTime <= 0)
 	        {
 	            readyToRun = true;
+	            remaningShakeTime = shakeTime;
 	        }
-
 	    }
 	    stateTimeRemaining -= Time.deltaTime;
 

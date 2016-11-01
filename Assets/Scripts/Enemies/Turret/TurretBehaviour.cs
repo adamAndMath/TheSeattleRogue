@@ -18,7 +18,7 @@ public class TurretBehaviour : Enemy
 	    turretAnimator = GetComponent<Animator>();
 
 	    GameObject platform = (GameObject)Instantiate(turretPlatform, transform.position, Quaternion.identity);
-        platform.transform.SetParent(GetComponentInParent<Transform>());
+        platform.transform.SetParent(transform.parent);
 	}
 	
 	// Update is called once per frame

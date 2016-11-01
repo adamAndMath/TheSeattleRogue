@@ -30,6 +30,7 @@ public class BossBehaviour : PhysicsObject
 
     public Camera cam;
     public List<GameObject> boulders;
+    public List<GameObject> bouldersInScene;
     public Animator animator;
     private Collider2D coll;
 
@@ -70,7 +71,7 @@ public class BossBehaviour : PhysicsObject
         }
 	    if (animator.GetBehaviour<StateHandler>())
 	    {
-	        animator.SetInteger("StateSet", Random.Range(3, 4));
+	        animator.SetInteger("StateSet", Random.Range(1, 1));
 
 	        animator.SetBool("RunFastMode", animator.GetInteger("StateSet") == 1);
 	        animator.SetBool("GreatKickMode", animator.GetInteger("StateSet") == 2);
@@ -86,14 +87,12 @@ public class BossBehaviour : PhysicsObject
             remainingShakeTime = shakeTime;
             hasSet = true;
         }
-
-
-        if (remainingShakeTime >= 0)
+        remainingShakeTime -= Time.deltaTime;
+        if (remainingShakeTime >= 0 && hasSet)
         {
             shakeX = Random.Range(-shakeAmount, shakeAmount);
             shakeY = Random.Range(-shakeAmount, shakeAmount);
             cam.transform.position = new Vector3(shakeX, shakeY, cam.transform.position.z);
-            remainingShakeTime -= Time.deltaTime;
             shakeAmount -= (startingShakeAmount/shakeTime)*Time.deltaTime;
             fallingBoulders();
         }

@@ -15,7 +15,7 @@ public class TurretShoot : StateMachineBehaviour
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
 	    GameObject bullet = (GameObject)Instantiate(bulletGameObject, animator.transform.position + animator.transform.up*0.45f, animator.transform.rotation);
-        bullet.transform.SetParent(animator.GetComponentInParent<Transform>());
+        bullet.transform.SetParent(animator.transform.parent);
         animator.SetBool("readyToShoot", false);
 	}
 
