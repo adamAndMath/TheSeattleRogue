@@ -98,7 +98,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012686488162}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -6.83, y: 2.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -160,7 +160,7 @@ Animator:
   m_GameObject: {fileID: 1000013793331368}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e7517d7c9de17ba42bf6f19136b9a86f, type: 2}
+  m_Controller: {fileID: 22100000, guid: 9a3ea20a7a26387489d43aca07df8618, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -206,6 +206,7 @@ MonoBehaviour:
   dashPower: 0
   weapon: {fileID: 95000012926095692}
   deathScene: 0
+  deathTransitionAnimator: {fileID: 0}
   enemyDeathSprites: []
 --- !u!114 &114000014161105452
 MonoBehaviour:
