@@ -1879,11 +1879,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000013690704878, guid: 57c30eeaea9b2a648a9c3139d0c3779e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -5.43
+      value: -5.39
       objectReference: {fileID: 0}
     - target: {fileID: 4000013690704878, guid: 57c30eeaea9b2a648a9c3139d0c3779e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.43
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 4000013690704878, guid: 57c30eeaea9b2a648a9c3139d0c3779e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5912,7 +5912,7 @@ Prefab:
         type: 2}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 22100000, guid: 062503537071f4c429beb0058f14ab0f,
+      objectReference: {fileID: 22100000, guid: 9a3ea20a7a26387489d43aca07df8618,
         type: 2}
     - target: {fileID: 95000012926095692, guid: 75dcc9dbf9ad55f4398bde8d7f714b21,
         type: 2}
@@ -7181,6 +7181,7 @@ MonoBehaviour:
   min: {x: -9, y: -5}
   max: {x: 17, y: 5}
   offset: {x: 0, y: 0}
+  extra: 0
   camMoveTime: 0
 --- !u!1001 &2072945312
 Prefab:
