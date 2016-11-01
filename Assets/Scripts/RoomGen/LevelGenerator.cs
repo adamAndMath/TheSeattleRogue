@@ -89,6 +89,8 @@ public class LevelGenerator : MonoBehaviour
 
     void Start()
     {
+        RoomHandler.Instance.rooms = new RoomInstance[max.x - min.y + 1, max.y - min.y + 1];
+        RoomHandler.Instance.min = min;
         int dir = Random.Range(0, 4);
         Position position;
 
@@ -210,6 +212,9 @@ public class LevelGenerator : MonoBehaviour
         GameObject roomObject = new GameObject(room.name, typeof(RoomInstance));
         roomObject.transform.position = new Vector3(pos.x * size.x, pos.y * size.y);
         roomObject.GetComponent<RoomInstance>().room = room;
+        RoomHandler.Instance[pos] = roomObject.GetComponent<RoomInstance>();
+        roomObject.SetActive(false);
+
         Position position = new Position();
 
         GenerateWall(room, roomObject, new Position(-1, -1), 15, 1);
@@ -287,7 +292,7 @@ public class LevelGenerator : MonoBehaviour
             do
             {
                 i = Random.Range(0, 30);
-            } while ((1 << i & spawner.spawnMask) == 0);
+            } while (((1 << i) & spawner.spawnMask) == 0);
 
             Enemy enemy = Instantiate(room.spawnables[i]);
             enemy.transform.SetParent(roomObject.transform, false);

@@ -47,12 +47,10 @@ public class GuardRobotBehaviour : Enemy {
             gravitySpeed += gravity * Time.deltaTime;
 
             MoveVertical(-move);
-            Debug.Log("This is not on the ground");
         }
         else
         {
             gravitySpeed = 0;
-            Debug.Log("This is on the ground");
         }
         if (IsGrounded() && !gizmosHasBeenDrawn)
         {

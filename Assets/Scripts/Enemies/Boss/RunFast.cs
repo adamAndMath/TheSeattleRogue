@@ -6,9 +6,12 @@ public class RunFast : StateMachineBehaviour
     public bool hasHitRightWall;
     public float bossSpeed;
     public float bossTimer;
+    
     private float realBossTimer;
+    private float shakeTime;
+    private bool shakeIsReady;
 
-    private bool readyToRun;
+    private bool readyToRun = true;
 
     public BossBehaviour boss;
 
@@ -20,36 +23,44 @@ public class RunFast : StateMachineBehaviour
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
-    {
-	    if (boss.MoveHorizontal(-bossSpeed) && hasHitRightWall)
+	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+	{
+	    if (readyToRun)
 	    {
-	        hasHitRightWall = false;
-            realBossTimer = bossTimer;
-            readyToRun = false;
-	    }
-        else if (boss.MoveHorizontal(bossSpeed))
-        {
-            hasHitRightWall = true;
-            realBossTimer = bossTimer;
-            readyToRun = false;
-        }
+	        if (hasHitRightWall)
+	        {
+	            if (boss.MoveHorizontal(-bossSpeed*Time.deltaTime))
+	            {
+	                hasHitRightWall = false;
+	                realBossTimer = bossTimer;
+	                readyToRun = false;
+	            }
 
-	    if (hasHitRightWall && readyToRun)
-	    {
-	        boss.MoveHorizontal(-bossSpeed);
-	        Debug.Log("So this is happening");
-	    }
-	    else if (readyToRun)
-	    {
-	        boss.MoveHorizontal(bossSpeed);
+	        }
+	        else
+	        {
+	            if (boss.MoveHorizontal(bossSpeed*Time.deltaTime))
+	            {
+                    hasHitRightWall = true;
+                    realBossTimer = bossTimer;
+                    readyToRun = false;
+	            }
+	        }
 	    }
 
-	    if (realBossTimer <= 0)
+	    if (readyToRun == false)
 	    {
-	        readyToRun = true;
+            boss.fallingBoulders();
+	        if (boss.CameraShake())
+	        {
+	            readyToRun = true;
+	        }
+
 	    }
-    }
+
+
+	    
+	}
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
 	//override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
