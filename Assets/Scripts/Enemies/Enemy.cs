@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Enemy : PhysicsObject
+public abstract class Enemy : PhysicsObject
 {
     public int health;
     public Sprite idleSprite;
