@@ -1,17 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class renderLayer : MonoBehaviour
+public class RenderLayer : MonoBehaviour
 {
-    public string Layer;
-    public int OrderInLayer;
+    public string layer;
+    public int orderInLayer;
     public Renderer renderer;
 
 	void Start ()
 	{
 	    renderer = GetComponent<Renderer>();
-	    renderer.sortingLayerName = Layer;
-	    renderer.sortingOrder = OrderInLayer;
+	    renderer.sortingLayerName = layer;
+	    renderer.sortingOrder = orderInLayer;
 
 	}
 }
