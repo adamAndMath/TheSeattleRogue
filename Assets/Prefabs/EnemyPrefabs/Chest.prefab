@@ -53,9 +53,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.2}
   serializedVersion: 2
-  m_Size: {x: 3.63, y: 1.66}
+  m_Size: {x: 0.8, y: 0.7}
 --- !u!114 &114000011052400084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -73,8 +73,7 @@ MonoBehaviour:
   gravity: 0
   gravitySpeed: 0
   scoreGiven: 0
-  orbs: {fileID: 1000012271734224, guid: b8344729a8d6fe041bd0f8420002e7ac, type: 2}
-  spitSpeed: 0.3
+  openChest: {fileID: 0}
 --- !u!212 &212000011161751374
 SpriteRenderer:
   m_ObjectHideFlags: 1

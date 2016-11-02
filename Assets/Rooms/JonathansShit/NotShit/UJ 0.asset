@@ -9,18 +9,104 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6260ed30445b7d9489f571908e66ba34, type: 3}
-  m_Name: LRDJ 0
+  m_Name: UJ 0
   m_EditorClassIdentifier: 
   size:
     x: 1
     y: 1
-  entrencesUp: 0
-  entrencesDown: 1
-  entrencesLeft: 1
-  entrencesRight: 1
+  entrencesUp: 1
+  entrencesDown: 0
+  entrencesLeft: 0
+  entrencesRight: 0
+  background: {fileID: 21300000, guid: 395f196ccb0fada438c8af3a8f2e9e29, type: 3}
   columns:
   - data:
-    - wallID: -2
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 1
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+  - data:
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 1
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+  - data:
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 1
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: -1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+  - data:
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 1
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: -1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+  - data:
+    - wallID: 1
+      slope: 1
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+  - data:
+    - wallID: 0
       slope: 0
     - wallID: 0
       slope: 0
@@ -37,7 +123,58 @@ MonoBehaviour:
     - wallID: 0
       slope: 0
   - data:
-    - wallID: -2
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: -1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: -1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+  - data:
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: -1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: -1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+  - data:
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: -1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: -1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+  - data:
+    - wallID: 0
       slope: 0
     - wallID: 0
       slope: 0
@@ -58,143 +195,7 @@ MonoBehaviour:
       slope: 1
     - wallID: 0
       slope: 0
-    - wallID: -1
-      slope: 0
     - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: -1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-  - data:
-    - wallID: 1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: -1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: -1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-  - data:
-    - wallID: -2
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: -1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-  - data:
-    - wallID: -2
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: -1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-  - data:
-    - wallID: -1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: -1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-  - data:
-    - wallID: -1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: -1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-  - data:
-    - wallID: -1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: -1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-  - data:
-    - wallID: -2
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: -1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-  - data:
-    - wallID: -2
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: -1
       slope: 0
     - wallID: 0
       slope: 0
@@ -209,27 +210,10 @@ MonoBehaviour:
   - data:
     - wallID: 1
       slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: -1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: -1
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-  - data:
     - wallID: 1
       slope: 1
     - wallID: 0
       slope: 0
-    - wallID: -1
-      slope: 0
     - wallID: 0
       slope: 0
     - wallID: 0
@@ -241,7 +225,13 @@ MonoBehaviour:
     - wallID: 0
       slope: 0
   - data:
-    - wallID: -2
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 1
+    - wallID: 0
       slope: 0
     - wallID: 0
       slope: 0
@@ -249,6 +239,17 @@ MonoBehaviour:
       slope: 0
     - wallID: 0
       slope: 0
+    - wallID: 0
+      slope: 0
+  - data:
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 1
     - wallID: 0
       slope: 0
     - wallID: 0
@@ -258,16 +259,16 @@ MonoBehaviour:
     - wallID: 0
       slope: 0
   - data:
-    - wallID: -2
+    - wallID: 1
       slope: 0
-    - wallID: 0
+    - wallID: 1
       slope: 0
-    - wallID: -1
+    - wallID: 1
       slope: 0
-    - wallID: 0
+    - wallID: 1
       slope: 0
-    - wallID: 0
-      slope: 0
+    - wallID: 1
+      slope: 1
     - wallID: 0
       slope: 0
     - wallID: 0
@@ -301,24 +302,20 @@ MonoBehaviour:
   - {fileID: 114000011684268616, guid: ceceb75b8ae45344a919c745ceb696d3, type: 2}
   spawners:
   - position:
-      x: 11
-      y: 1
-    spawnMask: 4
+      x: 2
+      y: 3
+    spawnMask: 2
   - position:
-      x: 3
-      y: 1
-    spawnMask: 4
+      x: 5
+      y: 0
+    spawnMask: 2
   - position:
-      x: 0
-      y: 7
-    spawnMask: 1
+      x: 9
+      y: 0
+    spawnMask: 2
   - position:
-      x: 14
-      y: 7
-    spawnMask: 1
-  - position:
-      x: 7
-      y: 7
-    spawnMask: 3
+      x: 12
+      y: 3
+    spawnMask: 2
   platform: {fileID: 212000013609954282, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
   spike: {fileID: 212000011588063242, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
