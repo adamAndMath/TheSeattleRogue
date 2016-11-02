@@ -93,7 +93,7 @@ MonoBehaviour:
   - {fileID: 21300044, guid: 598bddd6793f82f40a382116f86f0cad, type: 3}
   - {fileID: 21300046, guid: 598bddd6793f82f40a382116f86f0cad, type: 3}
   - {fileID: 21300048, guid: 598bddd6793f82f40a382116f86f0cad, type: 3}
-  TimeBetweenFrames: 5
+  TimeBetweenFrames: 3
 --- !u!222 &222000013293623390
 CanvasRenderer:
   m_ObjectHideFlags: 1
