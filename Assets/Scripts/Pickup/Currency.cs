@@ -7,7 +7,7 @@ public class Currency : Pickup
 
     protected override void PickedUp(Player player)
     {
-        player.money += val;
+        Player.money += val;
 
         GameObject clone = Instantiate(audioObject);
         clone.hideFlags = HideFlags.HideInHierarchy;

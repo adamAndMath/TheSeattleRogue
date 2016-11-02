@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.UI;
 
 public class WeaponBuyUI : MonoBehaviour
@@ -20,11 +19,11 @@ public class WeaponBuyUI : MonoBehaviour
 
     public void ClickedBuy(int WeaponID)
     {
-        if (Player.Instance.money >= Prices[WeaponID])
+        if (Player.money >= Prices[WeaponID])
         {
             //Player.Instance.Weapon = weapons[WeaponID];
             WeapnDescription[WeaponID].GetComponentInChildren<Button>().interactable = false;
-            Player.Instance.money -= Prices[WeaponID];
+            Player.money -= Prices[WeaponID];
         }
     }
 }

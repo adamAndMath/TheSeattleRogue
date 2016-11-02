@@ -14,6 +14,9 @@ public class HubToWorld : MonoBehaviour
     void Update()
     {
         if (coll.IsTouching(Player.Instance.GetComponent<Collider2D>()))
+        {
+            Player.money = 0;
             SceneManager.LoadScene(scene);
+        }
     }
 }
