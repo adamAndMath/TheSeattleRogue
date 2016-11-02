@@ -16,7 +16,7 @@ public class DeathScene : MonoBehaviour
         
 	    timer += Time.deltaTime;
 
-        if (timer >= time) return;
+        if (timer < time) return;
 
 	    timer -= time;
         Image image = Instantiate(imagePrefab);
