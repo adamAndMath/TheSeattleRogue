@@ -4,6 +4,7 @@ public class PlayerJump : StateMachineBehaviour
 {
     public float gravity;
     public float startSpeed;
+    public float releaseSpeed;
     public string fallState;
     private float speed;
     private Player player;
@@ -17,6 +18,9 @@ public class PlayerJump : StateMachineBehaviour
     public override void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         float move = PhysicsObject.ConstantAcceleration(-gravity, ref speed);
+
+        if (!animator.GetBool("Jump"))
+            speed = Mathf.Min(speed, releaseSpeed);
 
         if (player.MoveVertical(move))
             speed = 0;
