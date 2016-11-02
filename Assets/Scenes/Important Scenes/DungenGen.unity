@@ -318,7 +318,7 @@ MonoBehaviour:
   max: {x: 15, y: 8}
   offset: {x: 0, y: 0}
   extra: 0
-  camMoveTime: 0
+  camMoveTime: 0.5
 --- !u!224 &249580679 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224000010123640222, guid: cc6381f4814d1874a94a6dd6db15c86a,
