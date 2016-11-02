@@ -4,10 +4,10 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
-    public static int score;
+    public static int finalScore;
 	void Start ()
 	{
-	    GetComponent<Text>().text = "Score: " + score;
+	    GetComponent<Text>().text = "Score: " + finalScore;
 	}
 
 }

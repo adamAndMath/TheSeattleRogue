@@ -13,7 +13,7 @@ public class Player : PhysicsObject
     public int hp;
     public int money;
     private Animator animator;
-    public float score;
+    public int score;
 
     public float dashRegenerationRate = 1;
     public int maxDash = 100;
@@ -55,6 +55,7 @@ public class Player : PhysicsObject
         if (deathTransitionAnimator.GetCurrentAnimatorStateInfo(0).IsName("Done"))
         {
             DeathScene.enemies = enemyDeathSprites;
+            Score.finalScore = score;
             SceneManager.LoadScene(deathScene);
         }
 
