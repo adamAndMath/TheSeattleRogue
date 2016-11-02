@@ -21,9 +21,26 @@ MonoBehaviour:
   background: {fileID: 21300000, guid: 395f196ccb0fada438c8af3a8f2e9e29, type: 3}
   columns:
   - data:
-    - wallID: -2
+    - wallID: 1
       slope: 0
-    - wallID: -2
+    - wallID: 1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+  - data:
+    - wallID: 1
+      slope: 0
+    - wallID: 1
       slope: 0
     - wallID: 0
       slope: 0
@@ -33,16 +50,14 @@ MonoBehaviour:
       slope: 0
     - wallID: 0
       slope: 0
-    - wallID: -2
+    - wallID: 1
       slope: 0
-    - wallID: -2
+    - wallID: 1
       slope: 0
   - data:
     - wallID: -2
       slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
+    - wallID: -2
       slope: 0
     - wallID: 0
       slope: 0
@@ -54,22 +69,7 @@ MonoBehaviour:
       slope: 0
     - wallID: -2
       slope: 0
-  - data:
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
+    - wallID: -2
       slope: 0
   - data:
     - wallID: 0
