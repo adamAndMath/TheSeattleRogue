@@ -18,7 +18,7 @@ MonoBehaviour:
   entrencesDown: 0
   entrencesLeft: 0
   entrencesRight: 0
-  background: {fileID: 21300000, guid: f69ba36a33dd3944d84f272e90e99acd, type: 3}
+  background: {fileID: 21300000, guid: 395f196ccb0fada438c8af3a8f2e9e29, type: 3}
   columns:
   - data:
     - wallID: 1
