@@ -8,6 +8,11 @@ public class BulletBehaviour : MonoBehaviour
     private readonly RaycastHit2D[] hits = new RaycastHit2D[16];
     public int damage = 2;
 
+    void OnDisable()
+    {
+        Destroy(gameObject);
+    }
+
 	// Use this for initialization
 	void Start ()
 	{
