@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class CamMove : MonoBehaviour
 {
@@ -105,9 +106,16 @@ public class CamMove : MonoBehaviour
 
         if (RoomHandler.Instance)
         {
-            nextRoom = RoomHandler.Instance[new LevelGenerator.Position(
-                Mathf.FloorToInt(camMoveTo.x/Room.RoomSize.x),
-                Mathf.FloorToInt(camMoveTo.y/Room.RoomSize.y))];
+            try
+            {
+                nextRoom = RoomHandler.Instance[new LevelGenerator.Position(
+                    Mathf.FloorToInt(camMoveTo.x/Room.RoomSize.x),
+                    Mathf.FloorToInt(camMoveTo.y/Room.RoomSize.y))];
+            }
+            catch (IndexOutOfRangeException)
+            {
+                nextRoom = null;
+            }
 
             if (nextRoom)
                 nextRoom.gameObject.SetActive(true);

@@ -129,26 +129,9 @@ MonoBehaviour:
       slope: 0
     - wallID: 0
       slope: 0
-    - wallID: 1
-      slope: 1
-    - wallID: 1
-      slope: 1
     - wallID: 0
       slope: 0
     - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-  - data:
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
       slope: 0
     - wallID: 0
       slope: 0
@@ -161,12 +144,29 @@ MonoBehaviour:
       slope: 0
     - wallID: 0
       slope: 0
+    - wallID: -1
+      slope: 0
     - wallID: 0
       slope: 0
-    - wallID: 1
-      slope: 1
-    - wallID: 1
-      slope: 1
+    - wallID: 0
+      slope: 0
+    - wallID: -1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+  - data:
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
     - wallID: 0
       slope: 0
     - wallID: 0
@@ -304,7 +304,7 @@ MonoBehaviour:
   spawners:
   - position:
       x: 7
-      y: 5
+      y: 3
     spawnMask: 1
   platform: {fileID: 212000013609954282, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
   spike: {fileID: 212000011588063242, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}

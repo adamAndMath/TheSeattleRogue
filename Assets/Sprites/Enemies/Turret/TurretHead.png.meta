@@ -1,9 +1,13 @@
 fileFormatVersion: 2
-guid: 083689e6745e48b4c9a5b2368d7a6b82
-timeCreated: 1477073079
+guid: 417169382fc6ba54b90443eeb7204447
+timeCreated: 1478115150
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: TurretHead 1_0
+    21300002: TurretHead 1_1
+    21300004: TurretHead 1_2
+    21300006: TurretHead 1_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -38,7 +42,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -50,13 +54,65 @@ TextureImporter:
   textureType: 8
   buildTargetSettings:
   - buildTarget: Standalone
-    maxTextureSize: 512
-    textureFormat: -2
+    maxTextureSize: 2048
+    textureFormat: -1
     compressionQuality: 50
     allowsAlphaSplitting: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: TurretHead 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: TurretHead 1_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: TurretHead 1_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: TurretHead 1_3
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
     outline: []
   spritePackingTag: 
   userData: 
