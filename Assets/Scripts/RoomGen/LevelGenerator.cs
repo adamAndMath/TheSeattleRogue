@@ -234,7 +234,7 @@ public class LevelGenerator : MonoBehaviour
 
         GameObject door = Instantiate(this.door);
         door.transform.SetParent(roomObject.transform);
-        door.transform.localPosition = new Vector3(size.x/2, 1);
+        door.transform.localPosition = new Vector3(size.x/2 - 0.5F, 0.5F);
 
         Position position = new Position();
 
