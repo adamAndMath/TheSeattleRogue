@@ -13,6 +13,7 @@ public class Player : PhysicsObject
     public int hp;
     public int money;
     private Animator animator;
+    public float score;
 
     public float dashRegenerationRate = 1;
     public int maxDash = 100;
