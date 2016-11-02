@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95a2132fec69de7479bf1b3637f768de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 4
   idleSprite: {fileID: 21300000, guid: d84f651d3931a154dbdfb52f5c7a1594, type: 3}
   drops:
   - obj: {fileID: 1000012271734224, guid: 70488e5cd1ef718409e53b076d2cfd65, type: 2}

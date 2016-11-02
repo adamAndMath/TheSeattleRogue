@@ -18,7 +18,7 @@ public abstract class Enemy : PhysicsObject
         }
     }
 
-    public void Killed()
+    public virtual void Killed()
     {
         foreach (ItemDrop drop in drops)
         {

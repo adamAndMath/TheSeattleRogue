@@ -10,11 +10,15 @@ public class BoulderBehaviour : PhysicsObject
     public float fallSpeed;
     public float flySpeed;
 
+    [NonSerialized] public bool hasBeenkicked;
+
     private float directionX;
     private float directionY;
     private bool hasBeenTouched;
     private bool hasHitRightState;
     private Vector2 direction;
+    private Vector2 dir;
+    private bool playerHasBennSet;
 	// Use this for initialization
     protected override void Start()
     {
@@ -28,51 +32,71 @@ public class BoulderBehaviour : PhysicsObject
 	// Update is called once per frame
 	void Update () 
     {
-	    if (!IsGrounded() && !hasBeenTouched)
+	    if (!hasBeenkicked)
 	    {
-	        MoveVertical(fallSpeed*Time.deltaTime);
-
-	        if (coll.IsTouching(Player.Instance.GetComponent<Collider2D>()))
+	        if (!IsGrounded() && !hasBeenTouched)
 	        {
-	            Player.Instance.Damaged(1);
+	            MoveVertical(fallSpeed*Time.deltaTime);
+
+	            if (coll.IsTouching(Player.Instance.GetComponent<Collider2D>()))
+	            {
+	                Player.Instance.Damaged(1);
+	            }
+	        }
+	        else
+	        {
+	            if (coll.IsTouching(BossBehaviour.Instance.GetComponent<Collider2D>()))
+	            {
+	                hasBeenTouched = true;
+	                hasHitRightState = BossBehaviour.Instance.animator.GetBehaviour<RunFast>().hasHitRightWall;
+	            }
+	            if (hasBeenTouched)
+	            {
+	                if (hasHitRightState)
+	                {
+	                    if (MoveHorizontal(-flySpeed*direction.x*Time.deltaTime) ||
+	                        MoveVertical(flySpeed*direction.y*Time.deltaTime))
+	                    {
+	                        Destroy(gameObject);
+	                    }
+	                    if (coll.IsTouching(Player.Instance.GetComponent<Collider2D>()))
+	                    {
+	                        Player.Instance.Damaged(1);
+	                    }
+	                }
+	                else
+	                {
+	                    if (MoveHorizontal(flySpeed*direction.x*Time.deltaTime) ||
+	                        MoveVertical(flySpeed*direction.y*Time.deltaTime))
+	                    {
+	                        Destroy(gameObject);
+	                    }
+	                    if (coll.IsTouching(Player.Instance.GetComponent<Collider2D>()))
+	                    {
+	                        Player.Instance.Damaged(1);
+	                    }
+
+	                }
+
+	            }
 	        }
 	    }
 	    else
 	    {
-	        if (coll.IsTouching(BossBehaviour.Instance.GetComponent<Collider2D>()))
+	        if (!playerHasBennSet)
 	        {
-	            hasBeenTouched = true;
-	            hasHitRightState = BossBehaviour.Instance.animator.GetBehaviour<RunFast>().hasHitRightWall;
+	            dir = Player.Instance.transform.position.normalized;
+	            playerHasBennSet = true;
 	        }
-	        if (hasBeenTouched)
-	        {
-                if (hasHitRightState)
-                {
-                    if (MoveHorizontal(-flySpeed * direction.x * Time.deltaTime) ||
-                    MoveVertical(flySpeed * direction.y * Time.deltaTime))
-                    {
-                        Destroy(gameObject);
-                    }
-                    if (coll.IsTouching(Player.Instance.GetComponent<Collider2D>()))
-                    {
-                        Player.Instance.Damaged(1);
-                    }
-                }
-                else
-                {
-                    if (MoveHorizontal(flySpeed* direction.x*Time.deltaTime) ||
-                        MoveVertical(flySpeed*direction.y*Time.deltaTime))
-                    {
-                        Destroy(gameObject);
-                    }
-                    if (coll.IsTouching(Player.Instance.GetComponent<Collider2D>()))
-                    {
-                        Player.Instance.Damaged(1);
-                    }
-                    
-                }
-                
-	        }
+
+            if (MoveHorizontal(flySpeed * dir.x * Time.deltaTime) || MoveVertical(flySpeed * dir.y * Time.deltaTime))
+            {
+                //Destroy(gameObject);
+            }
+            if (coll.IsTouching(Player.Instance.GetComponent<Collider2D>()))
+            {
+                Player.Instance.Damaged(1);
+            }
 	    }
     }
 }

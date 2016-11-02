@@ -1,33 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SlamDown : StateMachineBehaviour {
-    public float shakeTime;
-    public float slamDeaccelerationSpeed;
-    public float slamSpeed;
-    public float jumpSpeedReference;
+public class Kick : StateMachineBehaviour {
 
-    private bool ground;
-    private float move; 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	//override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 	//
 	//}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
-    {
-	        move = slamDeaccelerationSpeed*Mathf.Pow(Time.deltaTime, 2) * 0.5f + slamSpeed*Time.deltaTime;
-	        slamSpeed += slamDeaccelerationSpeed*Time.deltaTime;
-
-	        BossBehaviour.Instance.MoveVertical(-move);
-
-	    if (animator.GetBool("IsGrounded"))
-	    {
-	        animator.SetBool("SlamDown", false);
-            animator.SetBool("ShakeTime", true);
-	    }
-    }
+	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+	{
+	    BossBehaviour.Instance.boulderGameObject.GetComponent<BoulderBehaviour>().hasBeenkicked = true;
+	}
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
 	//override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {

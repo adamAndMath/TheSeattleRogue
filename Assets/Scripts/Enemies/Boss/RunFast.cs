@@ -31,7 +31,7 @@ public class RunFast : StateMachineBehaviour
 	{
 	    Debug.Log(stateTimeRemaining);
 	    stateTimeRemaining -= Time.deltaTime;
-	    if (stateTimeRemaining <= 0)
+	    if (stateTimeRemaining <= 0 && hasHitRightWall)
 	    {
 	        animator.SetInteger("StateSet", 0);
 	    }

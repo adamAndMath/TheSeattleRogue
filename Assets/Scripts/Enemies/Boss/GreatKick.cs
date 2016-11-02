@@ -22,20 +22,26 @@ public class GreatKick : StateMachineBehaviour
 	        if (Mathf.Abs(BossBehaviour.Instance.transform.position.x - boulder.transform.position.x) < min || min == 0)
 	        {
 	            min = boulder.transform.position.x;
-	            closetsBoulder = boulder;
+	            BossBehaviour.Instance.boulderGameObject = boulder;
 	        }
 	        boulderDistance = min;
 	    }
-        if (Mathf.Abs(BossBehaviour.Instance.transform.position.x - boulderDistance) < 0.2)
-	    if (BossBehaviour.Instance.transform.position.x > boulderDistance)
+	    if (Mathf.Abs(BossBehaviour.Instance.transform.position.x - boulderDistance) < 0.2)
 	    {
-	        BossBehaviour.Instance.MoveVertical(3);
+	        if (BossBehaviour.Instance.transform.position.x > boulderDistance)
+	        {
+	            BossBehaviour.Instance.MoveVertical(3);
+	        }
+	        else
+	        {
+	            BossBehaviour.Instance.MoveVertical(-3);
+	        }
 	    }
 	    else
 	    {
-            BossBehaviour.Instance.MoveVertical(-3);
+	        animator.SetBool("IsKicking", true);
 	    }
-	}
+    }
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
 	//override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
