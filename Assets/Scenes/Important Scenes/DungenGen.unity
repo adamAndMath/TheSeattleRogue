@@ -1155,11 +1155,6 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224000010123640222, guid: cc6381f4814d1874a94a6dd6db15c86a,
     type: 2}
   m_PrefabInternal: {fileID: 1021483554}
---- !u!95 &249580680 stripped
-Animator:
-  m_PrefabParentObject: {fileID: 95000013311431870, guid: cc6381f4814d1874a94a6dd6db15c86a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1021483554}
 --- !u!4 &261223406 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000013861339534, guid: 951cb622ce9f3b54789568d1b8905148,
@@ -4065,6 +4060,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc6381f4814d1874a94a6dd6db15c86a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1021483555 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013486089540, guid: cc6381f4814d1874a94a6dd6db15c86a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1021483554}
 --- !u!4 &1029276235 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000013861339534, guid: 951cb622ce9f3b54789568d1b8905148,
@@ -4552,7 +4552,7 @@ Prefab:
         type: 2}
       propertyPath: deathTransitionAnimator
       value: 
-      objectReference: {fileID: 249580680}
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011321701894, guid: 75dcc9dbf9ad55f4398bde8d7f714b21, type: 2}
       propertyPath: m_LocalScale.x
       value: 1
@@ -4571,6 +4571,11 @@ Prefab:
       propertyPath: m_Size.y
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010651038966, guid: 75dcc9dbf9ad55f4398bde8d7f714b21,
+        type: 2}
+      propertyPath: deathTransitionObject
+      value: 
+      objectReference: {fileID: 1021483555}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 75dcc9dbf9ad55f4398bde8d7f714b21, type: 2}
   m_IsPrefabParent: 0
