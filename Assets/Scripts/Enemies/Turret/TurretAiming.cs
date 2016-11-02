@@ -26,7 +26,7 @@ public class TurretAiming : StateMachineBehaviour {
         if (Quaternion.Angle(enemy.transform.rotation, lookrotation) == 0 && enemy.GetComponent<TurretBehaviour>().cooldownOn == false)
         {
             animator.SetBool("readyToShoot", true);
-            enemy.GetComponent<TurretBehaviour>().ReloadTime = enemy.GetComponent<TurretBehaviour>().cooldown;
+            enemy.GetComponent<TurretBehaviour>().ReloadTime = 0;
         }
     }
 

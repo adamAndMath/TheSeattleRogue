@@ -99,7 +99,7 @@ MonoBehaviour:
       slope: 0
     - wallID: 0
       slope: 0
-    - wallID: -2
+    - wallID: 0
       slope: 0
     - wallID: 1
       slope: 0
@@ -116,7 +116,7 @@ MonoBehaviour:
       slope: 0
     - wallID: 0
       slope: 0
-    - wallID: -2
+    - wallID: 0
       slope: 0
     - wallID: 1
       slope: 0
@@ -133,7 +133,7 @@ MonoBehaviour:
       slope: 0
     - wallID: 0
       slope: 0
-    - wallID: -2
+    - wallID: 0
       slope: 0
     - wallID: 1
       slope: 0
@@ -150,7 +150,7 @@ MonoBehaviour:
       slope: 0
     - wallID: 0
       slope: 0
-    - wallID: -2
+    - wallID: 0
       slope: 0
     - wallID: 1
       slope: 0
@@ -168,7 +168,7 @@ MonoBehaviour:
     - wallID: 0
       slope: 0
     - wallID: 1
-      slope: 0
+      slope: 1
     - wallID: 1
       slope: 0
     - wallID: 1
