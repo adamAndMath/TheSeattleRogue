@@ -204,11 +204,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013171369616, guid: bdf30d943c4996147861b1a8d99993e6, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.56
+      value: -12.81
       objectReference: {fileID: 0}
     - target: {fileID: 4000013171369616, guid: bdf30d943c4996147861b1a8d99993e6, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -7.72
+      value: -7.66
       objectReference: {fileID: 0}
     - target: {fileID: 4000013171369616, guid: bdf30d943c4996147861b1a8d99993e6, type: 2}
       propertyPath: m_LocalPosition.z
@@ -608,11 +608,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000012766427272, guid: 388e40c48b095284cbf543dc94010a51, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5.49
+      value: -6.28
       objectReference: {fileID: 0}
     - target: {fileID: 4000012766427272, guid: 388e40c48b095284cbf543dc94010a51, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.49
+      value: -8.44
       objectReference: {fileID: 0}
     - target: {fileID: 4000012766427272, guid: 388e40c48b095284cbf543dc94010a51, type: 2}
       propertyPath: m_LocalPosition.z
@@ -641,7 +641,7 @@ Prefab:
     - target: {fileID: 114000010894105982, guid: 388e40c48b095284cbf543dc94010a51,
         type: 2}
       propertyPath: flySpeed
-      value: 15
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 388e40c48b095284cbf543dc94010a51, type: 2}
