@@ -29,6 +29,12 @@ public class RunFast : StateMachineBehaviour
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
+	    Debug.Log(stateTimeRemaining);
+	    stateTimeRemaining -= Time.deltaTime;
+	    if (stateTimeRemaining <= 0)
+	    {
+	        animator.SetInteger("StateSet", 0);
+	    }
 	    if (readyToRun)
 	    {
 	        if (hasHitRightWall)
@@ -61,9 +67,6 @@ public class RunFast : StateMachineBehaviour
 	            readyToRun = true;
 	        }
 	    }
-	    stateTimeRemaining -= Time.deltaTime;
-
-
 	}
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
