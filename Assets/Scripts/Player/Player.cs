@@ -32,7 +32,7 @@ public class Player : PhysicsObject
         this.item = item;
         weapon.runtimeAnimatorController = item.animator;
         weaponCollider2D.offset = item.collisionOffset;
-        weaponCollider2D.size = item.collisionOffset;
+        weaponCollider2D.size = item.collisionSize;
     }
 
     void Awake()
