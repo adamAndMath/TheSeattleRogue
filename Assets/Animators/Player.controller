@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravity: 35
   startSpeed: 16
-  releaseSpeed: 8
+  releaseSpeed: 4
   fallState: Fall
 --- !u!114 &114000011108214468
 MonoBehaviour:
