@@ -66,7 +66,7 @@ public class BossBehaviour : PhysicsObject
         
 	    if (animator.GetBehaviour<StateHandler>().betweenStates)
 	    {
-            animator.SetInteger("StateSet", Random.Range(2, 2));
+            animator.SetInteger("StateSet", Random.Range(1, 4));
 
 	        animator.SetBool("RunFastMode", animator.GetInteger("StateSet") == 1);
 	        animator.SetBool("GreatKickMode", animator.GetInteger("StateSet") == 2);
