@@ -18,6 +18,7 @@ MonoBehaviour:
   entrencesDown: 1
   entrencesLeft: 0
   entrencesRight: 0
+  background: {fileID: 0}
   columns:
   - data:
     - wallID: 0
@@ -312,5 +313,25 @@ MonoBehaviour:
       x: 7
       y: 5
     spawnMask: 4
+  - position:
+      x: 0
+      y: 3
+    spawnMask: 1
+  - position:
+      x: 0
+      y: 6
+    spawnMask: 1
+  - position:
+      x: 7
+      y: 2
+    spawnMask: 1
+  - position:
+      x: 14
+      y: 3
+    spawnMask: 1
+  - position:
+      x: 14
+      y: 6
+    spawnMask: 1
   platform: {fileID: 212000013609954282, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
   spike: {fileID: 212000011588063242, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}
