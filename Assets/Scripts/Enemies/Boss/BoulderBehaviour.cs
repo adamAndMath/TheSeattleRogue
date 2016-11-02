@@ -11,6 +11,7 @@ public class BoulderBehaviour : PhysicsObject
     public float flySpeed;
 
     [NonSerialized] public bool hasBeenkicked;
+    [NonSerialized] public bool kickModeEngaged;
 
     private float directionX;
     private float directionY;
@@ -83,20 +84,23 @@ public class BoulderBehaviour : PhysicsObject
 	    }
 	    else
 	    {
-	        if (!playerHasBennSet)
+	        if (kickModeEngaged)
 	        {
-	            dir = Player.Instance.transform.position.normalized;
-	            playerHasBennSet = true;
-	        }
+	            if (!playerHasBennSet)
+	            {
+	                dir = (Player.Instance.transform.position - transform.position).normalized;
+	                playerHasBennSet = true;
+	            }
 
-            if (MoveHorizontal(flySpeed * dir.x * Time.deltaTime) || MoveVertical(flySpeed * dir.y * Time.deltaTime))
-            {
-                //Destroy(gameObject);
-            }
-            if (coll.IsTouching(Player.Instance.GetComponent<Collider2D>()))
-            {
-                Player.Instance.Damaged(1);
-            }
+	            if (MoveHorizontal(flySpeed*dir.x*Time.deltaTime) || MoveVertical(flySpeed*dir.y*Time.deltaTime))
+	            {
+	                //Destroy(gameObject);
+	            }
+	            if (coll.IsTouching(Player.Instance.GetComponent<Collider2D>()))
+	            {
+	                Player.Instance.Damaged(1);
+	            }
+	        }
 	    }
     }
 }
