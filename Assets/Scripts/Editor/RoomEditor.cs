@@ -5,6 +5,7 @@ using UnityEngine;
 public class RoomEditor : Editor
 {
     private SerializedProperty propSize;
+    private SerializedProperty propBackground;
     private SerializedProperty propPlatform;
     private SerializedProperty propSpike;
     private SerializedProperty propWalls;
@@ -18,6 +19,7 @@ public class RoomEditor : Editor
     void OnEnable()
     {
         propSize = serializedObject.FindProperty("size");
+        propBackground = serializedObject.FindProperty("background");
         propPlatform = serializedObject.FindProperty("platform");
         propSpike = serializedObject.FindProperty("spike");
         propWalls = serializedObject.FindProperty("walls");
@@ -46,6 +48,7 @@ public class RoomEditor : Editor
         Entrences(width, height);
 
         EditorGUI.EndDisabledGroup();
+        EditorGUILayout.PropertyField(propBackground);
         EditorGUILayout.PropertyField(propPlatform);
         EditorGUILayout.PropertyField(propSpike);
         EditorGUILayout.PropertyField(propWalls, true);
@@ -112,6 +115,9 @@ public class RoomEditor : Editor
                 down ^= 1 << i;
         }
         EditorGUILayout.EndHorizontal();
+
+        if (serializedObject.targetObjects.Length > 1)
+            return;
 
         propEntrencesUp.intValue = up;
         propEntrencesDown.intValue = down;

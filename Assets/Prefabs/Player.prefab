@@ -196,6 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fba7d1ac9db39a44a318b3bfbe2bec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 4751c779cc5cc1a43b505bbd387ecc1f, type: 2}
   weaponCollider2D: {fileID: 61000014148133278}
   maxHP: 6
   hp: 0
