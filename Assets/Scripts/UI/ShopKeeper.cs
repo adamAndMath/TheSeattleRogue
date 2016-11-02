@@ -19,22 +19,22 @@ public class ShopKeeper : MonoBehaviour
 	        SpeechBubble.SetActive(false);
 	    }
 
-	    if (Input.GetKeyDown(KeyCode.W) && Vector2.Distance(Player.Instance.transform.position,transform.position) <=  ShopRange)
+	    if (Input.GetButtonDown("Cancel") && Vector2.Distance(Player.Instance.transform.position,transform.position) <=  ShopRange)
 	    {
 	        ShopActive =! ShopActive;
         }
 
-	    if (Input.GetKeyDown(KeyCode.Escape) && ShopActive)
-	    {
-	        ShopActive = false;
-	    }
+	    //if (Input.GetButtonDown("Cancel") && ShopActive)
+	    //{
+	    //    ShopActive = false;
+	    //}
 
             if (ShopActive)
 	    {
 	        ShopGameObject.SetActive(true);
 	        Time.timeScale = 0;
 	    }
-	    else if((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Escape)) && ShopActive)
+	    else if(Input.GetButtonDown("Cancel") && ShopActive)
 	    {
             ShopGameObject.SetActive(false);
             Time.timeScale = 1;
