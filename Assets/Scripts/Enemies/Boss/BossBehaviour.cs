@@ -70,9 +70,9 @@ public class BossBehaviour : PhysicsObject
         {
             isGrounded = true;
         }
-	    if (animator.GetBehaviour<StateHandler>())
+	    if (animator.GetBehaviour<StateHandler>().betweenStates)
 	    {
-	        animator.SetInteger("StateSet", Random.Range(1, 3));
+            animator.SetInteger("StateSet", Random.Range(1, 4));
 
 	        animator.SetBool("RunFastMode", animator.GetInteger("StateSet") == 1);
 	        animator.SetBool("GreatKickMode", animator.GetInteger("StateSet") == 2);
@@ -108,10 +108,12 @@ public class BossBehaviour : PhysicsObject
 
     public void fallingBoulders()
     {
+        GameObject boulderGameObject;
         Debug.Log("Boulders Being Run");
         if (timeLeftBetweenBoulders <= 0)
         {
-            Instantiate(boulders[Random.Range(0, boulders.Count)], new Vector2(Random.Range(-boulderSpawnRange, boulderSpawnRange), 10), Quaternion.identity);
+            boulderGameObject = (GameObject)Instantiate(boulders[Random.Range(0, boulders.Count)], new Vector2(Random.Range(-boulderSpawnRange, boulderSpawnRange), 10), Quaternion.identity);
+            bouldersInScene.Add(boulderGameObject);
             timeLeftBetweenBoulders = timeBetweenBoulders;
         }
         else
