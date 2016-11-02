@@ -11,7 +11,7 @@ public class Kick : StateMachineBehaviour {
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
-	    BossBehaviour.Instance.boulderGameObject.GetComponent<BoulderBehaviour>().hasBeenkicked = true;
+	    BossBehaviour.Instance.boulderGameObject.GetComponent<BoulderBehaviour>().kickModeEngaged = true;
 	}
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state

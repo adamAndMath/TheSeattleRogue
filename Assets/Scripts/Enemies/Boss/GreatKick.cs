@@ -4,11 +4,12 @@ using System.Collections;
 public class GreatKick : StateMachineBehaviour
 {
     private float boulderDistance;
+    private float relocationSpeed;
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
-    {
-        
+	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+	{
+	    relocationSpeed = animator.GetBehaviour<RunFast>().bossSpeed;
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -26,15 +27,17 @@ public class GreatKick : StateMachineBehaviour
 	        }
 	        boulderDistance = min;
 	    }
-	    if (Mathf.Abs(BossBehaviour.Instance.transform.position.x - boulderDistance) < 0.2)
+        BossBehaviour.Instance.boulderGameObject.GetComponent<BoulderBehaviour>().hasBeenkicked = true;
+	    
+        if (Mathf.Abs(BossBehaviour.Instance.transform.position.x - boulderDistance) > 0.2)
 	    {
 	        if (BossBehaviour.Instance.transform.position.x > boulderDistance)
 	        {
-	            BossBehaviour.Instance.MoveVertical(3);
+	            BossBehaviour.Instance.MoveHorizontal(-relocationSpeed*Time.deltaTime);
 	        }
 	        else
 	        {
-	            BossBehaviour.Instance.MoveVertical(-3);
+	            BossBehaviour.Instance.MoveHorizontal(relocationSpeed*Time.deltaTime);
 	        }
 	    }
 	    else
