@@ -2,7 +2,7 @@
 
 public class DroppedItem : Pickup
 {
-    Item item;
+    public Item item;
 
     protected override void PickedUp(Player player)
     {

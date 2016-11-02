@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.UI;
 
 public class MoneyGUI : MonoBehaviour
@@ -13,6 +12,6 @@ public class MoneyGUI : MonoBehaviour
 	
 	void Update ()
 	{
-	    text.text = "" + Player.Instance.money;
+	    text.text = "" + Player.money;
 	}
 }

@@ -11,7 +11,7 @@ public class Player : PhysicsObject
     public int maxHP = 3;
     [HideInInspector]
     public int hp;
-    public int money;
+    public static int money;
     private Animator animator;
     public int score;
 

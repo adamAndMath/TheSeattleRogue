@@ -34,20 +34,20 @@ public class ATM : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W) && Active)
         {
             int FreeSpace = MaxMoney - CurrentMoney;
-            if (Player.Instance.money <= FreeSpace)
+            if (Player.money <= FreeSpace)
             {
-                CurrentMoney += Player.Instance.money;
-                Player.Instance.money = 0;
+                CurrentMoney += Player.money;
+                Player.money = 0;
             }
             else
             {
-                Player.Instance.money -= FreeSpace;
+                Player.money -= FreeSpace;
                 CurrentMoney += FreeSpace;
             }
         }
         if (Input.GetKeyDown(KeyCode.S) && Active)
         {
-            Player.Instance.money += CurrentMoney;
+            Player.money += CurrentMoney;
             CurrentMoney = 0;
         }
 
