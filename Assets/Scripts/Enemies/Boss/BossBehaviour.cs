@@ -61,18 +61,11 @@ public class BossBehaviour : PhysicsObject
             Player.Instance.Damaged(1);
         }
 
-        if (!IsGrounded())
-        {
-            //MoveVertical(fallSpeed*Time.deltaTime);
-            isGrounded = false;
-        }
-        else
-        {
-            isGrounded = true;
-        }
+        animator.SetBool("IsGrounded", IsGrounded());
+        
 	    if (animator.GetBehaviour<StateHandler>().betweenStates)
 	    {
-            animator.SetInteger("StateSet", Random.Range(1, 4));
+            animator.SetInteger("StateSet", Random.Range(3, 4));
 
 	        animator.SetBool("RunFastMode", animator.GetInteger("StateSet") == 1);
 	        animator.SetBool("GreatKickMode", animator.GetInteger("StateSet") == 2);

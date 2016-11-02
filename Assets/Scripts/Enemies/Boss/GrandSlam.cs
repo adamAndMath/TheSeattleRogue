@@ -19,12 +19,13 @@ public class GrandSlam : StateMachineBehaviour
 	{
 	    boss = animator.GetComponent<BossBehaviour>();
 	    slam = animator.GetBehaviour<SlamDown>();
+	    speed = 0;
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
-	    if (!(boss.transform.position.x - boss.originPos.x < snapThreshold))
+	    if (!(Mathf.Abs(boss.transform.position.x - boss.originPos.x) < snapThreshold))
 	    {
 	        if (boss.transform.position.x > boss.originPos.x)
 	        {
@@ -37,27 +38,23 @@ public class GrandSlam : StateMachineBehaviour
 	    }
 	    else
 	    {
-            move = (speed + Time.deltaTime * jumpDeaccelerationSpeed / 2) * Time.deltaTime;
-            speed += Time.deltaTime * jumpDeaccelerationSpeed;
+            Debug.Log(jumpSpeed - move);
+            //speed += Time.deltaTime * jumpDeaccelerationSpeed;
+            //move = (speed + Time.deltaTime * jumpDeaccelerationSpeed / 2) * Time.deltaTime;
 
-            boss.MoveVertical((jumpSpeed-move) * Time.deltaTime);
+            move = jumpDeaccelerationSpeed * Mathf.Pow(Time.deltaTime, 2) * 0.5f + speed * Time.deltaTime;
+            speed += jumpDeaccelerationSpeed * Time.deltaTime;
+
+            boss.MoveVertical(jumpSpeed - move);
 
             if (jumpSpeed - move < 0)
             {
+                animator.SetInteger("StateSet", 0);
                 slam.slamDeaccelerationSpeed = jumpDeaccelerationSpeed;
-                slam.slamSpeed = speed*10;
+                slam.slamSpeed = speed;
                 slam.jumpSpeedReference = jumpSpeed;
                 animator.SetBool("SlamDown", true);
             }
-
-
-	        
-	        if (boss.isGrounded)
-	        {
-	            Debug.Log("What?");
-	            animator.SetInteger("StateSet", 0);
-	            speed = 0;
-	        }
 	    }
     }
 
