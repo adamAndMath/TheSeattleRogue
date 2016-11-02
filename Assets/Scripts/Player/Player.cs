@@ -87,6 +87,6 @@ public class Player : PhysicsObject
 
     protected override bool CanCollide(RaycastHit2D rayHit, Vector2 dir)
     {
-        return rayHit.collider.gameObject.layer != Platform || (Input.GetAxisRaw("Vertical") >= 0 && base.CanCollide(rayHit, dir));
+        return rayHit.collider.gameObject.layer != Platform || (Input.GetAxisRaw("Vertical") > -0.5F && base.CanCollide(rayHit, dir));
     }
 }
