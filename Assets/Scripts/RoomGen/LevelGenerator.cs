@@ -10,6 +10,7 @@ public class LevelGenerator : MonoBehaviour
     public Range pathDist;
     public Range exstraRooms;
     public SpriteRenderer wallPrefab;
+    public SpriteRenderer backgroundPrefab;
     [EnumMask]
     public Room.Direction forceStartDir;
 
@@ -214,6 +215,11 @@ public class LevelGenerator : MonoBehaviour
         roomObject.GetComponent<RoomInstance>().room = room;
         RoomHandler.Instance[pos] = roomObject.GetComponent<RoomInstance>();
         roomObject.SetActive(false);
+
+        SpriteRenderer background = Instantiate(backgroundPrefab);
+        background.transform.SetParent(roomObject.transform);
+        background.transform.localPosition = size/2 - new Vector3(1, 1);
+        background.GetComponent<SpriteRenderer>().sprite = room.background;
 
         Position position = new Position();
 
