@@ -118,6 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86535d02115547646905fe342f328517, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  door: {fileID: 0}
+  endRoom: {fileID: 0}
   rooms:
   - {fileID: 11400000, guid: 341d30a9d09bc4f42889a6de0cb6d608, type: 2}
   - {fileID: 11400000, guid: 9a9e0513641f8d345bdb945d63cbc71d, type: 2}
@@ -143,13 +145,15 @@ MonoBehaviour:
     max: 5
   wallPrefab: {fileID: 212000012543991934, guid: 0aae726afba3e0e45baf5109c22aba98,
     type: 2}
+  backgroundPrefab: {fileID: 212000012981208614, guid: a9a820bfe4016394cbda5f08fb62dd0e,
+    type: 2}
   forceStartDir: -15
   min:
     x: -100
     y: -100
   max:
-    x: 0
-    y: 100
+    x: 100
+    y: 0
 --- !u!4 &69776116
 Transform:
   m_ObjectHideFlags: 0

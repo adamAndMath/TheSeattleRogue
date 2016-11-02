@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class ProjectileBehaviour : PhysicsObject
 {
@@ -9,6 +8,11 @@ public class ProjectileBehaviour : PhysicsObject
     private float offSet = 0.9f;
 
     public GameObject smokeCloud;
+
+    void OnDisable()
+    {
+        Destroy(gameObject);
+    }
 
 	void Update ()
 	{
