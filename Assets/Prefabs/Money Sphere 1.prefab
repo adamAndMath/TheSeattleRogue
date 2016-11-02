@@ -89,7 +89,8 @@ MonoBehaviour:
   speedMin: {x: -3, y: 3}
   speedMax: {x: 3, y: 6}
   val: 0
-  audioObject: {fileID: 0}
+  audioObject: {fileID: 1000013612913616, guid: c94283cd028288149b973e87e0d3e36f,
+    type: 2}
 --- !u!212 &212000012734503444
 SpriteRenderer:
   m_ObjectHideFlags: 1
