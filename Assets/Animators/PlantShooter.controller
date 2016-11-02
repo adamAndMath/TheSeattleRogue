@@ -44,17 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93df637b35c831340a24ca5e88002c65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilesRight: {fileID: 1000010988014836, guid: ec793fed58f296a4bb8f27b8a80b7478,
+  projectile: {fileID: 114000011815794346, guid: ec793fed58f296a4bb8f27b8a80b7478,
     type: 2}
-  projectilesLeft: {fileID: 1000012964502610, guid: b21d552cfe5b2e04b9eef26db4a61d6d,
-    type: 2}
-  fastProjectileLeft: {fileID: 1000013513266676, guid: 59823b8a3992b834c823a8577b5f2a69,
-    type: 2}
-  fastProjectileRight: {fileID: 1000014284796580, guid: cab197893d361ef49b7d98b0f7fdac0f,
-    type: 2}
-  enemy: {fileID: 0}
-  angleVector: {x: 0, y: 0}
-  timer: 0.1
+  projectiles:
+  - {x: -1, y: 4}
+  - {x: 1, y: 4}
+  - {x: 3, y: 3.85}
+  - {x: 3, y: 3.85}
 --- !u!114 &114000014090214216
 MonoBehaviour:
   m_ObjectHideFlags: 1

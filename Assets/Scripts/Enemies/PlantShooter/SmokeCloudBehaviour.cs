@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
-using System.Collections;
-using UnityEngine.Networking;
 
 public class SmokeCloudBehaviour : MonoBehaviour
 {
     private Collider2D cloudCollider2D;
     public float disappearTimer;
+
+    void OnDisable()
+    {
+        Destroy(gameObject);
+    }
 
 	// Use this for initialization
     void Start()
