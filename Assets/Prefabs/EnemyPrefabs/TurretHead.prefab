@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013222661420}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.3027859, y: 1.4778047, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -110,6 +110,7 @@ MonoBehaviour:
   turretRange: 20
   cooldown: 2
   ReloadTime: 0
+  TESTPLSIGNORE: 0
   cooldownOn: 0
   ChargingSprites:
   - {fileID: 21300004, guid: aa5579be597365642b3d11fdcb1115de, type: 3}
