@@ -25,7 +25,7 @@ public abstract class Enemy : PhysicsObject
             drop.Drop(transform.position);
         }
         Player.Instance.enemyDeathSprites.Add(idleSprite);
-
+        Player.Instance.score += scoreGiven;
         DestroyObject(gameObject);
     }
 }

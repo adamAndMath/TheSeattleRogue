@@ -24,7 +24,6 @@ GameObject:
   - 95: {fileID: 95000012744207380}
   - 114: {fileID: 114000010472602348}
   - 50: {fileID: 50000014024165338}
-  - 61: {fileID: 61000011776328692}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -39,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011816118734}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6, y: -7.59, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -62,20 +61,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61000011776328692
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011816118734}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 2.75, y: 1.65}
 --- !u!61 &61000013412484180
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -126,6 +111,10 @@ MonoBehaviour:
   cam: {fileID: 0}
   boulders:
   - {fileID: 1000010733703914, guid: 388e40c48b095284cbf543dc94010a51, type: 2}
+  - {fileID: 1000010733703914, guid: 115583d1761ef5c4c89e6fb92a275693, type: 2}
+  - {fileID: 1000010733703914, guid: d5006ce1ffd3902499b562d20b6b6878, type: 2}
+  - {fileID: 1000010733703914, guid: e4106507c046989459d217ed8e65dec1, type: 2}
+  - {fileID: 1000010733703914, guid: 07b80b3b794f71f4b8c6b133fcb04641, type: 2}
   bouldersInScene: []
   animator: {fileID: 0}
 --- !u!212 &212000013074705434
