@@ -68,12 +68,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  idleSprite: {fileID: 21300000, guid: a1397ab2f0dba144298609d9c89aa047, type: 3}
-  drops: []
+  idleSprite: {fileID: 21300002, guid: a1397ab2f0dba144298609d9c89aa047, type: 3}
+  drops:
+  - obj: {fileID: 1000012271734224, guid: b8344729a8d6fe041bd0f8420002e7ac, type: 2}
+    chance: 1
+  - obj: {fileID: 1000012271734224, guid: b8344729a8d6fe041bd0f8420002e7ac, type: 2}
+    chance: 1
+  - obj: {fileID: 1000012271734224, guid: b8344729a8d6fe041bd0f8420002e7ac, type: 2}
+    chance: 1
+  - obj: {fileID: 1000012271734224, guid: b8344729a8d6fe041bd0f8420002e7ac, type: 2}
+    chance: 1
+  - obj: {fileID: 1000012271734224, guid: b8344729a8d6fe041bd0f8420002e7ac, type: 2}
+    chance: 1
+  - obj: {fileID: 1000012271734224, guid: b8344729a8d6fe041bd0f8420002e7ac, type: 2}
+    chance: 0.25
+  - obj: {fileID: 1000012271734224, guid: b8344729a8d6fe041bd0f8420002e7ac, type: 2}
+    chance: 0.25
+  - obj: {fileID: 1000012271734224, guid: b8344729a8d6fe041bd0f8420002e7ac, type: 2}
+    chance: 0.25
+  - obj: {fileID: 1000012271734224, guid: b8344729a8d6fe041bd0f8420002e7ac, type: 2}
+    chance: 0.25
+  - obj: {fileID: 1000012271734224, guid: b8344729a8d6fe041bd0f8420002e7ac, type: 2}
+    chance: 0.25
   gravity: 0
   gravitySpeed: 0
   scoreGiven: 0
-  openChest: {fileID: 0}
+  openChest: {fileID: 1000013691284172, guid: 9cc448eba9dcbe84e8057b534175437d, type: 2}
 --- !u!212 &212000011161751374
 SpriteRenderer:
   m_ObjectHideFlags: 1
