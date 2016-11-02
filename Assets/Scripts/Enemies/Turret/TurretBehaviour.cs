@@ -40,8 +40,8 @@ public class TurretBehaviour : Enemy
 
     private void OnDrawGizmos()
     {
-        UnityEditor.Handles.color = Color.green;
-        UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.forward, turretRange);
+        //UnityEditor.Handles.color = Color.green;
+        //UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.forward, turretRange);
     }
 
     public override void Damaged(int damageAmount)
