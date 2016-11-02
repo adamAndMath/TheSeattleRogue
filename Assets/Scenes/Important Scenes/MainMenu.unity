@@ -851,6 +851,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenuGameObject: {fileID: 404873433}
   paused: 1
+  canPause: 1
   SceneToLoad: 1
 --- !u!1 &1119804463
 GameObject:
