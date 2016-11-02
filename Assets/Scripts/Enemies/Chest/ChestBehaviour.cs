@@ -10,12 +10,14 @@ public class ChestBehaviour : Enemy
     private float timer;
     private int spitAmount;
     private bool isTriggered;
+    private Animator animator;
     
 	// Use this for initialization
     void Start ()
     {
         coll = GetComponent<Collider2D>();
         spitAmount = Random.Range(7, 11);
+        animator = GetComponent<Animator>();
     }
 	
 	// Update is called once per frame
@@ -24,6 +26,7 @@ public class ChestBehaviour : Enemy
 	    if (coll.IsTouching(Player.Instance.GetComponent<Collider2D>()))
 	    {
 	        isTriggered = true;
+            animator.SetBool("Opened", true);
 	    }
 
 	    if (isTriggered)
