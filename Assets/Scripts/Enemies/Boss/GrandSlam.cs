@@ -45,7 +45,7 @@ public class GrandSlam : StateMachineBehaviour
             move = jumpDeaccelerationSpeed * Mathf.Pow(Time.deltaTime, 2) * 0.5f + speed * Time.deltaTime;
             speed += jumpDeaccelerationSpeed * Time.deltaTime;
 
-            boss.MoveVertical(jumpSpeed - move);
+            boss.MoveVertical((jumpSpeed - move)*Time.deltaTime);
 
             if (jumpSpeed - move < 0)
             {

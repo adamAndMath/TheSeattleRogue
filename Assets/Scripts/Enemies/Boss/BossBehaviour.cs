@@ -14,8 +14,9 @@ public class BossBehaviour : PhysicsObject
     public float timeBetweenBoulders;
     public float boulderSpawnRange;
     
-    [NonSerialized] public Vector2 originPos;
-    [NonSerialized] public bool isGrounded;
+    public Vector2 originPos;
+    public bool isGrounded;
+    public GameObject boulderGameObject;
 
     private bool hasSet;
     private float remainingShakeTime;
@@ -65,7 +66,7 @@ public class BossBehaviour : PhysicsObject
         
 	    if (animator.GetBehaviour<StateHandler>().betweenStates)
 	    {
-            animator.SetInteger("StateSet", Random.Range(3, 4));
+            animator.SetInteger("StateSet", Random.Range(2, 2));
 
 	        animator.SetBool("RunFastMode", animator.GetInteger("StateSet") == 1);
 	        animator.SetBool("GreatKickMode", animator.GetInteger("StateSet") == 2);
