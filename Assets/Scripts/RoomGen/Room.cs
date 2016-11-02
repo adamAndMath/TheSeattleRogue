@@ -11,6 +11,7 @@ public class Room : ScriptableObject
     public int entrencesDown;
     public int entrencesLeft;
     public int entrencesRight;
+    public Sprite background;
     public Column[] columns;
     public Wall[] walls;
     public Enemy[] spawnables;
