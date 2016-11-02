@@ -90,6 +90,7 @@ public class LevelGenerator : MonoBehaviour
 
     void Start()
     {
+        Random.InitState(Random.Range(0, 1000000));
         RoomHandler.Instance.rooms = new RoomInstance[max.x - min.y + 1, max.y - min.y + 1];
         RoomHandler.Instance.min = min;
         int dir = Random.Range(0, 4);
