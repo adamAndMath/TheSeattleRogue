@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Important Scenes/DungenGen.unity
   - enabled: 1
     path: Assets/Scenes/Important Scenes/Death Scene.unity
+  - enabled: 1
+    path: Assets/Scenes/Important Scenes/BossRoom.unity
