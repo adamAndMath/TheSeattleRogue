@@ -17,6 +17,7 @@ public class BossBehaviour : PhysicsObject
     public Vector2 originPos;
     public bool isGrounded;
     public GameObject boulderGameObject;
+    public bool stateHasBeenSet;
 
     private bool hasSet;
     private float remainingShakeTime;
@@ -64,13 +65,14 @@ public class BossBehaviour : PhysicsObject
 
         animator.SetBool("IsGrounded", IsGrounded());
         
-	    if (animator.GetBehaviour<StateHandler>().betweenStates)
+	    if (animator.GetBehaviour<StateHandler>().betweenStates && !stateHasBeenSet)
 	    {
             animator.SetInteger("StateSet", Random.Range(1, 4));
 
 	        animator.SetBool("RunFastMode", animator.GetInteger("StateSet") == 1);
-	        animator.SetBool("GreatKickMode", animator.GetInteger("StateSet") == 2);
+	        animator.SetBool("GreatKickMode", animator.GetInteger("StateSet") == 2 && bouldersInScene.Count != 0);
 	        animator.SetBool("GrandSlamMode", animator.GetInteger("StateSet") == 3);
+	        stateHasBeenSet = false;
 	    }
     }
     public bool CameraShake(float shakeTime)

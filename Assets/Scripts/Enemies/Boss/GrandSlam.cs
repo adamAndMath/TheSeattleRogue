@@ -29,11 +29,13 @@ public class GrandSlam : StateMachineBehaviour
 	    {
 	        if (boss.transform.position.x > boss.originPos.x)
 	        {
-	            boss.MoveHorizontal(-relocationSpeed);
+	            boss.MoveHorizontal(-relocationSpeed*Time.deltaTime);
+	            BossBehaviour.Instance.GetComponent<SpriteRenderer>().flipX = true;
 	        }
 	        else
 	        {
 	            boss.MoveHorizontal(relocationSpeed*Time.deltaTime);
+	            BossBehaviour.Instance.GetComponent<SpriteRenderer>().flipX = false;
 	        }
 	    }
 	    else
