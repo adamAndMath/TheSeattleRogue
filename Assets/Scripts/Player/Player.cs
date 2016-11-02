@@ -52,11 +52,14 @@ public class Player : PhysicsObject
 
     void Update()
     {
-        if (deathTransitionAnimator.GetCurrentAnimatorStateInfo(0).IsName("Done"))
+        if (deathTransitionAnimator.gameObject.activeInHierarchy)
         {
-            DeathScene.enemies = enemyDeathSprites;
-            Score.finalScore = score;
-            SceneManager.LoadScene(deathScene);
+            if (deathTransitionAnimator.GetCurrentAnimatorStateInfo(0).IsName("Done"))
+            {
+                DeathScene.enemies = enemyDeathSprites;
+                Score.finalScore = score;
+                SceneManager.LoadScene(deathScene);
+            }
         }
 
         if (hp <= 0)
