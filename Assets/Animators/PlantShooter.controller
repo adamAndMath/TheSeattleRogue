@@ -49,7 +49,7 @@ MonoBehaviour:
   projectiles:
   - {x: -1, y: 4}
   - {x: 1, y: 4}
-  - {x: 3, y: 3.85}
+  - {x: -3, y: 3.85}
   - {x: 3, y: 3.85}
 --- !u!114 &114000010910622994
 MonoBehaviour:
@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9532a3400b179664683aa56fb8b251ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relocationSpeed: 2
+  relocationSpeed: 1
   direction: 0
   timeToShoot: 2
 --- !u!114 &114000014090214216
@@ -135,10 +135,7 @@ AnimatorStateTransition:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: isShooting
-    m_EventTreshold: 0
+  m_Conditions: []
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102000014117546268}
   m_Solo: 0
@@ -147,7 +144,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0.1
   m_TransitionOffset: 0
-  m_ExitTime: 0.9
+  m_ExitTime: 1
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -159,10 +156,7 @@ AnimatorStateTransition:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: isShooting
-    m_EventTreshold: 0
+  m_Conditions: []
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102000012053913126}
   m_Solo: 0
@@ -171,7 +165,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0.1
   m_TransitionOffset: 0
-  m_ExitTime: 0.9
+  m_ExitTime: 10
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -290,7 +284,7 @@ AnimatorStateMachine:
     m_Position: {x: 300, y: 108, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102000012053913126}
-    m_Position: {x: 300, y: 36, z: 0}
+    m_Position: {x: 300, y: 24, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102000013096076168}
     m_Position: {x: 528, y: 108, z: 0}
