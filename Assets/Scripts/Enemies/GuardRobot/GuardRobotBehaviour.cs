@@ -75,7 +75,7 @@ public class GuardRobotBehaviour : Enemy {
         Gizmos.DrawLine(transform.position, gizmosrightRange);
         Gizmos.DrawWireSphere(new Vector2(pointOfOrigin, yPoint), 0.1f);
     }
-    public override void Damaged(int damageAmount, Vector2 direction)
+    public override void Damaged(int damageAmount, Vector3 direction)
     {
         base.Damaged(damageAmount, direction);
         animator.SetBool("isTakingDamage", true);

@@ -10,14 +10,15 @@ public abstract class Enemy : PhysicsObject
     public int scoreGiven;
     public Vector2 damageDirection;
 
-    public virtual void Damaged(int damageAmount, Vector2 direction)
+    public virtual void Damaged(int damageAmount, Vector3 direction)
     {
         health -= damageAmount;
         if (health <= 0)
         {
             Killed();
         }
-        damageDirection = direction.normalized;
+        damageDirection = (direction - transform.position).normalized;
+        Debug.Log(damageDirection);
     }
 
     public virtual void Killed()

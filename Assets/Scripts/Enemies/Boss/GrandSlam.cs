@@ -40,7 +40,6 @@ public class GrandSlam : StateMachineBehaviour
 	    }
 	    else
 	    {
-            Debug.Log(jumpSpeed - move);
             //speed += Time.deltaTime * jumpDeaccelerationSpeed;
             //move = (speed + Time.deltaTime * jumpDeaccelerationSpeed / 2) * Time.deltaTime;
 

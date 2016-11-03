@@ -2,7 +2,6 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
 using Random = UnityEngine.Random;
 
 public class BossBehaviour : PhysicsObject
@@ -13,7 +12,10 @@ public class BossBehaviour : PhysicsObject
     public float shakeAmount;
     public float timeBetweenBoulders;
     public float boulderSpawnRange;
-    
+    public int health;
+    public float hitInvulTime;
+
+    [HideInInspector]
     public Vector2 originPos;
     public bool isGrounded;
     public GameObject boulderGameObject;
@@ -28,6 +30,8 @@ public class BossBehaviour : PhysicsObject
     private float timeLeftBetweenBoulders;
     private float fallSpeed = -10;
     private float speed;
+    private float invulTimeLeft;
+    private bool isHit;
 
     public int Health;
 
@@ -36,6 +40,8 @@ public class BossBehaviour : PhysicsObject
     public List<GameObject> bouldersInScene;
     public Animator animator;
     private Collider2D coll;
+
+    private Color startColor;
 
     void Awake()
     {
@@ -53,6 +59,8 @@ public class BossBehaviour : PhysicsObject
 	    timeLeftBetweenBoulders = timeBetweenBoulders;
 	    coll = GetComponent<Collider2D>();
 	    originPos = transform.position;
+	    startColor = GetComponent<SpriteRenderer>().color;
+	    invulTimeLeft = hitInvulTime;
 	}
 	
 	// Update is called once per frame
@@ -82,6 +90,29 @@ public class BossBehaviour : PhysicsObject
         animator.SetBool("RunFastMode", animator.GetInteger("StateSet") == 1);
         animator.SetBool("GrandSlamMode", animator.GetInteger("StateSet") == 2);
         animator.SetBool("GreatKickMode", animator.GetInteger("StateSet") == 3);
+
+	    if (invulTimeLeft <= 0)
+	    {
+	        isHit = false;
+	    }
+
+	    if (isHit)
+	    {
+	        GetComponent<SpriteRenderer>().color = Color.red;
+	        invulTimeLeft -= Time.deltaTime;
+	    }
+	    else
+	    {
+            Debug.Log("Returned to my good state");
+	        invulTimeLeft = hitInvulTime;
+	        GetComponent<SpriteRenderer>().color = startColor;
+	        isHit = false;
+	    }
+
+	    if (health <= 0)
+	    {
+	        Destroy(gameObject);
+	    }
     }
     public bool CameraShake(float shakeTime)
     {
@@ -112,7 +143,6 @@ public class BossBehaviour : PhysicsObject
     public void fallingBoulders()
     {
         GameObject boulderGameObject;
-        Debug.Log("Boulders Being Run");
         if (timeLeftBetweenBoulders <= 0)
         {
             boulderGameObject = (GameObject)Instantiate(boulders[Random.Range(0, boulders.Count)], new Vector2(Random.Range(-boulderSpawnRange, boulderSpawnRange), 10), Quaternion.identity);
@@ -124,4 +154,15 @@ public class BossBehaviour : PhysicsObject
             timeLeftBetweenBoulders -= Time.deltaTime;
         }
     }
+
+    public void Damaged(int damageAmount)
+    {
+        Debug.Log("HitConnected");
+        if (!isHit)
+        {
+            health -= damageAmount;
+            isHit = true;
+        }
+    }
+
 }

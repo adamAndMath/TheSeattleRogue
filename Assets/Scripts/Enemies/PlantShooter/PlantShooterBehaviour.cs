@@ -124,7 +124,7 @@ public class PlantShooterBehaviour : Enemy
         Gizmos.DrawWireSphere(new Vector3(stoppingPointRight, gizmosYPoint, 0), 0.1f);
         Gizmos.DrawWireSphere(new Vector3(pointOfOrigin, gizmosYPoint, 0), 0.1f);
     }
-    public override void Damaged(int damageAmount, Vector2 direction)
+    public override void Damaged(int damageAmount, Vector3 direction)
     {
         base.Damaged(damageAmount, direction);
         animator.SetBool("isTakingDamage", true);

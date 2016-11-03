@@ -11,8 +11,12 @@ public class EnemyTakingDamage : StateMachineBehaviour
     private float moveY;
     private float moveX;
 
-    public float initialSpeedX;
-    public float initalSpeedY;
+    public float speedX;
+    public float speedY;
+
+
+    private float initialSpeedX;
+    private float initalSpeedY;
 
     public float acceleration;
 
@@ -24,23 +28,40 @@ public class EnemyTakingDamage : StateMachineBehaviour
         renderer.color = Color.red;
         guardOnly = animator.GetComponent<GuardRobotBehaviour>();
         enemy = animator.GetComponent<Enemy>();
+        initalSpeedY = speedY;
+        initialSpeedX = speedX;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (enemy.MoveHorizontal(PhysicsObject.ConstantAcceleration(-acceleration*enemy.damageDirection.x, ref initialSpeedX)))
+        if (Mathf.Abs(enemy.damageDirection.x) < 0.01)
+        {
+            if (enemy.MoveHorizontal(PhysicsObject.ConstantAcceleration(acceleration*enemy.damageDirection.x, ref initialSpeedX)))
+            {
+                initialSpeedX = 0;
+            }
+        }
+        else
         {
             initialSpeedX = 0;
         }
-        if (enemy.MoveVertical(PhysicsObject.ConstantAcceleration(-acceleration * enemy.damageDirection.y, ref initalSpeedY)))
+
+        if (Mathf.Abs(enemy.damageDirection.y) < 0.01)
+        {
+            if (enemy.MoveVertical(PhysicsObject.ConstantAcceleration(-acceleration*enemy.damageDirection.y, ref initalSpeedY)))
+            {
+                initalSpeedY = 0;
+            }
+        }
+        else
         {
             initalSpeedY = 0;
         }
 
         if (Mathf.Abs(initalSpeedY) < 0.2 || Mathf.Abs(initialSpeedX) < 0.2)
         {
-            animator.SetBool("IsTakingDamage", false);
+            animator.SetBool("isTakingDamage", false);
         }
     }
 

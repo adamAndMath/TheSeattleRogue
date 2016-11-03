@@ -33225,6 +33225,16 @@ Prefab:
       propertyPath: cam
       value: 
       objectReference: {fileID: 2088990287}
+    - target: {fileID: 114000010472602348, guid: bdf30d943c4996147861b1a8d99993e6,
+        type: 2}
+      propertyPath: health
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010472602348, guid: bdf30d943c4996147861b1a8d99993e6,
+        type: 2}
+      propertyPath: hitInvulTime
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bdf30d943c4996147861b1a8d99993e6, type: 2}
   m_IsPrefabParent: 0

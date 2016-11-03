@@ -60,7 +60,7 @@ public class TurretBehaviour : Enemy
     }
 #endif
 
-    public override void Damaged(int damageAmount, Vector2 direction)
+    public override void Damaged(int damageAmount, Vector3 direction)
     {
         base.Damaged(damageAmount, direction);
         turretAnimator.SetBool("isTakingDamage", true);
