@@ -34,17 +34,11 @@ public class ShopKeeper : MonoBehaviour
 	        Time.timeScale = 0;
 	    }
 
-	    if(Input.GetButtonDown("Cancel") && ShopActive)
+	    if(!ShopActive && Vector2.Distance(Player.Instance.transform.position, transform.position) <= ShopRange+0.3)
 	    {
-	        ShopActive = false;
             ShopGameObject.SetActive(false);
             Time.timeScale = 1;
         }
-	    //if(!inRange)
-	    //{
-     //       ShopGameObject.SetActive(false);
-     //       Time.timeScale = 1;
-     //   }
 
-	}
+    }
 }
