@@ -225,11 +225,28 @@ MonoBehaviour:
     - wallID: 0
       slope: 0
   - data:
-    - wallID: -2
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
       slope: 0
     - wallID: 0
       slope: 0
     - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+  - data:
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
       slope: 0
     - wallID: 0
       slope: 0
@@ -242,28 +259,11 @@ MonoBehaviour:
     - wallID: 0
       slope: 0
   - data:
-    - wallID: -2
+    - wallID: 1
       slope: 0
-    - wallID: 0
+    - wallID: 1
       slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-  - data:
-    - wallID: -2
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: -1
+    - wallID: 1
       slope: 0
     - wallID: 0
       slope: 0
