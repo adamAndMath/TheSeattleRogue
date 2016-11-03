@@ -310,20 +310,12 @@ MonoBehaviour:
       y: 0
     spawnMask: 4
   - position:
-      x: 7
-      y: 5
-    spawnMask: 4
-  - position:
       x: 0
       y: 3
     spawnMask: 1
   - position:
       x: 0
       y: 6
-    spawnMask: 1
-  - position:
-      x: 7
-      y: 2
     spawnMask: 1
   - position:
       x: 14
