@@ -122,8 +122,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0.5917986}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 19}
-  m_SizeDelta: {x: 0, y: -38}
+  m_AnchoredPosition: {x: 0, y: 4.2535095}
+  m_SizeDelta: {x: 0, y: -8.507}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &108025508
 MonoBehaviour:
@@ -146,7 +146,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 190
+    m_FontSize: 140
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -458,7 +458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imagePrefab: {fileID: 114000011149129552, guid: ac6da06cbd219d0408a2c87f59e3d4b4,
     type: 2}
-  time: 0.4
+  time: 1
 --- !u!1 &1431185991
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,8 +492,8 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 0, y: 0.5917986}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -107.13}
-  m_SizeDelta: {x: 0, y: -214.27}
+  m_AnchoredPosition: {x: 0, y: -101.29999}
+  m_SizeDelta: {x: 0, y: -149.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1431185993
 MonoBehaviour:
