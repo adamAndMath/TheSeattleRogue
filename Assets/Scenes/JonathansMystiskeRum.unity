@@ -118,8 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86535d02115547646905fe342f328517, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  door: {fileID: 0}
-  endRoom: {fileID: 0}
+  door: {fileID: 1000012968112314, guid: c48939c7d145b2d42baa894658adb5d6, type: 2}
+  endRoom: {fileID: 11400000, guid: 1e89200e79d26d8469d01bbe033dfb3e, type: 2}
   rooms:
   - {fileID: 11400000, guid: 341d30a9d09bc4f42889a6de0cb6d608, type: 2}
   - {fileID: 11400000, guid: 9a9e0513641f8d345bdb945d63cbc71d, type: 2}
