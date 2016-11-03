@@ -12,7 +12,7 @@ public class DeathScene : MonoBehaviour
 
 	void Update ()
     {
-        if (id >= enemies.Count) return;
+        if (enemies != null && id >= enemies.Count) return;
         
 	    timer += Time.deltaTime;
 

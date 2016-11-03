@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public abstract class Enemy : PhysicsObject
 {
@@ -27,7 +28,16 @@ public abstract class Enemy : PhysicsObject
         {
             drop.Drop(transform.parent, transform.position);
         }
-        Player.Data.enemyDeathSprites.Add(idleSprite);
+
+        if (Player.Data.enemyDeathSprites != null)
+        {
+            Player.Data.enemyDeathSprites.Add(idleSprite);
+        }
+        else
+        {
+            Player.Data.enemyDeathSprites = new List<Sprite>();
+            Player.Data.enemyDeathSprites.Add(idleSprite);
+        }
         Player.Instance.score += scoreGiven;
         DestroyObject(gameObject);
     }

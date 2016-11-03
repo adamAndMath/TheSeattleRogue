@@ -57,6 +57,7 @@ public class Player : PhysicsObject
             Data = new PlayerData();
             Data.hp = maxHP;
             SetItem(item);
+            Data.enemyDeathSprites = new List<Sprite>();
         }
     }
 
@@ -88,7 +89,7 @@ public class Player : PhysicsObject
 
     public void Damaged(int damage)
     {
-        if (Data.hp > 0 && !animator.GetCurrentAnimatorStateInfo(0).IsName("Fly"))
+        if (Time.timeScale != 0 && Data.hp > 0 && !animator.GetCurrentAnimatorStateInfo(0).IsName("Fly"))
         {
             if (animator.GetCurrentAnimatorStateInfo(animator.GetLayerIndex("Invincibility")).IsName("Invincibility"))
                 return;

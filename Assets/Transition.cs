@@ -25,6 +25,7 @@ public class Transition : MonoBehaviour
                 Score.finalScore = Player.Instance.score;
 	            Player.Data.enemyDeathSprites = null;
 	            Player.Data.hp = Player.Instance.maxHP;
+	            Time.timeScale = 1;
                 SceneManager.LoadScene(Player.Instance.deathScene);
 	        }
 

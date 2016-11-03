@@ -12,23 +12,19 @@ public class PauseMenu : MonoBehaviour
 	void Update ()
 	{
 	    if (canPause)
-	    {   
-	        if (Input.GetKeyDown(KeyCode.Escape))
-	        {
-	            paused =! paused;
-	        }
-
-	        if (paused)
+	    {
+	        if (Input.GetKeyDown(KeyCode.Escape) && paused == false)
 	        {
 	            Time.timeScale = 0;
                 PauseMenuGameObject.SetActive(true);
-
+	            paused = true;
 	        }
-	        else
+	        else if (Input.GetKeyDown(KeyCode.Escape) && paused)
 	        {
 	            Time.timeScale = 1;
                 PauseMenuGameObject.SetActive(false);
-            }
+	            paused = false;
+	        }
 	    }
     }
 
