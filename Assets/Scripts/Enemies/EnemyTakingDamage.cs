@@ -35,9 +35,11 @@ public class EnemyTakingDamage : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (Mathf.Abs(enemy.damageDirection.x) < 0.01)
+        Debug.Log(Mathf.Abs(enemy.damageDirection.x));
+        if (Mathf.Abs(enemy.damageDirection.x) > 0.01)
         {
-            if (enemy.MoveHorizontal(PhysicsObject.ConstantAcceleration(acceleration*enemy.damageDirection.x, ref initialSpeedX)))
+            Debug.Log("IsThisHappening");
+            if (enemy.MoveHorizontal(PhysicsObject.ConstantAcceleration(acceleration, ref initialSpeedX) * enemy.damageDirection.x))
             {
                 initialSpeedX = 0;
             }
@@ -47,9 +49,9 @@ public class EnemyTakingDamage : StateMachineBehaviour
             initialSpeedX = 0;
         }
 
-        if (Mathf.Abs(enemy.damageDirection.y) < 0.01)
+        if (Mathf.Abs(enemy.damageDirection.y) > 0.01)
         {
-            if (enemy.MoveVertical(PhysicsObject.ConstantAcceleration(-acceleration*enemy.damageDirection.y, ref initalSpeedY)))
+            if (enemy.MoveVertical(PhysicsObject.ConstantAcceleration(-acceleration, ref initalSpeedY) * enemy.damageDirection.y))
             {
                 initalSpeedY = 0;
             }

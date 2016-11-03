@@ -58,9 +58,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guardOnly: {fileID: 0}
   enemy: {fileID: 0}
-  initialSpeedX: 5
-  initalSpeedY: 2
-  acceleration: -10
+  speedX: -3
+  speedY: 1
+  acceleration: 15
 --- !u!114 &114000011638885392
 MonoBehaviour:
   m_ObjectHideFlags: 1
