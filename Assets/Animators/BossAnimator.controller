@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42545203595db1c40982f1b024ff4fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relocationSpeed: 5
+  relocationSpeed: 15
   jumpSpeed: 10
   jumpDeaccelerationSpeed: 200
   snapThreshold: 0.1
@@ -164,7 +164,7 @@ MonoBehaviour:
   hasHitRightWall: 0
   bossSpeed: 20
   bossTimer: 2
-  stateTime: 2
+  stateTime: 10
   shakeTime: 2
   boss: {fileID: 0}
 --- !u!1101 &1101000010448141550
@@ -295,7 +295,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: RunFastMode
+    m_ConditionEvent: ShakeTime
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102000011473712018}
@@ -426,7 +426,7 @@ AnimatorStateTransition:
   m_TransitionDuration: 0.1
   m_TransitionOffset: 0
   m_ExitTime: 0.9
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -451,7 +451,7 @@ AnimatorState:
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: 7400000, guid: d1604b5f91fdd7e4e89e9052cfee59f5, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -549,7 +549,7 @@ AnimatorState:
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: 7400000, guid: 30518f38763ba024baaeba253daeada8, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -696,7 +696,7 @@ AnimatorStateMachine:
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: -120, y: 108, z: 0}
+  m_AnyStatePosition: {x: -36, y: 48, z: 0}
   m_EntryPosition: {x: -96, y: -24, z: 0}
   m_ExitPosition: {x: 900, y: 108, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

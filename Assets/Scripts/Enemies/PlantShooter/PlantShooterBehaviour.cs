@@ -9,7 +9,7 @@ public class PlantShooterBehaviour : Enemy
     private bool hasPassedMiddle;
 
     private Animator animator;
-
+    private bool hasHitWall;
     private float stoppingPointRight;
     private float stoppingPointLeft;
     private float pointOfOrigin;
@@ -59,15 +59,19 @@ public class PlantShooterBehaviour : Enemy
 	        
             if (hasPassedLeft && hasPassedRight && Mathf.Abs(transform.position.x - pointOfOrigin) > snappingThreshold)
 	        {
-                MoveHorizontalSloped(-relocationSpeed * Time.deltaTime);
+                if (MoveHorizontalSloped(-relocationSpeed * Time.deltaTime))
+                {
+                    hasHitWall = true;
+                }
 	        }
-            else if (Mathf.Abs(transform.position.x - pointOfOrigin) < snappingThreshold && hasPassedLeft && hasPassedRight)
+            else if ((Mathf.Abs(transform.position.x - pointOfOrigin) < snappingThreshold || hasHitWall) && hasPassedLeft && hasPassedRight)
             {
 	            hasPassedLeft = false;
 	            hasPassedRight = false;
                 animator.SetBool("isShooting",true);
 	            timeOfWaiting = timeOfWaitingSet;
-	        }
+                hasHitWall = false;
+            }
             if (!hasBeenGrounded && IsGrounded())
 	        {
 	            hasBeenGrounded = true;
@@ -78,27 +82,35 @@ public class PlantShooterBehaviour : Enemy
 
 
 
-	        if (transform.position.x > stoppingPointLeft && !hasPassedLeft && hasBeenGrounded)
+	        if ((transform.position.x > stoppingPointLeft && !hasHitWall && !hasPassedLeft && hasBeenGrounded))
 	        {
-	            MoveHorizontalSloped(-relocationSpeed*Time.deltaTime);
+	            if (MoveHorizontalSloped(-relocationSpeed*Time.deltaTime))
+	            {
+	                hasHitWall = true;
+	            }
 	        }
 	        else if (!hasPassedLeft && hasBeenGrounded)
 	        {
 	            hasPassedLeft = true;
 	            animator.SetBool("isShooting", true);
 	            timeOfWaiting = timeOfWaitingSet;
+	            hasHitWall = false;
 	        }
 
 
-	        if (transform.position.x < stoppingPointRight && hasPassedLeft && hasBeenGrounded && !hasPassedRight)
+	        if ((transform.position.x < stoppingPointRight || !hasHitWall) && hasPassedLeft && hasBeenGrounded && !hasPassedRight)
 	        {
-	            MoveHorizontalSloped(relocationSpeed*Time.deltaTime);
+	            if (MoveHorizontalSloped(relocationSpeed*Time.deltaTime))
+	            {
+	                hasHitWall = true;
+	            }
 	        }
             else if (transform.position.x > stoppingPointRight && !hasPassedRight)
             {
                 hasPassedRight = true;
                 animator.SetBool("isShooting", true);
                 timeOfWaiting = timeOfWaitingSet;
+                hasHitWall = false;
             }
 
 	    }
@@ -112,9 +124,9 @@ public class PlantShooterBehaviour : Enemy
         Gizmos.DrawWireSphere(new Vector3(stoppingPointRight, gizmosYPoint, 0), 0.1f);
         Gizmos.DrawWireSphere(new Vector3(pointOfOrigin, gizmosYPoint, 0), 0.1f);
     }
-    public override void Damaged(int damageAmount)
+    public override void Damaged(int damageAmount, Vector3 direction)
     {
-        base.Damaged(damageAmount);
+        base.Damaged(damageAmount, direction);
         animator.SetBool("isTakingDamage", true);
     }
 }

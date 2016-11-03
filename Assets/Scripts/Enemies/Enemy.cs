@@ -8,21 +8,24 @@ public abstract class Enemy : PhysicsObject
     public float gravity;
     public float gravitySpeed;
     public int scoreGiven;
+    public Vector2 damageDirection;
 
-    public virtual void Damaged(int damageAmount)
+    public virtual void Damaged(int damageAmount, Vector3 direction)
     {
         health -= damageAmount;
         if (health <= 0)
         {
             Killed();
         }
+        damageDirection = (direction - transform.position).normalized;
+        Debug.Log(damageDirection);
     }
 
     public virtual void Killed()
     {
         foreach (ItemDrop drop in drops)
         {
-            drop.Drop(transform.position);
+            drop.Drop(transform.parent, transform.position);
         }
         Player.Instance.enemyDeathSprites.Add(idleSprite);
         Player.Instance.score += scoreGiven;

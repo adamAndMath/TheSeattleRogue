@@ -23,7 +23,7 @@ public class GrandSlam : StateMachineBehaviour
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
+	override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
 	    if (!(Mathf.Abs(boss.transform.position.x - boss.originPos.x) < snapThreshold))
 	    {
@@ -40,7 +40,6 @@ public class GrandSlam : StateMachineBehaviour
 	    }
 	    else
 	    {
-            Debug.Log(jumpSpeed - move);
             //speed += Time.deltaTime * jumpDeaccelerationSpeed;
             //move = (speed + Time.deltaTime * jumpDeaccelerationSpeed / 2) * Time.deltaTime;
 
