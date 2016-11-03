@@ -18,8 +18,16 @@ public abstract class Enemy : PhysicsObject
         {
             Killed();
         }
-        damageDirection = direction;
-        Debug.Log(damageDirection);
+        if (Player.Instance.Direction)
+        {
+            damageDirection = -direction;
+            Debug.Log(damageDirection);
+        }
+        else
+        {
+            damageDirection = direction;
+            Debug.Log(damageDirection);
+        }
     }
 
     public virtual void Killed()
