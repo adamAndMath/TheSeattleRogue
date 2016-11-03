@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9532a3400b179664683aa56fb8b251ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relocationSpeed: 2
+  relocationSpeed: 1
   direction: 0
   timeToShoot: 2
 --- !u!114 &114000014090214216
@@ -165,7 +165,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0.1
   m_TransitionOffset: 0
-  m_ExitTime: 6
+  m_ExitTime: 10
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
