@@ -5,12 +5,11 @@ using UnityEngine.SceneManagement;
 public class Player : PhysicsObject
 {
     public static Player Instance { get; private set; }
+    public static PlayerData Data { get; private set; }
 
     public Item item;
     public BoxCollider2D weaponCollider2D;
     public int maxHP = 3;
-    [HideInInspector]
-    public int hp;
     public static int money;
     private Animator animator;
     public int score;
@@ -24,9 +23,15 @@ public class Player : PhysicsObject
 
     public int deathScene = 0;
     public GameObject deathTransitionObject;
-
-    public List<Sprite> enemyDeathSprites;
+    
     public bool Direction { get { return 0 < transform.localScale.x; } set { transform.localScale = new Vector3(value ? -1 : 1, 1, 1); } }
+
+    public class PlayerData
+    {
+        public int hp;
+        public Item item;
+        public List<Sprite> enemyDeathSprites = new List<Sprite>();
+    }
 
     public void SetItem(Item item)
     {
@@ -45,14 +50,19 @@ public class Player : PhysicsObject
     {
         base.Start();
         dashPower = maxDash;
-        hp = maxHP;
         animator = GetComponent<Animator>();
-        SetItem(item);
+
+        if (Data == null)
+        {
+            Data = new PlayerData();
+            Data.hp = maxHP;
+            SetItem(item);
+        }
     }
 
     void Update()
     {
-        if (hp <= 0)
+        if (Data.hp <= 0)
         {
             deathTransitionObject.gameObject.SetActive(true);
             Time.timeScale = 0;
@@ -78,12 +88,12 @@ public class Player : PhysicsObject
 
     public void Damaged(int damage)
     {
-        if (hp > 0 && !animator.GetCurrentAnimatorStateInfo(0).IsName("Fly"))
+        if (Data.hp > 0 && !animator.GetCurrentAnimatorStateInfo(0).IsName("Fly"))
         {
             if (animator.GetCurrentAnimatorStateInfo(animator.GetLayerIndex("Invincibility")).IsName("Invincibility"))
                 return;
 
-            hp -= damage;
+            Data.hp -= damage;
             animator.SetTrigger("Hit");
         }
     }
