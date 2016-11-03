@@ -44,9 +44,9 @@ public class TurretBehaviour : Enemy
         UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.forward, turretRange);
     }
 
-    public override void Damaged(int damageAmount)
+    public override void Damaged(int damageAmount, Vector2 direction)
     {
-        base.Damaged(damageAmount);
+        base.Damaged(damageAmount, direction);
         turretAnimator.SetBool("isTakingDamage", true);
     }
 

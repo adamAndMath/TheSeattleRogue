@@ -58,6 +58,7 @@ public class BoulderBehaviour : PhysicsObject
 	                    if (MoveHorizontal(-flySpeed*direction.x*Time.deltaTime) ||
 	                        MoveVertical(flySpeed*direction.y*Time.deltaTime))
 	                    {
+                            BossBehaviour.Instance.bouldersInScene.Remove(gameObject);
 	                        Destroy(gameObject);
 	                    }
 	                    if (coll.IsTouching(Player.Instance.GetComponent<Collider2D>()))
@@ -70,6 +71,7 @@ public class BoulderBehaviour : PhysicsObject
 	                    if (MoveHorizontal(flySpeed*direction.x*Time.deltaTime) ||
 	                        MoveVertical(flySpeed*direction.y*Time.deltaTime))
 	                    {
+                            BossBehaviour.Instance.bouldersInScene.Remove(gameObject);
 	                        Destroy(gameObject);
 	                    }
 	                    if (coll.IsTouching(Player.Instance.GetComponent<Collider2D>()))
@@ -94,7 +96,8 @@ public class BoulderBehaviour : PhysicsObject
 
 	            if (MoveHorizontal(flySpeed*dir.x*Time.deltaTime) || MoveVertical(flySpeed*dir.y*Time.deltaTime))
 	            {
-	                //Destroy(gameObject);
+	                BossBehaviour.Instance.bouldersInScene.Remove(gameObject);
+	                Destroy(gameObject);
 	            }
 	            if (coll.IsTouching(Player.Instance.GetComponent<Collider2D>()))
 	            {

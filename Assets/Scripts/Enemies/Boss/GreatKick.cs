@@ -24,8 +24,9 @@ public class GreatKick : StateMachineBehaviour
 	        {
 	            min = boulder.transform.position.x;
 	            BossBehaviour.Instance.boulderGameObject = boulder;
+                BossBehaviour.Instance.bouldersInScene.Remove(boulder);
 	        }
-	        boulderDistance = min;
+	        boulderDistance = min; 
 	    }
         BossBehaviour.Instance.boulderGameObject.GetComponent<BoulderBehaviour>().hasBeenkicked = true;
 	    

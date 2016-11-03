@@ -56,6 +56,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0909c9f235cabb47ae44e21ca2b0fc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  guardOnly: {fileID: 0}
+  enemy: {fileID: 0}
+  intialSpeedX: 1
+  initalSpeedY: 1
+  acceleration: 10
 --- !u!114 &114000011638885392
 MonoBehaviour:
   m_ObjectHideFlags: 1

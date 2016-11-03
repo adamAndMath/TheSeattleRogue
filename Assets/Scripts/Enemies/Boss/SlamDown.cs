@@ -24,8 +24,8 @@ public class SlamDown : StateMachineBehaviour {
 
 	    if (animator.GetBool("IsGrounded"))
 	    {
-	        animator.SetBool("SlamDown", false);
             animator.SetBool("ShakeTime", true);
+	        animator.SetBool("SlamDown", false);
 	    }
     }
 

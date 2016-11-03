@@ -21458,7 +21458,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -38537,7 +38537,7 @@ Transform:
   - {fileID: 274735544}
   - {fileID: 1313227790}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1 &1361866315
 GameObject:
   m_ObjectHideFlags: 0
@@ -49412,7 +49412,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012413323090, guid: 75dcc9dbf9ad55f4398bde8d7f714b21, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114000010651038966, guid: 75dcc9dbf9ad55f4398bde8d7f714b21,
         type: 2}
