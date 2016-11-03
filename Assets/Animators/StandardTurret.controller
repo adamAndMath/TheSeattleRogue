@@ -75,6 +75,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0909c9f235cabb47ae44e21ca2b0fc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  guardOnly: {fileID: 0}
+  enemy: {fileID: 0}
+  speedX: 0
+  speedY: 0
+  acceleration: 0
 --- !u!1101 &1101000010942427568
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -194,7 +199,7 @@ AnimatorStateTransition:
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 0
+  m_CanTransitionToSelf: 1
 --- !u!1101 &1101000013868332952
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
