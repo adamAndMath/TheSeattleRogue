@@ -35,7 +35,7 @@ public class Player : PhysicsObject
 
     public void SetItem(Item item)
     {
-        this.item = item;
+        Data.item = item;
         weapon.runtimeAnimatorController = item.animator;
         weaponCollider2D.offset = item.collisionOffset;
         weaponCollider2D.size = item.collisionSize;
@@ -58,6 +58,10 @@ public class Player : PhysicsObject
             Data.hp = maxHP;
             SetItem(item);
             Data.enemyDeathSprites = new List<Sprite>();
+        }
+        else
+        {
+            SetItem(Data.item);
         }
     }
 
