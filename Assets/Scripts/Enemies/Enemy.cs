@@ -8,14 +8,16 @@ public abstract class Enemy : PhysicsObject
     public float gravity;
     public float gravitySpeed;
     public int scoreGiven;
+    public Vector2 damageDirection;
 
-    public virtual void Damaged(int damageAmount)
+    public virtual void Damaged(int damageAmount, Vector2 direction)
     {
         health -= damageAmount;
         if (health <= 0)
         {
             Killed();
         }
+        damageDirection = direction.normalized;
     }
 
     public virtual void Killed()
