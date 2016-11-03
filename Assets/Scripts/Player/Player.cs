@@ -63,19 +63,22 @@ public class Player : PhysicsObject
             dashPower += Time.deltaTime*dashRegenerationRate;
         }
 
-        animator.SetBool("Moving", !Mathf.Approximately(0, Input.GetAxisRaw("Horizontal")));
-        animator.SetBool("Looking", !Mathf.Approximately(0, Input.GetAxisRaw("Horizontal")) || !Mathf.Approximately(0, Input.GetAxisRaw("Vertical")));
-        animator.SetBool("Jump", Input.GetButton("Jump"));
-        animator.SetBool("Grounded", IsGrounded());
-        animator.SetBool("Attacking", Input.GetButtonDown("Attack"));
-        weapon.SetBool("Attacking", Input.GetButtonDown("Attack"));
-        animator.SetBool("Charge", Input.GetAxis("Charge") > 0.9F && dashPower >= dashCost);
+        if (Time.timeScale != 0)
+        {
+            animator.SetBool("Moving", !Mathf.Approximately(0, Input.GetAxisRaw("Horizontal")));
+            animator.SetBool("Looking", !Mathf.Approximately(0, Input.GetAxisRaw("Horizontal")) || !Mathf.Approximately(0, Input.GetAxisRaw("Vertical")));
+            animator.SetBool("Jump", Input.GetButton("Jump"));
+            animator.SetBool("Grounded", IsGrounded());
+            animator.SetBool("Attacking", Input.GetButtonDown("Attack"));
+            weapon.SetBool("Attacking", Input.GetButtonDown("Attack"));
+            animator.SetBool("Charge", Input.GetAxis("Charge") > 0.9F && dashPower >= dashCost);
+        }
 
     }
 
     public void Damaged(int damage)
     {
-        if (hp > 0)
+        if (hp > 0 && !animator.GetCurrentAnimatorStateInfo(0).IsName("Fly"))
         {
             if (animator.GetCurrentAnimatorStateInfo(animator.GetLayerIndex("Invincibility")).IsName("Invincibility"))
                 return;

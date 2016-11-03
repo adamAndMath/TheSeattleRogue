@@ -12,8 +12,11 @@ public class PlayerMove : StateMachineBehaviour
 
     public override void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.1F)
+        if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.1F && Time.timeScale != 0)
+        {
             player.Direction = 0 > Input.GetAxisRaw("Horizontal");
+        }
+
         float move = Input.GetAxis("Horizontal")*speed*Time.deltaTime;
         player.MoveHorizontalSloped(move);
     }

@@ -195,9 +195,9 @@ MonoBehaviour:
       slope: 0
     - wallID: 0
       slope: 0
-    - wallID: 0
-      slope: 0
     - wallID: -1
+      slope: 0
+    - wallID: 0
       slope: 0
     - wallID: 0
       slope: 0
@@ -301,10 +301,6 @@ MonoBehaviour:
   - {fileID: 114000012730278908, guid: 2dd222dd33d95bf44b809baef75d72d2, type: 2}
   - {fileID: 114000011684268616, guid: ceceb75b8ae45344a919c745ceb696d3, type: 2}
   spawners:
-  - position:
-      x: 3
-      y: 7
-    spawnMask: 1
   - position:
       x: 10
       y: 0

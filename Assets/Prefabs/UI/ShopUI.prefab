@@ -607,7 +607,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000013666291898
 GameObject:
   m_ObjectHideFlags: 1
@@ -1253,10 +1253,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 813472b9bf282fc48b0ee02ca4d4c5d3, type: 2}
+  - {fileID: 11400000, guid: 4751c779cc5cc1a43b505bbd387ecc1f, type: 2}
+  - {fileID: 11400000, guid: 8b055e792790f8548a6696a3b5a7225f, type: 2}
+  - {fileID: 11400000, guid: 4d7ebe056bca041428f7faef24134119, type: 2}
   WeapnDescription:
   - {fileID: 1000012882764430}
   - {fileID: 1000013666291898}
@@ -2139,7 +2139,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.46323532, g: 0.46323532, b: 0.46323532, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2151,7 +2151,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 114000010235283916}
   m_OnClick:
     m_PersistentCalls:

@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class WeaponBuyUI : MonoBehaviour
 {
     //replace gameobject with the weapon
-    public GameObject[] weapons = new GameObject[1];
+    public Item[] weapons = new Item[1];
 	public GameObject[] WeapnDescription = new GameObject[1];
     public int[] Prices = new int[1];
 
@@ -21,7 +21,7 @@ public class WeaponBuyUI : MonoBehaviour
     {
         if (Player.money >= Prices[WeaponID])
         {
-            //Player.Instance.Weapon = weapons[WeaponID];
+            Player.Instance.SetItem(weapons[WeaponID]);
             WeapnDescription[WeaponID].GetComponentInChildren<Button>().interactable = false;
             Player.money -= Prices[WeaponID];
         }

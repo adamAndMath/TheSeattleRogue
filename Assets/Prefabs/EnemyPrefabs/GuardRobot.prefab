@@ -125,6 +125,7 @@ MonoBehaviour:
   gravity: 10
   gravitySpeed: 0
   scoreGiven: 50
+  damageDirection: {x: 0, y: 0}
   threatRangeRight: 2
   threatRangeLeft: 6
   relocationSpeed: 1
