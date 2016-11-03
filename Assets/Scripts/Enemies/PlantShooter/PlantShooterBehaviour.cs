@@ -54,67 +54,7 @@ public class PlantShooterBehaviour : Enemy
             gravitySpeed = 0;
         }
         timeOfWaiting -= Time.deltaTime;
-	    if (timeOfWaiting < 0)
-	    {
-	        
-            if (hasPassedLeft && hasPassedRight && Mathf.Abs(transform.position.x - pointOfOrigin) > snappingThreshold)
-	        {
-                if (MoveHorizontalSloped(-relocationSpeed * Time.deltaTime))
-                {
-                    hasHitWall = true;
-                }
-	        }
-            else if ((Mathf.Abs(transform.position.x - pointOfOrigin) < snappingThreshold || hasHitWall) && hasPassedLeft && hasPassedRight)
-            {
-	            hasPassedLeft = false;
-	            hasPassedRight = false;
-                animator.SetBool("isShooting",true);
-	            timeOfWaiting = timeOfWaitingSet;
-                hasHitWall = false;
-            }
-            if (!hasBeenGrounded && IsGrounded())
-	        {
-	            hasBeenGrounded = true;
-	            animator.SetBool("isShooting", true);
-	            timeOfWaiting = timeOfWaitingSet;
-	            gizmosYPoint = transform.position.y;
-	        }
 
-
-
-	        if ((transform.position.x > stoppingPointLeft && !hasHitWall && !hasPassedLeft && hasBeenGrounded))
-	        {
-	            if (MoveHorizontalSloped(-relocationSpeed*Time.deltaTime))
-	            {
-	                hasHitWall = true;
-	            }
-	        }
-	        else if (!hasPassedLeft && hasBeenGrounded)
-	        {
-	            hasPassedLeft = true;
-	            animator.SetBool("isShooting", true);
-	            timeOfWaiting = timeOfWaitingSet;
-	            hasHitWall = false;
-	        }
-
-
-	        if ((transform.position.x < stoppingPointRight || !hasHitWall) && hasPassedLeft && hasBeenGrounded && !hasPassedRight)
-	        {
-	            if (MoveHorizontalSloped(relocationSpeed*Time.deltaTime))
-	            {
-	                hasHitWall = true;
-	            }
-	        }
-            else if (transform.position.x > stoppingPointRight && !hasPassedRight)
-            {
-                hasPassedRight = true;
-                animator.SetBool("isShooting", true);
-                timeOfWaiting = timeOfWaitingSet;
-                hasHitWall = false;
-            }
-
-	    }
-	    
     }
 
     void OnDrawGizmos()

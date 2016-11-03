@@ -17,6 +17,7 @@ public class EnemyTakingDamage : StateMachineBehaviour
 
     private float initialSpeedX;
     private float initalSpeedY;
+    private TurretBehaviour turret;
 
     public float acceleration;
 
@@ -30,38 +31,48 @@ public class EnemyTakingDamage : StateMachineBehaviour
         enemy = animator.GetComponent<Enemy>();
         initalSpeedY = speedY;
         initialSpeedX = speedX;
+        turret = animator.GetComponent<TurretBehaviour>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Debug.Log(Mathf.Abs(enemy.damageDirection.x));
-        if (Mathf.Abs(enemy.damageDirection.x) > 0.01)
+        if (turret == null)
         {
-            Debug.Log("IsThisHappening");
-            if (enemy.MoveHorizontal(PhysicsObject.ConstantAcceleration(acceleration, ref initialSpeedX) * enemy.damageDirection.x))
+            Debug.Log(Mathf.Abs(enemy.damageDirection.x));
+            if (Mathf.Abs(enemy.damageDirection.x) > 0.01)
+            {
+                Debug.Log("IsThisHappening");
+                if (
+                    enemy.MoveHorizontal(PhysicsObject.ConstantAcceleration(acceleration, ref initialSpeedX)*enemy.damageDirection.x))
+                {
+                    initialSpeedX = 0;
+                }
+            }
+            else
             {
                 initialSpeedX = 0;
             }
-        }
-        else
-        {
-            initialSpeedX = 0;
-        }
 
-        if (Mathf.Abs(enemy.damageDirection.y) > 0.01)
-        {
-            if (enemy.MoveVertical(PhysicsObject.ConstantAcceleration(-acceleration, ref initalSpeedY) * enemy.damageDirection.y))
+            if (Mathf.Abs(enemy.damageDirection.y) > 0.01)
+            {
+                if (
+                    enemy.MoveVertical(PhysicsObject.ConstantAcceleration(-acceleration, ref initalSpeedY)*enemy.damageDirection.y))
+                {
+                    initalSpeedY = 0;
+                }
+            }
+            else
             {
                 initalSpeedY = 0;
             }
+
+            if (Mathf.Abs(initalSpeedY) < 0.2 || Mathf.Abs(initialSpeedX) < 0.2)
+            {
+                animator.SetBool("isTakingDamage", false);
+            }
         }
         else
-        {
-            initalSpeedY = 0;
-        }
-
-        if (Mathf.Abs(initalSpeedY) < 0.2 || Mathf.Abs(initialSpeedX) < 0.2)
         {
             animator.SetBool("isTakingDamage", false);
         }
