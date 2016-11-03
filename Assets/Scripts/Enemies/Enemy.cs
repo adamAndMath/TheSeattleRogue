@@ -17,7 +17,7 @@ public abstract class Enemy : PhysicsObject
         {
             Killed();
         }
-        damageDirection = (direction - transform.position).normalized;
+        damageDirection = direction;
         Debug.Log(damageDirection);
     }
 
