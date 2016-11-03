@@ -21,7 +21,7 @@ public class PlayerAttack : StateMachineBehaviour
 
                 if (enemy != null)
                 {
-                    enemy.Damaged(player.item.damage, player.transform.position);
+                    enemy.Damaged(player.item.damage, player.transform.right);
                 }
 
                 BossBehaviour boss = rayHit.collider.GetComponent<BossBehaviour>();
