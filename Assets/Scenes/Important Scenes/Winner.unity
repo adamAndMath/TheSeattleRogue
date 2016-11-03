@@ -101,6 +101,7 @@ GameObject:
   - 222: {fileID: 222265803}
   - 114: {fileID: 222265802}
   - 114: {fileID: 222265801}
+  - 114: {fileID: 222265804}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -165,7 +166,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 222265802}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 222265804}
+        m_MethodName: ChangeScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &222265802
@@ -201,6 +213,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 222265799}
+--- !u!114 &222265804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 222265799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5f9c89a6b646e49ba5024a9034e180, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PauseMenuGameObject: {fileID: 222265799}
+  paused: 0
+  canPause: 0
+  SceneToLoad: 1
 --- !u!1 &559006798
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,10 +320,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1205132888}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0.000030517578, y: 0}
-  m_SizeDelta: {x: 860, y: 484}
+  m_SizeDelta: {x: -4, y: -2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &978002622
 MonoBehaviour:
@@ -617,10 +644,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1205132888}
   m_RootOrder: 1
-  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -121}
-  m_SizeDelta: {x: 0, y: 242}
+  m_AnchoredPosition: {x: 0, y: 122}
+  m_SizeDelta: {x: 0, y: -244}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1947851504
 MonoBehaviour:
@@ -647,7 +674,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 210
+    m_MaxSize: 300
     m_Alignment: 4
     m_AlignByGeometry: 1
     m_RichText: 1
