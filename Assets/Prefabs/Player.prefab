@@ -85,7 +85,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012781959706}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.473, y: 0.285, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -148,9 +148,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0.25, y: -0.15}
+  m_Offset: {x: 0.87, y: 0.1}
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5}
+  m_Size: {x: 1.2, y: 1.6}
 --- !u!95 &95000012926095692
 Animator:
   serializedVersion: 3
@@ -160,7 +160,7 @@ Animator:
   m_GameObject: {fileID: 1000013793331368}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: 9a3ea20a7a26387489d43aca07df8618, type: 2}
+  m_Controller: {fileID: 22100000, guid: 71e3c819452c1df408cdde483d2a5bd6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -199,7 +199,6 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: 4751c779cc5cc1a43b505bbd387ecc1f, type: 2}
   weaponCollider2D: {fileID: 61000014148133278}
   maxHP: 6
-  hp: 0
   score: 0
   dashRegenerationRate: 20
   maxDash: 100
@@ -208,7 +207,6 @@ MonoBehaviour:
   weapon: {fileID: 95000012926095692}
   deathScene: 3
   deathTransitionObject: {fileID: 0}
-  enemyDeathSprites: []
 --- !u!114 &114000014161105452
 MonoBehaviour:
   m_ObjectHideFlags: 1
