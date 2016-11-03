@@ -54,7 +54,7 @@ public class EnemyTakingDamage : StateMachineBehaviour
                 initialSpeedX = 0;
             }
 
-
+           
                 if (enemy.MoveVertical(PhysicsObject.ConstantAcceleration(acceleration, ref initalSpeedY)))
                 {
                     initalSpeedY = 0;

@@ -59,7 +59,7 @@ MonoBehaviour:
   guardOnly: {fileID: 0}
   enemy: {fileID: 0}
   speedX: -2
-  speedY: 5
+  speedY: 2
   acceleration: 2
 --- !u!114 &114000011638885392
 MonoBehaviour:
