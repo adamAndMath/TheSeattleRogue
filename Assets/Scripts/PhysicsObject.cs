@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PhysicsObject : MonoBehaviour
+public abstract class PhysicsObject : MonoBehaviour
 {
     private static int platform;
 
@@ -25,7 +25,7 @@ public class PhysicsObject : MonoBehaviour
 
     protected bool IsGrounded()
     {
-        int size = collider2D.Cast(Vector2.down, rayHits, 0F);
+        int size = collider2D.Cast(Vector2.down, rayHits, 0.1F);
 
         if (size > 0)
         {

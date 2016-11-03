@@ -441,8 +441,8 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 100, y: 100}
-  m_Spacing: {x: 0, y: 0}
+  m_CellSize: {x: 50, y: 50}
+  m_Spacing: {x: -10, y: -10}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!114 &1374998170
@@ -695,6 +695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a023b506a7ba59c49931961426425d10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneToLoad: 1
 --- !u!1 &1747645003
 GameObject:
   m_ObjectHideFlags: 0

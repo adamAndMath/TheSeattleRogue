@@ -7,7 +7,7 @@ public class ATM : MonoBehaviour
     public GameObject MoneyDisplay;
     public float Range;
     private bool Active;
-    private int CurrentMoney;
+    private static int CurrentMoney;
     public int MaxMoney;
     private TextMesh displayTextMesh;
 
@@ -31,7 +31,7 @@ public class ATM : MonoBehaviour
             InstructionObject.SetActive(false);
         }
 
-        if (Input.GetKeyDown(KeyCode.W) && Active)
+        if (Input.GetAxis("Vertical") > 0 && Active)
         {
             int FreeSpace = MaxMoney - CurrentMoney;
             if (Player.money <= FreeSpace)
@@ -45,7 +45,7 @@ public class ATM : MonoBehaviour
                 CurrentMoney += FreeSpace;
             }
         }
-        if (Input.GetKeyDown(KeyCode.S) && Active)
+        if (Input.GetAxis("Vertical") < 0 && Active)
         {
             Player.money += CurrentMoney;
             CurrentMoney = 0;

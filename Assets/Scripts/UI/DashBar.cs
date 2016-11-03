@@ -9,11 +9,11 @@ public class DashBar : MonoBehaviour
 	{
 	    BackDrop = GetComponent<RectTransform>();
 
-        BackDrop.sizeDelta = new Vector2(Player.Instance.maxDash, BackDrop.sizeDelta.y);
+        BackDrop.sizeDelta = new Vector2(Player.Instance.maxDash*2, BackDrop.sizeDelta.y);
     }
 	
 	void Update ()
     {
-	    BarOfDashing.sizeDelta = new Vector2(Player.Instance.dashPower,BarOfDashing.sizeDelta.y);
+	    BarOfDashing.sizeDelta = new Vector2(Player.Instance.dashPower*2,BarOfDashing.sizeDelta.y);
 	}
 }

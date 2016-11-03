@@ -24,7 +24,7 @@ public abstract class Enemy : PhysicsObject
     {
         foreach (ItemDrop drop in drops)
         {
-            drop.Drop(transform.position);
+            drop.Drop(transform.parent, transform.position);
         }
         Player.Instance.enemyDeathSprites.Add(idleSprite);
         Player.Instance.score += scoreGiven;

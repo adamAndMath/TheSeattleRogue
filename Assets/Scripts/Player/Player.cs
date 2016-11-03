@@ -23,7 +23,7 @@ public class Player : PhysicsObject
     public Animator weapon;
 
     public int deathScene = 0;
-    public Animator deathTransitionAnimator;
+    public GameObject deathTransitionObject;
 
     public List<Sprite> enemyDeathSprites;
     public bool Direction { get { return 0 < transform.localScale.x; } set { transform.localScale = new Vector3(value ? -1 : 1, 1, 1); } }
@@ -52,38 +52,25 @@ public class Player : PhysicsObject
 
     void Update()
     {
-        if (deathTransitionAnimator.GetCurrentAnimatorStateInfo(0).IsName("Done"))
-        {
-            DeathScene.enemies = enemyDeathSprites;
-            Score.finalScore = score;
-            SceneManager.LoadScene(deathScene);
-        }
-
         if (hp <= 0)
         {
-            deathTransitionAnimator.gameObject.SetActive(true);
-            deathTransitionAnimator.SetBool("Transitioning", true);
-
-            animator.SetBool("Moving", false);
-            animator.SetBool("Attacking", false);
-            animator.SetBool("Charge", false);
+            deathTransitionObject.gameObject.SetActive(true);
+            Time.timeScale = 0;
         }
-        else
+
+        if (dashPower < maxDash)
         {
-            if (dashPower < maxDash)
-            {
-                dashPower += Time.deltaTime*dashRegenerationRate;
-            }
-
-            animator.SetBool("Moving", !Mathf.Approximately(0, Input.GetAxisRaw("Horizontal")));
-            animator.SetBool("Looking", !Mathf.Approximately(0, Input.GetAxisRaw("Horizontal")) || !Mathf.Approximately(0, Input.GetAxisRaw("Vertical")));
-            animator.SetBool("Jump", Input.GetButton("Jump"));
-            animator.SetBool("Grounded", IsGrounded());
-            animator.SetBool("Attacking", Input.GetButtonDown("Attack"));
-            weapon.SetBool("Attacking", Input.GetButtonDown("Attack"));
-            animator.SetBool("Charge", Input.GetAxis("Charge") > 0.9F && dashPower >= dashCost);
-
+            dashPower += Time.deltaTime*dashRegenerationRate;
         }
+
+        animator.SetBool("Moving", !Mathf.Approximately(0, Input.GetAxisRaw("Horizontal")));
+        animator.SetBool("Looking", !Mathf.Approximately(0, Input.GetAxisRaw("Horizontal")) || !Mathf.Approximately(0, Input.GetAxisRaw("Vertical")));
+        animator.SetBool("Jump", Input.GetButton("Jump"));
+        animator.SetBool("Grounded", IsGrounded());
+        animator.SetBool("Attacking", Input.GetButtonDown("Attack"));
+        weapon.SetBool("Attacking", Input.GetButtonDown("Attack"));
+        animator.SetBool("Charge", Input.GetAxis("Charge") > 0.9F && dashPower >= dashCost);
+
     }
 
     public void Damaged(int damage)
@@ -100,6 +87,6 @@ public class Player : PhysicsObject
 
     protected override bool CanCollide(RaycastHit2D rayHit, Vector2 dir)
     {
-        return rayHit.collider.gameObject.layer != Platform || (Input.GetAxisRaw("Vertical") >= 0 && base.CanCollide(rayHit, dir));
+        return rayHit.collider.gameObject.layer != Platform || (Input.GetAxisRaw("Vertical") > -0.5F && base.CanCollide(rayHit, dir));
     }
 }

@@ -23,73 +23,22 @@ MonoBehaviour:
   - data:
     - wallID: 1
       slope: 0
-    - wallID: 1
+    - wallID: 0
       slope: 0
-    - wallID: 1
+    - wallID: 0
       slope: 0
-    - wallID: 1
+    - wallID: 0
       slope: 0
-    - wallID: 1
+    - wallID: 0
       slope: 0
-    - wallID: 1
+    - wallID: 0
       slope: 0
-    - wallID: 1
+    - wallID: 0
       slope: 0
-    - wallID: 1
+    - wallID: 0
       slope: 0
   - data:
     - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 1
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 1
-      slope: 1
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 0
-  - data:
-    - wallID: 1
-      slope: 0
-    - wallID: 1
-      slope: 1
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 1
-      slope: 1
-    - wallID: 1
-      slope: 0
-  - data:
-    - wallID: 1
-      slope: 1
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 1
-      slope: 1
-  - data:
-    - wallID: 0
       slope: 0
     - wallID: 0
       slope: 0
@@ -106,24 +55,7 @@ MonoBehaviour:
     - wallID: 0
       slope: 0
   - data:
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
     - wallID: 1
-      slope: 1
-    - wallID: 1
-      slope: 1
-    - wallID: 0
-      slope: 0
-    - wallID: 0
-      slope: 0
-  - data:
-    - wallID: 0
       slope: 0
     - wallID: 0
       slope: 0
@@ -131,7 +63,7 @@ MonoBehaviour:
       slope: 0
     - wallID: 0
       slope: 0
-    - wallID: 1
+    - wallID: 0
       slope: 0
     - wallID: 1
       slope: 0
@@ -148,7 +80,7 @@ MonoBehaviour:
       slope: 0
     - wallID: 0
       slope: 0
-    - wallID: 1
+    - wallID: 0
       slope: 0
     - wallID: 1
       slope: 0
@@ -165,12 +97,12 @@ MonoBehaviour:
       slope: 0
     - wallID: 0
       slope: 0
-    - wallID: 1
+    - wallID: 0
       slope: 0
     - wallID: 1
       slope: 0
-    - wallID: 1
-      slope: 1
+    - wallID: 0
+      slope: 0
     - wallID: 0
       slope: 0
   - data:
@@ -182,13 +114,64 @@ MonoBehaviour:
       slope: 0
     - wallID: 0
       slope: 0
-    - wallID: 1
-      slope: 1
-    - wallID: 1
+    - wallID: 0
       slope: 0
     - wallID: 1
       slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+  - data:
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
     - wallID: 1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+  - data:
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+  - data:
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
       slope: 0
   - data:
     - wallID: 0
@@ -225,8 +208,25 @@ MonoBehaviour:
     - wallID: 1
       slope: 0
   - data:
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
+    - wallID: 0
+      slope: 0
     - wallID: 1
-      slope: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+    - wallID: 1
+      slope: 0
+  - data:
+    - wallID: 0
+      slope: 0
     - wallID: 0
       slope: 0
     - wallID: 0
@@ -303,8 +303,12 @@ MonoBehaviour:
   - {fileID: 114000011052400084, guid: 9912748011cc738488c4fb53fd419a9d, type: 2}
   spawners:
   - position:
-      x: 11
-      y: 1
+      x: 5
+      y: 0
+    spawnMask: 2
+  - position:
+      x: 10
+      y: 0
     spawnMask: 2
   platform: {fileID: 212000013609954282, guid: 7dc60b15e76c86e4aadfffec218b12d9, type: 2}
   spike: {fileID: 212000011588063242, guid: ca19ce3d1dfa53240b9b6379675b6f43, type: 2}

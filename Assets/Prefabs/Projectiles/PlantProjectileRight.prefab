@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011193339516}
   - 212: {fileID: 212000011699672426}
-  - 114: {fileID: 114000010521061234}
   - 114: {fileID: 114000011815794346}
   - 50: {fileID: 50000010586332576}
   - 61: {fileID: 61000012270370866}
@@ -75,17 +74,6 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.2, y: 0.2}
---- !u!114 &114000010521061234
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010988014836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e674e173b3f0db547bb9d5989f4817b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114000011815794346
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -97,9 +85,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb013de046aa1b4da39ce4965d79dea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalSpeed: -1
+  horizontalSpeed: 0
   acceleration: 4
-  startingSpeed: 4
+  startingSpeed: 0
   smokeCloud: {fileID: 1000011540148496, guid: 52668f7968e99254ead854f9517da80b, type: 2}
 --- !u!212 &212000011699672426
 SpriteRenderer:

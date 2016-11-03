@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 2
-  idleSprite: {fileID: 21300000, guid: 62890ef2c54f0504980344fb523b17e0, type: 3}
+  idleSprite: {fileID: 21300000, guid: a6bdc7237dd16b5448c786d69ad3ca87, type: 3}
   drops:
   - obj: {fileID: 1000012271734224, guid: 70488e5cd1ef718409e53b076d2cfd65, type: 2}
     chance: 0.5
@@ -109,7 +109,14 @@ MonoBehaviour:
   scoreGiven: 10
   turretRange: 20
   cooldown: 2
+  ReloadTime: 0
+  TESTPLSIGNORE: 0
   cooldownOn: 0
+  ChargingSprites:
+  - {fileID: 21300004, guid: aa5579be597365642b3d11fdcb1115de, type: 3}
+  - {fileID: 21300000, guid: aa5579be597365642b3d11fdcb1115de, type: 3}
+  - {fileID: 21300006, guid: aa5579be597365642b3d11fdcb1115de, type: 3}
+  - {fileID: 21300002, guid: aa5579be597365642b3d11fdcb1115de, type: 3}
   turretPlatform: {fileID: 1000010262839084, guid: f25ce4c8f5e88c64ab124c267f97d716,
     type: 2}
 --- !u!212 &212000011201949698
@@ -141,7 +148,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -508167467
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 083689e6745e48b4c9a5b2368d7a6b82, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 417169382fc6ba54b90443eeb7204447, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
