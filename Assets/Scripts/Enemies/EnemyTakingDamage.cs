@@ -44,7 +44,7 @@ public class EnemyTakingDamage : StateMachineBehaviour
             {
                 Debug.Log("IsThisHappening");
                 if (
-                    enemy.MoveHorizontal(PhysicsObject.ConstantAcceleration(acceleration, ref initialSpeedX)*enemy.damageDirection.x))
+                    enemy.MoveHorizontal(PhysicsObject.ConstantAcceleration(-acceleration, ref initialSpeedX)*enemy.damageDirection.x))
                 {
                     initialSpeedX = 0;
                 }
@@ -54,18 +54,11 @@ public class EnemyTakingDamage : StateMachineBehaviour
                 initialSpeedX = 0;
             }
 
-            if (Mathf.Abs(enemy.damageDirection.y) > 0.01)
-            {
-                if (
-                    enemy.MoveVertical(PhysicsObject.ConstantAcceleration(-acceleration, ref initalSpeedY)*enemy.damageDirection.y))
+
+                if (enemy.MoveVertical(PhysicsObject.ConstantAcceleration(acceleration, ref initalSpeedY)))
                 {
                     initalSpeedY = 0;
                 }
-            }
-            else
-            {
-                initalSpeedY = 0;
-            }
 
             if (Mathf.Abs(initalSpeedY) < 0.2 || Mathf.Abs(initialSpeedX) < 0.2)
             {
