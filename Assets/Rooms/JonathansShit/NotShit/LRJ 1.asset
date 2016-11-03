@@ -15,9 +15,9 @@ MonoBehaviour:
     x: 1
     y: 1
   entrencesUp: 0
-  entrencesDown: 1
+  entrencesDown: 0
   entrencesLeft: 1
-  entrencesRight: 0
+  entrencesRight: 1
   background: {fileID: 21300000, guid: 395f196ccb0fada438c8af3a8f2e9e29, type: 3}
   columns:
   - data:
