@@ -78,7 +78,7 @@ public class Player : PhysicsObject
 
     public void Damaged(int damage)
     {
-        if (hp > 0 && !animator.GetBool("Charge"))
+        if (hp > 0 && !animator.GetCurrentAnimatorStateInfo(0).IsName("Fly"))
         {
             if (animator.GetCurrentAnimatorStateInfo(animator.GetLayerIndex("Invincibility")).IsName("Invincibility"))
                 return;
