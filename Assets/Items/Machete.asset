@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300006, guid: ee416e40ee68e0d4eaa1cdbb7cdaf954, type: 3}
   animator: {fileID: 22100000, guid: ad82fb67205ccb34798db07cb2d94f6c, type: 2}
-  collisionOffset: {x: 0.25, y: -0.15}
-  collisionSize: {x: 1.5, y: 1.5}
+  collisionOffset: {x: 0.87, y: 0.1}
+  collisionSize: {x: 1.2, y: 1.6}
   damage: 7
   price: 50

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public abstract class Enemy : PhysicsObject
 {
@@ -17,8 +18,16 @@ public abstract class Enemy : PhysicsObject
         {
             Killed();
         }
-        damageDirection = direction;
-        Debug.Log(damageDirection);
+        if (Player.Instance.Direction)
+        {
+            damageDirection = -direction;
+            Debug.Log(damageDirection);
+        }
+        else
+        {
+            damageDirection = direction;
+            Debug.Log(damageDirection);
+        }
     }
 
     public virtual void Killed()
@@ -27,7 +36,16 @@ public abstract class Enemy : PhysicsObject
         {
             drop.Drop(transform.parent, transform.position);
         }
-        Player.Instance.enemyDeathSprites.Add(idleSprite);
+
+        if (Player.Data.enemyDeathSprites != null)
+        {
+            Player.Data.enemyDeathSprites.Add(idleSprite);
+        }
+        else
+        {
+            Player.Data.enemyDeathSprites = new List<Sprite>();
+            Player.Data.enemyDeathSprites.Add(idleSprite);
+        }
         Player.Instance.score += scoreGiven;
         DestroyObject(gameObject);
     }

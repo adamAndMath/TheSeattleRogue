@@ -1189,6 +1189,12 @@ Prefab:
       propertyPath: deathTransitionObject
       value: 
       objectReference: {fileID: 1915844561}
+    - target: {fileID: 95000012926095692, guid: 75dcc9dbf9ad55f4398bde8d7f714b21,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 9a3ea20a7a26387489d43aca07df8618,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 75dcc9dbf9ad55f4398bde8d7f714b21, type: 2}
   m_IsPrefabParent: 0
@@ -2096,7 +2102,22 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012496464288, guid: ec87c0c3747b40540a15e88610c6042c, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 111000010189370192, guid: ec87c0c3747b40540a15e88610c6042c,
+        type: 2}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 7400000, guid: 70aba5d8ac87a57448ca5036ab01cfc7, type: 2}
+    - target: {fileID: 111000010189370192, guid: ec87c0c3747b40540a15e88610c6042c,
+        type: 2}
+      propertyPath: m_Animations.Array.data[0]
+      value: 
+      objectReference: {fileID: 7400000, guid: 70aba5d8ac87a57448ca5036ab01cfc7, type: 2}
+    - target: {fileID: 114000013808252990, guid: ec87c0c3747b40540a15e88610c6042c,
+        type: 2}
+      propertyPath: orderInLayer
+      value: 1516
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec87c0c3747b40540a15e88610c6042c, type: 2}
@@ -3002,7 +3023,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013690704878, guid: 57c30eeaea9b2a648a9c3139d0c3779e, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114000011171227096, guid: 57c30eeaea9b2a648a9c3139d0c3779e,
         type: 2}

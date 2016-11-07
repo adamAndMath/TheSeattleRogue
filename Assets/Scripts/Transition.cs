@@ -17,12 +17,15 @@ public class Transition : MonoBehaviour
     }
 	void Update ()
     {
-	    if (Player.Instance.hp <= 0)
+	    if (Player.Data.hp <= 0)
 	    {
 	        if (currentFrame == TransitionFrames.Length)
 	        {
-                DeathScene.enemies = Player.Instance.enemyDeathSprites;
+                DeathScene.enemies = Player.Data.enemyDeathSprites;
                 Score.finalScore = Player.Instance.score;
+	            Player.Data.enemyDeathSprites = null;
+	            Player.Data.hp = Player.Instance.maxHP;
+	            Time.timeScale = 1;
                 SceneManager.LoadScene(Player.Instance.deathScene);
 	        }
 

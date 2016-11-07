@@ -2,6 +2,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 public class BossBehaviour : PhysicsObject
@@ -111,8 +112,8 @@ public class BossBehaviour : PhysicsObject
 
 	    if (health <= 0)
 	    {
-	        Destroy(gameObject);
-	    }
+	        SceneManager.LoadScene("Winner");
+        }
     }
     public bool CameraShake(float shakeTime)
     {
