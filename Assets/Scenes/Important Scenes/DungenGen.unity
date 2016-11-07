@@ -279,7 +279,7 @@ MonoBehaviour:
   door: {fileID: 1000012968112314, guid: c48939c7d145b2d42baa894658adb5d6, type: 2}
   endRoom: {fileID: 11400000, guid: 1e89200e79d26d8469d01bbe033dfb3e, type: 2}
   rooms:
-  - {fileID: 11400000, guid: 39b6a08aa1d30a64198cc25948a12854, type: 2}
+  - {fileID: 11400000, guid: 3b70ee7f6c65cc247b4810948eb7d7a5, type: 2}
   - {fileID: 11400000, guid: a52706bf194e05e42be6ee6d87c2ae0d, type: 2}
   - {fileID: 11400000, guid: 341d30a9d09bc4f42889a6de0cb6d608, type: 2}
   - {fileID: 11400000, guid: b7d975f015507d243a664c33bfb7f3bb, type: 2}
@@ -329,6 +329,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 26b04fa5aa019894e8a6968db9d5fd47, type: 2}
   - {fileID: 11400000, guid: 974f40ff90e248a43ba8d6a1b43b20f8, type: 2}
   - {fileID: 11400000, guid: a0b86d4b1812b3c4ea0f596bdb4cf369, type: 2}
+  - {fileID: 11400000, guid: c12c0dec5815ee54cadef9f570821cb0, type: 2}
+  - {fileID: 11400000, guid: 39b6a08aa1d30a64198cc25948a12854, type: 2}
   pathDist:
     min: 20
     max: 30
