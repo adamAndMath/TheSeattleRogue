@@ -25,7 +25,7 @@ public class CamMove : MonoBehaviour
 
         if (RoomHandler.Instance)
         {
-            currentRoom = RoomHandler.Instance[new LevelGenerator.Position(
+            currentRoom = RoomHandler.Instance[new Position(
                 Mathf.FloorToInt(transform.position.x/Room.RoomSize.x),
                 Mathf.FloorToInt(transform.position.y/Room.RoomSize.y))];
 
@@ -108,7 +108,7 @@ public class CamMove : MonoBehaviour
         {
             try
             {
-                nextRoom = RoomHandler.Instance[new LevelGenerator.Position(
+                nextRoom = RoomHandler.Instance[new Position(
                     Mathf.FloorToInt(camMoveTo.x/Room.RoomSize.x),
                     Mathf.FloorToInt(camMoveTo.y/Room.RoomSize.y))];
             }

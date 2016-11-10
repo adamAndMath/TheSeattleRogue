@@ -14,13 +14,13 @@ public class LevelGenerator : MonoBehaviour
     public SpriteRenderer wallPrefab;
     public SpriteRenderer backgroundPrefab;
     [EnumMask]
-    public Room.Direction forceStartDir;
+    public Direction forceStartDir;
 
     public Position min;
     public Position max;
 
     readonly List<Position> positions = new List<Position>();
-    readonly Dictionary<Position, Room.Direction> extraPositions = new Dictionary<Position, Room.Direction>();
+    readonly Dictionary<Position, Direction> extraPositions = new Dictionary<Position, Direction>();
 
     [Serializable]
     public struct Range
@@ -29,65 +29,6 @@ public class LevelGenerator : MonoBehaviour
         public int max;
 
         public int Random { get { return UnityEngine.Random.Range(min, max + 1); } }
-    }
-
-    [Serializable]
-    public struct Position
-    {
-        public int x;
-        public int y;
-
-        public Position(int x, int y)
-        {
-            this.x = x;
-            this.y = y;
-        }
-
-        public override bool Equals(object obj)
-        {
-            return obj is Position && (this == (Position)obj);
-        }
-
-        public static Position operator +(Position a, Position b)
-        {
-            return new Position(a.x + b.x, a.y + b.y);
-        }
-
-        public static Position operator -(Position a, Position b)
-        {
-            return new Position(a.x - b.x, a.y - b.y);
-        }
-
-        public static bool operator ==(Position a, Position b)
-        {
-            return a.x == b.x && a.y == b.y;
-        }
-
-        public static bool operator !=(Position a, Position b)
-        {
-            return a.x != b.x || a.y != b.y;
-        }
-
-        public static implicit operator Position(Room.Direction dir)
-        {
-            switch (dir)
-            {
-                case Room.Direction.Up: return new Position(0, 1);
-                case Room.Direction.Down: return new Position(0, -1);
-                case Room.Direction.Left: return new Position(-1, 0);
-                case Room.Direction.Right: return new Position(1, 0);
-                default: throw new Exception();
-            }
-        }
-
-        public static implicit operator Room.Direction(Position pos)
-        {
-            if (pos.y > 0) return Room.Direction.Up;
-            if (pos.y < 0) return Room.Direction.Down;
-            if (pos.x > 0) return Room.Direction.Right;
-            if (pos.x < 0) return Room.Direction.Left;
-            throw new Exception();
-        }
     }
 
     void Start()
@@ -107,7 +48,7 @@ public class LevelGenerator : MonoBehaviour
 
             for (int i = 0; i < pathLength; i++)
             {
-                position += (Room.Direction)(1 << dir);
+                position += (Direction)(1 << dir);
                 positions.Add(position);
                 dir = (dir + Random.Range(3, 6)) % 4;
             }
@@ -117,7 +58,7 @@ public class LevelGenerator : MonoBehaviour
 
         for (int i = 0; i < positions.Count; i++)
         {
-            Room.Direction direction = 0;
+            Direction direction = 0;
 
             if (i > 0)
             {
@@ -144,11 +85,11 @@ public class LevelGenerator : MonoBehaviour
             {
                 dir = Random.Range(0, 3);
 
-                KeyValuePair<Position, Room.Direction> extPos = extraPositions.ElementAt(Random.Range(0, extraPositions.Count));
+                KeyValuePair<Position, Direction> extPos = extraPositions.ElementAt(Random.Range(0, extraPositions.Count));
                 position = extPos.Key;
             } while (ValidateExtra(position, dir));
-            extraPositions.Add(position + (Room.Direction)(1 << dir), (Room.Direction)(1 << (dir ^ 2)));
-            extraPositions[position] |= (Room.Direction)(1 << dir);
+            extraPositions.Add(position + (Direction)(1 << dir), (Direction)(1 << (dir ^ 2)));
+            extraPositions[position] |= (Direction)(1 << dir);
         }
 
         foreach (var extraPosition in extraPositions)
@@ -165,13 +106,13 @@ public class LevelGenerator : MonoBehaviour
         }
     }
 
-    private bool RoomFit(Room room, Position position, Room.Direction direction)
+    private bool RoomFit(Room room, Position position, Direction direction)
     {
         return room.size.x == 1 && room.size.y == 1 &&
-               ((room.entrencesUp & 1) == 1) == ((direction & Room.Direction.Up) != 0) &&
-               ((room.entrencesDown & 1) == 1) == ((direction & Room.Direction.Down) != 0) &&
-               ((room.entrencesLeft & 1) == 1) == ((direction & Room.Direction.Left) != 0) &&
-               ((room.entrencesRight & 1) == 1) == ((direction & Room.Direction.Right) != 0);
+               ((room.entrencesUp & 1) == 1) == ((direction & Direction.Up) != 0) &&
+               ((room.entrencesDown & 1) == 1) == ((direction & Direction.Down) != 0) &&
+               ((room.entrencesLeft & 1) == 1) == ((direction & Direction.Left) != 0) &&
+               ((room.entrencesRight & 1) == 1) == ((direction & Direction.Right) != 0);
     }
 
     private bool ValidatePath()
@@ -194,7 +135,7 @@ public class LevelGenerator : MonoBehaviour
 
     private bool ValidateExtra(Position pos, int dir)
     {
-        Position newPos = pos + (Room.Direction) (1 << dir);
+        Position newPos = pos + (Direction) (1 << dir);
         return extraPositions.ContainsKey(newPos) ||
                newPos.x < min.x || newPos.x > max.x ||
                newPos.y < min.y || newPos.y > max.y;
@@ -211,7 +152,7 @@ public class LevelGenerator : MonoBehaviour
                 if (((int)position.Value & (1 << i)) == 0)
                     continue;
 
-                Position posTo = position.Key + (Room.Direction)(1 << i);
+                Position posTo = position.Key + (Direction)(1 << i);
                 Vector3 from = new Vector3(position.Key.x, position.Key.y);
                 Vector3 to = new Vector3(posTo.x, posTo.y);
                 Gizmos.DrawLine(from, to);
@@ -219,7 +160,7 @@ public class LevelGenerator : MonoBehaviour
         }
     }
 
-    private void GenerateEndRoom(Room room, Position pos, Vector3 size, Room.Direction directions)
+    private void GenerateEndRoom(Room room, Position pos, Vector3 size, Direction directions)
     {
         GameObject roomObject = new GameObject(room.name, typeof(RoomInstance));
         roomObject.transform.position = new Vector3(pos.x * size.x, pos.y * size.y);
@@ -243,10 +184,10 @@ public class LevelGenerator : MonoBehaviour
         GenerateWall(room, roomObject, new Position(-1, room.RealSize.y), 15, 1);
         GenerateWall(room, roomObject, new Position(room.RealSize.x, room.RealSize.y), 15, 1);
 
-        GenerateSide((directions & Room.Direction.Left) != 0, room, roomObject, -1, 1);
-        GenerateSide((directions & Room.Direction.Right) != 0, room, roomObject, room.RealSize.x, -1);
-        GenerateTop((directions & Room.Direction.Down) != 0, room, roomObject, -1, 1);
-        GenerateTop((directions & Room.Direction.Up) != 0, room, roomObject, room.RealSize.y, -1);
+        GenerateSide((directions & Direction.Left) != 0, room, roomObject, -1, 1);
+        GenerateSide((directions & Direction.Right) != 0, room, roomObject, room.RealSize.x, -1);
+        GenerateTop((directions & Direction.Down) != 0, room, roomObject, -1, 1);
+        GenerateTop((directions & Direction.Up) != 0, room, roomObject, room.RealSize.y, -1);
 
         foreach (var column in room.columns)
         {
@@ -263,13 +204,13 @@ public class LevelGenerator : MonoBehaviour
                     spike.transform.localPosition = new Vector3(position.x, position.y);
                     int dir = room.GetWallDir(position);
 
-                    if ((dir & (int)Room.Direction.Down) == 0)
+                    if ((dir & (int)Direction.Down) == 0)
                     {
-                        if ((dir & (int)Room.Direction.Left) != 0)
+                        if ((dir & (int)Direction.Left) != 0)
                             spike.transform.localRotation = Quaternion.Euler(0, 0, 270);
-                        else if ((dir & (int)Room.Direction.Right) != 0)
+                        else if ((dir & (int)Direction.Right) != 0)
                             spike.transform.localRotation = Quaternion.Euler(0, 0, 90);
-                        else if ((dir & (int)Room.Direction.Up) != 0)
+                        else if ((dir & (int)Direction.Up) != 0)
                             spike.transform.localRotation = Quaternion.Euler(0, 0, 180);
                     }
                 }
@@ -285,8 +226,8 @@ public class LevelGenerator : MonoBehaviour
                         EdgeCollider2D col = slope.GetComponent<EdgeCollider2D>();
 
                         Vector2 point = new Vector2(
-                            (dir & (int)Room.Direction.Up) != 0 ? 0.5F : -0.5F,
-                            (dir & (int)Room.Direction.Right) != 0 ? -0.5F : 0.5F);
+                            (dir & (int)Direction.Up) != 0 ? 0.5F : -0.5F,
+                            (dir & (int)Direction.Right) != 0 ? -0.5F : 0.5F);
 
                         col.points = new[] { point, -point };
                     }
@@ -361,13 +302,13 @@ public class LevelGenerator : MonoBehaviour
                     spike.transform.localPosition = new Vector3(position.x, position.y);
                     int dir = room.GetWallDir(position);
 
-                    if ((dir & (int) Room.Direction.Down) == 0)
+                    if ((dir & (int) Direction.Down) == 0)
                     {
-                        if ((dir & (int) Room.Direction.Left) != 0)
+                        if ((dir & (int) Direction.Left) != 0)
                             spike.transform.localRotation = Quaternion.Euler(0, 0, 270);
-                        else if ((dir & (int) Room.Direction.Right) != 0)
+                        else if ((dir & (int) Direction.Right) != 0)
                             spike.transform.localRotation = Quaternion.Euler(0, 0, 90);
-                        else if ((dir & (int) Room.Direction.Up) != 0)
+                        else if ((dir & (int) Direction.Up) != 0)
                             spike.transform.localRotation = Quaternion.Euler(0, 0, 180);
                     }
                 }
@@ -383,8 +324,8 @@ public class LevelGenerator : MonoBehaviour
                         EdgeCollider2D col = slope.GetComponent<EdgeCollider2D>();
 
                         Vector2 point = new Vector2(
-                            (dir & (int) Room.Direction.Up) != 0 ? 0.5F : -0.5F,
-                            (dir & (int) Room.Direction.Right) != 0 ? -0.5F : 0.5F);
+                            (dir & (int) Direction.Up) != 0 ? 0.5F : -0.5F,
+                            (dir & (int) Direction.Right) != 0 ? -0.5F : 0.5F);
 
                         col.points = new[] { point, -point };
                     }

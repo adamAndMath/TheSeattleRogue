@@ -134,7 +134,7 @@ public class RoomWindow : EditorWindow
     /// Returns what square of the grid the mouse is over.
     /// </summary>
     /// <returns>Grid position</returns>
-    private LevelGenerator.Position GetMousePos()
+    private Position GetMousePos()
     {
         Rect gridRect = new Rect(SideWidth, 0, position.width - SideWidth, position.height);
 
@@ -159,11 +159,11 @@ public class RoomWindow : EditorWindow
 
         Vector2 pos = Event.current.mousePosition;
         if (!gridRect.Contains(pos))
-            return new LevelGenerator.Position(-1, -1);
+            return new Position(-1, -1);
 
         pos += scrollPosition - gridRect.position;
         pos /= gridSize;
-        return new LevelGenerator.Position(Mathf.FloorToInt(pos.x), room.RealSize.y - 1 - Mathf.FloorToInt(pos.y));
+        return new Position(Mathf.FloorToInt(pos.x), room.RealSize.y - 1 - Mathf.FloorToInt(pos.y));
     }
 
     /// <summary>
@@ -199,7 +199,7 @@ public class RoomWindow : EditorWindow
     {
         scrollPosition = GUI.BeginScrollView(position, scrollPosition, new Rect(0, 0, room.RealSize.x * gridSize, room.RealSize.y * gridSize));
 
-        for (LevelGenerator.Position pos = new LevelGenerator.Position(); pos.x < room.RealSize.x; pos.x++)
+        for (Position pos = new Position(); pos.x < room.RealSize.x; pos.x++)
         {
             for (pos.y = 0; pos.y < room.RealSize.y; pos.y++)
             {

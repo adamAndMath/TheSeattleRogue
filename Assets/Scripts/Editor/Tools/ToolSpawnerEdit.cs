@@ -4,7 +4,7 @@ using UnityEngine;
 public class ToolSpawnerEdit : Tool
 {
     private int selectedObject;
-    private LevelGenerator.Position selectedPosition;
+    private Position selectedPosition;
     private SerializedProperty propSpawnMask;
     private int spawnerID;
     private Mode mode = Mode.None;
@@ -57,7 +57,7 @@ public class ToolSpawnerEdit : Tool
         return sellectionMask;
     }
 
-    public override bool PreRenderGrid(LevelGenerator.Position pos, Rect rect)
+    public override bool PreRenderGrid(Position pos, Rect rect)
     {
         if (selectedPosition != pos || mode == Mode.None) return true;
 
@@ -67,7 +67,7 @@ public class ToolSpawnerEdit : Tool
         return false;
     }
 
-    public override bool OnMouseDown(LevelGenerator.Position pos)
+    public override bool OnMouseDown(Position pos)
     {
         int button = Event.current.button;
 
@@ -103,7 +103,7 @@ public class ToolSpawnerEdit : Tool
         return true;
     }
 
-    public override bool OnMouseDrag(LevelGenerator.Position pos)
+    public override bool OnMouseDrag(Position pos)
     {
         if (pos.x == -1 || pos.y == -1)
         {
@@ -121,7 +121,7 @@ public class ToolSpawnerEdit : Tool
         return false;
     }
 
-    public override bool OnMouseUp(LevelGenerator.Position pos)
+    public override bool OnMouseUp(Position pos)
     {
         if (pos.x == -1 || pos.y == -1)
             return false;

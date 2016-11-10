@@ -6,7 +6,7 @@ using UnityEngine;
 public class ToolWall : Tool
 {
     private int selectedObject;
-    private readonly List<LevelGenerator.Position> selectedPositions = new List<LevelGenerator.Position>();
+    private readonly List<Position> selectedPositions = new List<Position>();
     private Mode mode = Mode.None;
     private bool slope;
 
@@ -29,7 +29,7 @@ public class ToolWall : Tool
         selectedObject = SelectionGrid(selectedObject, thumbnails, Mathf.FloorToInt((RoomWindow.SideWidth - 4) / 36));
     }
 
-    public override bool PreRenderGrid(LevelGenerator.Position pos, Rect rect)
+    public override bool PreRenderGrid(Position pos, Rect rect)
     {
         if (!selectedPositions.Contains(pos))
             return true;
@@ -43,7 +43,7 @@ public class ToolWall : Tool
         return false;
     }
 
-    public override bool OnMouseDown(LevelGenerator.Position pos)
+    public override bool OnMouseDown(Position pos)
     {
         int button = Event.current.button;
 
@@ -65,7 +65,7 @@ public class ToolWall : Tool
         return true;
     }
 
-    public override bool OnMouseDrag(LevelGenerator.Position pos)
+    public override bool OnMouseDrag(Position pos)
     {
         if (pos.x == -1 || pos.y == -1)
         {
@@ -86,7 +86,7 @@ public class ToolWall : Tool
         return false;
     }
 
-    public override bool OnMouseUp(LevelGenerator.Position pos)
+    public override bool OnMouseUp(Position pos)
     {
         if (pos.x == -1 || pos.y == -1)
             return false;
@@ -94,7 +94,7 @@ public class ToolWall : Tool
         switch (mode)
         {
             case Mode.Place:
-                foreach (LevelGenerator.Position p in selectedPositions)
+                foreach (Position p in selectedPositions)
                 {
                     GetPropertyAtPos(p).FindPropertyRelative("wallID").intValue = selectedObject + 1;
                     GetPropertyAtPos(p).FindPropertyRelative("slope").boolValue = slope;
@@ -102,7 +102,7 @@ public class ToolWall : Tool
 
                 break;
             case Mode.Delete:
-                foreach (LevelGenerator.Position p in selectedPositions)
+                foreach (Position p in selectedPositions)
                 {
                     GetPropertyAtPos(p).FindPropertyRelative("wallID").intValue = 0;
                     GetPropertyAtPos(p).FindPropertyRelative("slope").boolValue = false;

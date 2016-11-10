@@ -7,13 +7,13 @@ public class RomSerialGenerator : MonoBehaviour
     public Room endRoom;
     public Room[] rooms;
     [EnumMask]
-    public Room.Direction endDirections;
+    public Direction endDirections;
     public SpriteRenderer wallPrefab;
     public SpriteRenderer backgroundPrefab;
 
     void Start()
     {
-        LevelGenerator.Position position = new LevelGenerator.Position();
+        Position position = new Position();
 
         for (; position.x < rooms.Length; position.x++)
         {
@@ -23,7 +23,7 @@ public class RomSerialGenerator : MonoBehaviour
         GenerateEndRoom(endRoom, position, new Vector3(Room.RoomSize.x, Room.RoomSize.y), endDirections);
     }
 
-    private void GenerateEndRoom(Room room, LevelGenerator.Position pos, Vector3 size, Room.Direction directions)
+    private void GenerateEndRoom(Room room, Position pos, Vector3 size, Direction directions)
     {
         GameObject roomObject = new GameObject(room.name, typeof(RoomInstance));
         roomObject.transform.position = new Vector3(pos.x * size.x, pos.y * size.y);
@@ -40,17 +40,17 @@ public class RomSerialGenerator : MonoBehaviour
         door.transform.SetParent(roomObject.transform);
         door.transform.localPosition = new Vector3(size.x / 2 - 0.5F, 0.5F);
 
-        LevelGenerator.Position position = new LevelGenerator.Position();
+        Position position = new Position();
 
-        GenerateWall(room, roomObject, new LevelGenerator.Position(-1, -1), 15, 1);
-        GenerateWall(room, roomObject, new LevelGenerator.Position(room.RealSize.x, -1), 15, 1);
-        GenerateWall(room, roomObject, new LevelGenerator.Position(-1, room.RealSize.y), 15, 1);
-        GenerateWall(room, roomObject, new LevelGenerator.Position(room.RealSize.x, room.RealSize.y), 15, 1);
+        GenerateWall(room, roomObject, new Position(-1, -1), 15, 1);
+        GenerateWall(room, roomObject, new Position(room.RealSize.x, -1), 15, 1);
+        GenerateWall(room, roomObject, new Position(-1, room.RealSize.y), 15, 1);
+        GenerateWall(room, roomObject, new Position(room.RealSize.x, room.RealSize.y), 15, 1);
 
-        GenerateSide((directions & Room.Direction.Left) != 0, room, roomObject, -1, 1);
-        GenerateSide((directions & Room.Direction.Right) != 0, room, roomObject, room.RealSize.x, -1);
-        GenerateTop((directions & Room.Direction.Down) != 0, room, roomObject, -1, 1);
-        GenerateTop((directions & Room.Direction.Up) != 0, room, roomObject, room.RealSize.y, -1);
+        GenerateSide((directions & Direction.Left) != 0, room, roomObject, -1, 1);
+        GenerateSide((directions & Direction.Right) != 0, room, roomObject, room.RealSize.x, -1);
+        GenerateTop((directions & Direction.Down) != 0, room, roomObject, -1, 1);
+        GenerateTop((directions & Direction.Up) != 0, room, roomObject, room.RealSize.y, -1);
 
         foreach (var column in room.columns)
         {
@@ -67,13 +67,13 @@ public class RomSerialGenerator : MonoBehaviour
                     spike.transform.localPosition = new Vector3(position.x, position.y);
                     int dir = room.GetWallDir(position);
 
-                    if ((dir & (int)Room.Direction.Down) == 0)
+                    if ((dir & (int)Direction.Down) == 0)
                     {
-                        if ((dir & (int)Room.Direction.Left) != 0)
+                        if ((dir & (int)Direction.Left) != 0)
                             spike.transform.localRotation = Quaternion.Euler(0, 0, 270);
-                        else if ((dir & (int)Room.Direction.Right) != 0)
+                        else if ((dir & (int)Direction.Right) != 0)
                             spike.transform.localRotation = Quaternion.Euler(0, 0, 90);
-                        else if ((dir & (int)Room.Direction.Up) != 0)
+                        else if ((dir & (int)Direction.Up) != 0)
                             spike.transform.localRotation = Quaternion.Euler(0, 0, 180);
                     }
                 }
@@ -89,8 +89,8 @@ public class RomSerialGenerator : MonoBehaviour
                         EdgeCollider2D col = slope.GetComponent<EdgeCollider2D>();
 
                         Vector2 point = new Vector2(
-                            (dir & (int)Room.Direction.Up) != 0 ? 0.5F : -0.5F,
-                            (dir & (int)Room.Direction.Right) != 0 ? -0.5F : 0.5F);
+                            (dir & (int)Direction.Up) != 0 ? 0.5F : -0.5F,
+                            (dir & (int)Direction.Right) != 0 ? -0.5F : 0.5F);
 
                         col.points = new[] { point, -point };
                     }
@@ -125,7 +125,7 @@ public class RomSerialGenerator : MonoBehaviour
         }
     }
 
-    private void GenerateRoom(Room room, LevelGenerator.Position pos, Vector3 size)
+    private void GenerateRoom(Room room, Position pos, Vector3 size)
     {
         GameObject roomObject = new GameObject(room.name, typeof(RoomInstance));
         roomObject.transform.position = new Vector3(pos.x * size.x, pos.y * size.y);
@@ -138,12 +138,12 @@ public class RomSerialGenerator : MonoBehaviour
         background.transform.localPosition = size / 2 - new Vector3(1, 1);
         background.GetComponent<SpriteRenderer>().sprite = room.background;
 
-        LevelGenerator.Position position = new LevelGenerator.Position();
+        Position position = new Position();
 
-        GenerateWall(room, roomObject, new LevelGenerator.Position(-1, -1), 15, 1);
-        GenerateWall(room, roomObject, new LevelGenerator.Position(room.RealSize.x, -1), 15, 1);
-        GenerateWall(room, roomObject, new LevelGenerator.Position(-1, room.RealSize.y), 15, 1);
-        GenerateWall(room, roomObject, new LevelGenerator.Position(room.RealSize.x, room.RealSize.y), 15, 1);
+        GenerateWall(room, roomObject, new Position(-1, -1), 15, 1);
+        GenerateWall(room, roomObject, new Position(room.RealSize.x, -1), 15, 1);
+        GenerateWall(room, roomObject, new Position(-1, room.RealSize.y), 15, 1);
+        GenerateWall(room, roomObject, new Position(room.RealSize.x, room.RealSize.y), 15, 1);
 
         GenerateSide(room.entrencesLeft == 1, room, roomObject, -1, 1);
         GenerateSide(room.entrencesRight == 1, room, roomObject, room.RealSize.x, -1);
@@ -165,13 +165,13 @@ public class RomSerialGenerator : MonoBehaviour
                     spike.transform.localPosition = new Vector3(position.x, position.y);
                     int dir = room.GetWallDir(position);
 
-                    if ((dir & (int)Room.Direction.Down) == 0)
+                    if ((dir & (int)Direction.Down) == 0)
                     {
-                        if ((dir & (int)Room.Direction.Left) != 0)
+                        if ((dir & (int)Direction.Left) != 0)
                             spike.transform.localRotation = Quaternion.Euler(0, 0, 270);
-                        else if ((dir & (int)Room.Direction.Right) != 0)
+                        else if ((dir & (int)Direction.Right) != 0)
                             spike.transform.localRotation = Quaternion.Euler(0, 0, 90);
-                        else if ((dir & (int)Room.Direction.Up) != 0)
+                        else if ((dir & (int)Direction.Up) != 0)
                             spike.transform.localRotation = Quaternion.Euler(0, 0, 180);
                     }
                 }
@@ -187,8 +187,8 @@ public class RomSerialGenerator : MonoBehaviour
                         EdgeCollider2D col = slope.GetComponent<EdgeCollider2D>();
 
                         Vector2 point = new Vector2(
-                            (dir & (int)Room.Direction.Up) != 0 ? 0.5F : -0.5F,
-                            (dir & (int)Room.Direction.Right) != 0 ? -0.5F : 0.5F);
+                            (dir & (int)Direction.Up) != 0 ? 0.5F : -0.5F,
+                            (dir & (int)Direction.Right) != 0 ? -0.5F : 0.5F);
 
                         col.points = new[] { point, -point };
                     }
@@ -223,7 +223,7 @@ public class RomSerialGenerator : MonoBehaviour
         }
     }
 
-    private static void GeneratePlatform(Room room, GameObject roomObject, LevelGenerator.Position position)
+    private static void GeneratePlatform(Room room, GameObject roomObject, Position position)
     {
         SpriteRenderer platform = Instantiate(room.platform);
         platform.transform.SetParent(roomObject.transform);
@@ -237,18 +237,18 @@ public class RomSerialGenerator : MonoBehaviour
 
         if (entrence)
         {
-            GenerateWall(room, roomObject, new LevelGenerator.Position(x, 0), 5 | antiDir | (room[new LevelGenerator.Position(x + check, 0)].wallID == 1 ? dir : 0), 1);
-            GenerateWall(room, roomObject, new LevelGenerator.Position(x, 1), 5 | antiDir | (room[new LevelGenerator.Position(x + check, 1)].wallID == 1 ? dir : 0), 1);
-            GenerateWall(room, roomObject, new LevelGenerator.Position(x, 2), 4 | antiDir | (room[new LevelGenerator.Position(x + check, 2)].wallID == 1 ? dir : 0), 1);
-            GenerateWall(room, roomObject, new LevelGenerator.Position(x, 5), 1 | antiDir | (room[new LevelGenerator.Position(x + check, 5)].wallID == 1 ? dir : 0), 1);
-            GenerateWall(room, roomObject, new LevelGenerator.Position(x, 6), 5 | antiDir | (room[new LevelGenerator.Position(x + check, 6)].wallID == 1 ? dir : 0), 1);
-            GenerateWall(room, roomObject, new LevelGenerator.Position(x, 7), 5 | antiDir | (room[new LevelGenerator.Position(x + check, 7)].wallID == 1 ? dir : 0), 1);
+            GenerateWall(room, roomObject, new Position(x, 0), 5 | antiDir | (room[new Position(x + check, 0)].wallID == 1 ? dir : 0), 1);
+            GenerateWall(room, roomObject, new Position(x, 1), 5 | antiDir | (room[new Position(x + check, 1)].wallID == 1 ? dir : 0), 1);
+            GenerateWall(room, roomObject, new Position(x, 2), 4 | antiDir | (room[new Position(x + check, 2)].wallID == 1 ? dir : 0), 1);
+            GenerateWall(room, roomObject, new Position(x, 5), 1 | antiDir | (room[new Position(x + check, 5)].wallID == 1 ? dir : 0), 1);
+            GenerateWall(room, roomObject, new Position(x, 6), 5 | antiDir | (room[new Position(x + check, 6)].wallID == 1 ? dir : 0), 1);
+            GenerateWall(room, roomObject, new Position(x, 7), 5 | antiDir | (room[new Position(x + check, 7)].wallID == 1 ? dir : 0), 1);
         }
         else
         {
             for (int y = 0; y < 8; y++)
             {
-                GenerateWall(room, roomObject, new LevelGenerator.Position(x, y), 7 | (room[new LevelGenerator.Position(x + check, y)].wallID == 1 ? 8 : 0), 1);
+                GenerateWall(room, roomObject, new Position(x, y), 7 | (room[new Position(x + check, y)].wallID == 1 ? 8 : 0), 1);
             }
         }
     }
@@ -262,26 +262,26 @@ public class RomSerialGenerator : MonoBehaviour
         {
             for (int x = 0; x < 5; x++)
             {
-                GenerateWall(room, roomObject, new LevelGenerator.Position(x, y), 10 | antiDir | (room[new LevelGenerator.Position(x, y + check)].wallID == 1 ? dir : 0), 1);
-                GenerateWall(room, roomObject, new LevelGenerator.Position(14 - x, y), 10 | antiDir | (room[new LevelGenerator.Position(14 - x, y + check)].wallID == 1 ? dir : 0), 1);
+                GenerateWall(room, roomObject, new Position(x, y), 10 | antiDir | (room[new Position(x, y + check)].wallID == 1 ? dir : 0), 1);
+                GenerateWall(room, roomObject, new Position(14 - x, y), 10 | antiDir | (room[new Position(14 - x, y + check)].wallID == 1 ? dir : 0), 1);
             }
 
-            GenerateWall(room, roomObject, new LevelGenerator.Position(5, y), 2 | antiDir | (room[new LevelGenerator.Position(5, y + check)].wallID == 1 ? dir : 0), 1);
-            GenerateWall(room, roomObject, new LevelGenerator.Position(9, y), 8 | antiDir | (room[new LevelGenerator.Position(9, y + check)].wallID == 1 ? dir : 0), 1);
-            GeneratePlatform(room, roomObject, new LevelGenerator.Position(6, y));
-            GeneratePlatform(room, roomObject, new LevelGenerator.Position(7, y));
-            GeneratePlatform(room, roomObject, new LevelGenerator.Position(8, y));
+            GenerateWall(room, roomObject, new Position(5, y), 2 | antiDir | (room[new Position(5, y + check)].wallID == 1 ? dir : 0), 1);
+            GenerateWall(room, roomObject, new Position(9, y), 8 | antiDir | (room[new Position(9, y + check)].wallID == 1 ? dir : 0), 1);
+            GeneratePlatform(room, roomObject, new Position(6, y));
+            GeneratePlatform(room, roomObject, new Position(7, y));
+            GeneratePlatform(room, roomObject, new Position(8, y));
         }
         else
         {
             for (int x = 0; x < 15; x++)
             {
-                GenerateWall(room, roomObject, new LevelGenerator.Position(x, y), 10 | antiDir | (room[new LevelGenerator.Position(x, y + check)].wallID == 1 ? dir : 0), 1);
+                GenerateWall(room, roomObject, new Position(x, y), 10 | antiDir | (room[new Position(x, y + check)].wallID == 1 ? dir : 0), 1);
             }
         }
     }
 
-    private void GenerateWall(Room room, GameObject roomObject, LevelGenerator.Position position, int direction, int wallID)
+    private void GenerateWall(Room room, GameObject roomObject, Position position, int direction, int wallID)
     {
         SpriteRenderer wall = Instantiate(wallPrefab);
         wall.transform.SetParent(roomObject.transform);

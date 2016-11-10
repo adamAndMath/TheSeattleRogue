@@ -5,10 +5,10 @@ public class RoomHandler : MonoBehaviour
 {
     public static RoomHandler Instance { get; private set; }
 
-    public LevelGenerator.Position min;
+    public Position min;
     public RoomInstance[,] rooms;
 
-    public RoomInstance this[LevelGenerator.Position pos]
+    public RoomInstance this[Position pos]
     {
         get
         {

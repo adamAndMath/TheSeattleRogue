@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-[CustomPropertyDrawer(typeof(LevelGenerator.Position))]
+[CustomPropertyDrawer(typeof(Position))]
 public class EditorPosition : PropertyDrawer
 {
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)

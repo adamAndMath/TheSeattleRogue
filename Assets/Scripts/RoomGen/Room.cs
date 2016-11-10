@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class Room : ScriptableObject
 {
-    public static readonly LevelGenerator.Position RoomSize = new LevelGenerator.Position(16, 9);
+    public static readonly Position RoomSize = new Position(16, 9);
 
-    public LevelGenerator.Position size;
+    public Position size;
     //[EnumMask]
     public int entrencesUp;
     public int entrencesDown;
@@ -19,13 +19,10 @@ public class Room : ScriptableObject
     public SpriteRenderer platform;
     public SpriteRenderer spike;
 
-    public LevelGenerator.Position RealSize
+    public Position RealSize
     {
-        get { return new LevelGenerator.Position(size.x*RoomSize.x - 1, size.y*RoomSize.y - 1); }
+        get { return new Position(size.x*RoomSize.x - 1, size.y*RoomSize.y - 1); }
     }
-
-    [Flags]
-    public enum Direction { Up = 1, Left = 2, Down = 4, Right = 8 }
 
     [Serializable]
     public struct Wall
@@ -103,16 +100,16 @@ public class Room : ScriptableObject
     [Serializable]
     public struct Spawner
     {
-        public LevelGenerator.Position position;
+        public Position position;
         public int spawnMask;
     }
 
-    public RoomPosition this[LevelGenerator.Position pos]
+    public RoomPosition this[Position pos]
     {
         get { return columns[pos.x].data[pos.y]; }
     }
 
-    public int GetWallDir(LevelGenerator.Position pos)
+    public int GetWallDir(Position pos)
     {
         int dir = 0;
         if (pos.y == RealSize.y - 1 || this[pos + Direction.Up].wallID > 0) dir |= (int)Direction.Up;
@@ -122,7 +119,7 @@ public class Room : ScriptableObject
         return dir;
     }
 
-    public int GetWallDir(LevelGenerator.Position pos, int id)
+    public int GetWallDir(Position pos, int id)
     {
         int dir = 0;
         if (pos.y == RealSize.y - 1 || this[pos + Direction.Up].wallID == id) dir |= (int)Direction.Up;

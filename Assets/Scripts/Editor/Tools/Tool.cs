@@ -16,33 +16,33 @@ public abstract class Tool
 
     public virtual void OnEnable() { }
     public virtual void OnGUI() { }
-    public virtual bool PreRenderGrid(LevelGenerator.Position pos, Rect rect) { return true; }
-    public virtual void PostRenderGrid(LevelGenerator.Position pos, Rect rect) { }
+    public virtual bool PreRenderGrid(Position pos, Rect rect) { return true; }
+    public virtual void PostRenderGrid(Position pos, Rect rect) { }
 
     /// <summary>
     /// Runs mouse down event on tool
     /// </summary>
     /// <returns>Requires repaint</returns>
-    public abstract bool OnMouseDown(LevelGenerator.Position pos);
+    public abstract bool OnMouseDown(Position pos);
 
     /// <summary>
     /// Runs mouse drag event on tool
     /// </summary>
     /// <returns>Requires repaint</returns>
-    public abstract bool OnMouseDrag(LevelGenerator.Position pos);
+    public abstract bool OnMouseDrag(Position pos);
 
     /// <summary>
     /// Runs mouse up event on tool
     /// </summary>
     /// <returns>Requires repaint</returns>
-    public abstract bool OnMouseUp(LevelGenerator.Position pos);
+    public abstract bool OnMouseUp(Position pos);
 
     protected SerializedProperty FindProperty(string propertyPath)
     {
         return Window.serializedObject.FindProperty(propertyPath);
     }
 
-    protected SerializedProperty GetPropertyAtPos(LevelGenerator.Position pos)
+    protected SerializedProperty GetPropertyAtPos(Position pos)
     {
         return FindProperty("columns").GetArrayElementAtIndex(pos.x).FindPropertyRelative("data").GetArrayElementAtIndex(pos.y);
     }

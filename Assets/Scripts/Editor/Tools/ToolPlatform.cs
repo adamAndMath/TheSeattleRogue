@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ToolPlatform : Tool
 {
-    private readonly List<LevelGenerator.Position> selectedPositions = new List<LevelGenerator.Position>();
+    private readonly List<Position> selectedPositions = new List<Position>();
     private Mode mode = Mode.None;
 
     public enum Mode
@@ -15,7 +15,7 @@ public class ToolPlatform : Tool
     {
     }
 
-    public override bool PreRenderGrid(LevelGenerator.Position pos, Rect rect)
+    public override bool PreRenderGrid(Position pos, Rect rect)
     {
         if (!selectedPositions.Contains(pos))
             return true;
@@ -28,7 +28,7 @@ public class ToolPlatform : Tool
         return false;
     }
 
-    public override bool OnMouseDown(LevelGenerator.Position pos)
+    public override bool OnMouseDown(Position pos)
     {
         int button = Event.current.button;
 
@@ -50,7 +50,7 @@ public class ToolPlatform : Tool
         return true;
     }
 
-    public override bool OnMouseDrag(LevelGenerator.Position pos)
+    public override bool OnMouseDrag(Position pos)
     {
         if (pos.x == -1 || pos.y == -1)
         {
@@ -71,7 +71,7 @@ public class ToolPlatform : Tool
         return false;
     }
 
-    public override bool OnMouseUp(LevelGenerator.Position pos)
+    public override bool OnMouseUp(Position pos)
     {
         if (pos.x == -1 || pos.y == -1)
             return false;
@@ -79,7 +79,7 @@ public class ToolPlatform : Tool
         switch (mode)
         {
             case Mode.Place:
-                foreach (LevelGenerator.Position p in selectedPositions)
+                foreach (Position p in selectedPositions)
                 {
                     GetPropertyAtPos(p).FindPropertyRelative("wallID").intValue = -1;
                     GetPropertyAtPos(p).FindPropertyRelative("slope").boolValue = false;
@@ -87,7 +87,7 @@ public class ToolPlatform : Tool
 
                 break;
             case Mode.Delete:
-                foreach (LevelGenerator.Position p in selectedPositions)
+                foreach (Position p in selectedPositions)
                 {
                     GetPropertyAtPos(p).FindPropertyRelative("wallID").intValue = 0;
                     GetPropertyAtPos(p).FindPropertyRelative("slope").boolValue = false;
