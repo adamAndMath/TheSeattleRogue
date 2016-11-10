@@ -13,6 +13,7 @@ public class RomSerialGenerator : MonoBehaviour
 
     void Start()
     {
+        RoomHandler.Instance.rooms = new RoomInstance[rooms.Length, 1];
         Position position = new Position();
 
         for (; position.x < rooms.Length; position.x++)
