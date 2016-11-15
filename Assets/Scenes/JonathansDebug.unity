@@ -100,6 +100,7 @@ GameObject:
   - 4: {fileID: 69776116}
   - 114: {fileID: 69776115}
   - 114: {fileID: 69776117}
+  - 114: {fileID: 69776118}
   m_Layer: 0
   m_Name: DungeonGen
   m_TagString: Untagged
@@ -113,11 +114,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 69776114}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 86535d02115547646905fe342f328517, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  door: {fileID: 0}
+  endRoom: {fileID: 0}
   rooms:
   - {fileID: 11400000, guid: 39b6a08aa1d30a64198cc25948a12854, type: 2}
   - {fileID: 11400000, guid: a52706bf194e05e42be6ee6d87c2ae0d, type: 2}
@@ -209,6 +212,26 @@ MonoBehaviour:
   min:
     x: 0
     y: 0
+--- !u!114 &69776118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 69776114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7a39e911a9925b4ea8a96e43fa31d41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  door: {fileID: 1000012968112314, guid: c48939c7d145b2d42baa894658adb5d6, type: 2}
+  endRoom: {fileID: 11400000, guid: 1e89200e79d26d8469d01bbe033dfb3e, type: 2}
+  rooms:
+  - {fileID: 11400000, guid: 1605e98e549746548ac68fb38c3a61bb, type: 2}
+  endDirections: 1
+  wallPrefab: {fileID: 212000012543991934, guid: 0aae726afba3e0e45baf5109c22aba98,
+    type: 2}
+  backgroundPrefab: {fileID: 212000012981208614, guid: a9a820bfe4016394cbda5f08fb62dd0e,
+    type: 2}
 --- !u!1 &228851392
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,11 +339,6 @@ MonoBehaviour:
 --- !u!224 &249580679 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224000010123640222, guid: cc6381f4814d1874a94a6dd6db15c86a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1021483554}
---- !u!95 &249580680 stripped
-Animator:
-  m_PrefabParentObject: {fileID: 95000013311431870, guid: cc6381f4814d1874a94a6dd6db15c86a,
     type: 2}
   m_PrefabInternal: {fileID: 1021483554}
 --- !u!1 &318405584
@@ -810,7 +828,7 @@ Prefab:
         type: 2}
       propertyPath: deathTransitionAnimator
       value: 
-      objectReference: {fileID: 249580680}
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011321701894, guid: 75dcc9dbf9ad55f4398bde8d7f714b21, type: 2}
       propertyPath: m_LocalScale.x
       value: 1
