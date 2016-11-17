@@ -38,7 +38,7 @@ public class Lifemanager : MonoBehaviour
         {
             Image clone = healthBar[i];
 
-            if (Player.Data.hp > i)
+            if (Player.data.hp > i)
             {
                 clone.sprite = fullHeart;
             }

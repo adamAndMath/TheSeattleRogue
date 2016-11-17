@@ -6,6 +6,6 @@ public class HealthDrop : Pickup
 
     protected override void PickedUp(Player player)
     {
-        Player.Data.hp = Mathf.Min(Player.Data.hp + health, player.maxHP);
+        Player.data.hp = Mathf.Min(Player.data.hp + health, player.maxHP);
     }
 }

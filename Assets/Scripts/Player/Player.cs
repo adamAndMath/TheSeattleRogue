@@ -4,7 +4,7 @@ using UnityEngine;
 public class Player : PhysicsObject
 {
     public static Player Instance { get; private set; }
-    public static PlayerData Data { get; private set; }
+    public static PlayerData data;
 
     public Item item;
     public BoxCollider2D weaponCollider2D;
@@ -34,7 +34,7 @@ public class Player : PhysicsObject
 
     public void SetItem(Item item)
     {
-        Data.item = item;
+        data.item = item;
         weapon.runtimeAnimatorController = item.animator;
         weaponCollider2D.offset = item.collisionOffset;
         weaponCollider2D.size = item.collisionSize;
@@ -51,16 +51,16 @@ public class Player : PhysicsObject
         dashPower = maxDash;
         animator = GetComponent<Animator>();
 
-        if (Data == null)
+        if (data == null)
         {
-            Data = new PlayerData();
-            Data.hp = maxHP;
+            data = new PlayerData();
+            data.hp = maxHP;
             SetItem(item);
-            Data.enemyDeathSprites = new List<Sprite>();
+            data.enemyDeathSprites = new List<Sprite>();
         }
         else
         {
-            SetItem(Data.item);
+            SetItem(data.item);
         }
     }
 
@@ -86,15 +86,15 @@ public class Player : PhysicsObject
 
     public void Damaged(int damage)
     {
-        if (Time.timeScale != 0 && Data.hp > 0 && !animator.GetCurrentAnimatorStateInfo(0).IsName("Fly"))
+        if (Time.timeScale != 0 && data.hp > 0 && !animator.GetCurrentAnimatorStateInfo(0).IsName("Fly"))
         {
             if (animator.GetCurrentAnimatorStateInfo(animator.GetLayerIndex("Invincibility")).IsName("Invincibility") || animator.GetBool("Hit"))
                 return;
 
-            Data.hp -= damage;
+            data.hp -= damage;
             animator.SetTrigger("Hit");
 
-            if (Data.hp <= 0)
+            if (data.hp <= 0)
             {
                 deathTransitionObject.gameObject.SetActive(true);
                 Time.timeScale = 0;

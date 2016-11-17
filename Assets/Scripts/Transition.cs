@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -17,14 +16,15 @@ public class Transition : MonoBehaviour
     }
 	void Update ()
     {
-	    if (Player.Data.hp <= 0)
+	    if (Player.data.hp <= 0)
 	    {
 	        if (currentFrame == TransitionFrames.Length)
 	        {
-                DeathScene.enemies = Player.Data.enemyDeathSprites;
+                DeathScene.enemies = Player.data.enemyDeathSprites;
                 Score.finalScore = Player.Instance.score;
-	            Player.Data.enemyDeathSprites = null;
-	            Player.Data.hp = Player.Instance.maxHP;
+	            Player.data.enemyDeathSprites = null;
+	            Player.data.hp = Player.Instance.maxHP;
+	            Player.data = null;
 	            Time.timeScale = 1;
                 SceneManager.LoadScene(Player.Instance.deathScene);
 	        }
