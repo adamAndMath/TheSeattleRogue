@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Player : PhysicsObject
 {
@@ -67,12 +66,6 @@ public class Player : PhysicsObject
 
     void Update()
     {
-        if (Data.hp <= 0)
-        {
-            deathTransitionObject.gameObject.SetActive(true);
-            Time.timeScale = 0;
-        }
-
         if (dashPower < maxDash)
         {
             dashPower += Time.deltaTime*dashRegenerationRate;
@@ -95,11 +88,17 @@ public class Player : PhysicsObject
     {
         if (Time.timeScale != 0 && Data.hp > 0 && !animator.GetCurrentAnimatorStateInfo(0).IsName("Fly"))
         {
-            if (animator.GetCurrentAnimatorStateInfo(animator.GetLayerIndex("Invincibility")).IsName("Invincibility"))
+            if (animator.GetCurrentAnimatorStateInfo(animator.GetLayerIndex("Invincibility")).IsName("Invincibility") || animator.GetBool("Hit"))
                 return;
 
             Data.hp -= damage;
             animator.SetTrigger("Hit");
+
+            if (Data.hp <= 0)
+            {
+                deathTransitionObject.gameObject.SetActive(true);
+                Time.timeScale = 0;
+            }
         }
     }
 
