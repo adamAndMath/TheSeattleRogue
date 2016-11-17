@@ -107,6 +107,12 @@ MonoBehaviour:
   shakeAmount: 0.8
   timeBetweenBoulders: 0.5
   boulderSpawnRange: 15
+  health: 9
+  hitInvulTime: 0
+  originPos: {x: 0, y: 0}
+  isGrounded: 0
+  boulderGameObject: {fileID: 0}
+  stateHasBeenSet: 0
   Health: 1
   cam: {fileID: 0}
   boulders:
