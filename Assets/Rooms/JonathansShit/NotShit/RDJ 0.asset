@@ -302,10 +302,6 @@ MonoBehaviour:
   - {fileID: 114000011684268616, guid: ceceb75b8ae45344a919c745ceb696d3, type: 2}
   spawners:
   - position:
-      x: 10
-      y: 0
-    spawnMask: 2
-  - position:
       x: 3
       y: 4
     spawnMask: 2
