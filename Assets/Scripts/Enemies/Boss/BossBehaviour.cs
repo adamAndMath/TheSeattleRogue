@@ -1,6 +1,5 @@
 ﻿using System;
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
@@ -76,16 +75,8 @@ public class BossBehaviour : PhysicsObject
 
 	    if (!stateHasBeenSet)
 	    {
-	        if (animator.GetBehaviour<StateHandler>().betweenStates && bouldersInScene.Count != 0 && 1 == 0)
-	        {
-	            animator.SetInteger("StateSet", Random.Range(3, 4));
-	            stateHasBeenSet = true;
-	        }
-	        else
-	        {
-                animator.SetInteger("StateSet", Random.Range(1, 3));
-	            stateHasBeenSet = true;
-	        }
+	        animator.SetInteger("StateSet", Random.Range(1, 3));
+	        stateHasBeenSet = true;
 	    }
 
         animator.SetBool("RunFastMode", animator.GetInteger("StateSet") == 1);

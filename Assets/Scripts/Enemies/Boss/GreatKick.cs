@@ -7,27 +7,29 @@ public class GreatKick : StateMachineBehaviour
     private float relocationSpeed;
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+	public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
 	    relocationSpeed = animator.GetBehaviour<RunFast>().bossSpeed;
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
+	public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
         animator.SetInteger("StateSet", 0);
 	    foreach (GameObject boulder in BossBehaviour.Instance.bouldersInScene)
 	    {
 	        float min = 0;
-	        GameObject closetsBoulder;
+
 	        if (Mathf.Abs(BossBehaviour.Instance.transform.position.x - boulder.transform.position.x) < min || min == 0)
 	        {
 	            min = boulder.transform.position.x;
 	            BossBehaviour.Instance.boulderGameObject = boulder;
                 BossBehaviour.Instance.bouldersInScene.Remove(boulder);
 	        }
+
 	        boulderDistance = min; 
 	    }
+
         BossBehaviour.Instance.boulderGameObject.GetComponent<BoulderBehaviour>().hasBeenkicked = true;
 	    
         if (Mathf.Abs(BossBehaviour.Instance.transform.position.x - boulderDistance) > 0.2)
