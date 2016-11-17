@@ -37,16 +37,16 @@ public abstract class Enemy : PhysicsObject
             drop.Drop(transform.parent, transform.position);
         }
 
-        if (Player.data.enemyDeathSprites != null)
+        if (Player.data.kills != null)
         {
-            Player.data.enemyDeathSprites.Add(idleSprite);
+            Player.data.kills.Add(idleSprite);
         }
         else
         {
-            Player.data.enemyDeathSprites = new List<Sprite>();
-            Player.data.enemyDeathSprites.Add(idleSprite);
+            Player.data.kills = new List<Sprite> { idleSprite };
         }
-        Player.Instance.score += scoreGiven;
+
+        Player.data.score += scoreGiven;
         DestroyObject(gameObject);
     }
 }

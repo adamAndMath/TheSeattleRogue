@@ -16,30 +16,25 @@ public class Transition : MonoBehaviour
     }
 	void Update ()
     {
-	    if (Player.data.hp <= 0)
+	    if (Player.data.hp > 0) return;
+
+	    if (currentFrame == TransitionFrames.Length)
 	    {
-	        if (currentFrame == TransitionFrames.Length)
-	        {
-                DeathScene.enemies = Player.data.enemyDeathSprites;
-                Score.finalScore = Player.Instance.score;
-	            Player.data.enemyDeathSprites = null;
-	            Player.data.hp = Player.Instance.maxHP;
-	            Player.data = null;
-	            Time.timeScale = 1;
-                SceneManager.LoadScene(Player.Instance.deathScene);
-	        }
+	        DeathScene.finalScore = Player.data;
+	        Player.data = null;
+	        Time.timeScale = 1;
+	        SceneManager.LoadScene(Player.Instance.deathScene);
+	    }
 
-            if (count == 0)
-	        {
-	            count = TimeBetweenFrames;
-	            renderer.sprite = TransitionFrames[currentFrame];
-	            currentFrame++;
-	        }
-            else
-            {
-                count--;
-            }
-
+	    if (count == 0)
+	    {
+	        count = TimeBetweenFrames;
+	        renderer.sprite = TransitionFrames[currentFrame];
+	        currentFrame++;
+	    }
+	    else
+	    {
+	        count--;
 	    }
     }
 }

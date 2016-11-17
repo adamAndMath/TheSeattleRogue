@@ -104,6 +104,7 @@ public class BossBehaviour : PhysicsObject
 	    if (health <= 0)
 	    {
 	        SceneManager.LoadScene("Winner");
+	        Player.data = null;
         }
     }
     public bool CameraShake(float shakeTime)

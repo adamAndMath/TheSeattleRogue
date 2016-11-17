@@ -1,18 +1,26 @@
-﻿using UnityEngine;
-using System.Collections.Generic;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class DeathScene : MonoBehaviour
 {
-    public static List<Sprite> enemies;
+    public static Player.PlayerData finalScore;
     public Image imagePrefab;
+    public Text scoreText;
+    public Text timeText;
     public float time;
     private float timer;
     private int id;
 
-	void Update ()
+    void Start()
     {
-        if (enemies != null && id >= enemies.Count) return;
+        scoreText.text = "Score: " + finalScore.score;
+        timeText.text = String.Format("Time: {0} sec", finalScore.time.ToString("####.##"));
+    }
+
+	void Update()
+    {
+        if (finalScore.kills == null || id >= finalScore.kills.Count) return;
         
 	    timer += Time.deltaTime;
 
@@ -21,6 +29,6 @@ public class DeathScene : MonoBehaviour
 	    timer -= time;
         Image image = Instantiate(imagePrefab);
         image.transform.SetParent(transform);
-        image.sprite = enemies[id++];
-	}
+        image.sprite = finalScore.kills[id++];
+    }
 }

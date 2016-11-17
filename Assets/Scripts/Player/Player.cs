@@ -11,7 +11,6 @@ public class Player : PhysicsObject
     public int maxHP = 3;
     public static int money;
     private Animator animator;
-    public int score;
 
     public float dashRegenerationRate = 1;
     public int maxDash = 100;
@@ -28,8 +27,10 @@ public class Player : PhysicsObject
     public class PlayerData
     {
         public int hp;
+        public float time;
+        public int score;
         public Item item;
-        public List<Sprite> enemyDeathSprites = new List<Sprite>();
+        public List<Sprite> kills = new List<Sprite>();
     }
 
     public void SetItem(Item item)
@@ -56,7 +57,7 @@ public class Player : PhysicsObject
             data = new PlayerData();
             data.hp = maxHP;
             SetItem(item);
-            data.enemyDeathSprites = new List<Sprite>();
+            data.kills = new List<Sprite>();
         }
         else
         {
