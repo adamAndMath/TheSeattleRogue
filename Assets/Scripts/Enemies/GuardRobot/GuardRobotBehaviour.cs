@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System.Runtime.CompilerServices;
 
-public class GuardRobotBehaviour : Enemy {
+public class GuardRobotBehaviour : Enemy
+{
     public float threatRangeRight;
     public float threatRangeLeft;
     public float relocationSpeed;
