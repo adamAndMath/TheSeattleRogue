@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class StubleAround : StateMachineBehaviour
 {
@@ -10,16 +9,14 @@ public class StubleAround : StateMachineBehaviour
     private Enemy enemy;
     private float time;
 
-	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+	public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
 	    direction = Random.Range(-1, 2);
 	    enemy = animator.GetComponent<Enemy>();
 	    time = timeToShoot;
 	}
 
-
-
-	override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+	public override void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
 	    time -= Time.deltaTime;
 	    if (enemy.MoveHorizontal(relocationSpeed*direction*Time.deltaTime))
@@ -32,5 +29,4 @@ public class StubleAround : StateMachineBehaviour
 	        animator.SetBool("isShooting", true);
 	    }
 	}
-
 }

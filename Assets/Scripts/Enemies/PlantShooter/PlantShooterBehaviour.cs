@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class PlantShooterBehaviour : Enemy
 {
@@ -20,12 +19,6 @@ public class PlantShooterBehaviour : Enemy
     public float leftPoint;
     public float rightPoint;
 
-    private float timeOfWaiting = 4;
-
-    private float gizmosYPoint;
-
-    private Collider2D plantCollider2D;
-
 	// Use this for initialization
     protected override void Start()
     {
@@ -35,8 +28,6 @@ public class PlantShooterBehaviour : Enemy
 
         stoppingPointLeft = transform.position.x - leftPoint;
         stoppingPointRight = transform.position.x + rightPoint;
-
-        plantCollider2D = GetComponent<Collider2D>();
     }
 	
 	// Update is called once per frame
@@ -53,16 +44,14 @@ public class PlantShooterBehaviour : Enemy
         {
             gravitySpeed = 0;
         }
-        timeOfWaiting -= Time.deltaTime;
-
     }
 
     void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(new Vector3(stoppingPointLeft, gizmosYPoint,0), 0.1f);
-        Gizmos.DrawWireSphere(new Vector3(stoppingPointRight, gizmosYPoint, 0), 0.1f);
-        Gizmos.DrawWireSphere(new Vector3(pointOfOrigin, gizmosYPoint, 0), 0.1f);
+        Gizmos.DrawWireSphere(new Vector3(stoppingPointLeft, 0,0), 0.1f);
+        Gizmos.DrawWireSphere(new Vector3(stoppingPointRight, 0, 0), 0.1f);
+        Gizmos.DrawWireSphere(new Vector3(pointOfOrigin, 0, 0), 0.1f);
     }
     public override void Damaged(int damageAmount, Vector3 direction)
     {
